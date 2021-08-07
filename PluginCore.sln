@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F4038C30-CEF3-406D-AAC6-1158BE61617D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginCore", "src\PluginCore\PluginCore.csproj", "{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1} = {F4038C30-CEF3-406D-AAC6-1158BE61617D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5B7D6AB-2647-419D-93CB-5475018BA79C}
+	EndGlobalSection
+EndGlobal
