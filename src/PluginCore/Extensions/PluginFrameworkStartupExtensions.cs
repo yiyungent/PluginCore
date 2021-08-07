@@ -60,6 +60,7 @@ namespace PluginCore.Extensions
             }
 
 
+
         }
 
         public static void UsePluginFramework(this IApplicationBuilder app)

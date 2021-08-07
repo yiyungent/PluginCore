@@ -6,6 +6,37 @@ namespace PluginCore
 {
     public class PluginPathProvider
     {
+
+        static PluginPathProvider()
+        {
+            // 初始化插件目录
+            string appDataDir = Path.Combine(Directory.GetCurrentDirectory(), "App_Data");
+            if (!Directory.Exists(appDataDir))
+            {
+                Directory.CreateDirectory(appDataDir);
+            }
+
+            string pluginConfigJsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "App_Data", "plugin.config.json");
+            string pluginConfigJson = "{\"EnabledPlugins\":[],\"DisabledPlugins\":[],\"UninstalledPlugins\":[]}";
+            if (!File.Exists(pluginConfigJsonFilePath))
+            {
+                File.WriteAllText(pluginConfigJsonFilePath, pluginConfigJson, System.Text.Encoding.UTF8);
+            }
+
+            string tempPluginUploadDir = TempPluginUploadDir();
+            if (!Directory.Exists(tempPluginUploadDir))
+            {
+                Directory.CreateDirectory(tempPluginUploadDir);
+            }
+
+            string pluginsDir = PluginsRootPath();
+            if (!Directory.Exists(pluginsDir))
+            {
+                Directory.CreateDirectory(pluginsDir);
+            }
+
+        }
+
         /// <summary>
         /// 临时插件上传目录路径
         /// eg: F:\Com\me\Repos\Remember.Core\src\Presentation\WebApi\App_Data\TempPluginUpload
