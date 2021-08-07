@@ -7,6 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F4038C30-CEF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginCore", "src\PluginCore\PluginCore.csproj", "{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{F7651716-CAC1-42B3-9D95-2C7C835F17CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore3_1", "examples\AspNetCore3_1\AspNetCore3_1.csproj", "{A28AFD35-06C0-4CEE-BB40-45B080DF5A7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore5", "examples\AspNetCore5\AspNetCore5.csproj", "{5B797C83-F308-4455-A599-E0CC771AE059}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +23,22 @@ Global
 		{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A28AFD35-06C0-4CEE-BB40-45B080DF5A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A28AFD35-06C0-4CEE-BB40-45B080DF5A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A28AFD35-06C0-4CEE-BB40-45B080DF5A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A28AFD35-06C0-4CEE-BB40-45B080DF5A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B797C83-F308-4455-A599-E0CC771AE059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B797C83-F308-4455-A599-E0CC771AE059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B797C83-F308-4455-A599-E0CC771AE059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B797C83-F308-4455-A599-E0CC771AE059}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8F29F5E4-F306-42E1-BA5D-E0ACAF0A7ED1} = {F4038C30-CEF3-406D-AAC6-1158BE61617D}
+		{A28AFD35-06C0-4CEE-BB40-45B080DF5A7F} = {F7651716-CAC1-42B3-9D95-2C7C835F17CB}
+		{5B797C83-F308-4455-A599-E0CC771AE059} = {F7651716-CAC1-42B3-9D95-2C7C835F17CB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5B7D6AB-2647-419D-93CB-5475018BA79C}

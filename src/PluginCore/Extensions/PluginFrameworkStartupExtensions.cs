@@ -49,10 +49,15 @@ namespace PluginCore.Extensions
                     }
                     #endregion
 
+
+
+                    // 将本 Assembly 内的 Controller 添加
+                    var ass = Assembly.GetExecutingAssembly();
+                    PluginControllerManager pluginControllerManager = scope.ServiceProvider.GetService<PluginControllerManager>();
+                    pluginControllerManager.AddControllers(ass);
+
                 }
             }
-
-
 
 
         }
