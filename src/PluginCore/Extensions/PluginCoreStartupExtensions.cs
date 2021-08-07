@@ -18,11 +18,11 @@ namespace PluginCore.Extensions
     /// <summary>
     /// 
     /// </summary>
-    public static class PluginFrameworkStartupExtensions
+    public static class PluginCoreStartupExtensions
     {
         private static IWebHostEnvironment _webHostEnvironment;
 
-        public static void AddPluginFramework(this IServiceCollection services)
+        public static void AddPluginCore(this IServiceCollection services)
         {
             // 用于添加插件Controller 时，通知Controller.Action发生变化
             services.AddSingleton<IActionDescriptorChangeProvider>(PluginActionDescriptorChangeProvider.Instance);
@@ -70,11 +70,12 @@ namespace PluginCore.Extensions
 
         }
 
-        public static void UsePluginFramework(this IApplicationBuilder app)
+        public static void UsePluginCore(this IApplicationBuilder app)
         {
             //string contentRootPath = Directory.GetCurrentDirectory();
 
             // https://docs.microsoft.com/zh-CN/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0
+            app.UseDefaultFiles();
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
