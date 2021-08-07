@@ -10,6 +10,8 @@ using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.FileProviders;
 
 namespace PluginCore.Extensions
 {
@@ -18,6 +20,8 @@ namespace PluginCore.Extensions
     /// </summary>
     public static class PluginFrameworkStartupExtensions
     {
+        private static IWebHostEnvironment _webHostEnvironment;
+
         public static void AddPluginFramework(this IServiceCollection services)
         {
             // 用于添加插件Controller 时，通知Controller.Action发生变化
@@ -56,6 +60,9 @@ namespace PluginCore.Extensions
                     PluginControllerManager pluginControllerManager = scope.ServiceProvider.GetService<PluginControllerManager>();
                     pluginControllerManager.AddControllers(ass);
 
+
+                    // IWebHostEnvironment
+                    _webHostEnvironment = scope.ServiceProvider.GetService<IWebHostEnvironment>();
                 }
             }
 
@@ -65,7 +72,15 @@ namespace PluginCore.Extensions
 
         public static void UsePluginFramework(this IApplicationBuilder app)
         {
+            //string contentRootPath = Directory.GetCurrentDirectory();
 
+            // https://docs.microsoft.com/zh-CN/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(_webHostEnvironment.ContentRootPath, "PluginCoreAdmin")),
+                RequestPath = "/PluginCore/Admin"
+            });
         }
 
 
