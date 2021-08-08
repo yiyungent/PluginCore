@@ -41,6 +41,9 @@ namespace PluginCore.Extensions
                 {
                     PluginManager pluginManager = scope.ServiceProvider.GetService<PluginManager>();
 
+                    // 初始化 PluginCore 相关目录
+                    PluginPathProvider.PluginsRootPath();
+
                     // 在程序启动时加载所有 已安装的插件
 
                     // 获取PluginConfigModel
@@ -98,7 +101,12 @@ namespace PluginCore.Extensions
             //string contentRootPath = Directory.GetCurrentDirectory();
 
             // https://docs.microsoft.com/zh-CN/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0
-            app.UseDefaultFiles();
+            var options = new DefaultFilesOptions()
+            {
+                RequestPath = "/PluginCore/Admin",
+            };
+            options.DefaultFileNames.Add("PluginCoreAdmin/index.html");
+            app.UseDefaultFiles(options);
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(

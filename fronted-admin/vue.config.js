@@ -24,7 +24,7 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/',
+  publicPath: '/PluginCore/Admin',
   // outputDir: 'dist',
   // ../examples/AspNetCore3_1/PluginCoreAdmin
   outputDir: '../examples/AspNetCore3_1/PluginCoreAdmin',

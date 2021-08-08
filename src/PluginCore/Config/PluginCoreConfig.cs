@@ -17,7 +17,7 @@ namespace PluginCore.Config
         {
             public string UserName { get; set; } = "admin";
 
-            public string Password { get; set; } = "12345";
+            public string Password { get; set; } = "ABC12345";
         }
     }
 }

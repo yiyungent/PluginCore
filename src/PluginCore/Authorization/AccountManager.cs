@@ -12,7 +12,10 @@ namespace PluginCore.Authorization
 
         public AccountManager(IHttpContextAccessor httpContextAccessor)
         {
-            HttpContext = ((HttpContextAccessor)httpContextAccessor).HttpContext;
+            // Exception: IFeatureCollection has been disposed. Object name: 'Collection'.
+            // https://stackoverflow.com/questions/59963383/session-setstring-method-throws-exception-ifeaturecollection-has-been-disposed
+            //HttpContext = ((HttpContextAccessor)httpContextAccessor).HttpContext;
+            HttpContext = httpContextAccessor.HttpContext;
         }
 
         public Config.PluginCoreConfig.AdminModel Admin
@@ -46,7 +49,9 @@ namespace PluginCore.Authorization
                     }
                 }
                 catch (Exception ex)
-                { }
+                {
+                    //throw ex;
+                }
                 if (string.IsNullOrEmpty(token))
                 {
                     // cookie 中找 token

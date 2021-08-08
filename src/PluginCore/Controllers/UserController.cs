@@ -56,6 +56,32 @@ namespace PluginCore.Controllers
 
 
         [PluginCoreAdminAuthorize]
+        public async Task<ActionResult<CommonResponseModel>> Info()
+        {
+            CommonResponseModel responseModel = new CommonResponseModel();
+
+            try
+            {
+                string adminUserName = PluginCoreConfigFactory.Create().Admin.UserName;
+
+                responseModel.code = 1;
+                responseModel.message = "成功";
+                responseModel.data = new
+                {
+                    name = adminUserName,
+                    avatar = "images/avatar.gif"
+                };
+            }
+            catch (Exception ex)
+            {
+                responseModel.code = -1;
+                responseModel.message = "失败: " + ex.Message;
+            }
+
+            return await Task.FromResult(responseModel);
+        }
+
+        [PluginCoreAdminAuthorize]
         public async Task<ActionResult<CommonResponseModel>> Update([FromBody] UpdateRequestModel requestModel)
         {
             CommonResponseModel responseModel = new CommonResponseModel();
