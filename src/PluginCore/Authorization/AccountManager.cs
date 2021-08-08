@@ -8,14 +8,24 @@ namespace PluginCore.Authorization
 {
     public class AccountManager
     {
-        public Microsoft.AspNetCore.Http.HttpContext HttpContext { get; set; }
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public Microsoft.AspNetCore.Http.HttpContext HttpContext
+        {
+            get
+            {
+                return this._httpContextAccessor.HttpContext;
+            }
+        }
 
         public AccountManager(IHttpContextAccessor httpContextAccessor)
         {
             // Exception: IFeatureCollection has been disposed. Object name: 'Collection'.
             // https://stackoverflow.com/questions/59963383/session-setstring-method-throws-exception-ifeaturecollection-has-been-disposed
             //HttpContext = ((HttpContextAccessor)httpContextAccessor).HttpContext;
-            HttpContext = httpContextAccessor.HttpContext;
+            //HttpContext = httpContextAccessor.HttpContext;
+            // 注意: 不要将 HttpContext 保存起来，应当每次都从 httpContextAccessor 取
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public Config.PluginCoreConfig.AdminModel Admin

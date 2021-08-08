@@ -93,6 +93,7 @@ namespace PluginCore.Extensions
             services.AddTransient<AccountManager>();
             // HttpContext.Current
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            //services.AddHttpContextAccessor();
 
         }
 
