@@ -54,6 +54,16 @@ namespace PluginCore.Controllers
             return await Task.FromResult(responseModel);
         }
 
+        public async Task<ActionResult<CommonResponseModel>> Logout()
+        {
+            CommonResponseModel responseModel = new CommonResponseModel()
+            {
+                code = 1,
+                message = "退出登录成功"
+            };
+
+            return await Task.FromResult(responseModel);
+        }
 
         [PluginCoreAdminAuthorize]
         public async Task<ActionResult<CommonResponseModel>> Info()
