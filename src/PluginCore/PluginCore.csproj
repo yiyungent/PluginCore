@@ -2,19 +2,55 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+    <Version>0.1.0</Version>
+    <Company>yiyun</Company>
+    <Authors>yiyun</Authors>
+    <Description>一个轻量的插件框架</Description>
+    <Copyright>Copyright (c) 2021-present yiyun</Copyright>
+    <RepositoryUrl>https://github.com/yiyungent/PluginCore</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageTags>PluginCore</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
+
+  <!-- 将 PluginCoreAdmin\*\* 与 readme.txt 复制到build后文件夹，且加入 nupkg -->
+  <ItemGroup>
+    <Content Include="PluginCoreAdmin\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <Content Include="PluginCoreAdmin\*\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <Content Include="PluginCoreAdmin\*\*\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <Content Include="readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!-- 方便开发debug,与发布到nuget -->
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <PackageReference Include="PluginCore.IPlugins" Version="0.1.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <ProjectReference Include="..\PluginCore.IPlugins\PluginCore.IPlugins.csproj" />
+  </ItemGroup>
+
+  
   <ItemGroup>
     <PackageReference Include="SharpZipLib" Version="1.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\TempPluginUpload\" />
-    <Folder Include="PluginCoreAdmin\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PluginCore.IPlugins\PluginCore.IPlugins.csproj" />
-  </ItemGroup>
+  
 
 </Project>

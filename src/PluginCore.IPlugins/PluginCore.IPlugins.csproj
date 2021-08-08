@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.1.0</Version>
+    <Company>yiyun</Company>
+    <Authors>yiyun</Authors>
+    <Description>PluginCore 插件开发包</Description>
+    <Copyright>Copyright (c) 2021-present yiyun</Copyright>
+    <RepositoryUrl>https://github.com/yiyungent/PluginCore</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageTags>PluginCore PluginCore.IPlugin</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
