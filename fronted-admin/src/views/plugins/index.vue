@@ -115,7 +115,7 @@ import {
   uninstallAction,
   enableAction,
   disableAction
-} from "@/api/admin/plugins";
+} from "@/api/plugins";
 import { Message } from "element-ui";
 
 const pluginStatusOptions = [

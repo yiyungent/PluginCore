@@ -2,7 +2,7 @@ import request from "@/utils/request";
 
 export function listAction(status) {
   return request({
-    url: "/admin/plugins/list",
+    url: "/plugincore/admin/plugins/list",
     method: "get",
     params: { status: status }
   });
@@ -10,7 +10,7 @@ export function listAction(status) {
 
 export function installAction(pluginId) {
   return request({
-    url: "/admin/plugins/install",
+    url: "/plugincore/admin/plugins/install",
     method: "post",
     params: { pluginId: pluginId }
   });
@@ -18,7 +18,7 @@ export function installAction(pluginId) {
 
 export function uninstallAction(pluginId) {
   return request({
-    url: "/admin/plugins/uninstall",
+    url: "/plugincore/admin/plugins/uninstall",
     method: "post",
     params: { pluginId: pluginId }
   });
@@ -26,7 +26,7 @@ export function uninstallAction(pluginId) {
 
 export function deleteAction(pluginId) {
   return request({
-    url: "/admin/plugins/delete",
+    url: "/plugincore/admin/plugins/delete",
     method: "post",
     params: { pluginId: pluginId }
   });
@@ -34,7 +34,7 @@ export function deleteAction(pluginId) {
 
 export function enableAction(pluginId) {
   return request({
-    url: "/admin/plugins/enable",
+    url: "/plugincore/admin/plugins/enable",
     method: "post",
     params: { pluginId: pluginId }
   });
@@ -42,7 +42,7 @@ export function enableAction(pluginId) {
 
 export function disableAction(pluginId) {
   return request({
-    url: "/admin/plugins/disable",
+    url: "/plugincore/admin/plugins/disable",
     method: "post",
     params: { pluginId: pluginId }
   });
@@ -50,7 +50,7 @@ export function disableAction(pluginId) {
 
 export function detailsAction(pluginId) {
   return request({
-    url: "/admin/plugins/details",
+    url: "/plugincore/admin/plugins/details",
     method: "get",
     params: { pluginId: pluginId }
   });
@@ -58,7 +58,7 @@ export function detailsAction(pluginId) {
 
 export function readmeAction(pluginId) {
   return request({
-    url: "/admin/plugins/readme",
+    url: "/plugincore/admin/plugins/readme",
     method: "get",
     params: { pluginId: pluginId }
   });
@@ -66,7 +66,7 @@ export function readmeAction(pluginId) {
 
 export function settingsAction(pluginId) {
   return request({
-    url: "/admin/plugins/settings",
+    url: "/plugincore/admin/plugins/settings",
     method: "get",
     params: { pluginId: pluginId }
   });
@@ -74,7 +74,7 @@ export function settingsAction(pluginId) {
 
 export function settingsSaveAction(pluginId, data) {
   return request({
-    url: "/admin/plugins/settings",
+    url: "/plugincore/admin/plugins/settings",
     method: "post",
     data: { pluginId: pluginId, data: data }
   });

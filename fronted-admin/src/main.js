@@ -1,26 +1,19 @@
-import Vue from "vue";
+import Vue from 'vue'
 
-import "normalize.css/normalize.css"; // A modern alternative to CSS resets
+import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
-import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 // import locale from 'element-ui/lib/locale/lang/en' // lang i18n
 
-import "@/styles/index.scss"; // global css
+import '@/styles/index.scss' // global css
 
-import App from "./App";
-import store from "./store";
-import router from "./router";
+import App from './App'
+import store from './store'
+import router from './router'
 
-import "@/icons"; // icon
-import "@/permission"; // permission control
-
-import * as filters from "./filters";
-
-// 注册常用全局过滤器
-Object.keys(filters).forEach((key) => {
-  Vue.filter(key, filters[key]);
-});
+import '@/icons' // icon
+import '@/permission' // permission control
 
 /**
  * If you don't want to use mock-server
@@ -30,9 +23,9 @@ Object.keys(filters).forEach((key) => {
  * Currently MockJs will be used in the production environment,
  * please remove it before going online ! ! !
  */
-if (process.env.NODE_ENV === "production") {
-  const { mockXHR } = require("../mock");
-  mockXHR();
+if (process.env.NODE_ENV === 'production') {
+  const { mockXHR } = require('../mock')
+  mockXHR()
 }
 
 // set ElementUI lang to EN
@@ -40,11 +33,11 @@ if (process.env.NODE_ENV === "production") {
 // 如果想要中文版 element-ui，按如下方式声明
 Vue.use(ElementUI);
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
 new Vue({
-  el: "#app",
+  el: '#app',
   router,
   store,
   render: h => h(App)
-});
+})

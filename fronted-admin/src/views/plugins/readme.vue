@@ -19,7 +19,7 @@
 </template>
 <script>
 import { MarkdownPreview } from "vue-meditor";
-import { readmeAction } from "@/api/admin/plugins";
+import { readmeAction } from "@/api/plugins";
 import { showMessage } from "@/utils/tools";
 
 export default {

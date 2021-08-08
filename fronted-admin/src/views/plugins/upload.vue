@@ -26,7 +26,7 @@ import { getToken } from "@/utils/auth";
 export default {
   data() {
     return {
-      uploadAction: process.env.VUE_APP_BASE_API + "/admin/plugins/upload",
+      uploadAction: process.env.VUE_APP_BASE_API + "/plugincore/admin/plugins/upload",
       headers: { Authorization: "Bearer " + getToken() }
     };
   },

@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { detailsAction } from "@/api/admin/plugins";
+import { detailsAction } from "@/api/plugins";
 import { showMessage } from "@/utils/tools";
 
 const pluginStatusOptions = [

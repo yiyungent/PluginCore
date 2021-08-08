@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PluginCore.Extensions;
 
 namespace AspNetCore3_1
 {
@@ -26,6 +27,8 @@ namespace AspNetCore3_1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddPluginCore();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +42,8 @@ namespace AspNetCore3_1
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UsePluginCore();
 
             app.UseAuthorization();
 

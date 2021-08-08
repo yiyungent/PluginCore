@@ -23,10 +23,10 @@
   </div>
 </template>
 <script>
-import { settingsAction } from "@/api/admin/plugins";
+import { settingsAction } from "@/api/plugins";
 import { showMessage } from "@/utils/tools";
 import JsonEditor from "@/components/JsonEditor";
-import { settingsSaveAction } from "@/api/admin/plugins";
+import { settingsSaveAction } from "@/api/plugins";
 
 export default {
   components: { JsonEditor },
