@@ -7,6 +7,7 @@ using PluginCore;
 using PluginCore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PluginCore.Authorization;
 using PluginCore.ResponseModel;
 //using ResponseModel;
 
@@ -18,6 +19,7 @@ namespace PluginCore.Controllers
     /// <para>插件</para>
     /// </summary>
     [Route("api/plugincore/admin/[controller]/[action]")]
+    [PluginCoreAdminAuthorize]
     [ApiController]
     public class AppCenterController : ControllerBase
     {

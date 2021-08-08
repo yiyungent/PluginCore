@@ -10,8 +10,12 @@ using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.FileProviders;
+using PluginCore.Authorization;
 
 namespace PluginCore.Extensions
 {
@@ -67,6 +71,25 @@ namespace PluginCore.Extensions
             }
 
 
+            #region 添加授权策略-所有标记 [PluginCoreAdminAuthorize] 都需要权限检查
+            services.AddSingleton<IAuthorizationHandler, PluginCoreAdminAuthorizationHandler>();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("PluginCoreAdmin", policy =>
+                {
+                    // 无法满足 下方任何一项：HTTP 403 错误
+                    // 3.需要 检查是否拥有当前请求资源的权限
+                    policy.Requirements.Add(new PluginCoreAdminRequirement());
+                });
+            });
+            #endregion
+
+
+            // AccountManager
+            services.AddTransient<AccountManager>();
+            // HttpContext.Current
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
         }
 
@@ -82,6 +105,8 @@ namespace PluginCore.Extensions
                     Path.Combine(_webHostEnvironment.ContentRootPath, "PluginCoreAdmin")),
                 RequestPath = "/PluginCore/Admin"
             });
+
+            app.UseAuthorization();
         }
 
 

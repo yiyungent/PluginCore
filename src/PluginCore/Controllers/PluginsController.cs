@@ -10,6 +10,7 @@ using PluginCore;
 using PluginCore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PluginCore.Authorization;
 using PluginCore.IPlugins;
 using PluginCore.ResponseModel;
 
@@ -18,7 +19,7 @@ using PluginCore.ResponseModel;
 namespace PluginCore.Controllers
 {
     [Route("api/plugincore/admin/[controller]/[action]")]
-    //[WebApiAuthorize]
+    [PluginCoreAdminAuthorize]
     [ApiController]
     public class PluginsController : ControllerBase
     {

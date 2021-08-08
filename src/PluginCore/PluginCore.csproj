@@ -12,7 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\TempPluginUpload\" />
-    <Folder Include="Authorization\" />
     <Folder Include="PluginCoreAdmin\" />
   </ItemGroup>
   <ItemGroup>
