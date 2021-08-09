@@ -2,8 +2,6 @@ name: PluginCore NuGet Push
 
 on: 
   push:
-    branches:
-      - main
     tags:
       - 'PluginCore-v*'
 
