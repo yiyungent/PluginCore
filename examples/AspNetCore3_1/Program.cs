@@ -21,6 +21,7 @@ namespace AspNetCore3_1
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    //.UseSetting(WebHostDefaults.HostingStartupAssembliesKey, "PluginCore");
                 });
     }
 }
