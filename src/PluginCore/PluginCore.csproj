@@ -49,9 +49,6 @@
   <ItemGroup>
     <PackageReference Include="SharpZipLib" Version="1.2.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\TempPluginUpload\" />
-  </ItemGroup>
   
 
 </Project>

@@ -50,7 +50,7 @@ namespace PluginCore.Controllers
             {
                 string htmlStr = string.Empty;
                 HttpClient httpClient = new HttpClient();
-                htmlStr = await httpClient.GetStringAsync(this.RemoteFronted);
+                htmlStr = await httpClient.GetStringAsync(this.RemoteFronted + "/index.html");
 
                 return Content(htmlStr, "text/html", Encoding.UTF8);
             }

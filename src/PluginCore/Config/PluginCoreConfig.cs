@@ -16,7 +16,7 @@ namespace PluginCore.Config
         public bool IsLocalFronted { get; set; } = false;
 
         public string RemoteFronted { get; set; } =
-            "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-fronted@0.1.1/dist-cdn/index.html";
+            "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-fronted@0.1.1/dist-cdn";
 
         public sealed class AdminModel
         {

@@ -16,6 +16,14 @@ namespace PluginCore.Controllers
     {
         private readonly AccountManager _accountManager;
 
+        public string RemoteFronted
+        {
+            get
+            {
+                return PluginCore.Config.PluginCoreConfigFactory.Create().RemoteFronted;
+            }
+        }
+
         public UserController(AccountManager accountManager)
         {
             _accountManager = accountManager;
@@ -79,7 +87,7 @@ namespace PluginCore.Controllers
                 responseModel.data = new
                 {
                     name = adminUserName,
-                    avatar = "images/avatar.gif"
+                    avatar = this.RemoteFronted + "/images/avatar.gif"
                 };
             }
             catch (Exception ex)
