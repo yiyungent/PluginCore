@@ -24,10 +24,16 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/PluginCore/Admin',
+  // publicPath: '/PluginCore/Admin',
+  // 通过jsDelivr引用GitHub资源: https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径
+  publicPath: process.env.NODE_ENV === 'cdn'
+    ? 'https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-fronted@v0.1.0/dist-cdn'
+    // ? '/PluginCore/Admin'
+    : '/PluginCore/Admin',
   // outputDir: 'dist',
-  // ../examples/AspNetCore3_1/PluginCoreAdmin
-  outputDir: '../examples/AspNetCore3_1/PluginCoreAdmin',
+  outputDir: process.env.NODE_ENV === 'cdn'
+    ? 'dist-cdn'
+    : 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
