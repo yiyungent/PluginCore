@@ -13,10 +13,10 @@ namespace PluginCore.Config
 
         public AdminModel Admin { get; set; }
 
-        public bool IsLocalFronted { get; set; } = false;
+        public bool IsLocalFrontend { get; set; } = false;
 
-        public string RemoteFronted { get; set; } =
-            "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-fronted@0.1.1/dist-cdn";
+        public string RemoteFrontend { get; set; } =
+            "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.2/dist-cdn";
 
         public sealed class AdminModel
         {

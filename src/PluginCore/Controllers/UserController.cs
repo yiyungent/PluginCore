@@ -20,7 +20,7 @@ namespace PluginCore.Controllers
         {
             get
             {
-                return PluginCore.Config.PluginCoreConfigFactory.Create().RemoteFronted;
+                return PluginCore.Config.PluginCoreConfigFactory.Create().RemoteFrontend;
             }
         }
 
