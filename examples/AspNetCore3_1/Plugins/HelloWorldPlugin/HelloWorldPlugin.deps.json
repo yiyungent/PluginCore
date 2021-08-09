@@ -11,7 +11,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "NETStandard.Library": "2.0.3",
-          "PluginCore.IPlugins": "1.0.0"
+          "PluginCore.IPlugins": "0.1.0"
         },
         "runtime": {
           "HelloWorldPlugin.dll": {}
@@ -1850,7 +1850,7 @@
           }
         }
       },
-      "PluginCore.IPlugins/1.0.0": {
+      "PluginCore.IPlugins/0.1.0": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "System.Text.Json": "5.0.2"
@@ -2973,7 +2973,7 @@
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     },
-    "PluginCore.IPlugins/1.0.0": {
+    "PluginCore.IPlugins/0.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

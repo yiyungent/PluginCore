@@ -109,10 +109,18 @@ namespace PluginCore.Extensions
             //// TODO: 404: 无效, 失败, 改为使用 Controller 手动指定
             ////options.DefaultFileNames.Add("PluginCoreAdmin/index.html");
             //app.UseDefaultFiles(options);
+
+            // 注意: 为了无需重启Web，而更新是否本地前端配置, 因此此项保持常驻开启
+            // 因此, 需要保证 PluginCoreAdmin 文件夹存在
+            string pluginCoreAdminDir = Path.Combine(_webHostEnvironment.ContentRootPath, "PluginCoreAdmin");
+            if (!Directory.Exists(pluginCoreAdminDir))
+            {
+                Directory.CreateDirectory(pluginCoreAdminDir);
+            }
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
-                    Path.Combine(_webHostEnvironment.ContentRootPath, "PluginCoreAdmin")),
+                    pluginCoreAdminDir),
                 RequestPath = "/PluginCore/Admin"
             });
 
