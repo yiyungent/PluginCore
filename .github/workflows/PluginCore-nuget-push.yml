@@ -1,0 +1,40 @@
+name: PluginCore NuGet Push
+
+on: 
+  push:
+    branches:
+      - main
+    tags:
+      - 'PluginCore-v*'
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.202
+
+    - name: Build and Pack
+      run: |
+        dotnet build --configuration Release
+        dotnet pack --configuration Release
+        
+    - name: Install Nuget
+      uses: nuget/setup-nuget@v1
+      with:
+        nuget-version: '5.x'
+
+    - name: Add private GitHub registry to NuGet
+      run: |
+        nuget sources add -name github -Source https://nuget.pkg.github.com/dotnet-campus/index.json -Username dotnet-campus -Password ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Push generated package to GitHub registry and NuGet
+      run: |
+        nuget push ./src/PluginCore/bin/Release/*.nupkg -Source github -SkipDuplicate
+        nuget push ./src/PluginCore/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NugetKey }}
