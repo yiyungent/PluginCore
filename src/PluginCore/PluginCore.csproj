@@ -18,7 +18,8 @@
   </ItemGroup>
 
   <!-- 将 PluginCoreAdmin\*\* 与 readme.txt 复制到build后文件夹，且加入 nupkg -->
-  <ItemGroup>
+  <!-- 从 0.2.0 开始, 支持远程前端，本地前端不再必要 -->
+  <!--<ItemGroup>
     <Content Include="PluginCoreAdmin\*">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <CopyToPublishDirectory>Always</CopyToPublishDirectory>
@@ -34,7 +35,7 @@
     <Content Include="readme.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
+  </ItemGroup>-->
 
   <!-- 方便开发debug,与发布到nuget -->
   <ItemGroup Condition="'$(Configuration)' == 'Release'">

@@ -102,12 +102,13 @@ namespace PluginCore.Extensions
             //string contentRootPath = Directory.GetCurrentDirectory();
 
             // https://docs.microsoft.com/zh-CN/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0
-            var options = new DefaultFilesOptions()
-            {
-                RequestPath = "/PluginCore/Admin",
-            };
-            options.DefaultFileNames.Add("PluginCoreAdmin/index.html");
-            app.UseDefaultFiles(options);
+            //var options = new DefaultFilesOptions()
+            //{
+            //    RequestPath = "/PluginCore/Admin",
+            //};
+            //// TODO: 404: 无效, 失败, 改为使用 Controller 手动指定
+            ////options.DefaultFileNames.Add("PluginCoreAdmin/index.html");
+            //app.UseDefaultFiles(options);
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
