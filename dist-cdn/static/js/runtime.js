@@ -137,7 +137,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-fronted@v0.1.0/dist-cdn/";
+/******/ 	__webpack_require__.p = "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-fronted@0.1.1/dist-cdn/";
 /******/
 /******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
