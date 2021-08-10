@@ -112,17 +112,24 @@ namespace PluginCore.Extensions
 
             // 注意: 为了无需重启Web，而更新是否本地前端配置, 因此此项保持常驻开启
             // 因此, 需要保证 PluginCoreAdmin 文件夹存在
-            string pluginCoreAdminDir = Path.Combine(_webHostEnvironment.ContentRootPath, "PluginCoreAdmin");
-            if (!Directory.Exists(pluginCoreAdminDir))
-            {
-                Directory.CreateDirectory(pluginCoreAdminDir);
-            }
+            string pluginCoreAdminDir = PluginPathProvider.PluginCoreAdminDir();
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
                     pluginCoreAdminDir),
                 RequestPath = "/PluginCore/Admin"
             });
+
+            // 由于没办法在运行时, 动态 UseStaticFiles(), 因此不再为每一个插件都 UseStaticFiles(),
+            // 而是统一在一个文件夹下, 插件启用时, 将插件的wwwroot复制到 Plugins_wwwroot/{PluginId}, 禁用时, 再删除
+            string pluginwwwrootDir = PluginPathProvider.PluginsWwwRootDir();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    pluginwwwrootDir),
+                RequestPath = "/Plugins"
+            });
+
 
             app.UseAuthorization();
         }

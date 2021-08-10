@@ -8,9 +8,5 @@
     <ProjectReference Include="..\..\src\PluginCore\PluginCore.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Plugins\" />
-  </ItemGroup>
-
 
 </Project>

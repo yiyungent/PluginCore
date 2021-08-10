@@ -233,7 +233,15 @@ namespace PluginCore.Controllers
                 // 4.保存到 plugin.config.json
                 PluginConfigModelFactory.Save(pluginConfigModel);
 
-                // 5. 找到此插件实例
+                // 5. 尝试复制 插件下的 wwwroot 到 Plugins_wwwroot
+                string wwwRootDir = PluginPathProvider.WwwRootDir(pluginId);
+                if (Directory.Exists(wwwRootDir))
+                {
+                    string targetDir = PluginPathProvider.PluginWwwRootDir(pluginId);
+                    Utils.FileUtil.CopyFolder(wwwRootDir, targetDir);
+                }
+
+                // 6. 找到此插件实例
                 IPlugin plugin = _pluginFinder.Plugin(pluginId);
                 if (plugin == null)
                 {
@@ -241,7 +249,7 @@ namespace PluginCore.Controllers
                     responseData.message = "启用失败: 此插件不存在, 或未安装";
                     return await Task.FromResult(responseData);
                 }
-                // 6.调取插件的 AfterEnable(), 插件开发者可在此回收资源
+                // 7.调取插件的 AfterEnable(), 插件开发者可在此回收资源
                 var pluginEnableResult = plugin.AfterEnable();
                 if (!pluginEnableResult.IsSuccess)
                 {
@@ -321,6 +329,13 @@ namespace PluginCore.Controllers
                     responseData.code = -1;
                     responseData.message = "禁用失败: 此插件不存在, 或未启用";
                     return await Task.FromResult(responseData);
+                }
+
+                // 7. 尝试移除 Plugins_wwwroot/PluginId
+                string pluginWwwRootDir = PluginPathProvider.PluginWwwRootDir(pluginId);
+                if (Directory.Exists(pluginWwwRootDir))
+                {
+                    Directory.Delete(pluginWwwRootDir, true);
                 }
 
 

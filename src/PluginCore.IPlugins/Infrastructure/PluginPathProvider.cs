@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 
 namespace PluginCore
 {
@@ -35,6 +36,17 @@ namespace PluginCore
                 Directory.CreateDirectory(pluginsDir);
             }
 
+            string pluginsWwwRootDir = PluginsWwwRootDir();
+            if (!Directory.Exists(pluginsWwwRootDir))
+            {
+                Directory.CreateDirectory(pluginsWwwRootDir);
+            }
+
+            string pluginCoreAdminDir = PluginCoreAdminDir();
+            if (!Directory.Exists(pluginCoreAdminDir))
+            {
+                Directory.CreateDirectory(pluginCoreAdminDir);
+            }
         }
 
         /// <summary>
@@ -101,6 +113,92 @@ namespace PluginCore
             return pluginFolderNames;
         }
 
+        /// <summary>
+        /// Plugins/{pluginId}/wwwroot
+        /// </summary>
+        /// <returns></returns>
+
+        public static string WwwRootDir(string pluginId)
+        {
+            string wwwrootDir = Path.Combine(PluginsRootPath(), pluginId, "wwwroot");
+
+            return wwwrootDir;
+        }
+
+        /// <summary>
+        /// Plugins/{currentPluginId}/wwwroot
+        /// </summary>
+        /// <returns></returns>
+        //public static string CurrentWwwRootDir()
+        //{
+        //    string wwwrootDir = Path.Combine(PluginsRootPath(), CurrentPluginId(), "wwwroot");
+
+        //    return wwwrootDir;
+        //}
+
+
+        /// <summary>
+        /// Plugins_wwwroot
+        /// </summary>
+        /// <returns></returns>
+        public static string PluginsWwwRootDir()
+        {
+            string pluginsWwwRootDir = Path.Combine(Directory.GetCurrentDirectory(), "Plugins_wwwroot");
+
+            return pluginsWwwRootDir;
+        }
+
+        /// <summary>
+        /// Plugins_wwwroot/pluginId
+        /// </summary>
+        /// <param name="pluginId"></param>
+        /// <returns></returns>
+        public static string PluginWwwRootDir(string pluginId)
+        {
+            string pluginWwwRootDir = Path.Combine(PluginsWwwRootDir(), pluginId);
+
+            return pluginWwwRootDir;
+        }
+
+        /// <summary>
+        /// Plugins_wwwroot/currentPluginId
+        /// </summary>
+        /// <returns></returns>
+        //public static string CurrentPluginWwwRootDir()
+        //{
+        //    string pluginId = CurrentPluginId();
+
+        //    string pluginWwwRootDir = PluginWwwRootDir(pluginId);
+
+        //    return pluginWwwRootDir;
+        //}
+
+        public static string PluginCoreAdminDir()
+        {
+            string pluginCoreAdminDir = Path.Combine(Directory.GetCurrentDirectory(), "PluginCoreAdmin");
+
+            return pluginCoreAdminDir;
+        }
+
+
+        /// <summary>
+        /// 规范:
+        /// PluginId = 插件程序集名 (PluginId.dll)
+        ///
+        /// TODO: 无法获取当前 PluginId
+        /// </summary>
+        /// <returns></returns>
+        //public static string CurrentPluginId()
+        //{
+        //    //var ass = Assembly.GetExecutingAssembly(); // 错误: PluginCore.IPlugins
+        //    //var ass = Assembly.GetCallingAssembly(); // 错误: PluginCore.IPlugins
+        //    //var ass = Assembly.GetEntryAssembly(); // 错误: AspNetCore3_1
+            
+
+        //    string pluginId = ass.GetName().Name;
+
+        //    return pluginId;
+        //}
 
 
     }
