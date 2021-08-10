@@ -18,7 +18,9 @@
 - **开箱即用** - 前后端自动集成
 - **动态 WebAPI** - 每个插件都可新增 Controller, 拥有自己的路由
 - **热插拔** - 安装、启用、禁用、卸载 均无需重启站点
-- **易扩展** - 你可以编写你自己的插件sdk, 然后引用插件sdk, 编写扩展插件
+- **易扩展** - 你可以编写你自己的插件sdk, 然后引用插件sdk, 编写扩展插件 - 自定义插件钩子, 并应用
+- **无需数据库** - 无数据库依赖
+- **0侵入** - 近乎0侵入
 
 
 ## 截图
@@ -90,18 +92,78 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 <!-- - [详细文档(/docs)](https://moeci.com/PluginCore "在线文档") 文档构建中 -->
 - [见示例(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
 
-### 版本依赖
 
-|    PluginCore.IPlugins    | 0.1.0 | 0.1.0 |
-| :-----------------------: | :---: | :---: |
-|        PluginCore         | 0.1.0 | 0.2.0 |
-| plugincore-admin-frontend | 0.1.0 | 0.1.2 |
+
+### 添加插件钩子, 并应用
+
+> 1.例如，自定义插件钩子: `ITestPlugin`
+
+```C#
+using PluginCore.IPlugins;
+
+namespace PluginCore.IPlugins
+{
+    public interface ITestPlugin : IPlugin
+    {
+        string Say();
+    }
+}
+```
+
+> 2.在需要激活的地方，应用钩子，这样所有启用的插件中，实现了 `ITestPlugin` 的插件，都将调用 `Say()`
+
+```C#
+using PluginCore;
+using PluginCore.IPlugins;
+
+namespace WebApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class TestController : ControllerBase
+    {
+        private readonly PluginFinder _pluginFinder;
+
+        public TestController(PluginFinder pluginFinder)
+        {
+            _pluginFinder = pluginFinder;
+        }
+
+        public ActionResult Get()
+        {
+            //var plugins = PluginFinder.EnablePlugins<BasePlugin>().ToList();
+            // 所有实现了 ITestPlugin 的已启用插件
+            var plugins2 = _pluginFinder.EnablePlugins<ITestPlugin>().ToList();
+
+            foreach (var item in plugins2)
+            {
+                // 调用
+                string words = item.Say();
+                Console.WriteLine(words);
+            }
+
+            return Ok("");
+        }
+    }
+}
+```
+
+
+
+
+
+## 版本依赖
+
+|    PluginCore.IPlugins    | 0.1.0 | 0.1.0 | 0.2.0 |
+| :-----------------------: | :---: | :---: | :---: |
+|        PluginCore         | 0.1.0 | 0.2.0 | 0.3.0 |
+| plugincore-admin-frontend | 0.1.0 | 0.1.2 | 0.1.2 |
 
 
 
 | PluginCore.IPlugins | [![nuget](https://img.shields.io/nuget/v/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) |
-| ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| PluginCore          | [![nuget](https://img.shields.io/nuget/v/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) |
+| :-----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|     PluginCore      | [![nuget](https://img.shields.io/nuget/v/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) |
 
 
 
