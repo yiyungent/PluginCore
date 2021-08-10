@@ -24,7 +24,7 @@ jobs:
         dotnet build --configuration Release
         dotnet pack --configuration Release
         ls
-        ls ./src/PluginCore.IPlugins/bin/Release/
+        ls ./bin/Release/
         
     - name: Install Nuget
       uses: nuget/setup-nuget@v1
