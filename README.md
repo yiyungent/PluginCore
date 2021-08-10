@@ -154,10 +154,10 @@ namespace WebApi.Controllers
 
 ## 版本依赖
 
-|    PluginCore.IPlugins    | 0.1.0 | 0.1.0 | 0.2.0 |
-| :-----------------------: | :---: | :---: | :---: |
-|        PluginCore         | 0.1.0 | 0.2.0 | 0.3.0 |
-| plugincore-admin-frontend | 0.1.0 | 0.1.2 | 0.1.2 |
+|    PluginCore.IPlugins    | 0.1.0 | 0.1.0 | 0.2.0 | 0.2.0 |
+| :-----------------------: | :---: | :---: | :---: | :---: |
+|        PluginCore         | 0.1.0 | 0.2.0 | 0.3.0 | 0.3.1 |
+| plugincore-admin-frontend | 0.1.0 | 0.1.2 | 0.1.2 | 0.1.3 |
 
 
 
