@@ -16,7 +16,7 @@ namespace PluginCore.Config
         public bool IsLocalFrontend { get; set; } = false;
 
         public string RemoteFrontend { get; set; } =
-            "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.2/dist-cdn";
+            "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.3/dist-cdn";
 
         public sealed class AdminModel
         {
