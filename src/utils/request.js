@@ -43,26 +43,50 @@ service.interceptors.response.use(
    * You can also judge the status by HTTP Status Code
    */
   response => {
+    // status: 2xx
+
     const res = response.data;
     res.status = response.status;
 
-    // if the custom code is not 20000, it is judged as an error.
-    if (res.status !== 200) {
-      Message({
-        message: res.message || "Error",
-        type: "error",
-        duration: 5 * 1000
-      });
+    console.log("PluginCore.Admin: res", res);
 
-      // 50008: Illegal token; 50012: Other clients logged in; 50014: Token expired;
+    // 不拦截: 由 具体的 view 自己处理
+    // if the custom code < 0, it is judged as an error.
+    // if (res.code < 0) {
+
+    //   // Message({
+    //   //   message: res.message || "Error",
+    //   //   type: "error",
+    //   //   duration: 5 * 1000
+    //   // });
+      
+    //   return Promise.reject(new Error(res.message || "Error"));
+    // } else {
+    //   return res;
+    // }
+
+    return res;
+  },
+  error => {
+    // 请求已经发出, 但 status 不在 2xx 范围内
+    // 【务必注意】这里的error输出的不是一个对象【error.response才是一个对象】
+    // eg: error是字符串: Error: Request failed with status code 401
+
+    if (error.response) {
+      const res = error.response.data || { };
+      res.status = error.response.status;
+
+      console.log("PluginCore.Admin: res", res);
+
+      // 401: Illegal token; 401: Other clients logged in; 401: Token expired;
       if (res.status === 401) {
         // to re-login
         MessageBox.confirm(
-          "You have been logged out, you can cancel to stay on this page, or log in again",
-          "Confirm logout",
+          "401: 没有权限, 你需要重新登录",
+          "确认退出登录",
           {
-            confirmButtonText: "Re-Login",
-            cancelButtonText: "Cancel",
+            confirmButtonText: "重新登录",
+            cancelButtonText: "取消",
             type: "warning"
           }
         ).then(() => {
@@ -70,20 +94,22 @@ service.interceptors.response.use(
             location.reload();
           });
         });
+      } else {
+
+        Message({
+          message: res.message || "Error",
+          type: "error",
+          duration: 5 * 1000
+        });
+
       }
-      return Promise.reject(new Error(res.message || "Error"));
+
     } else {
-      return res;
+      // Something happened in setting up the request that triggered an Error
+      console.log( "Error", error.message);
     }
-  },
-  error => {
-    console.log("err" + error); // for debug
-    Message({
-      message: error.message,
-      type: "error",
-      duration: 5 * 1000
-    });
-    return Promise.reject(error);
+
+    return Promise.reject(res);
   }
 );
 

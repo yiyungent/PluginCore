@@ -13,7 +13,7 @@
         <el-input
           ref="username"
           v-model="loginForm.username"
-          placeholder="Username"
+          placeholder="UserName"
           name="username"
           type="text"
           tabindex="1"
@@ -54,6 +54,7 @@
 
 <script>
 import { validUsername } from '@/utils/validate'
+import { showMessage } from '@/utils/tools'
 
 export default {
   name: 'Login',
@@ -109,9 +110,14 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
-          this.$store.dispatch('user/login', this.loginForm).then(() => {
-            this.$router.push({ path: this.redirect || '/' })
-            this.loading = false
+          this.$store.dispatch('user/login', this.loginForm).then((response) => {
+            if (response.code < 0) {
+              showMessage(response)
+              return
+            } else {
+              this.$router.push({ path: this.redirect || '/' })
+              this.loading = false
+            }
           }).catch(() => {
             this.loading = false
           })
