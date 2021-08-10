@@ -52,10 +52,13 @@ namespace PluginCore.Authorization
                 try
                 {
                     // header 中找 token
-                    string authHeader = request.Headers["Authorization"];
-                    if (!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer"))
+                    if (request.Headers.ContainsKey("Authorization"))
                     {
-                        token = authHeader.Substring("Bearer ".Length).Trim();
+                        string authHeader = request.Headers["Authorization"];
+                        if (!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer"))
+                        {
+                            token = authHeader.Substring("Bearer ".Length).Trim();
+                        }
                     }
                 }
                 catch (Exception ex)

@@ -73,6 +73,17 @@ namespace PluginCore.Extensions
                 }
             }
 
+            // 1. 先 Authentication (我是谁) 2. 再 Authorization (我能做什么)
+
+            // fixed: https://github.com/yiyungent/PluginCore/issues/4
+            // System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+            #region 添加认证 Authentication
+            // 没通过 Authentication: 401 Unauthorized
+            services.AddAuthentication("PluginCore.Authentication")
+                .AddScheme<Authentication.PluginCoreAuthenticationSchemeOptions,
+                    Authentication.PluginCoreAuthenticationHandler>("PluginCore.Authentication", "PluginCore.Authentication",
+                    options => { });
+            #endregion
 
             #region 添加授权策略-所有标记 [PluginCoreAdminAuthorize] 都需要权限检查
             services.AddSingleton<IAuthorizationHandler, PluginCoreAdminAuthorizationHandler>();
@@ -131,6 +142,9 @@ namespace PluginCore.Extensions
             });
 
 
+            // 发现 UseAuthentication 认证中间件重复添加, 也只会执行一次 认证
+            // 但 UseAuthorization 重复添加2次, 则会执行 2次 授权
+            app.UseAuthentication();
             app.UseAuthorization();
         }
 

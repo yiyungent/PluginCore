@@ -31,6 +31,13 @@ namespace PluginCore.Authorization
             }
             else
             {
+                // 认证通过后, 可通过下面方式获取 token
+                var identity = context.User.Identity;
+
+                string token = this._accountManager.CurrentToken();
+
+                Console.WriteLine($"通过 Authorization: token: {token}");
+
                 context.Succeed(requirement);
             }
 

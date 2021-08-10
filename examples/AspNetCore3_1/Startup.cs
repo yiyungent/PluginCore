@@ -45,7 +45,9 @@ namespace AspNetCore3_1
 
             app.UsePluginCore();
 
-            app.UseAuthorization();
+            // UsePluginCore() 内部已经 Use 下面两个, 无需重复 Use
+            //app.UseAuthentication();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
