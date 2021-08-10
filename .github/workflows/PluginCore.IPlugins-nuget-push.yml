@@ -20,10 +20,11 @@ jobs:
 
     - name: Build and Pack
       run: |
+        cd ./src/PluginCore.IPlugins
         dotnet build --configuration Release
         dotnet pack --configuration Release
         ls
-        ls ./src/PluginCore/bin/Release/
+        ls ./src/PluginCore.IPlugins/bin/Release/
         
     - name: Install Nuget
       uses: nuget/setup-nuget@v1
