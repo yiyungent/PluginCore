@@ -36,7 +36,7 @@ namespace PluginCore.Authorization
 
                 string token = this._accountManager.CurrentToken();
 
-                Console.WriteLine($"通过 Authorization: token: {token}");
+                Utils.LogUtil.Info($"通过 Authorization: token: {token}");
 
                 context.Succeed(requirement);
             }
