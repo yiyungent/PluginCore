@@ -11,6 +11,7 @@ using PluginCore.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PluginCore.Authorization;
+using PluginCore.Infrastructure;
 using PluginCore.IPlugins;
 using PluginCore.ResponseModel;
 
@@ -371,10 +372,23 @@ namespace PluginCore.Controllers
             }
             //文件后缀
             string fileExtension = Path.GetExtension(file.FileName);//获取文件格式，拓展名
-            if (fileExtension != ".zip")
+            // 类型标记
+            UploadFileType uploadFileType = UploadFileType.NoAllowedType;
+            switch (fileExtension)
+            {
+                case ".zip":
+                    uploadFileType = UploadFileType.Zip;
+                    break;
+                case ".nupkg":
+                    uploadFileType = UploadFileType.Nupkg;
+                    break;
+            }
+
+            if (fileExtension != ".zip" && fileExtension != ".nupkg")
             {
                 responseData.code = -1;
-                responseData.message = "只能上传zip格式文件";
+                // nupkg 其实就是 zip
+                responseData.message = "只能上传 zip 或 nupkg 格式文件";
                 return responseData;
             }
             //判断文件大小
@@ -397,7 +411,16 @@ namespace PluginCore.Controllers
                     fs.Flush();//清空文件流
                 }
                 // 2.解压
-                bool isDecomparessSuccess = Utils.ZipHelper.DecomparessFile(tempZipFilePath, tempZipFilePath.Replace(".zip", ""));
+                bool isDecomparessSuccess = false;
+                if (uploadFileType == UploadFileType.Zip)
+                {
+                    isDecomparessSuccess = Utils.ZipHelper.DecomparessFile(tempZipFilePath, tempZipFilePath.Replace(".zip", ""));
+                }
+                else if (uploadFileType == UploadFileType.Nupkg)
+                {
+                    isDecomparessSuccess = NupkgService.DecomparessFile(tempZipFilePath, tempZipFilePath.Replace(".zip", ""));
+                }
+
                 // 3.删除原压缩包
                 System.IO.File.Delete(tempZipFilePath);
                 if (!isDecomparessSuccess)
@@ -646,6 +669,13 @@ namespace PluginCore.Controllers
             #endregion
 
             return responseModels;
+        }
+
+        public enum UploadFileType
+        {
+            NoAllowedType = 0,
+            Zip = 1,
+            Nupkg = 2
         }
 
         #endregion

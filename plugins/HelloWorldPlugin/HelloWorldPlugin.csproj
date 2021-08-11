@@ -14,15 +14,15 @@
 
   <!-- 发布插件相关文件 -->
   <ItemGroup>
-    <None Update="info.json">
+    <Content Include="info.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="README.md">
+    </Content>
+    <Content Include="README.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="settings.json">
+    </Content>
+    <Content Include="settings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
 
   <!-- 发布 wwwroot -->

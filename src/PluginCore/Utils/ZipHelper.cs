@@ -388,6 +388,43 @@ namespace PluginCore.Utils
             return result;
         }
 
+
+        public static bool FastDecomparessFile(string sourceFile, string destinationDirectory = null)
+        {
+            bool result = false;
+
+            if (!File.Exists(sourceFile))
+            {
+                throw new FileNotFoundException("要解压的文件不存在", sourceFile);
+            }
+
+            if (string.IsNullOrWhiteSpace(destinationDirectory))
+            {
+                destinationDirectory = Path.GetDirectoryName(sourceFile);
+            }
+
+            try
+            {
+                if (!Directory.Exists(destinationDirectory))
+                {
+                    Directory.CreateDirectory(destinationDirectory);
+                }
+
+                FastZip fastZip = new FastZip();
+                string fileFilter = null;
+
+                fastZip.ExtractZip(sourceFile, destinationDirectory, fileFilter);
+
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("文件解压发生错误", ex);
+            }
+
+            return result;
+        }
+
         #endregion
     }
 }

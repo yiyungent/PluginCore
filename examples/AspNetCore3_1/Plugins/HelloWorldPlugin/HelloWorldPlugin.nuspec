@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>HelloWorldPlugin</id>
+    <version>1.0.0</version>
+    <authors>HelloWorldPlugin</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="PluginCore.IPlugins" version="0.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc" version="2.2.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/netstandard2.0/info.json" buildAction="Content" />
+      <files include="any/netstandard2.0/README.md" buildAction="Content" />
+      <files include="any/netstandard2.0/settings.json" buildAction="Content" />
+      <files include="any/netstandard2.0/wwwroot/index.html" buildAction="Content" />
+      <files include="any/netstandard2.0/wwwroot/css/main.css" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+</package>
