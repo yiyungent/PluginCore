@@ -1,5 +1,5 @@
 <p align="center">
-<!-- <img src="docs/.vuepress/public/images/logo.png" alt="PluginCore"> -->
+  <img src="docs/.vuepress/public/images/logo.png" alt="PluginCore">
 </p>
 <h1 align="center">PluginCore</h1>
 
