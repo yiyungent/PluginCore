@@ -3,17 +3,16 @@
     <el-upload
       drag
       :action="uploadAction"
-      accept=".zip"
       auto-upload
       :on-success="uploadSuccess"
       :headers="headers"
     >
       <i class="el-icon-upload" />
       <div class="el-upload__text">
-        将插件压缩包拖到此处，或<em>点击上传</em>
+        将插件包拖到此处，或<em>点击上传</em>
       </div>
       <div slot="tip" class="el-upload__tip">
-        只能上传zip文件，且不超过5MB
+        只能上传 zip 或 nupkg 文件，且不超过5MB
       </div>
     </el-upload>
   </div>
