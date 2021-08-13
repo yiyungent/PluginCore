@@ -35,7 +35,8 @@ jobs:
       with:
         tag_name: ${{ github.ref }}
         name: ${{ github.ref }}
-        body: TODO: New Release.
+        body: TODO New Release.
+        #body_path: CHANGELOG.txt
         draft: false
         prerelease: false
         files: |
