@@ -28,9 +28,23 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}:${{ steps.last_release.outputs.tag_name }}-beta -f examples/AspNetCore3_1/Dockerfile .
 
-      - name: Login to Registry
+      - name: Login to Registry - Docker Hub
         run: docker login --username=${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Push Image
+      - name: Push Image - Docker 
+        # push: RELEASE_VERSION-beta
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}:${{ steps.last_release.outputs.tag_name }}-beta
+
+      - name: Login to Registry - ghcr.io
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      
+      - name: Push Image - ghcr.io
+        # push: RELEASE_VERSION-beta
+        run: |
+          IMAGE_ID=ghcr.io/${{ github.repository_owner }}/${{ steps.vars.outputs.IMAGE_NAME }}
+          VERSION=${{ steps.vars.outputs.RELEASE_VERSION }}-beta
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+          docker tag ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}:${{ steps.last_release.outputs.tag_name }}-beta $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION

@@ -21,12 +21,27 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}:${{ steps.vars.outputs.RELEASE_VERSION }} -f examples/AspNetCore3_1/Dockerfile .
 
-      - name: Login to Registry
+      - name: Login to Registry - Docker Hub
         run: docker login --username=${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Push Image
+      - name: Push Image - Docker Hub
         # push: RELEASE_VERSION, latest
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}:${{ steps.vars.outputs.RELEASE_VERSION }}
           docker tag ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}:${{ steps.vars.outputs.RELEASE_VERSION }} ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}:latest
+      
+      - name: Login to Registry - ghcr.io
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      
+      - name: Push Image - ghcr.io
+        # push: RELEASE_VERSION, latest
+        run: |
+          IMAGE_ID=ghcr.io/${{ github.repository_owner }}/${{ steps.vars.outputs.IMAGE_NAME }}
+          VERSION=${{ steps.vars.outputs.RELEASE_VERSION }}
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+          docker tag ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}:latest $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
+          docker tag $IMAGE_ID:$VERSION $IMAGE_ID:latest
+          docker push $IMAGE_ID:latest
