@@ -19,11 +19,8 @@ jobs:
       with:
         dotnet-version: 5.0.102
         
-    - name: Install dependencies
-      run: dotnet restore
-      
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release
       
     - name: Zip the Build
       run: |
