@@ -8,6 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["examples/AspNetCore3_1/AspNetCore3_1.csproj", "examples/AspNetCore3_1/"]
+# 其实可以不复制以下Project, 已配置 Release 时通过 nuget包
 COPY ["src/PluginCore/PluginCore.csproj", "src/PluginCore/"]
 COPY ["src/PluginCore.IPlugins/PluginCore.IPlugins.csproj", "src/PluginCore.IPlugins/"]
 RUN dotnet restore "examples/AspNetCore3_1/AspNetCore3_1.csproj"
