@@ -18,7 +18,7 @@
 - **开箱即用** - 前后端自动集成
 - **动态 WebAPI** - 每个插件都可新增 Controller, 拥有自己的路由
 - **插件前后端分离** - 可在插件 `wwwroot` 文件夹下放置前端文件 (index.html,...), 然后访问 `/plugins/plugindId/index.html`
-- **热插拔** - 安装、启用、禁用、卸载 均无需重启站点
+- **热插拔** - 上传、安装、启用、禁用、卸载 均无需重启站点
 - **依赖注入** - 可在 实现 `IPlugin` 的插件类的构造方法上申请依赖注入项, 当然 `Controller` 构造方法上也可依赖注入
 - **易扩展** - 你可以编写你自己的插件sdk, 然后引用插件sdk, 编写扩展插件 - 自定义插件钩子, 并应用
 - **无需数据库** - 无数据库依赖
@@ -86,6 +86,25 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 > 现在访问 https://localhost:5001/PluginCore/Admin 即可进入 PluginCore Admin  
 > https://localhost:5001 需改为你的地址
+
+### 补充
+
+请登录 `PluginCore Admin` 后，为了安全，及时修改默认用户名，密码:
+
+`App_Data/PluginCore.Config.json`     
+
+```json
+{
+    "Admin": {
+        "UserName": "admin",
+        "Password": "ABC12345"
+    },
+    "IsLocalFrontend": false,
+    "RemoteFrontend": "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.2/dist-cdn"
+}
+```
+
+修改后，立即生效，无需重启站点，需重新登录 `PluginCore Admin`
 
 
 ## Docker 体验
