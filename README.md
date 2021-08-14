@@ -17,7 +17,7 @@
 - **简单** - 约定优于配置, 以最少的配置帮助你专注于业务
 - **开箱即用** - 前后端自动集成
 - **动态 WebAPI** - 每个插件都可新增 Controller, 拥有自己的路由
-- **插件前后端分离** - 可在插件 `wwwroot` 文件夹下放置前端文件 (index.html,...)
+- **插件前后端分离** - 可在插件 `wwwroot` 文件夹下放置前端文件 (index.html,...), 然后访问 `/plugins/plugindId/index.html`
 - **热插拔** - 安装、启用、禁用、卸载 均无需重启站点
 - **依赖注入** - 可在 实现 `IPlugin` 的插件类的构造方法上申请依赖注入项, 当然 `Controller` 构造方法上也可依赖注入
 - **易扩展** - 你可以编写你自己的插件sdk, 然后引用插件sdk, 编写扩展插件 - 自定义插件钩子, 并应用
@@ -195,9 +195,14 @@ namespace WebApi.Controllers
 
 > **规范**
 >
+> 1. 插件sdk
 > 插件接口应当位于 `PluginCore.IPlugins` 命名空间，这是规范，不强求，但建议这么做，      
 >
 > 程序集名不一定要与命名空间名相同，你完全在你的插件sdk程序集中，使用 `PluginCore.IPlugins` 命名空间。
+> 
+> 2. 插件
+> 插件程序集名(一般=项目(Project)名) 与 插件 `info.json` 中 `PluginId` 一致, 例如: Project: `HelloWorldPlugin`, PluginId: `HelloWorldPlugin`
+> `PluginId` 为插件唯一标识
 
 
 
