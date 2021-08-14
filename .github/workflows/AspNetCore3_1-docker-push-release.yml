@@ -17,7 +17,9 @@ jobs:
       - name: Set outputs
         id: vars
         run: |
-          echo ::set-output name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
+          #echo ::set-output name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
+          # 去掉前面的 refs/tags/AspNetCore3_1-
+          echo ::set-output name=RELEASE_VERSION::$(echo ${GITHUB_REF:24})
           echo ::set-output name=IMAGE_NAME::plugincore-aspnetcore3-1
 
       - name: Build Image
