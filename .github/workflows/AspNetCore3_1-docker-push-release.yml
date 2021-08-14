@@ -1,8 +1,11 @@
 name: Docker Image CI/CD - Release - AspNetCore3_1
 
 on:
-  release:
-    types: [published]
+#  release:
+#    types: [published]
+  push:
+    tags:
+      - 'AspNetCore3_1-v*'
 
 jobs:
   # build and push
