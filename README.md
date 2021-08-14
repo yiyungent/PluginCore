@@ -86,6 +86,22 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 > https://localhost:5001 需改为你的地址
 
 
+## Docker 体验
+
+如果你需要在本地体验 PluginCore, 那么这里有一个 [例子/examples](https://github.com/yiyungent/PluginCore/tree/main/examples)
+
+```bash
+docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspnetcore3-1 yiyungent/plugincore-aspnetcore3-1
+```
+
+现在你可以访问 http://localhost:5004/PluginCore/Admin
+
+> 补充:
+> 使用 `ghcr.io`
+> 
+> ```bash
+> docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspnetcore3-1 ghcr.io/yiyungent/plugincore-aspnetcore3-1
+> ```
 
 ## 使用
 
