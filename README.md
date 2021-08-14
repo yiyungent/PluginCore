@@ -215,11 +215,13 @@ namespace WebApi.Controllers
 > **规范**
 >
 > 1. 插件sdk
+> 
 > 插件接口应当位于 `PluginCore.IPlugins` 命名空间，这是规范，不强求，但建议这么做，      
 >
 > 程序集名不一定要与命名空间名相同，你完全在你的插件sdk程序集中，使用 `PluginCore.IPlugins` 命名空间。
 > 
 > 2. 插件
+> 
 > 插件程序集名(一般=项目(Project)名) 与 插件 `info.json` 中 `PluginId` 一致, 例如: Project: `HelloWorldPlugin`, PluginId: `HelloWorldPlugin`
 > `PluginId` 为插件唯一标识
 
