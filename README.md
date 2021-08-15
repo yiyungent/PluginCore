@@ -234,11 +234,13 @@ namespace WebApi.Controllers
 
 ## 相关项目
 
-- [plugincore-admin-frontend](https://github.com/yiyungent/plugincore-admin-frontend)
+- [plugincore-admin-frontend](https://github.com/yiyungent/plugincore-admin-frontend) PluginCore Admin 前端实现
+- [Remember.Core](https://github.com/yiyungent/Remember.Core)  插件框架提取处
 
 ## 鸣谢
 
-
+- 插件系统设计参考自 <a href="https://github.com/lamondlu/CoolCat" target="_blank">CoolCat</a>，感谢作者 lamondlu 的贡献
+- 设计参考自 <a href="https://github.com/nopSolutions/nopCommerce" target="_blank">nopCommerce</a>，感谢作者 nopSolutions 的贡献
 
 ## Donate
 
