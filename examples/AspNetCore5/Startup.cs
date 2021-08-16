@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PluginCore.Extensions;
 
 namespace AspNetCore5
 {
@@ -32,6 +33,8 @@ namespace AspNetCore5
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AspNetCore5", Version = "v1" });
             });
+
+            services.AddPluginCore();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +51,11 @@ namespace AspNetCore5
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UsePluginCore();
+
+            // UsePluginCore() 内部已经 Use 下面两个, 无需重复 Use
+            //app.UseAuthentication();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

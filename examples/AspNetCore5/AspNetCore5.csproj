@@ -8,7 +8,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!-- 方便开发debug,与发布到nuget -->
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <PackageReference Include="PluginCore" Version="0.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <ProjectReference Include="..\..\src\PluginCore\PluginCore.csproj" />
   </ItemGroup>
 
