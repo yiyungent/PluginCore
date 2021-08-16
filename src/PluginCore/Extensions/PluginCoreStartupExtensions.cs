@@ -112,6 +112,9 @@ namespace PluginCore.Extensions
 
         public static IApplicationBuilder UsePluginCore(this IApplicationBuilder app)
         {
+            // 一定在 PluginCore 添加的中间件中 第一个
+            app.UseMiddleware<PluginHttpStartFilterMiddleware>();
+
             app.UsePluginCoreAdminUI();
 
             // 由于没办法在运行时, 动态 UseStaticFiles(), 因此不再为每一个插件都 UseStaticFiles(),
@@ -130,16 +133,22 @@ namespace PluginCore.Extensions
             app.UseAuthentication();
             app.UseAuthorization();
 
+            #region Plugin Middleware
             // Plugin Middleware
             //app.UseMiddleware<PluginContentFilterMiddleware>();
 
 
+            // 一定在 PluginCore 添加的中间件中 最后一个
+            app.UseMiddleware<PluginHttpEndFilterMiddleware>();
+            #endregion
 
+            #region 启动 Log
             Config.PluginCoreConfig pluginCoreConfig = Config.PluginCoreConfigFactory.Create();
 
             Utils.LogUtil.Info("启动成功:");
             Utils.LogUtil.Info($"前端模式: {pluginCoreConfig.FrontendMode}");
-            Utils.LogUtil.Info($"注意: 更新前端模式 需要 重启站点");
+            Utils.LogUtil.Info($"注意: 更新前端模式 需要 重启站点"); 
+            #endregion
 
             return app;
         }
