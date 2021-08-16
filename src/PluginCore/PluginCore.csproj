@@ -17,6 +17,11 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
+  <!-- 0.4.0 : 支持嵌入式 前端 (打包进dll) -->
+  <ItemGroup>
+    <EmbeddedResource Include="PluginCoreAdmin/**/**/*" />
+  </ItemGroup>
+
   <!-- 将 PluginCoreAdmin\*\* 与 readme.txt 复制到build后文件夹，且加入 nupkg -->
   <!-- 从 0.2.0 开始, 支持远程前端，本地前端不再必要 -->
   <!--<ItemGroup>

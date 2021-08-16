@@ -1,1 +1,8 @@
-﻿{"Admin":{"UserName":"admin","Password":"ABC12345"},"IsLocalFrontend":true,"RemoteFrontend":"https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.2/dist-cdn"}
+﻿{
+	"Admin": {
+		"UserName": "admin",
+		"Password": "ABC12345"
+	},
+	"FrontendMode": "LocalEmbedded",
+	"RemoteFrontend": "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.2/dist-cdn"
+}

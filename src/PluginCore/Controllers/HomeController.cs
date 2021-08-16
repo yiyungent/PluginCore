@@ -13,48 +13,50 @@ namespace PluginCore.Controllers
     [Controller]
     public class HomeController : Controller
     {
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        #region Old
+        //private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public bool IsLocalFronted
-        {
-            get
-            {
-                return PluginCore.Config.PluginCoreConfigFactory.Create().IsLocalFrontend;
-            }
-        }
+        //public bool IsLocalFronted
+        //{
+        //    get
+        //    {
+        //        return PluginCore.Config.PluginCoreConfigFactory.Create().IsLocalFrontend;
+        //    }
+        //}
 
-        public string RemoteFronted
-        {
-            get
-            {
-                return PluginCore.Config.PluginCoreConfigFactory.Create().RemoteFrontend;
-            }
-        }
+        //public string RemoteFronted
+        //{
+        //    get
+        //    {
+        //        return PluginCore.Config.PluginCoreConfigFactory.Create().RemoteFrontend;
+        //    }
+        //}
 
-        public HomeController(IWebHostEnvironment webHostEnvironment)
-        {
-            this._webHostEnvironment = webHostEnvironment;
-        }
+        //public HomeController(IWebHostEnvironment webHostEnvironment)
+        //{
+        //    this._webHostEnvironment = webHostEnvironment;
+        //}
 
-        [Route("PluginCore/Admin")]
-        public async Task<ActionResult> Home()
-        {
-            if (this.IsLocalFronted)
-            {
-                var localIndexFilePath = Path.Combine(
-                    this._webHostEnvironment.ContentRootPath, "PluginCoreAdmin", "index.html");
+        //[Route("PluginCore/Admin")]
+        //public async Task<ActionResult> Home()
+        //{
+        //    if (this.IsLocalFronted)
+        //    {
+        //        var localIndexFilePath = Path.Combine(
+        //            this._webHostEnvironment.ContentRootPath, "PluginCoreAdmin", "index.html");
 
-                return PhysicalFile(localIndexFilePath, "text/html");
-            }
-            else
-            {
-                string htmlStr = string.Empty;
-                HttpClient httpClient = new HttpClient();
-                htmlStr = await httpClient.GetStringAsync(this.RemoteFronted + "/index.html");
+        //        return PhysicalFile(localIndexFilePath, "text/html");
+        //    }
+        //    else
+        //    {
+        //        string htmlStr = string.Empty;
+        //        HttpClient httpClient = new HttpClient();
+        //        htmlStr = await httpClient.GetStringAsync(this.RemoteFronted + "/index.html");
 
-                return Content(htmlStr, "text/html", Encoding.UTF8);
-            }
-        }
+        //        return Content(htmlStr, "text/html", Encoding.UTF8);
+        //    }
+        //} 
+        #endregion
 
     }
 }

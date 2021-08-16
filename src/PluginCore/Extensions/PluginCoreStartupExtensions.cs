@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.FileProviders;
 using PluginCore.Authorization;
+using PluginCore.AdminUI;
 
 namespace PluginCore.Extensions
 {
@@ -108,28 +109,9 @@ namespace PluginCore.Extensions
 
         }
 
-        public static void UsePluginCore(this IApplicationBuilder app)
+        public static IApplicationBuilder UsePluginCore(this IApplicationBuilder app)
         {
-            //string contentRootPath = Directory.GetCurrentDirectory();
-
-            // https://docs.microsoft.com/zh-CN/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0
-            //var options = new DefaultFilesOptions()
-            //{
-            //    RequestPath = "/PluginCore/Admin",
-            //};
-            //// TODO: 404: 无效, 失败, 改为使用 Controller 手动指定
-            ////options.DefaultFileNames.Add("PluginCoreAdmin/index.html");
-            //app.UseDefaultFiles(options);
-
-            // 注意: 为了无需重启Web，而更新是否本地前端配置, 因此此项保持常驻开启
-            // 因此, 需要保证 PluginCoreAdmin 文件夹存在
-            string pluginCoreAdminDir = PluginPathProvider.PluginCoreAdminDir();
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                    pluginCoreAdminDir),
-                RequestPath = "/PluginCore/Admin"
-            });
+            app.UsePluginCoreAdminUI();
 
             // 由于没办法在运行时, 动态 UseStaticFiles(), 因此不再为每一个插件都 UseStaticFiles(),
             // 而是统一在一个文件夹下, 插件启用时, 将插件的wwwroot复制到 Plugins_wwwroot/{PluginId}, 禁用时, 再删除
@@ -146,6 +128,15 @@ namespace PluginCore.Extensions
             // 但 UseAuthorization 重复添加2次, 则会执行 2次 授权
             app.UseAuthentication();
             app.UseAuthorization();
+
+
+            Config.PluginCoreConfig pluginCoreConfig = Config.PluginCoreConfigFactory.Create();
+
+            Utils.LogUtil.Info("启动成功:");
+            Utils.LogUtil.Info($"前端模式: {pluginCoreConfig.FrontendMode}");
+            Utils.LogUtil.Info($"注意: 更新前端模式 需要 重启站点");
+
+            return app;
         }
 
 

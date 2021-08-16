@@ -13,10 +13,14 @@ namespace PluginCore.Config
 
         public AdminModel Admin { get; set; }
 
-        public bool IsLocalFrontend { get; set; } = false;
+        /// <summary>
+        /// LocalEmbedded
+        /// LocalFolder
+        /// RemoteCDN
+        /// </summary>
+        public string FrontendMode { get; set; } = "LocalEmbedded";
 
-        public string RemoteFrontend { get; set; } =
-            "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.3/dist-cdn";
+        public string RemoteFrontend { get; set; } = "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.3/dist-cdn";
 
         public sealed class AdminModel
         {
@@ -24,5 +28,6 @@ namespace PluginCore.Config
 
             public string Password { get; set; } = "ABC12345";
         }
+
     }
 }
