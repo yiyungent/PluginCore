@@ -17,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.FileProviders;
 using PluginCore.Authorization;
 using PluginCore.AdminUI;
+using PluginCore.Middlewares;
 
 namespace PluginCore.Extensions
 {
@@ -128,6 +129,10 @@ namespace PluginCore.Extensions
             // 但 UseAuthorization 重复添加2次, 则会执行 2次 授权
             app.UseAuthentication();
             app.UseAuthorization();
+
+            // Plugin Middleware
+            //app.UseMiddleware<PluginContentFilterMiddleware>();
+
 
 
             Config.PluginCoreConfig pluginCoreConfig = Config.PluginCoreConfigFactory.Create();
