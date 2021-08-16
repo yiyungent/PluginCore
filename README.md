@@ -185,9 +185,23 @@ namespace WebApi.Controllers
 }
 ```
 
+### 自定义前端
 
+PluginCore 支持3种前端文件加载方式
 
+> 配置文件 `App_Data/PluginCore.Config.json` 中 `FrontendMode`
 
+1. LocalEmbedded
+  - 默认, 嵌入式资源，前端文件打包进dll, 此模式下, 若想自定义前端, 只有将 前端文件放入 `PluginCore` 项目的 `PluginCoreAdmin` 文件夹中，重新 `build` 一个 dll, 集成项目再引用此dll
+
+2. LocalFolder
+  - 在集成了 `PluginCore` 的 ASP.NET Core 项目中, 新建 `PluginCoreAdmin`, 将前端文件放入此文件夹
+
+3. RemoteCDN
+  - 使用远程cdn资源, 可通过 配置文件中 `RemoteFrontend` 指定url
+
+> **注意:**    
+> 更新 `FrontendMode`, 需重启站点后, 才能生效
 
 ## 版本依赖
 
