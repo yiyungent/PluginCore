@@ -87,7 +87,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 > 现在访问 https://localhost:5001/PluginCore/Admin 即可进入 PluginCore Admin  
 > https://localhost:5001 需改为你的地址
 
-### 补充
+### 注意
 
 请登录 `PluginCore Admin` 后，为了安全，及时修改默认用户名，密码:
 
@@ -203,20 +203,9 @@ PluginCore 支持3种前端文件加载方式
 > **注意:**    
 > 更新 `FrontendMode`, 需重启站点后, 才能生效
 
-## 版本依赖
-
-|    PluginCore.IPlugins    | 0.1.0 | 0.1.0 | 0.2.0 | 0.2.0 |
-| :-----------------------: | :---: | :---: | :---: | :---: |
-|        PluginCore         | 0.1.0 | 0.2.0 | 0.3.0 | 0.3.1 |
-| plugincore-admin-frontend | 0.1.0 | 0.1.2 | 0.1.2 | 0.1.3 |
 
 
-
-| PluginCore.IPlugins | [![nuget](https://img.shields.io/nuget/v/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) |
-| :-----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|     PluginCore      | [![nuget](https://img.shields.io/nuget/v/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) |
-
-
+### 补充
 
 > **补充**
 >
@@ -229,15 +218,32 @@ PluginCore 支持3种前端文件加载方式
 > **规范**
 >
 > 1. 插件sdk
-> 
+>
 > 插件接口应当位于 `PluginCore.IPlugins` 命名空间，这是规范，不强求，但建议这么做，      
 >
 > 程序集名不一定要与命名空间名相同，你完全在你的插件sdk程序集中，使用 `PluginCore.IPlugins` 命名空间。
-> 
+>
 > 2. 插件
-> 
-> 插件程序集名(一般=项目(Project)名) 与 插件 `info.json` 中 `PluginId` 一致, 例如: Project: `HelloWorldPlugin`, PluginId: `HelloWorldPlugin`
+>
+> 插件程序集名(一般=项目(Project)名) 与 插件 `info.json` 中 `PluginId` 一致, 例如: Project: `HelloWorldPlugin`, PluginId: `HelloWorldPlugin`,  此项必须，否则插件无法加载
 > `PluginId` 为插件唯一标识
+
+
+
+
+
+## 版本依赖
+
+|    PluginCore.IPlugins    | 0.1.0 | 0.1.0 | 0.2.0 | 0.2.0 | 0.2.0 |
+| :-----------------------: | :---: | :---: | :---: | :---: | :---: |
+|        PluginCore         | 0.1.0 | 0.2.0 | 0.3.0 | 0.3.1 | 0.4.0 |
+| plugincore-admin-frontend | 0.1.0 | 0.1.2 | 0.1.2 | 0.1.3 | 0.1.3 |
+
+
+
+| PluginCore.IPlugins | [![nuget](https://img.shields.io/nuget/v/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) |
+| :-----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|     PluginCore      | [![nuget](https://img.shields.io/nuget/v/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) |
 
 
 
