@@ -95,12 +95,12 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 ```json
 {
-    "Admin": {
-        "UserName": "admin",
-        "Password": "ABC12345"
-    },
-    "IsLocalFrontend": false,
-    "RemoteFrontend": "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.2/dist-cdn"
+	"Admin": {
+		"UserName": "admin",
+		"Password": "ABC12345"
+	},
+	"FrontendMode": "LocalEmbedded",
+	"RemoteFrontend": "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.2/dist-cdn"
 }
 ```
 
