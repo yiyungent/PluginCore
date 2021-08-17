@@ -24,11 +24,15 @@ jobs:
         npm run build:cdn
         
     - name: Publish to npm
-      run: npm publish --registry https://registry.npmjs.org
+      run: |
+        npm config set registry https://registry.npmjs.org
+        npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     - name: Publish to GitHub Package
-      run: npm publish --registry https://npm.pkg.github.com
+      run: |
+        npm config set registry https://npm.pkg.github.com
+        npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
