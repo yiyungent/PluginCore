@@ -35,6 +35,14 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
+const VERSION = "0.2.0";
+const GIT_HASH = "";
+console.log(
+  `${"\n"} %c plugincore-admin-frontend v${VERSION} ${GIT_HASH} %c https://github.com/yiyungent/plugincore-admin-frontend ${"\n"}${"\n"}`,
+  "color: #fff; background: #030307; padding:5px 0;",
+  "background: #ff80ab; padding:5px 0;"
+);
+
 new Vue({
   el: '#app',
   router,
