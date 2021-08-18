@@ -20,7 +20,7 @@ namespace PluginCore.AdminUI
 {
     public class PluginCoreAdminUIMiddleware
     {
-        private const string EmbeddedFileNamespace = "PluginCore.PluginCoreAdmin";
+        private const string EmbeddedFileNamespace = "PluginCore.node_modules.plugincore_admin_frontend.dist";
 
         private readonly PluginCoreAdminUIOptions _options;
         private readonly StaticFileMiddleware _staticFileMiddleware;

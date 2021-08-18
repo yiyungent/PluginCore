@@ -19,7 +19,7 @@
 
   <!-- 0.4.0 : 支持嵌入式 前端 (打包进dll) -->
   <ItemGroup>
-    <EmbeddedResource Include="PluginCoreAdmin/**/**/*" />
+    <EmbeddedResource Include="node_modules/plugincore-admin-frontend/dist/**/**/*" />
   </ItemGroup>
 
   <!-- 将 PluginCoreAdmin\*\* 与 readme.txt 复制到build后文件夹，且加入 nupkg -->
@@ -54,6 +54,18 @@
   <ItemGroup>
     <PackageReference Include="SharpZipLib" Version="1.2.0" />
   </ItemGroup>
+
+  <!-- Use Visual Studio npm package if it is installed. -->
+  <PropertyGroup Condition="Exists('$(VsInstallRoot)\Web\External\npm.cmd')">
+    <Path>$(Path)$(VsInstallRoot)\Web\External\;</Path>
+  </PropertyGroup>
+
+  <Target Name="NpmInstall" BeforeTargets="Build">
+    <Exec Command="npm install" EnvironmentVariables="PATH=$(Path.Replace(';', '%3B'))" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js/npm is required to build this project. To continue, please install Node.js from https://nodejs.org/ or Visual Studio Installer, and then restart your command prompt or IDE." />
+  </Target>
   
 
 </Project>

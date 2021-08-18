@@ -28,7 +28,7 @@ namespace PluginCore.AdminUI
                 {
                     case "localembedded":
                         funcStream = () => typeof(PluginCoreAdminUIOptions).GetTypeInfo().Assembly
-                            .GetManifestResourceStream("PluginCore.PluginCoreAdmin.index.html");
+                            .GetManifestResourceStream("PluginCore.node_modules.plugincore_admin_frontend.dist.index.html");
                         break;
                     case "localfolder":
                         string absoluteRootPath = PluginPathProvider.PluginCoreAdminDir();
@@ -44,7 +44,7 @@ namespace PluginCore.AdminUI
                         break;
                     default:
                         funcStream = () => typeof(PluginCoreAdminUIOptions).GetTypeInfo().Assembly
-                             .GetManifestResourceStream("PluginCore.PluginCoreAdmin.index.html");
+                             .GetManifestResourceStream("PluginCore.node_modules.plugincore_admin_frontend.dist.index.html");
                         break;
                 }
 
