@@ -38,20 +38,6 @@ namespace PluginCore
             // 此插件的 加载上下文
             var context = new CollectibleAssemblyLoadContext();
 
-            #region 加载插件主dll
-            // 插件的主dll, 不包括插件项目引用的dll
-            string pluginMainDllFilePath = Path.Combine(PluginPathProvider.PluginsRootPath(), pluginId, $"{pluginId}.dll");
-            Assembly pluginMainAssembly;
-            using (var fs = new FileStream(pluginMainDllFilePath, FileMode.Open))
-            {
-                // 使用此方法, 就不会导致dll被锁定
-                pluginMainAssembly = context.LoadFromStream(fs);
-
-                // 加载其中的控制器
-                _pluginControllerManager.AddControllers(pluginMainAssembly);
-            }
-            #endregion
-
             // TODO:未测试 加载插件引用的dll: 方法二: 
             //AssemblyName[] referenceAssemblyNames = pluginMainAssembly.GetReferencedAssemblies();
             //foreach (var assemblyName in referenceAssemblyNames)
@@ -61,6 +47,8 @@ namespace PluginCore
 
             // 跳过不需要加载的 dll, eg: ASP.NET Core Shared Framework, 主程序中已有dll
             string[] skipDlls = SkipDlls.ToArray(); //new string[] { "Core.dll", "Domain.dll", "Framework.dll", "Services.dll", "Repositories.dll", "PluginCore.dll" };
+
+            // 注意: 先加载插件引用的dll, 因为可能在插件主dll的Controller中立即使用了引用的dll
 
             #region 加载插件引用的dll
             // 加载插件引用的dll
@@ -84,6 +72,21 @@ namespace PluginCore
                 }
             }
             #endregion
+
+            #region 加载插件主dll
+            // 插件的主dll, 不包括插件项目引用的dll
+            string pluginMainDllFilePath = Path.Combine(PluginPathProvider.PluginsRootPath(), pluginId, $"{pluginId}.dll");
+            Assembly pluginMainAssembly;
+            using (var fs = new FileStream(pluginMainDllFilePath, FileMode.Open))
+            {
+                // 使用此方法, 就不会导致dll被锁定
+                pluginMainAssembly = context.LoadFromStream(fs);
+
+                // 加载其中的控制器
+                _pluginControllerManager.AddControllers(pluginMainAssembly);
+            }
+            #endregion
+
 
             // 这个插件加载上下文 放入 集合中
             PluginsLoadContexts.Add(pluginId, context);
