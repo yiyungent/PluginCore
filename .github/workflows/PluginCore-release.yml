@@ -20,7 +20,11 @@ jobs:
         dotnet-version: 5.0.102
         
     - name: Build
-      run: dotnet build --configuration Release
+      run: |
+        cd ./src/PluginCore
+        dotnet build --configuration Release
+        ls
+        ls ./bin/Release/
       
     - name: Zip the Build
       run: |
