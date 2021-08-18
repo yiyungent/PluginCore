@@ -3,6 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace PluginCore.IPlugins
 {
+    /// <summary>
+    /// 目前未有效化，占坑
+    /// </summary>
     public interface IStartupPlugin : IPlugin
     {
         /// <summary>
