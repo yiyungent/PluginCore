@@ -29,6 +29,17 @@ namespace AspNetCore3_1
             services.AddControllers();
 
             services.AddPluginCore();
+
+            services.AddHttpContextAccessor();
+
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".AdventureWorks.Session";
+                options.IdleTimeout = TimeSpan.FromSeconds(60*60*24);
+                options.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +59,8 @@ namespace AspNetCore3_1
             // UsePluginCore() 内部已经 Use 下面两个, 无需重复 Use
             //app.UseAuthentication();
             //app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

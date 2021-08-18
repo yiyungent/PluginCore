@@ -1,3 +1,10 @@
 {
-	"Hello": "哈哈哈哈哈或或或或或或"
+	"Hello": "哈哈哈哈哈或或或或或或",
+	"GitHubOAuth": {
+		"AppName": "HelloWorldPlugin",
+		"ClientId": "ea71f9ab3f05e7837e7a",
+		"ClientSecret": "0f979a8fe468582748f069bc19a1e7c3083d2c4a",
+		"RedirectUri": "https://localhost:5001/api/GitHub/Callback",
+		"Scopes": [ "user", "notifications" ]
+	}
 }
