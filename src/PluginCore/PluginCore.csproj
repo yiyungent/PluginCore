@@ -17,6 +17,14 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
+  <!-- 生成注释xml -->
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp3.1|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp3.1\PluginCore.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net5.0|AnyCPU'">
+    <DocumentationFile>bin\Release\net5.0\PluginCore.xml</DocumentationFile>
+  </PropertyGroup>
+
   <!-- 0.4.0 : 支持嵌入式 前端 (打包进dll) -->
   <ItemGroup>
     <EmbeddedResource Include="node_modules/plugincore-admin-frontend/dist/**/**/*" />
