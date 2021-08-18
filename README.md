@@ -192,7 +192,7 @@ PluginCore 支持3种前端文件加载方式
 > 配置文件 `App_Data/PluginCore.Config.json` 中 `FrontendMode`
 
 1. LocalEmbedded
-  - 默认, 嵌入式资源，前端文件打包进dll, 此模式下, 若想自定义前端, 只有将 前端文件放入 `PluginCore` 项目的 `PluginCoreAdmin` 文件夹中，重新 `build` 一个 dll, 集成项目再引用此dll
+  - 默认, 嵌入式资源，前端文件打包进dll, 此模式下, 不容易自定义前端文件，需要修改 `PluginCore` 源代码，重新编译，不建议
 
 2. LocalFolder
   - 在集成了 `PluginCore` 的 ASP.NET Core 项目中, 新建 `PluginCoreAdmin`, 将前端文件放入此文件夹
@@ -234,10 +234,10 @@ PluginCore 支持3种前端文件加载方式
 
 ## 版本依赖
 
-|    PluginCore.IPlugins    | 0.1.0 | 0.1.0 | 0.2.0 | 0.2.0 | 0.2.0 |
-| :-----------------------: | :---: | :---: | :---: | :---: | :---: |
-|        PluginCore         | 0.1.0 | 0.2.0 | 0.3.0 | 0.3.1 | 0.4.0 |
-| plugincore-admin-frontend | 0.1.0 | 0.1.2 | 0.1.2 | 0.1.3 | 0.1.3 |
+|    PluginCore.IPlugins    | 0.1.0 | 0.1.0 | 0.2.0 | 0.2.0 | 0.2.0 | 0.2.0 |
+| :-----------------------: | :---: | :---: | :---: | :---: | :---: | :---: |
+|        PluginCore         | 0.1.0 | 0.2.0 | 0.3.0 | 0.3.1 | 0.4.0 | 0.5.0 |
+| plugincore-admin-frontend | 0.1.0 | 0.1.2 | 0.1.2 | 0.1.3 | 0.1.3 | 0.2.0 |
 
 
 
