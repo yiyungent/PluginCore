@@ -17,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.FileProviders;
 using PluginCore.Authorization;
 using PluginCore.AdminUI;
+using PluginCore.Infrastructure;
 using PluginCore.Middlewares;
 
 namespace PluginCore.Extensions
@@ -27,6 +28,8 @@ namespace PluginCore.Extensions
     public static class PluginCoreStartupExtensions
     {
         private static IWebHostEnvironment _webHostEnvironment;
+
+        private static IServiceCollection _services;
 
         public static void AddPluginCore(this IServiceCollection services)
         {
@@ -72,6 +75,7 @@ namespace PluginCore.Extensions
 
                     // IWebHostEnvironment
                     _webHostEnvironment = scope.ServiceProvider.GetService<IWebHostEnvironment>();
+
                 }
             }
 
@@ -108,6 +112,22 @@ namespace PluginCore.Extensions
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //services.AddHttpContextAccessor();
 
+            PluginFinder pluginFinder = services.BuildServiceProvider().GetService<PluginFinder>();
+
+            #region IStartupPlugin
+
+            var plugins = pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupPlugin>().ToList();
+
+            foreach (var item in plugins)
+            {
+                // 调用
+                item?.ConfigureServices(services);
+            }
+
+            #endregion
+
+            // 一定要在最后
+            _services = services;
         }
 
         public static IApplicationBuilder UsePluginCore(this IApplicationBuilder app)
@@ -142,12 +162,28 @@ namespace PluginCore.Extensions
             app.UseMiddleware<PluginHttpEndFilterMiddleware>();
             #endregion
 
+
+            PluginFinder pluginFinder = _services.BuildServiceProvider().GetService<PluginFinder>();
+
+            #region IStartupPlugin
+
+            var plugins = pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupPlugin>().ToList();
+
+            foreach (var item in plugins)
+            {
+                // 调用
+                item?.Configure(app);
+            }
+
+            #endregion
+
+
             #region 启动 Log
             Config.PluginCoreConfig pluginCoreConfig = Config.PluginCoreConfigFactory.Create();
 
             Utils.LogUtil.Info("启动成功:");
             Utils.LogUtil.Info($"前端模式: {pluginCoreConfig.FrontendMode}");
-            Utils.LogUtil.Info($"注意: 更新前端模式 需要 重启站点"); 
+            Utils.LogUtil.Info($"注意: 更新前端模式 需要 重启站点");
             #endregion
 
             return app;

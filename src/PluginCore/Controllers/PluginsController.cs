@@ -225,7 +225,16 @@ namespace PluginCore.Controllers
 
             try
             {
-                // 1. 找到此插件实例
+                // 1. 创建插件程序集加载上下文, 添加到 PluginsLoadContexts
+                _pluginManager.LoadPlugin(pluginId);
+                // 2.从 pluginConfigModel.DisabledPlugins 移除
+                pluginConfigModel.DisabledPlugins.Remove(pluginId);
+                // 3. 添加到 pluginConfigModel.EnabledPlugins
+                pluginConfigModel.EnabledPlugins.Add(pluginId);
+                // 4.保存到 plugin.config.json
+                PluginConfigModelFactory.Save(pluginConfigModel);
+
+                // 5. 找到此插件实例
                 IPlugin plugin = _pluginFinder.Plugin(pluginId);
                 if (plugin == null)
                 {
@@ -233,22 +242,29 @@ namespace PluginCore.Controllers
                     responseData.message = "启用失败: 此插件不存在, 或未安装";
                     return await Task.FromResult(responseData);
                 }
-                // 2.调取插件的 AfterEnable(), 插件开发者可在此回收资源
+                // 6.调取插件的 AfterEnable(), 插件开发者可在此回收资源
                 var pluginEnableResult = plugin.AfterEnable();
                 if (!pluginEnableResult.IsSuccess)
                 {
+                    // 7.启用不成功, 回滚插件状态: (1)释放插件上下文 (2)更新 plugin.config.json
+                    try
+                    {
+                        _pluginManager.UnloadPlugin(pluginId);
+                    }
+                    catch (Exception ex)
+                    { }
+
+                    // 从 pluginConfigModel.EnabledPlugins 移除
+                    pluginConfigModel.EnabledPlugins.Remove(pluginId);
+                    // 添加到 pluginConfigModel.DisabledPlugins
+                    pluginConfigModel.DisabledPlugins.Add(pluginId);
+                    // 保存到 plugin.config.json
+                    PluginConfigModelFactory.Save(pluginConfigModel);
+
                     responseData.code = -1;
                     responseData.message = "启用失败: 来自插件的错误信息: " + pluginEnableResult.Message;
                     return await Task.FromResult(responseData);
                 }
-                // 3. 创建插件程序集加载上下文, 添加到 PluginsLoadContexts
-                _pluginManager.LoadPlugin(pluginId);
-                // 4.从 pluginConfigModel.DisabledPlugins 移除
-                pluginConfigModel.DisabledPlugins.Remove(pluginId);
-                // 5. 添加到 pluginConfigModel.EnabledPlugins
-                pluginConfigModel.EnabledPlugins.Add(pluginId);
-                // 6.保存到 plugin.config.json
-                PluginConfigModelFactory.Save(pluginConfigModel);
 
                 // 7. 尝试复制 插件下的 wwwroot 到 Plugins_wwwroot
                 string wwwRootDir = PluginPathProvider.WwwRootDir(pluginId);

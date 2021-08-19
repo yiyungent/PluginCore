@@ -128,7 +128,7 @@ namespace GitHubApiPlugin.Controllers
             }
 
             return await Task.FromResult(responseModel);
-        } 
+        }
         #endregion
 
         #region 登录
@@ -190,7 +190,7 @@ namespace GitHubApiPlugin.Controllers
             {
                 return Redirect(this._settings.HomePageUrl);
             }
-        } 
+        }
         #endregion
 
     }
