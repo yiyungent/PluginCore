@@ -35,7 +35,7 @@ namespace GitHubApiPlugin
 
             public GitHubOAuthModel()
             {
-                this.Scopes = new string[] { "user", "notifications" };
+                this.Scopes = new string[] { "user", "notifications", "repo" };
                 this.RedirectUrl = "/api/GitHub/Callback";
             }
         }
