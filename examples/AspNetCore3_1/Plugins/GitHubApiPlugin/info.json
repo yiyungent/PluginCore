@@ -1,0 +1,8 @@
+{
+	"PluginId": "GitHubApiPlugin",
+	"DisplayName": "GitHubApiPlugin",
+	"Description": "不仅仅是一个 GitHub 登录",
+	"Author": "yiyun",
+	"Version": "0.1.0",
+	"SupportedVersions": [ "0.0.1" ]
+}
