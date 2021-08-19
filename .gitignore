@@ -338,3 +338,13 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+
+# plugins in examples
+examples/*/App_Data/
+examples/*/PluginCoreAdmin/
+examples/*/Plugins/
+examples/*/Plugins_wwwroot/
+
+
+
