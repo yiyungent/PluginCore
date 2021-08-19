@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>0.5.0</Version>
+    <Version>0.5.1</Version>
     <Company>yiyun</Company>
     <Authors>yiyun</Authors>
     <Description>一个轻量的插件框架</Description>
