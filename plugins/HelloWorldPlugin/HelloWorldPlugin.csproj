@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="Octokit" Version="0.50.0" />
   </ItemGroup>
 
   <!-- 方便开发debug,与发布到nuget -->
