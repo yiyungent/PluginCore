@@ -13,6 +13,11 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
+	<PropertyGroup>
+		<LangVersion>9.0</LangVersion>
+		<!--<Nullable>enable</Nullable>-->
+	</PropertyGroup>
+
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>

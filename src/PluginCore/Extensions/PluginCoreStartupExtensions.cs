@@ -178,6 +178,9 @@ namespace PluginCore.Extensions
             #endregion
 
 
+            app.UseMiddleware<PluginStartupXMiddleware>();
+
+
             #region 启动 Log
             Config.PluginCoreConfig pluginCoreConfig = Config.PluginCoreConfigFactory.Create();
 
