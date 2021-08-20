@@ -48,3 +48,4 @@ jobs:
           PluginCore-netcoreapp3.1.zip
           PluginCore-net5.0.zip
           LICENSE 
+          README.md

@@ -46,3 +46,4 @@ jobs:
         files: |
           PluginCore.IPlugins-netstandard2.0.zip
           LICENSE 
+          README.md
