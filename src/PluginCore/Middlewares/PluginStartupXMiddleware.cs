@@ -18,41 +18,18 @@ namespace PluginCore.Middlewares
             _next = next;
         }
 
-        public async Task InvokeAsync(HttpContext httpContext, IServiceProvider serviceProvider, PluginFinder pluginFinder)
-        {
-            bool isReachedEnd = false;
-            //IApplicationBuilder applicationBuilder = new ApplicationBuilder(serviceProvider);
-            IApplicationBuilder applicationBuilder = new PluginApplicationBuilder(serviceProvider, () =>
-            {
-                isReachedEnd = true;
-            });
-            var plugins = pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupXPlugin>().ToList();
-            foreach (var item in plugins)
-            {
-                // 调用
-                Utils.LogUtil.Info($"{item.GetType().ToString()} 运行时 Configure(IApplicationBuilder app) 激活管道Middleware");
+        public static Action ReachedEndAction { get; set; } = () => { _isReachedEnd = true; };
 
-                item.Configure(applicationBuilder);
-            }
+        private static bool _isReachedEnd;
+
+        public async Task InvokeAsync(HttpContext httpContext, PluginApplicationBuilderManager pluginApplicationBuilderManager)
+        {
+            //bool isReachedEnd = false;
+            _isReachedEnd = false;
 
             try
             {
-                #region Old - Use ApplicationBuilder
-                // 迫不得已又得重新 UseRouting(), 不然会报错, 因为内部检查 末端Middleware
-                //applicationBuilder.UseRouting();
-                //applicationBuilder.UseEndpoints(configure =>
-                //{
-                //    //isReachedEnd = true;
-                //});
-                //applicationBuilder.Run(async (HttpContext httpContext) =>
-                //{
-                //    isReachedEnd = true;
-
-                //    await Task.FromResult(0);
-                //}); 
-                #endregion
-
-                RequestDelegate requestDelegate = applicationBuilder.Build();
+                RequestDelegate requestDelegate = pluginApplicationBuilderManager.GetBuildResult();
 
                 await requestDelegate(httpContext);
             }
@@ -66,7 +43,7 @@ namespace PluginCore.Middlewares
                 }
             }
 
-            if (isReachedEnd)
+            if (_isReachedEnd)
             {
                 // Call the next delegate/middleware in the pipeline
                 await _next(httpContext);

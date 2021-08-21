@@ -28,5 +28,21 @@ namespace WebSocketDemoPlugin
         {
 
         }
+
+        public int ConfigureOrder
+        {
+            get
+            {
+                return 2;
+            }
+        }
+
+        public int ConfigureServicesOrder
+        {
+            get
+            {
+                return 2;
+            }
+        }
     }
 }

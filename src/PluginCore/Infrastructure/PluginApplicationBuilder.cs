@@ -22,7 +22,24 @@ namespace PluginCore.Infrastructure
 
         private readonly List<Func<RequestDelegate, RequestDelegate>> _components = new List<Func<RequestDelegate, RequestDelegate>>();
 
-        private readonly Action _reachEndAction;
+        private Action _reachEndAction;
+
+        public Action ReachEndAction
+        {
+            get
+            {
+                return this._reachEndAction;
+            }
+            set
+            {
+                this._reachEndAction = value;
+            }
+        }
+
+        public PluginApplicationBuilder()
+        {
+
+        }
 
         /// <summary>
         /// Initializes a new instance of <see cref="ApplicationBuilder"/>.

@@ -29,5 +29,22 @@ namespace HelloWorldPlugin
         {
             app.UseMiddleware<SayHelloMiddleware>();
         }
+
+        public int ConfigureOrder
+        {
+            get
+            {
+                return 2;
+            }
+        }
+
+
+        public int ConfigureServicesOrder
+        {
+            get
+            {
+                return 2;
+            }
+        }
     }
 }

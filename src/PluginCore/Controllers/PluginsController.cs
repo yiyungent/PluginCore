@@ -27,13 +27,15 @@ namespace PluginCore.Controllers
         #region Fields
         private readonly PluginManager _pluginManager;
         private readonly PluginFinder _pluginFinder;
+        private readonly PluginApplicationBuilderManager _pluginApplicationBuilderManager;
         #endregion
 
         #region Ctor
-        public PluginsController(PluginManager pluginManager, PluginFinder pluginFinder)
+        public PluginsController(PluginManager pluginManager, PluginFinder pluginFinder, PluginApplicationBuilderManager pluginApplicationBuilderManager)
         {
             _pluginManager = pluginManager;
             _pluginFinder = pluginFinder;
+            _pluginApplicationBuilderManager = pluginApplicationBuilderManager;
         }
         #endregion
 
@@ -266,7 +268,10 @@ namespace PluginCore.Controllers
                     return await Task.FromResult(responseData);
                 }
 
-                // 7. 尝试复制 插件下的 wwwroot 到 Plugins_wwwroot
+                // 7. ReBuild
+                this._pluginApplicationBuilderManager.ReBuild();
+
+                // 8. 尝试复制 插件下的 wwwroot 到 Plugins_wwwroot
                 string wwwRootDir = PluginPathProvider.WwwRootDir(pluginId);
                 if (Directory.Exists(wwwRootDir))
                 {
@@ -324,6 +329,8 @@ namespace PluginCore.Controllers
                     }
                     // 3.移除插件对应的程序集加载上下文
                     _pluginManager.UnloadPlugin(pluginId);
+                    // 3.1. ReBuild
+                    this._pluginApplicationBuilderManager.ReBuild();
                     // 4.从 pluginConfigModel.EnabledPlugins 移除
                     pluginConfigModel.EnabledPlugins.Remove(pluginId);
                     // 5. 添加到 pluginConfigModel.DisabledPlugins

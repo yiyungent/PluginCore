@@ -18,6 +18,7 @@ using Microsoft.Extensions.FileProviders;
 using PluginCore.Authorization;
 using PluginCore.AdminUI;
 using PluginCore.Infrastructure;
+using PluginCore.IPlugins.Interfaces.Base;
 using PluginCore.Middlewares;
 
 namespace PluginCore.Extensions
@@ -39,6 +40,8 @@ namespace PluginCore.Extensions
             services.AddTransient<PluginControllerManager>();
             services.AddTransient<PluginManager>();
             services.AddTransient<PluginFinder>();
+            services.AddTransient<IPluginFinder, PluginFinder>();
+            services.AddTransient<PluginApplicationBuilderManager>();
 
             using (var serviceProvider = services.BuildServiceProvider())
             {
@@ -116,7 +119,7 @@ namespace PluginCore.Extensions
 
             #region IStartupPlugin
 
-            var plugins = pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupPlugin>().ToList();
+            var plugins = pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupPlugin>()?.OrderBy(m => m.ConfigureServicesOrder)?.ToList();
 
             foreach (var item in plugins)
             {
@@ -167,7 +170,7 @@ namespace PluginCore.Extensions
 
             #region IStartupPlugin
 
-            var plugins = pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupPlugin>().ToList();
+            var plugins = pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupPlugin>()?.OrderBy(m => m.ConfigureOrder)?.ToList();
 
             foreach (var item in plugins)
             {

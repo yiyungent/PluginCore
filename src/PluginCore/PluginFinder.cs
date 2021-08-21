@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using PluginCore.IPlugins;
+using PluginCore.IPlugins.Interfaces.Base;
 
 namespace PluginCore
 {
@@ -14,7 +15,7 @@ namespace PluginCore
     /// TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的插件才有上下文, 为了保险，暂时这么做
     /// 注意: 这意味着一个启用的插件需同时满足这两个条件
     /// </summary>
-    public class PluginFinder
+    public class PluginFinder : IPluginFinder
     {
         #region Fields
         private readonly IServiceProvider _serviceProvider;
