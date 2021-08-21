@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using PluginCore.Interfaces;
+using PluginCore.IPlugins;
 using PluginCore.Middlewares;
 
 namespace PluginCore.Infrastructure
@@ -29,11 +30,11 @@ namespace PluginCore.Infrastructure
             PluginApplicationBuilder applicationBuilder = new PluginApplicationBuilder();
             applicationBuilder.ReachEndAction = PluginStartupXMiddleware.ReachedEndAction;
 
-            var plugins = this._pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupXPlugin>()?.OrderBy(m => m.ConfigureOrder)?.ToList();
+            var plugins = this._pluginFinder.EnablePlugins<IStartupXPlugin>()?.OrderBy(m => m.ConfigureOrder)?.ToList();
             foreach (var item in plugins)
             {
                 // 调用
-                Utils.LogUtil.Info($"{item.GetType().ToString()} 运行时 Configure(IApplicationBuilder app) 激活 HTTP request pipeline middleware");
+                Utils.LogUtil.Info($"{item.GetType().ToString()} {nameof(IStartupXPlugin)}.{nameof(IStartupXPlugin.Configure)}");
 
                 item.Configure(applicationBuilder);
             }

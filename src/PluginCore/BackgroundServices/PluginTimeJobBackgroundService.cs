@@ -42,7 +42,7 @@ namespace PluginCore.BackgroundServices
                     if (nowTime - lastExecuteTime >= item.SecondsPeriod)
                     {
                         // 调用
-                        Utils.LogUtil.Info($"{pluginKey} ITimeJobPlugin.ExecuteAsync()");
+                        Utils.LogUtil.Info($"{pluginKey} {nameof(ITimeJobPlugin)}.{nameof(ITimeJobPlugin.ExecuteAsync)}");
                         Task task = item?.ExecuteAsync();
                         this._pluginAndLastExecuteTimeDic[pluginKey] = DateTime.Now.ToTimeStamp10();
                     }
@@ -50,7 +50,7 @@ namespace PluginCore.BackgroundServices
                 else
                 {
                     // 调用
-                    Utils.LogUtil.Info($"{pluginKey} ITimeJobPlugin.ExecuteAsync()");
+                    Utils.LogUtil.Info($"{pluginKey} {nameof(ITimeJobPlugin)}.{nameof(ITimeJobPlugin.ExecuteAsync)}");
                     Task task = item?.ExecuteAsync();
                     this._pluginAndLastExecuteTimeDic.Add(pluginKey, DateTime.Now.ToTimeStamp10());
                 }

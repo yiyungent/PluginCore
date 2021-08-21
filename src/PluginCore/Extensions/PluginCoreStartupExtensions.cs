@@ -21,6 +21,7 @@ using PluginCore.Infrastructure;
 using PluginCore.Interfaces;
 using PluginCore.Middlewares;
 using PluginCore.BackgroundServices;
+using PluginCore.IPlugins;
 
 namespace PluginCore.Extensions
 {
@@ -120,11 +121,12 @@ namespace PluginCore.Extensions
 
             #region IStartupPlugin
 
-            var plugins = pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupPlugin>()?.OrderBy(m => m.ConfigureServicesOrder)?.ToList();
+            var plugins = pluginFinder.EnablePlugins<IStartupPlugin>()?.OrderBy(m => m.ConfigureServicesOrder)?.ToList();
 
             foreach (var item in plugins)
             {
                 // 调用
+                Utils.LogUtil.Info($"{item.GetType().ToString()} {nameof(IStartupPlugin)}.{nameof(IStartupPlugin.ConfigureServices)}");
                 item?.ConfigureServices(services);
             }
 
@@ -179,6 +181,7 @@ namespace PluginCore.Extensions
             foreach (var item in plugins)
             {
                 // 调用
+                Utils.LogUtil.Info($"{item.GetType().ToString()} {nameof(IStartupPlugin)}.{nameof(IStartupPlugin.Configure)}");
                 item?.Configure(app);
             }
 
