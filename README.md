@@ -109,7 +109,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 ## Docker 体验
 
-如果你需要在本地体验 PluginCore, 那么这里有一个 [例子/examples](https://github.com/yiyungent/PluginCore/tree/main/examples)
+如果你需要在本地体验 PluginCore, 那么这里有一个 [例子(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
 
 ```bash
 docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspnetcore3-1 yiyungent/plugincore-aspnetcore3-1
@@ -126,9 +126,8 @@ docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspn
 
 ## 使用
 
-<!-- - [详细文档(/docs)](https://moeci.com/PluginCore "在线文档") 文档构建中 -->
+- [详细文档(/docs)](https://moeci.com/PluginCore "在线文档") 文档构建中
 - [见示例(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
-
 
 
 ### 添加插件钩子, 并应用

@@ -3,12 +3,12 @@
  * @Description:
  */
 module.exports = {
-  title: "Remember.Core",
-  description: ".NET Web 应用框架",
-  base: "/Remember.Core/",
+  title: "PluginCore",
+  description: "ASP.NET Core 轻量级 插件框架",
+  base: "/PluginCore/",
   themeConfig: {
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-    repo: "yiyungent/Remember.Core",
+    repo: "yiyungent/PluginCore",
     // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
     // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
     repoLabel: "GitHub",
@@ -20,7 +20,7 @@ module.exports = {
     // 假如文档不是放在仓库的根目录下：
     docsDir: "docs",
     // 假如文档放在一个特定的分支下：
-    docsBranch: "master",
+    docsBranch: "main",
     // 默认是 false, 设置为 true 来启用
     editLinks: true,
     // 默认为 "Edit this page"
@@ -34,7 +34,7 @@ module.exports = {
         text: "开发文档",
         items: [
           { text: "插件开发", link: "/PluginDev/" },
-          // { text: "Remember.Core.AspNetCore", link: "/Remember.Core.AspNetCore/" },
+          // { text: "PluginCore.AspNetCore", link: "/PluginCore.AspNetCore/" },
         ],
       },
       // {
@@ -61,18 +61,18 @@ module.exports = {
     //       ],
     //     },
     //   ],
-    //   "/Remember.Core/": [
+    //   "/PluginCore/": [
     //     {
-    //       title: "Remember.Core", // 必要的
-    //       path: "/Remember.Core/",
+    //       title: "PluginCore", // 必要的
+    //       path: "/PluginCore/",
     //       collapsable: false, // 可选的, 默认值是 true,
     //       // children: [{ title: "API", path: "api" }],
     //     },
     //   ],
-    //   "/Remember.Core.AspNetCore/": [
+    //   "/PluginCore.AspNetCore/": [
     //     {
-    //       title: "Remember.Core.AspNetCore", // 必要的
-    //       path: "/Remember.Core.AspNetCore/",
+    //       title: "PluginCore.AspNetCore", // 必要的
+    //       path: "/PluginCore.AspNetCore/",
     //       collapsable: false, // 可选的, 默认值是 true,
     //       // children: [{ title: "API", path: "api" }],
     //     },
