@@ -1,0 +1,8 @@
+{
+	"PluginId": "TestTimeJobPlugin",
+	"DisplayName": "TestTimeJobPlugin 示例插件",
+	"Description": "定时任务",
+	"Author": "yiyun",
+	"Version": "0.1.0",
+	"SupportedVersions": [ "0.0.1" ]
+}

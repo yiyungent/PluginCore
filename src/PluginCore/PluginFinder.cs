@@ -5,8 +5,8 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Microsoft.Extensions.DependencyInjection;
+using PluginCore.Interfaces;
 using PluginCore.IPlugins;
-using PluginCore.IPlugins.Interfaces.Base;
 
 namespace PluginCore
 {

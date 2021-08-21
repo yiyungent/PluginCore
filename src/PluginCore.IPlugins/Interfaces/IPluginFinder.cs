@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PluginCore.IPlugins;
 
-namespace PluginCore.IPlugins.Interfaces.Base
+namespace PluginCore.Interfaces
 {
     public interface IPluginFinder
     {

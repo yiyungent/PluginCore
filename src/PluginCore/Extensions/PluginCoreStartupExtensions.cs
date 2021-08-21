@@ -18,8 +18,9 @@ using Microsoft.Extensions.FileProviders;
 using PluginCore.Authorization;
 using PluginCore.AdminUI;
 using PluginCore.Infrastructure;
-using PluginCore.IPlugins.Interfaces.Base;
+using PluginCore.Interfaces;
 using PluginCore.Middlewares;
+using PluginCore.BackgroundServices;
 
 namespace PluginCore.Extensions
 {
@@ -128,6 +129,9 @@ namespace PluginCore.Extensions
             }
 
             #endregion
+
+            // AddBackgroundServices
+            services.AddBackgroundServices();
 
             // 一定要在最后
             _services = services;

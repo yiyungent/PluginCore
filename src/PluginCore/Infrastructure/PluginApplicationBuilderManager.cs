@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using PluginCore.IPlugins.Interfaces.Base;
+using PluginCore.Interfaces;
 using PluginCore.Middlewares;
 
 namespace PluginCore.Infrastructure
