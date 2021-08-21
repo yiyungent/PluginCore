@@ -1,69 +1,141 @@
-#  (2021-08-21)
+# PluginCore.IPlugins-v0.5.0
+
+## Added
+
+- `IPluginFinder` 添加，并注入服务
+- `ConfigureServicesOrder`, `ConfigureOrder` 添加，`ConfigureOrder` 应用
+
+# PluginCore-v0.7.0
+
+## Added
+
+- `IPluginFinder` 注入服务
+
+## Updated
+
+-  `PluginApplicationBuilderManager`
+   - 性能提升: 不再是每次在 middleware.invoke 时 build插件的middleware, 而是启用禁用时rebuild
 
 
-### Bug Fixes
 
-* **src/plugincore/controllers/pluginscontroller.cs:** 启用插件: 启用失败时 回滚 ([49d46c7](https://github.com/yiyungent/PluginCore/commit/49d46c79c3601df3b4899aee38296500c942854b))
-* **src/plugincore/pluginmanager.cs:** 当插件引用dll时, 插件Controller立即使用引用dll时，报错:找不到引用dll ([d8c79c5](https://github.com/yiyungent/PluginCore/commit/d8c79c5681dc0a2e4a3d36565075c243b6ce44c7))
-* authentication: 401 ([01c5d04](https://github.com/yiyungent/PluginCore/commit/01c5d04e0a11e53c402076a25c1780fc728ccbc3))
-* **.github/workflows:** remove branches: main ([57266f4](https://github.com/yiyungent/PluginCore/commit/57266f438ed027a36ed16a732f52b5db49b56807))
-* **examples/aspnetcore3_1:** /plugins/HelloWorldPlugin/css/main.css ([5e36a87](https://github.com/yiyungent/PluginCore/commit/5e36a879925368dbdfbb84475d8aa3ce3e6f1e22))
-* api url error, config file with init etc ([9adb655](https://github.com/yiyungent/PluginCore/commit/9adb6551650b8ede28bec086df13023a2b7d9bf6))
-* fronted -> frontend ([c41cfdb](https://github.com/yiyungent/PluginCore/commit/c41cfdbfba02fcfe37981d9aa4c8c05b194363de))
-* pluginCore Admin: avatar url 404: dist-cdn ([38ca90c](https://github.com/yiyungent/PluginCore/commit/38ca90c5ff8b5138e1751887b9f60a376158eaad))
+# PluginCore.IPlugins-v0.4.0
 
 
-### Features
+## Added
 
-* **/plugincore.registry:** nuGetController.List ([028a486](https://github.com/yiyungent/PluginCore/commit/028a4864920728c7db3633476512806e53eb1c2f))
-* **authorization:** authorization, Login ([5b6f9fa](https://github.com/yiyungent/PluginCore/commit/5b6f9fa989d9739c30ef0d1f0186b876cddc5890))
-* **examples/aspnetcore3_1,plugins/githubapiplugin:** gitHubApiPlugin ([47474b4](https://github.com/yiyungent/PluginCore/commit/47474b4a4308f25559abf3c4a1f7b4075c22f2e2))
-* **examples/aspnetcore3_1,plugins/helloworldplugin:** hellowWorldPlugin: GitHub Login ([8827ddf](https://github.com/yiyungent/PluginCore/commit/8827ddffd87e561b47a97b429015ae5fe41a8ca0))
-* **examples/aspnetcore3_1/plugincoreadmin:** update Login ([a77ef6d](https://github.com/yiyungent/PluginCore/commit/a77ef6dc72d226f5b52620d1c9ab6273a107068a))
-* **examples/aspnetcore5:** add PluginCore ([b373af3](https://github.com/yiyungent/PluginCore/commit/b373af300edfe4e32f2cab7c36a0ba1b608fa16f))
-* **fronted-admin:** fronted-admin ([0ea475c](https://github.com/yiyungent/PluginCore/commit/0ea475c7a7cfffcd893c18b03df166b63d824df5))
-* **fronted-admin:** remove ([80cd010](https://github.com/yiyungent/PluginCore/commit/80cd010899216d46e62fa398742727fec06c8520))
-* **fronted-admin,examples/aspnetcore3_1:** for PluginCore ([ccc2f16](https://github.com/yiyungent/PluginCore/commit/ccc2f16fa309fc8762113222c08edd580090de99))
-* **fronted-admin/src/views/login/index.vue:** pretty ([72db653](https://github.com/yiyungent/PluginCore/commit/72db653cd44ee54650a01ea3b088b62c08bc3e97))
-* **github action:** nuget-push ([4827f49](https://github.com/yiyungent/PluginCore/commit/4827f49178a7bdeb586269b713d7c527a879a1d9))
-* **istartupplugin.cs,istartupxplugin.cs:** 添加注释 ([d4519b5](https://github.com/yiyungent/PluginCore/commit/d4519b54e9df931c6e75d9ca59742edc5f3185ac))
-* **plugincore:** pluginContentFilterMiddleware, IContentFilterPlugin ([2597e9c](https://github.com/yiyungent/PluginCore/commit/2597e9c054bde134f9f250071347990be59e8d37))
-* **plugincore,/plugincore.iplugins:** pluginHttpEndFilter ([c0cd458](https://github.com/yiyungent/PluginCore/commit/c0cd4581df72cdb9f4f678a531e7f04980c9695d))
-* **plugincore,plugincore.iplugins,helloworldplugin:** iStartupXPlugin: 运行时 Configure(app) ([0d18a6f](https://github.com/yiyungent/PluginCore/commit/0d18a6f9949faa1e92f1d20da35689e8e153bac1))
-* **plugincore.csproj:** 0.2.0 ([4a10e5d](https://github.com/yiyungent/PluginCore/commit/4a10e5d5d5a45a3a763569bb6ef2c46d04a373fe))
-* **plugincore.csproj:** 0.3.0 ([627ef86](https://github.com/yiyungent/PluginCore/commit/627ef866f464edddb1f836fde83e4cac04d6f4a3))
-* **plugincore.csproj:** 0.3.1 ([001ef67](https://github.com/yiyungent/PluginCore/commit/001ef674190418354bf964d7bf042d66717a0828))
-* **plugincore.csproj:** 0.4.0 ([2ef0a92](https://github.com/yiyungent/PluginCore/commit/2ef0a924d5ca4c21245add4d3c05c13909100551))
-* **plugincore.iplugins:** iStartupPlugin.cs, PluginCore.IPlugins.csproj ([4459fbe](https://github.com/yiyungent/PluginCore/commit/4459fbe5e2cbe369519b7010a7b7d6d4600738cf))
-* **plugincore.iplugins.csproj:** 0.2.0 ([d7fb02f](https://github.com/yiyungent/PluginCore/commit/d7fb02fe481e1b2d20a7f7b34f0fa50e95240059))
-* **plugincore.iplugins.csproj:** 0.3.0 ([c8000be](https://github.com/yiyungent/PluginCore/commit/c8000bec4800826afa5db37edfb095a945231591))
-* **plugincore/plugincoreadmin:** add ([802ad74](https://github.com/yiyungent/PluginCore/commit/802ad74efd013f34e9c5f7d5ed3eef8574f2c20b))
-* **pluginframeworkstartupextensions.cs:** useStaticFiles: PluginCoreAdmin ([b0adb8e](https://github.com/yiyungent/PluginCore/commit/b0adb8e1f31912472946c8c76fe05b5ff85a77b4))
-* **plugins,plugincore.iplugins,plugincore:** add: order, add: PluginApplicationBuilderManager ([5e4a5f4](https://github.com/yiyungent/PluginCore/commit/5e4a5f46a4eb3aaca5d978fc1e695d0849e11e5c))
-* **plugins/githubapiplugin:** rEADME.md,SettingsModel.cs,settings.json ([ba99296](https://github.com/yiyungent/PluginCore/commit/ba99296b9706acdfa1908172ea23deabf0ed9c56))
-* **plugins/helloworldplugin:** remove GitHub API ([6d2a518](https://github.com/yiyungent/PluginCore/commit/6d2a518765f7795febded5f4ea5ead57d7b7e417))
-* **plugins/websocketdemoplugin:** new empty plugin project ([0257e94](https://github.com/yiyungent/PluginCore/commit/0257e94a35d84b11cbce41f65d5d67157e871880))
-* **pluginserviceprovide.cs:** add ([0eb5a28](https://github.com/yiyungent/PluginCore/commit/0eb5a284f89cdca374660623a937178cfec6ebf1))
-* add controllers, examples ([c7e8553](https://github.com/yiyungent/PluginCore/commit/c7e8553b9bbb6d45eac251e1060acb719fd3dac9))
-* localEmbedded: PluginCoreAdmin -> package.json ([f8be0d2](https://github.com/yiyungent/PluginCore/commit/f8be0d2ce86b26d9f00cf67845daed2853f285f6))
-* logout, Login: pretty ([5fac6a3](https://github.com/yiyungent/PluginCore/commit/5fac6a3939436d58d860e2529be08a26c7a79946))
-* logUtil and apply ([f0ee2e8](https://github.com/yiyungent/PluginCore/commit/f0ee2e8df4ec3ec17048a0f718340b6e0adb7360))
-* nuget config, v0.1.0 ([fffc419](https://github.com/yiyungent/PluginCore/commit/fffc419480481b632340eb4e42a0b608c5fff144))
-* plugin 支持加载插件 wwwroot 文件夹下的 html前端等 ([273f9a4](https://github.com/yiyungent/PluginCore/commit/273f9a44c8727675f60d364fcf59a373958b3575)), closes [#3](https://github.com/yiyungent/PluginCore/issues/3)
-* pluginCore, plugins/HelloWorldPlugin ([5141afd](https://github.com/yiyungent/PluginCore/commit/5141afded8feba94af581d6132fccb87aafa516c))
-* pluginCore.IPlugins, plugins: HelloWorldPlugin ([1e81de2](https://github.com/yiyungent/PluginCore/commit/1e81de2107394f527a94ec5d4c2ae6853d2d5526))
-* pluginCoreConfig, PluginCoreConfigFactory ([6a0dae2](https://github.com/yiyungent/PluginCore/commit/6a0dae2d222d9f0464b8d158eb87f674529af56e))
-* remoteFronted, remove PluginCoreAdmin ([81f6982](https://github.com/yiyungent/PluginCore/commit/81f698213cee6383da9d8035165d3881b88bc709))
-* update: IStartupPlugin success, fix: Plugin.Enable ([ad950b2](https://github.com/yiyungent/PluginCore/commit/ad950b2802f60da3f950fd3eaf7bf1eee24c84b6))
-* 保证 PluginCoreAdmin 文件夹存在 ([2bf2c0e](https://github.com/yiyungent/PluginCore/commit/2bf2c0e42cbafb03af00ff324f1fb637238de441))
-* 支持 nupkg 格式插件 ([1aa1d5f](https://github.com/yiyungent/PluginCore/commit/1aa1d5f45208fe273637548cd69f96a770c32c28))
-* 支持嵌入式 前端 (打包进dll) ([7e08cb3](https://github.com/yiyungent/PluginCore/commit/7e08cb33868890227f11645c2b8d4dd022318c94))
-* 生成注释xml: PluginCore.IPlugins,PluginCore ([5878148](https://github.com/yiyungent/PluginCore/commit/5878148244344f412e75fe9446824dd99ca2de47))
-* **plugincoreconfig.cs:** [@0](https://github.com/0).1.3/dist-cdn ([da3fb7d](https://github.com/yiyungent/PluginCore/commit/da3fb7d5986582c1fde3d27e31fd8b135cd881c4))
-* **plugincorehostingstartup:** failure ([0803d76](https://github.com/yiyungent/PluginCore/commit/0803d7679313ffa0e9c583d0923bff3412f265d5))
-* **pluginframeworkstartupextensions.cs:** pluginFramework -> PluginCore, app.UseDefaultFiles(); ([17e1587](https://github.com/yiyungent/PluginCore/commit/17e15879076d36d3d2cf6891181cf823fb78c66d))
-* **src/plugincore.registry:** empty project template ([6f50738](https://github.com/yiyungent/PluginCore/commit/6f50738549d700629dfe5674ccdf7e1d21945afa))
-* 自动初始化插件目录 ([fe3d162](https://github.com/yiyungent/PluginCore/commit/fe3d162e3a5455d308db55f9b260301f10ff4eee))
+- `IStartupXPlugin` 支持在运行时添加 `请求管道Middleware` , 热插拔 ( 实验阶段 )
+   - 不同于 `IStartupPlugin` 必须启用后，重启站点
+
+
+# PluginCore-v0.6.0
+
+## Added
+
+- 激活 `IStartupXPlugin`  的 `Configure(IApplicationBuilder app)`
+   - 支持在运行时添加 `请求管道Middleware` , 热插拔 ( 实验阶段 )
+   - 不同于 `IStartupPlugin` 必须启用后，重启站点
+   - 暂不支持 `ConfigureServices(IServiceCollection services)`
+
+# PluginCore-v0.5.1
+
+## Fixed
+
+- 当插件引用dll时, 插件Controller立即使用引用dll时，报错:找不到引用dll
+  - 改变加载dll顺序: 先加载插件引用的dll, 再加载插件主dll
+
+- 插件启用: 内部顺序 引起的插件未成功启用，但配置文件却已改变
+
+## Updated
+
+- IStartupPlugin 激活，进入实验阶段
+  - 实现 `IStartupPlugin` 的插件 安装后，需先启用，再重启站点，即可激活 `IStartupPlugin`, 此类插件无法热插拔
+
+
+
+# PluginCore.IPlugins-v0.3.0
+
+## Added
+
+- 插件sdk
+  - 新的api
+
+
+# PluginCore-v0.5.0
+
+## Added
+
+- 插件sdk
+  - 新的api
+
+## Updated
+
+- 前端内嵌式资源 改为使用 npm, 不再使用 `PluginCoreAdmin`, 只有 `LocalFolder` 模式才使用此文件夹
+
+
+
+# PluginCore-v0.4.0
+
+## Added
+
+- 支持 嵌入式资源 方式引入前端
+
+## Updated
+
+- PluginCore.Config.json 部分配置属性 改变
+   - PluginCore.Config.json 前端配置 改为 前端模式 ( `FrontendMode` )
+
+
+
+
+# PluginCore.IPlugins-v0.2.0
+
+## Added
+
+- plugin 支持加载插件 wwwroot 文件夹下的 html前端等
+
+
+
+
+# PluginCore-v0.3.1
+
+## Fixed
+
+- System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+  - Fixed #4 
+
+
+# PluginCore-v0.3.0
+
+## Added
+
+- plugin 支持加载插件 wwwroot 文件夹下的 html前端等
+
+
+
+# PluginCore-v0.2.0
+
+
+## Added
+
+- 支持加载远程前端, 使用 jsdelivr
+   - https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-fronted@0.1.2/dist-cdn/
+
+
+
+# PluginCore.IPlugins-v0.1.0
+
+## 基本的 Plugin 接口
+
+- IPlugin
+- BasePlugin
+- 基本 辅助类
+
+
+# PluginCore-v0.1.0
+
+## Added
+
+- 加载本地 前端
 
 
 
