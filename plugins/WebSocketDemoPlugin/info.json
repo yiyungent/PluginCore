@@ -1,0 +1,8 @@
+{
+	"PluginId": "WebSocketDemoPlugin",
+	"DisplayName": "WebSocket 示例插件",
+	"Description": "使用 WebSocket",
+	"Author": "yiyun",
+	"Version": "0.1.0",
+	"SupportedVersions": [ "0.0.1" ]
+}

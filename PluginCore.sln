@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31612.314
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F4038C30-CEF3-406D-AAC6-1158BE61617D}"
 EndProject
@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldPlugin", "plugins
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginCore.Registry", "src\PluginCore.Registry\PluginCore.Registry.csproj", "{42648CA6-5BC7-4C5C-8A23-1F384D18309F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubApiPlugin", "plugins\GitHubApiPlugin\GitHubApiPlugin.csproj", "{7FCD2963-3652-40BF-A6B5-6D0E6083B128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubApiPlugin", "plugins\GitHubApiPlugin\GitHubApiPlugin.csproj", "{7FCD2963-3652-40BF-A6B5-6D0E6083B128}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketDemoPlugin", "plugins\WebSocketDemoPlugin\WebSocketDemoPlugin.csproj", "{23DC0791-2E47-4162-B950-90780E94C332}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{7FCD2963-3652-40BF-A6B5-6D0E6083B128}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FCD2963-3652-40BF-A6B5-6D0E6083B128}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FCD2963-3652-40BF-A6B5-6D0E6083B128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23DC0791-2E47-4162-B950-90780E94C332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DC0791-2E47-4162-B950-90780E94C332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DC0791-2E47-4162-B950-90780E94C332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DC0791-2E47-4162-B950-90780E94C332}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{C000158C-1690-41E8-8D44-41AC01A8E81B} = {D8255E7B-33DD-40B1-95A7-2B4F45BFE0F4}
 		{42648CA6-5BC7-4C5C-8A23-1F384D18309F} = {F4038C30-CEF3-406D-AAC6-1158BE61617D}
 		{7FCD2963-3652-40BF-A6B5-6D0E6083B128} = {D8255E7B-33DD-40B1-95A7-2B4F45BFE0F4}
+		{23DC0791-2E47-4162-B950-90780E94C332} = {D8255E7B-33DD-40B1-95A7-2B4F45BFE0F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5B7D6AB-2647-419D-93CB-5475018BA79C}
