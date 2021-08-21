@@ -1,0 +1,33 @@
+{
+  "name": "PluginCore",
+  "version": "0.1.0",
+  "description": "<p align=\"center\">\r <img src=\"docs/.vuepress/public/images/logo.png\" alt=\"PluginCore\">\r </p>\r <h1 align=\"center\">PluginCore</h1>",
+  "main": "",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "docs:test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiyungent/PluginCore.git"
+  },
+  "keywords": [
+    "PluginCore"
+  ],
+  "author": "yiyun",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/yiyungent/PluginCore/issues"
+  },
+  "homepage": "https://github.com/yiyungent/PluginCore#readme",
+  "dependencies": {
+    "vuepress": "^1.5.2"
+  }
+}
