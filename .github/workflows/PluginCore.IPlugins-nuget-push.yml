@@ -23,6 +23,7 @@ jobs:
         cd ./src/PluginCore.IPlugins
         dotnet build --configuration Release
         dotnet pack --configuration Release
+        dotnet pack --configuration Release -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg
         ls
         ls ./bin/Release/
         
