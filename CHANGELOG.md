@@ -1,3 +1,33 @@
+
+
+
+
+
+# PluginCore-v0.8.0
+
+## Added
+
+- `ITimeJobPlugin` 定时任务 激活
+
+## Updated
+
+- 命名空间 整理
+
+
+
+
+# PluginCore.IPlugins-v0.6.0
+
+## Added
+
+- `ITimeJobPlugin` 定时任务
+
+## Updated
+
+- 命名空间 整理
+
+
+
 # PluginCore.IPlugins-v0.5.0
 
 ## Added
