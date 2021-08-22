@@ -1,94 +1,178 @@
 # 指南
 
-## 项目简介
 
-一个轻量的 Web 应用框架, 具有优雅、高效、简洁、富于表达力等优点。采用 前后端分离 设计，是崇尚开发效率的全栈框架
+## 一分钟集成
 
-- **简洁友好** - 统一的设计规范，精心打磨的操作界面回应你的期待。
-- **易扩展** - 一套完整的插件机制，以 约定优于配置 为中心的项目结构，无论是对开发者还是使用者都如此友好。
+推荐使用 [NuGet](https://www.nuget.org/packages/PluginCore), 在你项目的根目录 执行下方的命令, 如果你使用 Visual Studio, 这时依次点击 **Tools** -> **NuGet Package Manager** -> **Package Manager Console** , 确保 "Default project" 是你想要安装的项目, 输入下方的命令进行安装.
 
-前端 基于 `vue-element-admin`，后端 基于 `.NET Core3.1` ， RESTful + Semantic WebAPI 设计，采用 `UHub（IdentityServer4）` 完成认证授权。
+```bash
+PM> Install-Package PluginCore
+```
 
-Remember.Core 目前仅提供了插件框架，若你需要实现一个Web插件系统，或许 Remember.Core 是不错的参考，这也是本项目的目的，作为 插件系统实现的参考。
+> 在你的 ASP.NET Core 应用程序中修改代码
+>
+> Startup.cs
 
-## 框架技术栈
+```C#
+using PluginCore.Extensions;
 
-<!-- ![](/images/Remember.Core生态.png) -->
-<img :src="$withBase('/images/Remember.Core生态.png')">
+// This method gets called by the runtime. Use this method to add services to the container.
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllers();
 
-## 项目分层
+    // 1. 添加 PluginCore
+    services.AddPluginCore();
+}
 
-<!-- ![](/images/project-structure.png) -->
-<img :src="$withBase('/images/project-structure.png')">
+// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    if (env.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
 
-<!-- ![](/images/PluginCore.png) -->
-<img :src="$withBase('/images/PluginCore.png')">
+    app.UseHttpsRedirection();
 
-## 功能一览
+    app.UseRouting();
 
-- **上传本地插件** - 热插拔：无论是加载，卸载都无需重启你的站点
+    // 2. 使用 PluginCore
+    app.UsePluginCore();
 
-- **放置钩子** - 让插件行为加入框架
+    app.UseAuthorization();
 
-- **全程 `依赖注入`** - 你可在插件生命周期获取你注入的任何服务
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapControllers();
+    });
+}
+```
 
-<!-- ![](/images/pluginDependence.png) -->
-<img :src="$withBase('/images/pluginDependence.png')">
+> 现在访问 https://localhost:5001/PluginCore/Admin 即可进入 PluginCore Admin  
+> https://localhost:5001 需改为你的地址
 
-- **以 `约定优于配置`** 为中心的项目结构 - 只需关注你的业务
+### 注意
 
-<!-- ![](/images/plugin-structure.png) -->
-<img :src="$withBase('/images/plugin-structure.png')">
+请登录 `PluginCore Admin` 后，为了安全，及时修改默认用户名，密码:
 
-- **一插件一 LoadContext** - 插件间彼此隔离
+`App_Data/PluginCore.Config.json`     
 
-- **Framework 域共享机制** - 免去重复加载
+```json
+{
+	"Admin": {
+		"UserName": "admin",
+		"Password": "ABC12345"
+	},
+	"FrontendMode": "LocalEmbedded",
+	"RemoteFrontend": "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.2/dist-cdn"
+}
+```
 
-- **简单易用** - `PluginFinder`、`PluginManager` 或许你仅仅需要它们
-
-<!-- ![](/images/PluginFinder.png) -->
-<!-- ![](/images/PluginManager.png) -->
-<img :src="$withBase('/images/PluginFinder.png')">
-<img :src="$withBase('/images/PluginManager.png')">
-
-- **一套完整的 插件生命周期** - 在需要时做你想做
-
-<!-- ![](/images/screenshot/2020-10-29-18-33-40.png) -->
-<img :src="$withBase('/images/screenshot/2020-10-29-18-33-40.png')">
-
-- **动态扩展 WebAPI** - 每个插件都是一个 WebAPI
-
-<!-- ![](/images/screenshot/2020-10-29-18-40-28.png) -->
-<img :src="$withBase('/images/screenshot/2020-10-29-18-40-28.png')">
-
-- **完整插件的机制** - 从上传，设置，禁用再到卸载，一次打通
-
-<!-- ![](/images/screenshot/2020-10-29-18-41-59.png) -->
-<img :src="$withBase('/images/screenshot/2020-10-29-18-41-59.png')">
-
-<!-- ![](/images/screenshot/2020-10-29-18-42-27.png) -->
-<img :src="$withBase('/images/screenshot/2020-10-29-18-42-27.png')">
-
-<!-- ![](/images/screenshot/2020-10-29-18-44-05.png) -->
-<img :src="$withBase('/images/screenshot/2020-10-29-18-44-05.png')">
-
-- **多数据库切换** - 让EF做它该做的事
+修改后，立即生效，无需重启站点，需重新登录 `PluginCore Admin`
 
 
-- **轻量的插件框架** - 易用不过如此
+### 添加插件钩子, 并应用
 
-<!-- ![](/images/screenshot/2020-11-24-19-49-49.png) -->
-<img :src="$withBase('/images/screenshot/2020-11-24-19-49-49.png')">
+> 1.例如，自定义插件钩子: `ITestPlugin`
+
+```C#
+using PluginCore.IPlugins;
+
+namespace PluginCore.IPlugins
+{
+    public interface ITestPlugin : IPlugin
+    {
+        string Say();
+    }
+}
+```
+
+> 2.在需要激活的地方，应用钩子，这样所有启用的插件中，实现了 `ITestPlugin` 的插件，都将调用 `Say()`
+
+```C#
+using PluginCore;
+using PluginCore.IPlugins;
+
+namespace WebApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class TestController : ControllerBase
+    {
+        private readonly PluginFinder _pluginFinder;
+
+        public TestController(PluginFinder pluginFinder)
+        {
+            _pluginFinder = pluginFinder;
+        }
+
+        public ActionResult Get()
+        {
+            //var plugins = PluginFinder.EnablePlugins<BasePlugin>().ToList();
+            // 所有实现了 ITestPlugin 的已启用插件
+            var plugins2 = _pluginFinder.EnablePlugins<ITestPlugin>().ToList();
+
+            foreach (var item in plugins2)
+            {
+                // 调用
+                string words = item.Say();
+                Console.WriteLine(words);
+            }
+
+            return Ok("");
+        }
+    }
+}
+```
+
+### 自定义前端
+
+PluginCore 支持3种前端文件加载方式
+
+> 配置文件 `App_Data/PluginCore.Config.json` 中 `FrontendMode`
+
+1. LocalEmbedded
+  - 默认, 嵌入式资源，前端文件打包进dll, 此模式下, 不容易自定义前端文件，需要修改 `PluginCore` 源代码，重新编译，不建议
+
+2. LocalFolder
+  - 在集成了 `PluginCore` 的 ASP.NET Core 项目中, 新建 `PluginCoreAdmin`, 将前端文件放入此文件夹
+
+3. RemoteCDN
+  - 使用远程cdn资源, 可通过 配置文件中 `RemoteFrontend` 指定url
+
+> **注意:**    
+> 更新 `FrontendMode`, 需重启站点后, 才能生效
 
 
-## 补充
 
-- 作者博客: https://moeci.com
+### 补充
 
-- 作者邮箱: i@moeci.com
+> **补充**
+>
+> 开发插件只需要, 添加对 `PluginCore.IPlugins` 包 (插件sdk) 的引用即可，        
+>
+> 当然如果你需要 `PluginCore` ,  也可以添加引用
 
-- Remember.Core 的前生 是 在线学习系统 [remember](https://github.com/yiyungent/remember)
 
-- Remember 系列 是作者在大学的作品，写的不好，还请见谅
 
-- 插件系统设计参考自: https://github.com/lamondlu/Mystique，本框架去除了一些个人认为不必要的，再进行了一些高度封装、扩展
+> **规范**
+>
+> 1. 插件sdk
+>
+> 插件接口应当位于 `PluginCore.IPlugins` 命名空间，这是规范，不强求，但建议这么做，      
+>
+> 程序集名不一定要与命名空间名相同，你完全在你的插件sdk程序集中，使用 `PluginCore.IPlugins` 命名空间。
+>
+> 2. 插件
+>
+> 插件程序集名(一般=项目(Project)名) 与 插件 `info.json` 中 `PluginId` 一致, 例如: Project: `HelloWorldPlugin`, PluginId: `HelloWorldPlugin`,  此项必须，否则插件无法加载
+> `PluginId` 为插件唯一标识
+
+
+
+
+## 环境
+
+- 运行环境: .NET Core 3.1 (+)
+- 开发环境: Visual Studio Community 2019

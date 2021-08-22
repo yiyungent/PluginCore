@@ -31,68 +31,27 @@ module.exports = {
       { text: "首页", link: "/" },
       { text: "指南", link: "/Guide/" },
       {
-        text: "开发文档",
+        text: "插件开发",
         items: [
-          { text: "插件开发", link: "/PluginDev/" },
-          // { text: "PluginCore.AspNetCore", link: "/PluginCore.AspNetCore/" },
+          { text: "快速上手", link: "/PluginDev/Guide/" },
+          { text: "插件SDK", link: "/PluginDev/PluginSDK/" },
         ],
       },
-      // {
-      //   text: "Web SDK",
-      //   items: [
-      //     { text: "sim-captcha-js", link: "/WebSDK/sim-captcha-js/" },
-      //     { text: "vue-sim-captcha", link: "/WebSDK/vue-sim-captcha/" },
-      //   ],
-      // },
+      {
+        text: "社区",
+        items: [
+          { text: "插件", link: "/Community/Plugins/" },
+        ],
+      },
+      {
+        text: "高级",
+        items: [
+          { text: "系统设计", link: "/Advanced/Design/" },
+          // { text: "vue-sim-captcha", link: "/WebSDK/vue-sim-captcha/" },
+        ],
+      },
     ],
 
     sidebarDepth: 2,
-    // sidebar: {
-    //   "/Guide/": [
-    //     {
-    //       title: "指南", // 必要的
-    //       path: "/Guide/",
-    //       collapsable: false, // 可选的, 默认值是 true,
-    //       children: [
-    //         {
-    //           title: "依赖",
-    //           path: "dependence",
-    //         },
-    //       ],
-    //     },
-    //   ],
-    //   "/PluginCore/": [
-    //     {
-    //       title: "PluginCore", // 必要的
-    //       path: "/PluginCore/",
-    //       collapsable: false, // 可选的, 默认值是 true,
-    //       // children: [{ title: "API", path: "api" }],
-    //     },
-    //   ],
-    //   "/PluginCore.AspNetCore/": [
-    //     {
-    //       title: "PluginCore.AspNetCore", // 必要的
-    //       path: "/PluginCore.AspNetCore/",
-    //       collapsable: false, // 可选的, 默认值是 true,
-    //       // children: [{ title: "API", path: "api" }],
-    //     },
-    //   ],
-    //   "/WebSDK/sim-captcha-js/": [
-    //     {
-    //       title: "sim-captcha-js", // 必要的
-    //       path: "/WebSDK/sim-captcha-js/",
-    //       collapsable: false, // 可选的, 默认值是 true,
-    //       children: [{ title: "API", path: "api" }],
-    //     },
-    //   ],
-    //   "/WebSDK/vue-sim-captcha/": [
-    //     {
-    //       title: "vue-sim-captcha", // 必要的
-    //       path: "/WebSDK/vue-sim-captcha/",
-    //       collapsable: false, // 可选的, 默认值是 true,
-    //       children: [{ title: "API", path: "api" }],
-    //     },
-    //   ],
-    // },
   },
 };
