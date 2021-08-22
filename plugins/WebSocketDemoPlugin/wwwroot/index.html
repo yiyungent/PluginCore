@@ -1,17 +1,58 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 	<meta charset="utf-8" />
-	<title>HelloWorldPlugin</title>
-	<!-- 注意:路径, 前置 /plugins/HelloWorldPlugin/ -->
-	<link href="/plugins/HelloWorldPlugin/css/main.css" rel="stylesheet" />
+	<title>WebSocketDemoPlugin</title>
+	<style>
+		table {
+			border: 0
+		}
+
+		.commslog-data {
+			font-family: Consolas, Courier New, Courier, monospace;
+		}
+
+		.commslog-server {
+			background-color: red;
+			color: white
+		}
+
+		.commslog-client {
+			background-color: green;
+			color: white
+		}
+	</style>
 </head>
 <body>
-	<div id="app">
-		<h3>HelloWorldPlugin! </h3>
-		<p>插件的前端文件应当放在 wwwroot 文件夹下</p>
+	<h1>WebSocket Sample Application</h1>
+	<p id="stateLabel">Ready to connect...</p>
+	<div>
+		<label for="connectionUrl">WebSocket Server URL:</label>
+		<input id="connectionUrl" />
+		<button id="connectButton" type="submit">Connect</button>
+	</div>
+	<p></p>
+	<div>
+		<label for="sendMessage">Message to send:</label>
+		<input id="sendMessage" disabled />
+		<button id="sendButton" type="submit" disabled>Send</button>
+		<button id="closeButton" disabled>Close Socket</button>
 	</div>
 
+	<h2>Communication Log</h2>
+	<table style="width: 800px">
+		<thead>
+			<tr>
+				<td style="width: 100px">From</td>
+				<td style="width: 100px">To</td>
+				<td>Data</td>
+			</tr>
+		</thead>
+		<tbody id="commsLog">
+		</tbody>
+	</table>
+
+	<!-- 注意:路径, 前置 /plugins/WebSocketDemoPlugin/ -->
+	<script src="/plugins/WebSocketDemoPlugin/js/main.js"></script>
 </body>
 </html>
