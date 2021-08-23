@@ -1,6 +1,7 @@
 'use strict'
 const path = require('path')
 const defaultSettings = require('./src/settings.js')
+const myEnv = require('./src/env.js')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -26,11 +27,7 @@ module.exports = {
    */
   // publicPath: '/PluginCore/Admin',
   // 通过jsDelivr引用GitHub资源: https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径
-  publicPath: process.env.NODE_ENV === 'cdn'
-    ? process.env.BASE_URL
-    // ? '/PluginCore/Admin'
-    : '/PluginCore/Admin',
-  // outputDir: 'dist',
+  publicPath: myEnv.baseUrl,
   outputDir: process.env.NODE_ENV === 'cdn'
     ? 'dist-cdn'
     : 'dist',

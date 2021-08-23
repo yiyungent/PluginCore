@@ -1,6 +1,7 @@
 import { login, logout, getInfo } from '@/api/user'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import { resetRouter } from '@/router'
+import myEnv from "@/env"
 
 const getDefaultState = () => {
   return {
@@ -57,7 +58,7 @@ const actions = {
 
         let { name, avatar } = data
         if (avatar == '') {
-          avatar = process.env.BASE_URL + "/images/avatar.gif"
+          avatar = myEnv.baseUrl + "/images/avatar.gif"
         }
 
         commit('SET_NAME', name)

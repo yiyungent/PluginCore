@@ -15,6 +15,8 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 
+import myEnv from "@/env"
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
@@ -35,7 +37,7 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
-const VERSION = "0.2.2";
+const VERSION = myEnv.version;
 const GIT_HASH = "";
 console.log(
   `${"\n"} %c plugincore-admin-frontend v${VERSION} ${GIT_HASH} %c https://github.com/yiyungent/plugincore-admin-frontend ${"\n"}${"\n"}`,

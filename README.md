@@ -1,22 +1,18 @@
-# vue-admin-template
+# plugincore-admin-frontend
 
 English | [简体中文](./README-zh.md)
 
-> A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
+> PluginCore Admin For Frontend
 
-**Live demo:** http://panjiachen.github.io/vue-admin-template
-
-
-**The current version is `v4.0+` build on `vue-cli`. If you want to use the old version , you can switch branch to [tag/3.11.0](https://github.com/PanJiaChen/vue-admin-template/tree/tag/3.11.0), it does not rely on `vue-cli`**
 
 ## Build Setup
 
 ```bash
 # clone the project
-git clone https://github.com/PanJiaChen/vue-admin-template.git
+git clone https://github.com/yiyungent/plugincore-admin-frontend.git
 
 # enter the project directory
-cd vue-admin-template
+cd plugincore-admin-frontend
 
 # install dependency
 npm install
@@ -35,6 +31,9 @@ npm run build:stage
 
 # build for production environment
 npm run build:prod
+
+# build for cdn environment
+npm run build:cdn
 ```
 
 ## Advanced
@@ -67,13 +66,9 @@ For `typescript` version, you can use [vue-typescript-admin-template](https://gi
 
 ## Related Project
 
+- [PluginCore](https://github.com/yiyungent/PluginCore)
+
 - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
-
-- [electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
-
-- [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)
-
-- [awesome-project](https://github.com/PanJiaChen/vue-element-admin/issues/2312)
 
 ## Browsers support
 
@@ -85,6 +80,6 @@ Modern browsers and Internet Explorer 10+.
 
 ## License
 
-[MIT](https://github.com/PanJiaChen/vue-admin-template/blob/master/LICENSE) license.
+[MIT](https://github.com/yiyungent/plugincore-admin-frontend/blob/main/LICENSE) license.
 
-Copyright (c) 2017-present PanJiaChen
+Copyright (c) 2021-present yiyun
