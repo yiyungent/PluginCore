@@ -55,7 +55,7 @@ const actions = {
           return reject('Verification failed, please Login again.')
         }
 
-        const { name, avatar } = data
+        let { name, avatar } = data
         if (avatar == '') {
           avatar = process.env.BASE_URL + "/images/avatar.gif"
         }

@@ -35,7 +35,7 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
-const VERSION = "0.2.0";
+const VERSION = "0.2.2";
 const GIT_HASH = "";
 console.log(
   `${"\n"} %c plugincore-admin-frontend v${VERSION} ${GIT_HASH} %c https://github.com/yiyungent/plugincore-admin-frontend ${"\n"}${"\n"}`,
