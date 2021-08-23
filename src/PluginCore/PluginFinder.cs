@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -19,12 +20,47 @@ namespace PluginCore
     {
         #region Fields
         private readonly IServiceProvider _serviceProvider;
+
+        /// <summary>
+        /// Key: 实现了 IPlugin 的插件类
+        /// Value: 此插件类 允许的 行为(众多实现了 IPlugin 的钩子接口)
+        /// </summary>
+        private static ConcurrentDictionary<Type, List<Type>> _pluginAllowedBehavior;
         #endregion
 
         #region Ctor
         public PluginFinder(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
+        }
+
+        static PluginFinder()
+        {
+            // TODO: 初始化: 默认为信任模式: 插件允许所有行为
+            _pluginAllowedBehavior = new ConcurrentDictionary<Type, List<Type>>();
+        }
+        #endregion
+
+
+        #region 允许激活行为的 启用插件
+        /// <summary>
+        /// TODO: 实现了指定接口或类型 的启用插件 并且 允许激活此行为(接口)
+        ///
+        /// <para>TODO: 考虑后，还是没办法限制住插件恶意行为, 因为无法限制插件 修改配置文件 </para>
+        /// </summary>
+        /// <typeparam name="TPlugin"></typeparam>
+        /// <returns></returns>
+        public IEnumerable<TPlugin> ActivatedPlugins<TPlugin>()
+            where TPlugin : IPlugin
+        {
+            var enablePlugins = EnablePlugins<TPlugin>();
+            foreach (var plugin in enablePlugins)
+            {
+                // TODO: 检查是否允许 此插件行为
+
+
+                yield return plugin;
+            }
         }
         #endregion
 
