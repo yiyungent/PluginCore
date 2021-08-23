@@ -1,6 +1,12 @@
 
 
+# PluginCore-v0.8.1
 
+## Fixed
+
+- 用户头像 在某些时候url错误: 改为完全由前端提供
+
+- RemoteFrontend 已更新
 
 
 # PluginCore-v0.8.0
