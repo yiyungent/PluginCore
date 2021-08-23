@@ -4,5 +4,5 @@
 		"Password": "ABC12345"
 	},
 	"FrontendMode": "LocalEmbedded",
-	"RemoteFrontend": "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.2/dist-cdn"
+	"RemoteFrontend": "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.2.3/dist-cdn"
 }

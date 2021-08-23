@@ -87,7 +87,8 @@ namespace PluginCore.Controllers
                 responseModel.data = new
                 {
                     name = adminUserName,
-                    avatar = this.RemoteFronted + "/images/avatar.gif"
+                    //avatar = this.RemoteFronted + "/images/avatar.gif"
+                    avatar = ""
                 };
             }
             catch (Exception ex)

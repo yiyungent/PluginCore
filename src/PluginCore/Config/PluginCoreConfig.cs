@@ -20,7 +20,7 @@ namespace PluginCore.Config
         /// </summary>
         public string FrontendMode { get; set; } = "LocalEmbedded";
 
-        public string RemoteFrontend { get; set; } = "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.1.3/dist-cdn";
+        public string RemoteFrontend { get; set; } = "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.2.3/dist-cdn";
 
         public sealed class AdminModel
         {
