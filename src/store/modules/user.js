@@ -56,6 +56,9 @@ const actions = {
         }
 
         const { name, avatar } = data
+        if (avatar == '') {
+          avatar = process.env.BASE_URL + "/images/avatar.gif"
+        }
 
         commit('SET_NAME', name)
         commit('SET_AVATAR', avatar)
