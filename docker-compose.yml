@@ -15,7 +15,8 @@ services:
       # 注意：http://*:80 不要用 双引号 "" 引起来
       - ASPNETCORE_URLS=http://*:80
     volumes:
-      - ./plugins:/app/plugins
+      # 注意: Linux 下 区分大小写
+      - ./Plugins:/app/Plugins
       - ./App_Data:/app/App_Data
       - ./PluginCoreAdmin:/app/PluginCoreAdmin
       - ./Plugins_wwwroot:/app/Plugins_wwwroot

@@ -25,6 +25,14 @@
 - **0侵入** - 近乎0侵入
 
 
+## 在线演示
+
+- http://plugincore.moeci.com/PluginCore/Admin
+  - 用户名: admin  密码: ABC12345
+  - 在线演示, 功能大部分受限, 完整体验, 请自行搭建, 可使用下方 Docker 快速体验
+  - 非最新版本
+
+
 ## 截图
 
 ![](screenshots/1.png)
@@ -117,8 +125,11 @@ docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspn
 
 现在你可以访问 http://localhost:5004/PluginCore/Admin
 
-> 补充:
-> 使用 `ghcr.io`
+> 补充:     
+> 若使用 `Docker Compose`, 可参考仓库根目录下的 `docker-compose.yml`     
+
+> 补充:   
+> 使用 `ghcr.io`     
 > 
 > ```bash
 > docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspnetcore3-1 ghcr.io/yiyungent/plugincore-aspnetcore3-1
