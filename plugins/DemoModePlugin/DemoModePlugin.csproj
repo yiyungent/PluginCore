@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+	</ItemGroup>
+
+	<!-- 方便开发debug,与发布到nuget -->
+	<ItemGroup Condition="'$(Configuration)' == 'Release'">
+		<PackageReference Include="PluginCore.IPlugins" Version="0.4.0" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+		<ProjectReference Include="..\..\src\PluginCore.IPlugins\PluginCore.IPlugins.csproj" />
+	</ItemGroup>
+
+	<!-- 发布插件相关文件 -->
+	<ItemGroup>
+		<Content Include="info.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="README.md">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="settings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+</Project>
