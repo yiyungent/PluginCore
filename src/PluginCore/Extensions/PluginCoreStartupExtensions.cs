@@ -176,12 +176,13 @@ namespace PluginCore.Extensions
 
             #region IStartupPlugin
 
-            var plugins = pluginFinder.EnablePlugins<PluginCore.IPlugins.IStartupPlugin>()?.OrderBy(m => m.ConfigureOrder)?.ToList();
+            var plugins = pluginFinder.EnablePlugins<IStartupPlugin>()?.OrderBy(m => m.ConfigureOrder)?.ToList();
 
             foreach (var item in plugins)
             {
                 // 调用
-                Utils.LogUtil.Info($"{item.GetType().ToString()} {nameof(IStartupPlugin)}.{nameof(IStartupPlugin.Configure)}");
+                Utils.LogUtil.PluginBehavior(item, typeof(IStartupPlugin), nameof(IStartupPlugin.Configure));
+
                 item?.Configure(app);
             }
 
