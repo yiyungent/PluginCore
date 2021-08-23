@@ -38,7 +38,8 @@ namespace DemoModePlugin.Middlewares
             bool isMatch = false;
             CommonResponseModel responseModel = new CommonResponseModel();
 
-            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Upload");
+            // 注意: 忽略大小写
+            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Upload", StringComparison.OrdinalIgnoreCase);
             if (isMatch)
             {
                 responseModel.code = -1;
@@ -48,7 +49,7 @@ namespace DemoModePlugin.Middlewares
                 await httpContext.Response.WriteAsync(jsonStr, Encoding.UTF8);
                 return;
             }
-            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Uninstall");
+            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Uninstall", StringComparison.OrdinalIgnoreCase);
             if (isMatch)
             {
                 responseModel.code = -1;
@@ -58,7 +59,7 @@ namespace DemoModePlugin.Middlewares
                 await httpContext.Response.WriteAsync(jsonStr, Encoding.UTF8);
                 return;
             }
-            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Disable");
+            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Disable", StringComparison.OrdinalIgnoreCase);
             if (isMatch)
             {
                 responseModel.code = -1;
@@ -68,7 +69,7 @@ namespace DemoModePlugin.Middlewares
                 await httpContext.Response.WriteAsync(jsonStr, Encoding.UTF8);
                 return;
             }
-            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Delete");
+            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Delete", StringComparison.OrdinalIgnoreCase);
             if (isMatch)
             {
                 responseModel.code = -1;
