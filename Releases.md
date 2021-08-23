@@ -1,5 +1,12 @@
 
 
+# PluginCore-v0.8.2
+
+## Fixed
+
+- nuget 包中 `PluginCore.dll` 缺失 `Resources` 导致 #7 
+
+
 # PluginCore-v0.8.1
 
 ## Fixed
