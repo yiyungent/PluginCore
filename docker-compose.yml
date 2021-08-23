@@ -1,0 +1,21 @@
+version: '3.4'
+
+# 本文件 用作 Release 用，用作 Docker 部署
+
+services:
+  plugincore.service:
+    image: yiyungent/plugincore-aspnetcore3-1
+    container_name: plugincore-aspnetcore3-1-container
+    ports:
+      - "5007:80"
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+      - ASPNETCORE_ENVIRONMENT=Production
+      # 注意：http://*:80 不要用 双引号 "" 引起来
+      - ASPNETCORE_URLS=http://*:80
+    volumes:
+      - ./plugins:/app/plugins
+      - ./App_Data:/app/App_Data
+      - ./PluginCoreAdmin:/app/PluginCoreAdmin
+      - ./Plugins_wwwroot:/app/Plugins_wwwroot

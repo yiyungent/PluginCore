@@ -50,3 +50,42 @@ jobs:
           docker push $IMAGE_ID:$VERSION
           docker tag $IMAGE_ID:$VERSION $IMAGE_ID:latest
           docker push $IMAGE_ID:latest
+
+
+  # Docker 自动部署
+  deploy-docker: 
+    needs: [build]
+    name: Deploy Docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set outputs
+        id: vars
+        run: |
+          #echo ::set-output name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
+          # 去掉前面的 refs/tags/AspNetCore3_1-
+          echo ::set-output name=RELEASE_VERSION::$(echo ${GITHUB_REF:24})
+          echo ::set-output name=IMAGE_NAME::plugincore-aspnetcore3-1
+
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }} # 服务器ip
+          username: ${{ secrets.HOST_USERNAME }} # 服务器登录用户名
+          password: ${{ secrets.HOST_PASSWORD }} # 服务器登录密码
+          port: ${{ secrets.HOST_PORT }} # 服务器ssh端口
+          command_timeout: 360m
+          script: |
+            # 切换工作区
+            cd /www/wwwroot/plugincore.moeci.com
+            # 下载 docker-compose.yml
+            wget -O docker-compose.yml https://raw.githubusercontent.com/yiyungent/PluginCore/main/docker-compose.yml
+            # 停止并删除旧 容器、网络、挂载点
+            #docker-compose down                          # TODO: docker-compose: command not found. 不知道为什么找不到 docker-compose，但直接连接服务器执行就可以
+            /usr/local/python3/bin/docker-compose down
+            # 删除旧镜像
+            docker rmi ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.IMAGE_NAME }}
+            # 登录镜像服务器
+            docker login --username=${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }} 
+            # 创建并启动容器
+            #docker-compose up -d --build
+            /usr/local/python3/bin/docker-compose up -d --build
