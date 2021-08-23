@@ -78,7 +78,7 @@ jobs:
             # 切换工作区
             cd /www/wwwroot/plugincore.moeci.com
             # 下载 docker-compose.yml
-            wget -O docker-compose.yml https://raw.githubusercontent.com/yiyungent/PluginCore/main/docker-compose.yml
+            wget -O docker-compose.yml https://gitee.com/yiyungent/PluginCore/raw/main/docker-compose.yml
             # 停止并删除旧 容器、网络、挂载点
             #docker-compose down                          # TODO: docker-compose: command not found. 不知道为什么找不到 docker-compose，但直接连接服务器执行就可以
             /usr/local/python3/bin/docker-compose down
