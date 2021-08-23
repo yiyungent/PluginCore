@@ -36,13 +36,18 @@ namespace WebSocketDemoPlugin.Controllers
 
         private async Task Echo(HttpContext httpContext, WebSocket webSocket)
         {
-            var buffer = new byte[1024 * 4];
-            WebSocketReceiveResult result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+            var receiveBuffer = new byte[1024 * 4];
+            WebSocketReceiveResult result = await webSocket.ReceiveAsync(new ArraySegment<byte>(receiveBuffer), CancellationToken.None);
             while (!result.CloseStatus.HasValue)
             {
-                await webSocket.SendAsync(new ArraySegment<byte>(buffer, 0, result.Count), result.MessageType, result.EndOfMessage, CancellationToken.None);
+                byte[] myBuffer = System.Text.Encoding.UTF8.GetBytes("哈哈哈哈!");
+                await webSocket.SendAsync(new ArraySegment<byte>(myBuffer), WebSocketMessageType.Text, false, CancellationToken.None);
 
-                result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+                
+                await webSocket.SendAsync(new ArraySegment<byte>(receiveBuffer, 0, result.Count), result.MessageType, result.EndOfMessage, CancellationToken.None);
+
+                // 继续接收
+                result = await webSocket.ReceiveAsync(new ArraySegment<byte>(receiveBuffer), CancellationToken.None);
             }
             await webSocket.CloseAsync(result.CloseStatus.Value, result.CloseStatusDescription, CancellationToken.None);
         }
