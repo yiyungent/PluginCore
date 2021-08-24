@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DemoModePlugin.ResponseModel;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Primitives;
 using PluginCore.Interfaces;
 using PluginCore.IPlugins;
 
@@ -38,7 +39,28 @@ namespace DemoModePlugin.Middlewares
             bool isMatch = false;
             CommonResponseModel responseModel = new CommonResponseModel();
 
+            #region 特殊可用
+
+            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Disable", StringComparison.OrdinalIgnoreCase)
+                      || httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Enable", StringComparison.OrdinalIgnoreCase)
+                      || httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Uninstall", StringComparison.OrdinalIgnoreCase)
+                      || httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Install", StringComparison.OrdinalIgnoreCase);
+            if (isMatch)
+            {
+                KeyValuePair<string, StringValues> pluginIdPair = httpContext.Request.Query
+                    .FirstOrDefault(m => m.Key.Equals("pluginId", StringComparison.OrdinalIgnoreCase));
+                string pluginId = pluginIdPair.Value.FirstOrDefault();
+                if (!string.IsNullOrEmpty(pluginId) && pluginId == "HelloWorldPlugin")
+                {
+                    await _next(httpContext);
+                    return;
+                }
+            }
+
+            #endregion
+
             // 注意: 忽略大小写
+            #region 禁用
             isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Upload", StringComparison.OrdinalIgnoreCase);
             if (isMatch)
             {
@@ -100,6 +122,7 @@ namespace DemoModePlugin.Middlewares
                 await httpContext.Response.WriteAsync(jsonStr, Encoding.UTF8);
                 return;
             }
+            #endregion
 
 
             // Call the next delegate/middleware in the pipeline
