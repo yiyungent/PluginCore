@@ -8,7 +8,7 @@
     
     <meta name="description" content="ASP.NET Core 轻量级 插件框架">
     
-    <link rel="preload" href="/PluginCore/assets/css/0.styles.adff9330.css" as="style"><link rel="preload" href="/PluginCore/assets/js/app.09b5dedd.js" as="script"><link rel="preload" href="/PluginCore/assets/js/2.165e3843.js" as="script"><link rel="preload" href="/PluginCore/assets/js/11.8fe6a92c.js" as="script"><link rel="prefetch" href="/PluginCore/assets/js/10.540226f7.js"><link rel="prefetch" href="/PluginCore/assets/js/12.40621b2d.js"><link rel="prefetch" href="/PluginCore/assets/js/13.966f5551.js"><link rel="prefetch" href="/PluginCore/assets/js/14.43cc945c.js"><link rel="prefetch" href="/PluginCore/assets/js/15.98964b38.js"><link rel="prefetch" href="/PluginCore/assets/js/16.ee3ff88f.js"><link rel="prefetch" href="/PluginCore/assets/js/3.e77e1804.js"><link rel="prefetch" href="/PluginCore/assets/js/4.2a5d96fc.js"><link rel="prefetch" href="/PluginCore/assets/js/5.fd255a4a.js"><link rel="prefetch" href="/PluginCore/assets/js/6.66b67ff0.js"><link rel="prefetch" href="/PluginCore/assets/js/7.809bd4f7.js"><link rel="prefetch" href="/PluginCore/assets/js/8.0f96eb09.js"><link rel="prefetch" href="/PluginCore/assets/js/9.51d597e0.js">
+    <link rel="preload" href="/PluginCore/assets/css/0.styles.adff9330.css" as="style"><link rel="preload" href="/PluginCore/assets/js/app.4e392cc7.js" as="script"><link rel="preload" href="/PluginCore/assets/js/2.165e3843.js" as="script"><link rel="preload" href="/PluginCore/assets/js/11.d16f7cdf.js" as="script"><link rel="prefetch" href="/PluginCore/assets/js/10.c83b3fcf.js"><link rel="prefetch" href="/PluginCore/assets/js/12.6854df7d.js"><link rel="prefetch" href="/PluginCore/assets/js/13.d69dbe8d.js"><link rel="prefetch" href="/PluginCore/assets/js/14.ecc945bb.js"><link rel="prefetch" href="/PluginCore/assets/js/15.d3e06c00.js"><link rel="prefetch" href="/PluginCore/assets/js/16.c2d7923c.js"><link rel="prefetch" href="/PluginCore/assets/js/3.e77e1804.js"><link rel="prefetch" href="/PluginCore/assets/js/4.2a5d96fc.js"><link rel="prefetch" href="/PluginCore/assets/js/5.fd255a4a.js"><link rel="prefetch" href="/PluginCore/assets/js/6.66b67ff0.js"><link rel="prefetch" href="/PluginCore/assets/js/7.809bd4f7.js"><link rel="prefetch" href="/PluginCore/assets/js/8.4b28c54f.js"><link rel="prefetch" href="/PluginCore/assets/js/9.4fe18a19.js">
     <link rel="stylesheet" href="/PluginCore/assets/css/0.styles.adff9330.css">
   </head>
   <body>
@@ -43,114 +43,114 @@
     <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>插件开发 - 快速上手</p></blockquote> <h1 id="快速上手"><a href="#快速上手" class="header-anchor">#</a> 快速上手</h1> <h4 id="_1-引入插件sdk"><a href="#_1-引入插件sdk" class="header-anchor">#</a> 1. 引入插件SDK</h4> <p><a href="https://www.nuget.org/packages/PluginCore.IPlugins/" target="_blank" rel="noopener noreferrer">NuGet<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <blockquote><p>方式1: NuGet Package Manager</p></blockquote> <div class="language-shell extra-class"><pre class="language-shell"><code>Install-Package PluginCore.IPlugins
 </code></pre></div><blockquote><p>方式2: .NET CLI</p></blockquote> <div class="language-shell extra-class"><pre class="language-shell"><code>dotnet <span class="token function">add</span> package PluginCore.IPlugins
 </code></pre></div><blockquote><p>方式3: PackageReference ( 在你的 <code>HelloWorldPlugin.csproj</code> <code>&lt;ItemGroup&gt;</code> 中 添加 )</p></blockquote> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>PluginCore.IPlugins<span class="token punctuation">&quot;</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0.6.0<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
-</code></pre></div><blockquote><p>一个示例插件项目结构 如下图</p></blockquote> <img src="/PluginCore/images/plugin-project-structure.png"> <h4 id="_2-添加-helloworldplugin-类-继承-baseplugin"><a href="#_2-添加-helloworldplugin-类-继承-baseplugin" class="header-anchor">#</a> 2. 添加 <code>HelloWorldPlugin</code> 类 继承 <code>BasePlugin</code></h4> <blockquote><p>或则你可以直接实现 <code>IPlugin</code></p></blockquote> <blockquote><p>可通过预先定义框架行为钩子，插件再实现接口，将插件行为加入框架，如实现  <code>IStartupXPlugin</code></p></blockquote> <blockquote><p>支持插件 <code>构造器注入</code> 框架预先注入的服务等</p></blockquote> <div class="language-c# extra-class"><pre class="language-text"><code>public class HelloWorldPlugin : BasePlugin, IStartupXPlugin
-{
-    public override (bool IsSuccess, string Message) AfterEnable()
-    {
-        Console.WriteLine($&quot;{nameof(HelloWorldPlugin)}: {nameof(AfterEnable)}&quot;);
-        return base.AfterEnable();
-    }
+</code></pre></div><blockquote><p>一个示例插件项目结构 如下图</p></blockquote> <img src="/PluginCore/images/plugin-project-structure.png"> <h4 id="_2-添加-helloworldplugin-类-继承-baseplugin"><a href="#_2-添加-helloworldplugin-类-继承-baseplugin" class="header-anchor">#</a> 2. 添加 <code>HelloWorldPlugin</code> 类 继承 <code>BasePlugin</code></h4> <blockquote><p>或则你可以直接实现 <code>IPlugin</code></p></blockquote> <blockquote><p>可通过预先定义框架行为钩子，插件再实现接口，将插件行为加入框架，如实现  <code>IStartupXPlugin</code></p></blockquote> <blockquote><p>支持插件 <code>构造器注入</code> 框架预先注入的服务等</p></blockquote> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorldPlugin</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">BasePlugin</span><span class="token punctuation">,</span> <span class="token class-name">IStartupXPlugin</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token punctuation">(</span><span class="token keyword">bool</span> IsSuccess<span class="token punctuation">,</span> <span class="token keyword">string</span> Message<span class="token punctuation">)</span></span> <span class="token function">AfterEnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$&quot;</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">nameof</span><span class="token punctuation">(</span>HelloWorldPlugin<span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">nameof</span><span class="token punctuation">(</span>AfterEnable<span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">base</span><span class="token punctuation">.</span><span class="token function">AfterEnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    public override (bool IsSuccess, string Message) BeforeDisable()
-    {
-        Console.WriteLine($&quot;{nameof(HelloWorldPlugin)}: {nameof(BeforeDisable)}&quot;);
-        return base.BeforeDisable();
-    }
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token punctuation">(</span><span class="token keyword">bool</span> IsSuccess<span class="token punctuation">,</span> <span class="token keyword">string</span> Message<span class="token punctuation">)</span></span> <span class="token function">BeforeDisable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$&quot;</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">nameof</span><span class="token punctuation">(</span>HelloWorldPlugin<span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp"><span class="token keyword">nameof</span><span class="token punctuation">(</span>BeforeDisable<span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">base</span><span class="token punctuation">.</span><span class="token function">BeforeDisable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    public void ConfigureServices(IServiceCollection services)
-    {
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">ConfigureServices</span><span class="token punctuation">(</span><span class="token class-name">IServiceCollection</span> services<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
 
-    }
+    <span class="token punctuation">}</span>
 
-    public void Configure(IApplicationBuilder app)
-    {
-        app.UseMiddleware&lt;SayHelloMiddleware&gt;();
-    }
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Configure</span><span class="token punctuation">(</span><span class="token class-name">IApplicationBuilder</span> app<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        app<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">UseMiddleware</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>SayHelloMiddleware<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    public int ConfigureOrder
-    {
-        get
-        {
-            return 2;
-        }
-    }
-
-
-    public int ConfigureServicesOrder
-    {
-        get
-        {
-            return 2;
-        }
-    }
-}
-</code></pre></div><blockquote><p><code>SayHelloMiddleware.cs</code></p></blockquote> <div class="language-C# extra-class"><pre class="language-text"><code>public class SayHelloMiddleware
-{
-    private readonly RequestDelegate _next;
-
-    /// &lt;summary&gt;
-    /// 在 &lt;see cref=&quot;PluginApplicationBuilder&quot;/&gt; Build 时, 将会 new Middleware(), 最终将所有 Middleware 包装为一个 &lt;see cref=&quot;RequestDelegate&quot;/&gt;
-    /// &lt;/summary&gt;
-    /// &lt;param name=&quot;next&quot;&gt;&lt;/param&gt;
-    public SayHelloMiddleware(RequestDelegate next)
-    {
-        _next = next;
-    }
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> ConfigureOrder
+    <span class="token punctuation">{</span>
+        <span class="token keyword">get</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
 
-    /// &lt;summary&gt;
-    /// 
-    /// &lt;/summary&gt;
-    /// &lt;param name=&quot;httpContext&quot;&gt;&lt;/param&gt;
-    /// &lt;param name=&quot;pluginFinder&quot;&gt;测试，是否运行时添加的Middleware，是否可以依赖注入&lt;/param&gt;
-    /// &lt;returns&gt;&lt;/returns&gt;
-    public async Task InvokeAsync(HttpContext httpContext, IPluginFinder pluginFinder)
-    {
-        // 测试: 成功
-        List&lt;IPlugin&gt; plugins = pluginFinder.EnablePlugins()?.ToList();
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> ConfigureServicesOrder
+    <span class="token punctuation">{</span>
+        <span class="token keyword">get</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p><code>SayHelloMiddleware.cs</code></p></blockquote> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SayHelloMiddleware</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">RequestDelegate</span> _next<span class="token punctuation">;</span>
 
-        bool isMatch = false;
+    <span class="token comment">/// &lt;summary&gt;</span>
+    <span class="token comment">/// 在 &lt;see cref=&quot;PluginApplicationBuilder&quot;/&gt; Build 时, 将会 new Middleware(), 最终将所有 Middleware 包装为一个 &lt;see cref=&quot;RequestDelegate&quot;/&gt;</span>
+    <span class="token comment">/// &lt;/summary&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;next&quot;&gt;&lt;/param&gt;</span>
+    <span class="token keyword">public</span> <span class="token function">SayHelloMiddleware</span><span class="token punctuation">(</span><span class="token class-name">RequestDelegate</span> next<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        _next <span class="token operator">=</span> next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-        isMatch = httpContext.Request.Path.Value.StartsWith(&quot;/SayHello&quot;);
 
-        if (isMatch)
-        {
-            await httpContext.Response.WriteAsync($&quot;Hello World! {DateTime.Now:yyyy-MM-dd HH:mm:ss} &lt;br&gt;&quot; +
-                                                  $&quot;{httpContext.Request.Path} &lt;br&gt;&quot; +
-                                                  $&quot;{httpContext.Request.QueryString.Value}&quot;, Encoding.UTF8);
-        }
-        else
-        {
-            // Call the next delegate/middleware in the pipeline
-            await _next(httpContext);
-        }
-    }
+    <span class="token comment">/// &lt;summary&gt;</span>
+    <span class="token comment">/// </span>
+    <span class="token comment">/// &lt;/summary&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;httpContext&quot;&gt;&lt;/param&gt;</span>
+    <span class="token comment">/// &lt;param name=&quot;pluginFinder&quot;&gt;测试，是否运行时添加的Middleware，是否可以依赖注入&lt;/param&gt;</span>
+    <span class="token comment">/// &lt;returns&gt;&lt;/returns&gt;</span>
+    <span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task</span> <span class="token function">InvokeAsync</span><span class="token punctuation">(</span><span class="token class-name">HttpContext</span> httpContext<span class="token punctuation">,</span> <span class="token class-name">IPluginFinder</span> pluginFinder<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 测试: 成功</span>
+        <span class="token class-name">List<span class="token punctuation">&lt;</span>IPlugin<span class="token punctuation">&gt;</span></span> plugins <span class="token operator">=</span> pluginFinder<span class="token punctuation">.</span><span class="token function">EnablePlugins</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">?.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-}
-</code></pre></div><h4 id="_3-插件其他配置"><a href="#_3-插件其他配置" class="header-anchor">#</a> 3. 插件其他配置</h4> <blockquote><p>支持 动态扩展 WebAPI，和普通WebAPI 项目相同，直接创建 Controller 即可</p></blockquote> <blockquote><p>注意: 这里的 <code>IUserInfoService</code> 是集成了 <code>PluginCore</code> 的项目里的服务接口</p></blockquote> <div class="language-C# extra-class"><pre class="language-text"><code>[Route(&quot;api/plugins/[controller]&quot;)]
-[ApiController]
-public class UserHelloController : ControllerBase
-{
-    private readonly IUserInfoService _userInfoService;
+        <span class="token class-name"><span class="token keyword">bool</span></span> isMatch <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 
-    public UserHelloController(IUserInfoService userInfoService)
-    {
-        this._userInfoService = userInfoService;
-    }
+        isMatch <span class="token operator">=</span> httpContext<span class="token punctuation">.</span>Request<span class="token punctuation">.</span>Path<span class="token punctuation">.</span>Value<span class="token punctuation">.</span><span class="token function">StartsWith</span><span class="token punctuation">(</span><span class="token string">&quot;/SayHello&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    public ActionResult Get()
-    {
-        UserInfo userInfo = _userInfoService.FirstOrDefaultAsync(m =&gt; !m.IsDeleted).Result;
-        SettingsModel settingsModel = PluginSettingsModelFactory.Create&lt;SettingsModel&gt;(&quot;HelloWorldPlugin&quot;);
-        string rtn = $&quot;用户名: {userInfo.UserName}, 创建时间: {userInfo.CreateTime.ToString()}, Hello: {settingsModel.Hello}&quot;;
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isMatch<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">await</span> httpContext<span class="token punctuation">.</span>Response<span class="token punctuation">.</span><span class="token function">WriteAsync</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$&quot;Hello World! </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now</span><span class="token format-string"><span class="token punctuation">:</span>yyyy-MM-dd HH:mm:ss</span><span class="token punctuation">}</span></span><span class="token string"> &lt;br&gt;&quot;</span></span> <span class="token operator">+</span>
+                                                  <span class="token interpolation-string"><span class="token string">$&quot;</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">httpContext<span class="token punctuation">.</span>Request<span class="token punctuation">.</span>Path</span><span class="token punctuation">}</span></span><span class="token string"> &lt;br&gt;&quot;</span></span> <span class="token operator">+</span>
+                                                  <span class="token interpolation-string"><span class="token string">$&quot;</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">httpContext<span class="token punctuation">.</span>Request<span class="token punctuation">.</span>QueryString<span class="token punctuation">.</span>Value</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">,</span> Encoding<span class="token punctuation">.</span>UTF8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Call the next delegate/middleware in the pipeline</span>
+            <span class="token keyword">await</span> <span class="token function">_next</span><span class="token punctuation">(</span>httpContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
-        return Ok(rtn);
-    }
-}
-</code></pre></div><blockquote><p>插件设置（可选）, Json Model 类 继承 <code>PluginSettingsModel</code></p></blockquote> <div class="language-C# extra-class"><pre class="language-text"><code>public class SettingsModel : PluginSettingsModel
-{
-    public string Hello { get; set; }
-}
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="_3-插件其他配置"><a href="#_3-插件其他配置" class="header-anchor">#</a> 3. 插件其他配置</h4> <blockquote><p>支持 动态扩展 WebAPI，和普通WebAPI 项目相同，直接创建 Controller 即可</p></blockquote> <blockquote><p>注意: 这里的 <code>IUserInfoService</code> 是集成了 <code>PluginCore</code> 的项目里的服务接口</p></blockquote> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Route</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">&quot;api/plugins/[controller]&quot;</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">ApiController</span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserHelloController</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">ControllerBase</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">IUserInfoService</span> _userInfoService<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token function">UserHelloController</span><span class="token punctuation">(</span><span class="token class-name">IUserInfoService</span> userInfoService<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>_userInfoService <span class="token operator">=</span> userInfoService<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token return-type class-name">ActionResult</span> <span class="token function">Get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">UserInfo</span> userInfo <span class="token operator">=</span> _userInfoService<span class="token punctuation">.</span><span class="token function">FirstOrDefaultAsync</span><span class="token punctuation">(</span>m <span class="token operator">=&gt;</span> <span class="token operator">!</span>m<span class="token punctuation">.</span>IsDeleted<span class="token punctuation">)</span><span class="token punctuation">.</span>Result<span class="token punctuation">;</span>
+        <span class="token class-name">SettingsModel</span> settingsModel <span class="token operator">=</span> PluginSettingsModelFactory<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Create</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>SettingsModel<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span><span class="token string">&quot;HelloWorldPlugin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token keyword">string</span></span> rtn <span class="token operator">=</span> <span class="token interpolation-string"><span class="token string">$&quot;用户名: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">userInfo<span class="token punctuation">.</span>UserName</span><span class="token punctuation">}</span></span><span class="token string">, 创建时间: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">userInfo<span class="token punctuation">.</span>CreateTime<span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">, Hello: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">settingsModel<span class="token punctuation">.</span>Hello</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token function">Ok</span><span class="token punctuation">(</span>rtn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>插件设置（可选）, Json Model 类 继承 <code>PluginSettingsModel</code></p></blockquote> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SettingsModel</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">PluginSettingsModel</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Hello <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre></div><p>文件名必须 <code>settings.json</code></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
 	<span class="token property">&quot;Hello&quot;</span><span class="token operator">:</span> <span class="token string">&quot;哈哈哈哈哈或或或或或或&quot;</span> 
 <span class="token punctuation">}</span>
@@ -207,7 +207,7 @@ public class UserHelloController : ControllerBase
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ItemGroup</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Project</span><span class="token punctuation">&gt;</span></span>
-</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/yiyungent/PluginCore/edit/main/docs/PluginDev/Guide/README.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/24/2021, 9:58:58 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/PluginCore/assets/js/app.09b5dedd.js" defer></script><script src="/PluginCore/assets/js/2.165e3843.js" defer></script><script src="/PluginCore/assets/js/11.8fe6a92c.js" defer></script>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/yiyungent/PluginCore/edit/main/docs/PluginDev/Guide/README.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/24/2021, 10:10:47 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/PluginCore/assets/js/app.4e392cc7.js" defer></script><script src="/PluginCore/assets/js/2.165e3843.js" defer></script><script src="/PluginCore/assets/js/11.d16f7cdf.js" defer></script>
   </body>
 </html>
