@@ -90,6 +90,16 @@ namespace DemoModePlugin.Middlewares
                 await httpContext.Response.WriteAsync(jsonStr, Encoding.UTF8);
                 return;
             }
+            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/User/Update", StringComparison.OrdinalIgnoreCase);
+            if (isMatch)
+            {
+                responseModel.code = -1;
+                responseModel.message = "演示模式: 禁止修改用户";
+                string jsonStr = System.Text.Json.JsonSerializer.Serialize(responseModel);
+
+                await httpContext.Response.WriteAsync(jsonStr, Encoding.UTF8);
+                return;
+            }
 
 
             // Call the next delegate/middleware in the pipeline
