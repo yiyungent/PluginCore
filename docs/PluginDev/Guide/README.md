@@ -23,7 +23,7 @@ Install-Package PluginCore.IPlugins
 dotnet add package PluginCore.IPlugins
 ```
 
-> 方式3: PackageReference ( 在你的 `HelloWorldPlugin.csproj` <ItemGroup> 中 添加 )
+> 方式3: PackageReference ( 在你的 `HelloWorldPlugin.csproj` `<ItemGroup>` 中 添加 )
 
 ```xml
 <PackageReference Include="PluginCore.IPlugins" Version="0.6.0" />

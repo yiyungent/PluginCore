@@ -53,5 +53,23 @@ module.exports = {
     ],
 
     sidebarDepth: 2,
+
+    sidebar: {
+
+      "/PluginDev/PluginSDK/": [
+        {
+          title: "插件SDK", // 必要的
+          path: "/PluginDev/PluginSDK/",
+          collapsable: false, // 可选的, 默认值是 true,
+          children: [
+            { title: "IStartupPlugin", path: "IStartupPlugin" },
+            { title: "IStartupXPlugin", path: "IStartupXPlugin" },
+            { title: "ITimeJobPlugin", path: "ITimeJobPlugin" },
+          ],
+        },
+      ],
+
+    }
+
   },
 };
