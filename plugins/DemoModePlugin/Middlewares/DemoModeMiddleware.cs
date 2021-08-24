@@ -79,6 +79,17 @@ namespace DemoModePlugin.Middlewares
                 await httpContext.Response.WriteAsync(jsonStr, Encoding.UTF8);
                 return;
             }
+            isMatch = httpContext.Request.Path.Value.StartsWith("/api/plugincore/admin/Plugins/Settings", StringComparison.OrdinalIgnoreCase);
+            string httpMethod = httpContext.Request.Method;
+            if (isMatch && httpMethod.Equals("POST", StringComparison.OrdinalIgnoreCase))
+            {
+                responseModel.code = -1;
+                responseModel.message = "演示模式: 禁止设置插件";
+                string jsonStr = System.Text.Json.JsonSerializer.Serialize(responseModel);
+
+                await httpContext.Response.WriteAsync(jsonStr, Encoding.UTF8);
+                return;
+            }
 
 
             // Call the next delegate/middleware in the pipeline
