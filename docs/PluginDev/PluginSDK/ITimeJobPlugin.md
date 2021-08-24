@@ -3,7 +3,7 @@
 
 
 
-```C#
+```csharp
 namespace PluginCore.IPlugins
 {
     /// <summary>

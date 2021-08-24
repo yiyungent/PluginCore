@@ -13,7 +13,7 @@ PM> Install-Package PluginCore
 >
 > Startup.cs
 
-```C#
+```csharp
 using PluginCore.Extensions;
 
 // This method gets called by the runtime. Use this method to add services to the container.
@@ -76,7 +76,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 > 1.例如，自定义插件钩子: `ITestPlugin`
 
-```C#
+```csharp
 using PluginCore.IPlugins;
 
 namespace PluginCore.IPlugins
@@ -90,7 +90,7 @@ namespace PluginCore.IPlugins
 
 > 2.在需要激活的地方，应用钩子，这样所有启用的插件中，实现了 `ITestPlugin` 的插件，都将调用 `Say()`
 
-```C#
+```csharp
 using PluginCore;
 using PluginCore.IPlugins;
 

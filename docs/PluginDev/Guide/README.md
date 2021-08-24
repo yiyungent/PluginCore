@@ -43,7 +43,7 @@ dotnet add package PluginCore.IPlugins
 
 > 支持插件 `构造器注入` 框架预先注入的服务等
 
-```c#
+```csharp
 public class HelloWorldPlugin : BasePlugin, IStartupXPlugin
 {
     public override (bool IsSuccess, string Message) AfterEnable()
@@ -89,7 +89,7 @@ public class HelloWorldPlugin : BasePlugin, IStartupXPlugin
 
 > `SayHelloMiddleware.cs`
 
-```C#
+```csharp
 public class SayHelloMiddleware
 {
     private readonly RequestDelegate _next;
@@ -142,7 +142,7 @@ public class SayHelloMiddleware
 
 > 注意: 这里的 `IUserInfoService` 是集成了 `PluginCore ` 的项目里的服务接口
 
-```C#
+```csharp
 [Route("api/plugins/[controller]")]
 [ApiController]
 public class UserHelloController : ControllerBase
@@ -167,7 +167,7 @@ public class UserHelloController : ControllerBase
 
 > 插件设置（可选）, Json Model 类 继承 `PluginSettingsModel`
 
-```C#
+```csharp
 public class SettingsModel : PluginSettingsModel
 {
     public string Hello { get; set; }
@@ -175,6 +175,7 @@ public class SettingsModel : PluginSettingsModel
 ```
 
 文件名必须 `settings.json`
+
 ```json
 {
 	"Hello": "哈哈哈哈哈或或或或或或" 
