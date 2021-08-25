@@ -7,6 +7,27 @@
 
 # 快速上手
 
+## 方式1 (推荐): 使用 `dotnet cli` 快速安装插件模板, 并创建插件项目
+
+> 安装插件模板
+
+```shell
+dotnet new --install PluginCore.Template
+```
+
+> 使用此插件模板, 创建插件项目
+
+```shell
+dotnet new plugincore -n MyFirstPlugin
+```
+
+> 通过 `-n` 指定插件项目名, 这里我的是 `MyFirstPlugin`
+
+> `plugincore` 为 插件模板 `shortname`
+
+
+## 方式2: 手动创建插件项目
+
 #### 1. 引入插件SDK
 
 [NuGet](https://www.nuget.org/packages/PluginCore.IPlugins/)
