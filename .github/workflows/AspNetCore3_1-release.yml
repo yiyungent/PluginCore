@@ -1,0 +1,67 @@
+name: AspNetCore3_1 Release
+
+on: 
+  push:
+    tags:
+      - 'AspNetCore3_1-v*'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v2
+      
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.102
+        
+    - name: Build
+      run: |
+        cd ./examples/AspNetCore3_1
+        # win-x64
+        dotnet publish -c Release -r win-x64 -p:PublishSingleFile=true --output ../../win-x64 --self-contained true
+        # win-x86
+        dotnet publish -c Release -r win-x86 -p:PublishSingleFile=true --output ../../win-x86 --self-contained true
+        # linux-x64
+        dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true --output ../../linux-x64 --self-contained true
+        # linux-arm
+        dotnet publish -c Release -r linux-arm -p:PublishSingleFile=true --output ../../linux-arm --self-contained true
+        # linux-arm64
+        dotnet publish -c Release -r linux-arm64 -p:PublishSingleFile=true --output ../../linux-arm64 --self-contained true
+        # osx-x64
+        dotnet publish -c Release -r osx-x64 -p:PublishSingleFile=true --output ../../osx-x64 --self-contained true
+        # osx.10.10-x64
+        dotnet publish -c Release -r osx.10.10-x64 -p:PublishSingleFile=true --output ../../osx.10.10-x64 --self-contained true
+      
+    - name: Zip the Build
+      run: |
+        zip -r AspNetCore3_1-win-x64.zip ./win-x64/
+        zip -r AspNetCore3_1-win-x86.zip ./win-x86/
+        zip -r AspNetCore3_1-linux-x64.zip ./linux-x64/
+        zip -r AspNetCore3_1-linux-arm.zip ./linux-arm/
+        zip -r AspNetCore3_1-linux-arm64.zip ./linux-arm64/
+        zip -r AspNetCore3_1-osx-x64.zip ./osx-x64/
+        zip -r AspNetCore3_1-osx.10.10-x64.zip ./osx.10.10-x64/
+      
+    - name: Create Release and Upload Release Asset
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        #tag_name: ${{ github.ref }}
+        #name: ${{ github.ref }}
+        body: TODO New Release.
+        #body_path: CHANGELOG.txt
+        draft: false
+        prerelease: false
+        files: |
+          AspNetCore3_1-win-x64.zip
+          AspNetCore3_1-win-x86.zip
+          AspNetCore3_1-linux-x64.zip
+          AspNetCore3_1-linux-arm.zip
+          AspNetCore3_1-linux-arm64.zip
+          AspNetCore3_1-osx-x64.zip
+          AspNetCore3_1-osx.10.10-x64.zip
