@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "yiyun",
+    "classifications": [ "Common" ],
+    "identity": "PluginCore.Template",
+    "name": "Example Plugin template: PluginCore",
+    "shortName": "plugincore",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "ExamplePlugin",
+    "preferNameDirectory": true
+}

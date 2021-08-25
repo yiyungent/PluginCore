@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>PluginCore.Template</id>
+    <version>0.1.0</version>
+    <description>Example Plugin template: PluginCore</description>
+    <authors>yiyun</authors>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+    <license type="file">license\license.txt</license>
+  </metadata>
+</package>
