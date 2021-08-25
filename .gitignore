@@ -339,9 +339,6 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
-# VuePress
-docs/.vuepress/dist/
-
 # plugins in examples
 examples/AspNetCore3_1/App_Data/
 examples/AspNetCore3_1/PluginCoreAdmin/

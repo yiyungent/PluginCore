@@ -1,12 +1,8 @@
 {
   "name": "PluginCore",
   "version": "0.1.0",
-  "description": "<p align=\"center\">\r <img src=\"docs/.vuepress/public/images/logo.png\" alt=\"PluginCore\">\r </p>\r <h1 align=\"center\">PluginCore</h1>",
+  "description": "<p align=\"center\">\r <img src=\".vuepress/public/images/logo.png\" alt=\"PluginCore\">\r </p>\r <h1 align=\"center\">PluginCore</h1>",
   "main": "",
-  "directories": {
-    "doc": "docs",
-    "example": "examples"
-  },
   "scripts": {
     "docs:test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
