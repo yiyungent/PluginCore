@@ -1,5 +1,12 @@
 
 
+
+# PluginCore-v0.8.3
+
+## Fixed
+
+- 当 `主程序 打包进入 1个dll 或 1个exe` 可能导致 插件重复引入 主程序已引入Assembly
+
 # PluginCore-v0.8.2
 
 ## Fixed
