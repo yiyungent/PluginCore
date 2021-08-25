@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Loader;
 using System.Text;
 
 namespace PluginCore
@@ -22,11 +23,26 @@ namespace PluginCore
         {
             _pluginControllerManager = pluginControllerManager;
             SkipDlls = new List<string>();
+
+            #region 跳过1: 程序目录下 以单独dll 出现
             // 获取主程序 已经存在的（不许在再加载的 dll）
             string basePath = AppContext.BaseDirectory;
             //Console.WriteLine($"PluginCore.PluginManager: basePath: {basePath}");
             // { "Core.dll", "Domain.dll", "Framework.dll", "Services.dll", "Repositories.dll", "PluginCore.dll", ... }
             SkipDlls = new DirectoryInfo(basePath).GetFiles("*.dll").Select(m => m.Name).ToList();
+            #endregion
+
+            #region 跳过2: 打包进入1个dll 或 打包进 1个exe
+            // 注意: 用户可能将 dll 打包在 一个dll中, 或打包进 exe, 因此 通过此方式 确保跳过
+            // 主程序所有 位于 AssemblyLoadContext.Default
+            List<string> skipAssembliesName = AssemblyLoadContext.Default.Assemblies
+                .Select(m => m.GetName())
+                .Select(m => m.Name).ToList();
+            foreach (var name in skipAssembliesName)
+            {
+                this.SkipDlls.Add($"{name}.dll");
+            }
+            #endregion
         }
 
         /// <summary>
