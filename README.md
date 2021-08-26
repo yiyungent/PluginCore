@@ -271,6 +271,11 @@ PluginCore 支持3种前端文件加载方式
 - [plugincore-admin-frontend](https://github.com/yiyungent/plugincore-admin-frontend) PluginCore Admin 前端实现
 - [Remember.Core](https://github.com/yiyungent/Remember.Core)  插件框架提取处
 
+
+## 赞助者
+
+TODO: 
+
 ## 鸣谢
 
 - 插件系统设计参考自 <a href="https://github.com/lamondlu/CoolCat" target="_blank">CoolCat</a>，感谢作者 lamondlu 的贡献
