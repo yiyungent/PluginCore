@@ -1,6 +1,22 @@
 
 
 
+
+
+# PluginCore-v0.8.3
+
+## Updated
+
+- PackageReference: PluginCore.IPlugins: 0.6.1
+
+# PluginCore.IPlugins-v0.6.1
+
+## Updated
+
+- remove: `Newtonsoft.Json`
+  - 设置的json格式化 使用 `System.Text.json`
+
+
 # PluginCore-v0.8.3
 
 ## Fixed
