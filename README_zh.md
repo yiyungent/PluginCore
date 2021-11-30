@@ -3,9 +3,9 @@
 </p>
 <h1 align="center">PluginCore</h1>
 
-[中文](README_zh.md)
+[English](README.md)
 
-> ASP.NET Core lightweight plugin framework
+> 适用于 ASP.NET Core 的轻量级插件框架
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/github/license/yiyungent/PluginCore.svg?style=flat)](https://github.com/yiyungent/PluginCore/blob/master/LICENSE)
@@ -15,31 +15,31 @@
 
 
 
-## Introduce
+## 介绍
 
-ASP.NET Core lightweight plugin framework
+适用于 ASP.NET Core 的轻量级插件框架
 
-- **Simple** - Agreement is better than configuration, with minimal configuration to help you focus on your business
-- **Out of the box** - Automatic front-end and back-end integration, two lines of code complete the integration
-- **Dynamic WebAPI** - Each plug-in can add a Controller and have its own routing
-- **Front and back ends of the plug-in are separated** - You can place the front-end files (index.html,...) under the plugin `wwwroot` folder, and then visit `/plugins/pluginId/index.html`
-- **Hot swap** - Upload, install, enable, disable, uninstall, and delete without restarting the site; you can even add the `HTTP request pipeline middleware` at runtime through the plug-in, and there is no need to restart the site
-- **Dependency injection** - You can apply for dependency injection in the construction method of the plug-in class that implements IPlugin. Of course, dependency injection can also be used in the controller construction method
-- **Easy to expand** - You can write your own plug-in SDK, then reference the plug-in SDK, write extension plug-ins-custom plug-in hooks, and apply
-- **No database required** - No database dependency
-- **0 intrusion** - Nearly zero intrusion, does not affect your existing system
-- **Little reliance** - Only rely on a third-party package (`SharpZipLib` for decompression)
+- **简单** - 约定优于配置, 以最少的配置帮助你专注于业务
+- **开箱即用** - 前后端自动集成, 两行代码完成集成
+- **动态 WebAPI** - 每个插件都可新增 Controller, 拥有自己的路由
+- **插件前后端分离** - 可在插件 `wwwroot` 文件夹下放置前端文件 (index.html,...), 然后访问 `/plugins/pluginId/index.html`
+- **热插拔** - 上传、安装、启用、禁用、卸载、删除 均无需重启站点; 甚至可通过插件在运行时添加 `HTTP request pipeline middleware`, 也无需重启站点
+- **依赖注入** - 可在 实现 `IPlugin` 的插件类的构造方法上申请依赖注入项, 当然 `Controller` 构造方法上也可依赖注入
+- **易扩展** - 你可以编写你自己的插件sdk, 然后引用插件sdk, 编写扩展插件 - 自定义插件钩子, 并应用
+- **无需数据库** - 无数据库依赖
+- **0侵入** - 近乎0侵入, 不影响你的现有系统
+- **极少依赖** - 只依赖于一个第三方包 ( 用于解压的 `SharpZipLib` )
 
 
-## Online demo
+## 在线演示
 
 - http://plugincore.moeci.com/PluginCore/Admin
-  - Username: admin Password: ABC12345
-  - Online demo, most of the functions are limited, complete experience, please build it yourself, you can use the Docker below to quickly experience
-  - Not the latest version
+  - 用户名: admin  密码: ABC12345
+  - 在线演示, 功能大部分受限, 完整体验, 请自行搭建, 可使用下方 Docker 快速体验
+  - 非最新版本
 
 
-## Screenshot
+## 截图
 
 ![](screenshots/1.png)
 
@@ -50,15 +50,15 @@ ASP.NET Core lightweight plugin framework
 ![](screenshots/4.png)
 
 
-## One minute integration
+## 一分钟集成
 
-Recommended Use [NuGet](https://www.nuget.org/packages/PluginCore), Execute the following commands in the root directory of your project. If you use Visual Studio, then click **Tools** -> **NuGet Package Manager** -> **Package Manager Console**, make sure "Default project" It is the item you want to install, enter the command below to install it.
+推荐使用 [NuGet](https://www.nuget.org/packages/PluginCore), 在你项目的根目录 执行下方的命令, 如果你使用 Visual Studio, 这时依次点击 **Tools** -> **NuGet Package Manager** -> **Package Manager Console** , 确保 "Default project" 是你想要安装的项目, 输入下方的命令进行安装.
 
 ```bash
 PM> Install-Package PluginCore
 ```
 
-> Modify the code in your ASP.NET Core application
+> 在你的 ASP.NET Core 应用程序中修改代码
 >
 > Startup.cs
 
@@ -70,7 +70,7 @@ public void ConfigureServices(IServiceCollection services)
 {
     services.AddControllers();
 
-    // 1. Add PluginCore
+    // 1. 添加 PluginCore
     services.AddPluginCore();
 }
 
@@ -86,7 +86,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
     app.UseRouting();
 
-    // 2. Use PluginCore
+    // 2. 使用 PluginCore
     app.UsePluginCore();
 
     app.UseAuthorization();
@@ -98,12 +98,12 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-> Now visit https://localhost:5001/PluginCore/Admin to enter PluginCore Admin
-> https://localhost:5001 Need to be changed to your address
+> 现在访问 https://localhost:5001/PluginCore/Admin 即可进入 PluginCore Admin  
+> https://localhost:5001 需改为你的地址
 
-### Notice
+### 注意
 
-Please log in to `PluginCore Admin`, and for safety, modify the default user name and password in time:
+请登录 `PluginCore Admin` 后，为了安全，及时修改默认用户名，密码:
 
 `App_Data/PluginCore.Config.json`     
 
@@ -118,38 +118,38 @@ Please log in to `PluginCore Admin`, and for safety, modify the default user nam
 }
 ```
 
-After the modification, it will take effect immediately, no need to restart the site, you need to log in to `PluginCore Admin` again
+修改后，立即生效，无需重启站点，需重新登录 `PluginCore Admin`
 
 
-## Docker experience
+## Docker 体验
 
-If you need to experience PluginCore locally, then here is an [example(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
+如果你需要在本地体验 PluginCore, 那么这里有一个 [例子(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
 
 ```bash
 docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspnetcore3-1 yiyungent/plugincore-aspnetcore3-1
 ```
 
-Now you can visit http://localhost:5004/PluginCore/Admin
+现在你可以访问 http://localhost:5004/PluginCore/Admin
 
-> add:     
-> If you use `Docker Compose`, you can refer to `docker-compose.yml` in the root directory of the warehouse
+> 补充:     
+> 若使用 `Docker Compose`, 可参考仓库根目录下的 `docker-compose.yml`     
 
-> add:   
-> Use `ghcr.io`     
+> 补充:   
+> 使用 `ghcr.io`     
 > 
 > ```bash
 > docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspnetcore3-1 ghcr.io/yiyungent/plugincore-aspnetcore3-1
 > ```
 
-## Use
+## 使用
 
-- [Detailed Documentation(/docs)](https://moeci.com/PluginCore "Online Documentation") Document is under construction
-- [See examples(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples) 
+- [详细文档(/docs)](https://moeci.com/PluginCore "在线文档") 文档构建中
+- [见示例(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
 
 
-### Add plugin hook and apply
+### 添加插件钩子, 并应用
 
-> 1. For example, custom plug-in hook: `ITestPlugin`
+> 1.例如，自定义插件钩子: `ITestPlugin`
 
 ```C#
 using PluginCore.IPlugins;
@@ -163,7 +163,7 @@ namespace PluginCore.IPlugins
 }
 ```
 
-> 2. Apply the hook where it needs to be activated, so that all enabled plug-ins that implement `ITestPlugin` will call `Say()`
+> 2.在需要激活的地方，应用钩子，这样所有启用的插件中，实现了 `ITestPlugin` 的插件，都将调用 `Say()`
 
 ```C#
 using PluginCore;
@@ -185,12 +185,12 @@ namespace WebApi.Controllers
         public ActionResult Get()
         {
             //var plugins = PluginFinder.EnablePlugins<BasePlugin>().ToList();
-            // All enabled plugins that implement ITestPlugin
+            // 所有实现了 ITestPlugin 的已启用插件
             var plugins2 = _pluginFinder.EnablePlugins<ITestPlugin>().ToList();
 
             foreach (var item in plugins2)
             {
-                // transfer
+                // 调用
                 string words = item.Say();
                 Console.WriteLine(words);
             }
@@ -201,20 +201,20 @@ namespace WebApi.Controllers
 }
 ```
 
-### Custom frontend
+### 自定义前端
 
-PluginCore supports 3 front-end file loading methods
+PluginCore 支持3种前端文件加载方式
 
-> `FrontendMode` in the configuration file `App_Data/PluginCore.Config.json`
+> 配置文件 `App_Data/PluginCore.Config.json` 中 `FrontendMode`
 
 1. LocalEmbedded
-  - By default, embedded resources and front-end files are packaged into dll. In this mode, it is not easy to customize the front-end files. You need to modify the source code of `PluginCore` and recompile. It is not recommended
+  - 默认, 嵌入式资源，前端文件打包进dll, 此模式下, 不容易自定义前端文件，需要修改 `PluginCore` 源代码，重新编译，不建议
 
 2. LocalFolder
-  - In the ASP.NET Core project that integrates `PluginCore`, create a new `PluginCoreAdmin`, and put the front-end files into this folder
+  - 在集成了 `PluginCore` 的 ASP.NET Core 项目中, 新建 `PluginCoreAdmin`, 将前端文件放入此文件夹
 
 3. RemoteCDN
-  - To use remote CDN resources, you can specify the url through the `RemoteFrontend` in the configuration file
+  - 使用远程cdn资源, 可通过 配置文件中 `RemoteFrontend` 指定url
 
 > **注意:**    
 > 更新 `FrontendMode`, 需重启站点后, 才能生效
