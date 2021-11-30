@@ -484,6 +484,12 @@ namespace PluginCore.Controllers
             {
                 responseData.code = -1;
                 responseData.message = "上传插件失败: " + ex.Message;
+                ex = ex.InnerException;
+                while (ex != null)
+                {
+                    responseData.message += " - " + ex.InnerException.Message;
+                    ex = ex.InnerException;
+                }
             }
 
             return await Task.FromResult(responseData);
