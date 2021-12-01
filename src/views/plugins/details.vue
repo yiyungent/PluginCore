@@ -44,7 +44,7 @@ import { showMessage } from "@/utils/tools";
 export default {
   filters: {
     statusFilter(status) {
-      return this.pluginStatusKeyValue[status];
+      return pluginStatusKeyValue[status];
     }
   },
   data() {

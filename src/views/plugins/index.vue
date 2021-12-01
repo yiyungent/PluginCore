@@ -137,7 +137,7 @@ import { Message } from "element-ui";
 export default {
   filters: {
     statusFilter(status) {
-      return this.pluginStatusKeyValue[status];
+      return pluginStatusKeyValue[status];
     }
   },
   data() {
