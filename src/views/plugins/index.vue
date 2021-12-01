@@ -42,7 +42,7 @@
         align="center"
       >
         <template slot-scope="scope">
-          <el-tag>{{ scope.row.status | statusFilter }}</el-tag>
+          <el-tag>{{ getStatus(scope.row.status) }}</el-tag>
         </template>
       </el-table-column>
       <el-table-column
@@ -135,31 +135,18 @@ import {
 import { Message } from "element-ui";
 
 export default {
-  filters: {
-    statusFilter(status) {
-      return pluginStatusKeyValue[status];
-    }
-  },
+  filters: {},
   data() {
     return {
       list: null,
-      listLoading: true,
-      pluginStatusKeyValue: null
+      listLoading: true
     };
   },
   created() {
-    this.loadPluginStatusKeyValue();
     this.loadList();
   },
   methods: {
-    loadList() {
-      this.listLoading = true;
-      listAction().then(response => {
-        this.list = response.data;
-        this.listLoading = false;
-      });
-    },
-    loadPluginStatusKeyValue() {
+    getStatus(status) {
       let pluginStatusOptions = [
         { key: "-1", display_name: this.$t("pluginList.statusInstall") },
         { key: "0", display_name: this.$t("pluginList.statusEnable") },
@@ -167,10 +154,19 @@ export default {
         { key: "2", display_name: this.$t("pluginList.statusUninstall") }
       ];
       // arr to obj, such as { CN : "China", US : "USA" }
-      this.pluginStatusKeyValue = pluginStatusOptions.reduce((acc, cur) => {
+      let pluginStatusKeyValue = pluginStatusOptions.reduce((acc, cur) => {
         acc[cur.key] = cur.display_name;
         return acc;
       }, {});
+
+      return pluginStatusKeyValue[status];
+    },
+    loadList() {
+      this.listLoading = true;
+      listAction().then(response => {
+        this.list = response.data;
+        this.listLoading = false;
+      });
     },
     installClick(pluginId) {
       installAction(pluginId).then(this.showMessage);
