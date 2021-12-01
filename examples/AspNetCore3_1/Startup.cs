@@ -16,6 +16,8 @@ namespace AspNetCore3_1
 {
     public class Startup
     {
+        readonly string AllowSpecificOrigins = "_AllowSpecificOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -40,8 +42,21 @@ namespace AspNetCore3_1
             //    options.IdleTimeout = TimeSpan.FromSeconds(60*60*24);
             //    options.Cookie.IsEssential = true;
             //});
-        }
 
+            // 允许 跨域请求
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: AllowSpecificOrigins,
+                    builder =>
+                    {
+                        // 配置的白名单都允许
+                        // https://www.cnblogs.com/jidanfan/p/11177509.html
+                        builder.AllowAnyOrigin()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
+        }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -62,10 +77,16 @@ namespace AspNetCore3_1
 
             //app.UseSession();
 
+            // 跨域: 启用 CORS 中间件 (若业务后台与服务端同源, 则不需要配置)
+            // 注意: 这样启用, 会使所有路由 都使用此跨域策略
+            app.UseCors(AllowSpecificOrigins);
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
         }
+
     }
 }
