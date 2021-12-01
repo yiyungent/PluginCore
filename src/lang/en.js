@@ -1,4 +1,9 @@
 export default {
+  
+  common: {
+    back: "Back"
+  },
+
   route: {
     dashboard: "Dashboard",
     plugin: "Plugins",
@@ -8,6 +13,7 @@ export default {
     pluginReadme: "Plugin Readme",
     pluginSettings: "Plugin Settings"
   },
+
   navbar: {
     dashboard: "Dashboard",
     github: "GitHub",
@@ -17,6 +23,7 @@ export default {
     size: "Global Size",
     docs: "Docs"
   },
+
   login: {
     title: "PluginCore Admin",
     logIn: "Login",
@@ -27,24 +34,24 @@ export default {
   },
 
   pluginList: {
-    displayName: "Display Name",
+    displayName: "DisplayName",
     desc: "Desc",
     author: "Author",
     status: "Status",
     version: "Version",
     operation: "Operation",
-    clickInstall: "安装",
-    clickDisable: "禁用",
-    clickEnable: "启用",
-    clickUninstall: "卸载",
-    clickDelete: "删除",
-    clickSettings: "设置",
-    clickDetails: "详细",
-    clickReadme: "文档",
-    statusInstall: "已安装",
-    statusEnable: "已启用",
-    statusDisable: "未启用",
-    statusUninstall: "未安装"
+    clickInstall: "Install",
+    clickDisable: "Disable",
+    clickEnable: "Enable",
+    clickUninstall: "Uninstall",
+    clickDelete: "Delete",
+    clickSettings: "Settings",
+    clickDetails: "Details",
+    clickReadme: "Readme",
+    statusInstall: "Installed",
+    statusEnable: "Enabled",
+    statusDisable: "Disabled",
+    statusUninstall: "Not installed"
   },
 
   pluginUpload: {
@@ -53,18 +60,41 @@ export default {
     uploadLimit: "Only ZIP or NUPkg files can be uploaded and cannot exceed 5MB"
   },
 
+  pluginDetails: {
+    title: "Plugin Details",
+    displayName: "DisplayName",
+    desc: "Desc",
+    author: "Author",
+    version: "Version",
+    supportedVersions: "Supported Versions",
+    status: "Status"
+  },
+
+  pluginReadme: {
+    title: "Plugin Readme",
+    noReadme: "No Readme"
+  },
+
+  pluginSettings: {
+    title: "Plugin Settings",
+    noSettings: "No Settings",
+    save: "Save"
+  },
+
   theme: {
     change: "Change Theme",
     documentation: "Theme documentation",
     tips:
       "Tips: It is different from the theme-pick on the navbar is two different skinning methods, each with different application scenarios. Refer to the documentation for details."
   },
+
   tagsView: {
     refresh: "Refresh",
     close: "Close",
     closeOthers: "Close Others",
     closeAll: "Close All"
   },
+
   settings: {
     title: "Page style setting",
     theme: "Theme Color",
@@ -72,4 +102,5 @@ export default {
     fixedHeader: "Fixed Header",
     sidebarLogo: "Sidebar Logo"
   }
+
 };

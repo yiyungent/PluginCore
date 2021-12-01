@@ -1,8 +1,8 @@
 <template>
   <div class="app-container">
     <el-page-header
-      title="返回"
-      content="插件设置"
+      :title="$t('common.back')"
+      :content="$t('pluginSettings.title')"
       class="rem-page-header"
       @back="goBack"
     />
@@ -10,7 +10,7 @@
       <div slot="header" class="clearfix">
         <span>{{ item.pluginId }}</span>
         <span style="float: right; padding: 3px 0" type="text">{{
-          item.content == "" ? "无设置项" : ""
+          item.content == "" ? $t('pluginSettings.noSettings') : ""
         }}</span>
       </div>
       <div class="editor-container">
@@ -18,7 +18,7 @@
       </div>
     </el-card>
     <el-button size="mini" type="primary" @click="settingsSaveClick()">
-      保存
+      {{ $t('pluginSettings.save') }}
     </el-button>
   </div>
 </template>

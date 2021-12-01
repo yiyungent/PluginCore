@@ -25,7 +25,9 @@
             </el-dropdown-item>
           </a>
           <a target="_blank" href="https://github.com/yiyungent/PluginCore">
-            <el-dropdown-item>Docs</el-dropdown-item>
+            <el-dropdown-item>
+              {{ $t('navbar.docs') }}
+            </el-dropdown-item>
           </a>
           <el-dropdown-item divided @click.native="logout">
             <span style="display:block;">

@@ -9,10 +9,10 @@
     >
       <i class="el-icon-upload" />
       <div class="el-upload__text">
-        {{ $t("pluginList.uploadTip") }}<em>{{ $t("pluginList.clickUpload") }}</em>
+        {{ $t("pluginUpload.uploadTip") }}<em>{{ $t("pluginUpload.clickUpload") }}</em>
       </div>
       <div slot="tip" class="el-upload__tip">
-        {{ $t("pluginList.uploadLimit") }}
+        {{ $t("pluginUpload.uploadLimit") }}
       </div>
     </el-upload>
   </div>

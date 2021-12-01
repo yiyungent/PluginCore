@@ -1,4 +1,9 @@
 export default {
+
+  common: {
+    back: "返回"
+  },
+
   route: {
     dashboard: "首页",
     plugin: "插件管理",
@@ -8,6 +13,7 @@ export default {
     pluginReadme: "插件文档",
     pluginSettings: "插件设置"
   },
+
   navbar: {
     dashboard: "首页",
     github: "项目地址",
@@ -17,6 +23,7 @@ export default {
     size: "布局大小",
     docs: "文档"
   },
+
   login: {
     title: "PluginCore Admin",
     logIn: "登录",
@@ -53,18 +60,41 @@ export default {
     uploadLimit: "只能上传 zip 或 nupkg 文件，且不超过5MB"
   },
 
+  pluginDetails: {
+    title: "插件详细",
+    displayName: "显示名",
+    desc: "描述",
+    author: "作者",
+    version: "版本",
+    supportedVersions: "支持版本",
+    status: "状态"
+  },
+
+  pluginReadme: {
+    title: "插件文档",
+    noReadme: "无文档"
+  },
+
+  pluginSettings: {
+    title: "插件设置",
+    noSettings: "无设置项",
+    save: "保存"
+  },
+
   theme: {
     change: "换肤",
     documentation: "换肤文档",
     tips:
       "Tips: 它区别于 navbar 上的 theme-pick, 是两种不同的换肤方法，各自有不同的应用场景，具体请参考文档。"
   },
+
   tagsView: {
     refresh: "刷新",
     close: "关闭",
     closeOthers: "关闭其它",
     closeAll: "关闭所有"
   },
+
   settings: {
     title: "系统布局配置",
     theme: "主题色",
@@ -72,4 +102,5 @@ export default {
     fixedHeader: "固定 Header",
     sidebarLogo: "侧边栏 Logo"
   }
+  
 };

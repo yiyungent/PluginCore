@@ -1,8 +1,8 @@
 <template>
   <div class="app-container">
     <el-page-header
-      title="返回"
-      content="插件文档"
+      :title="$t('common.back')"
+      :content="$t('pluginReadme.title')"
       class="rem-page-header"
       @back="goBack"
     />
@@ -10,7 +10,7 @@
       <div slot="header" class="clearfix">
         <span>{{ item.pluginId }}</span>
         <span style="float: right; padding: 3px 0" type="text">{{
-          item.content == "" ? "无文档" : ""
+          item.content == "" ? $t('pluginReadme.noReadme') : ""
         }}</span>
       </div>
       <markdown-preview :initial-value="item.content" />

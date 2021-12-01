@@ -2,8 +2,8 @@
   <div class="app-container">
     <div class="rem-plugin-details">
       <el-page-header
-        title="返回"
-        content="插件详细"
+        :title="$t('common.back')"
+        :content="$t('pluginDetails.title')"
         class="rem-page-header"
         @back="goBack"
       />
@@ -12,24 +12,24 @@
           <span class="rem-label">PluginId:</span><span>{{ info.pluginId }}</span>
         </div>
         <div class="rem-item">
-          <span class="rem-label">显示名:</span><span>{{ info.displayName }}</span>
+          <span class="rem-label">{{ $t('pluginDetails.displayName') }}:</span><span>{{ info.displayName }}</span>
         </div>
         <div class="rem-item">
-          <span class="rem-label">描述:</span><span>{{ info.description }}</span>
+          <span class="rem-label">{{ $t('pluginDetails.desc') }}:</span><span>{{ info.description }}</span>
         </div>
         <div class="rem-item">
-          <span class="rem-label">作者:</span><span>{{ info.author }}</span>
+          <span class="rem-label">{{ $t('pluginDetails.author') }}:</span><span>{{ info.author }}</span>
         </div>
         <div class="rem-item">
-          <span class="rem-label">版本:</span><span><el-tag>{{ info.version }}</el-tag></span>
+          <span class="rem-label">{{ $t('pluginDetails.version') }}:</span><span><el-tag>{{ info.version }}</el-tag></span>
         </div>
         <div class="rem-item">
-          <span class="rem-label">支持版本:</span><span><el-tag v-for="(v, index) in info.supportedVersions" :key="index">{{
+          <span class="rem-label">{{ $t('pluginDetails.supportedVersions') }}:</span><span><el-tag v-for="(v, index) in info.supportedVersions" :key="index">{{
             v
           }}</el-tag></span>
         </div>
         <div class="rem-item">
-          <span class="rem-label">状态:</span><span><el-tag>{{ info.status | statusFilter }}</el-tag></span>
+          <span class="rem-label">{{ $t('pluginDetails.status') }}:</span><span><el-tag>{{ info.status | statusFilter }}</el-tag></span>
         </div>
       </el-card>
     </div>
@@ -40,23 +40,11 @@
 import { detailsAction } from "@/api/plugins";
 import { showMessage } from "@/utils/tools";
 
-const pluginStatusOptions = [
-  { key: "-1", display_name: "已安装" },
-  { key: "0", display_name: "已启用" },
-  { key: "1", display_name: "未启用" },
-  { key: "2", display_name: "未安装" }
-];
-
-// arr to obj, such as { CN : "China", US : "USA" }
-const pluginStatusKeyValue = pluginStatusOptions.reduce((acc, cur) => {
-  acc[cur.key] = cur.display_name;
-  return acc;
-}, {});
 
 export default {
   filters: {
     statusFilter(status) {
-      return pluginStatusKeyValue[status];
+      return this.pluginStatusKeyValue[status];
     }
   },
   data() {
@@ -69,13 +57,28 @@ export default {
         version: "",
         supportedVersions: [],
         status: 0
-      }
+      },
+      pluginStatusKeyValue: null
     };
   },
   created() {
+    this.loadPluginStatusKeyValue();
     this.loadInfo();
   },
   methods: {
+    loadPluginStatusKeyValue() {
+      let pluginStatusOptions = [
+        { key: "-1", display_name: this.$t("pluginList.statusInstall") },
+        { key: "0", display_name: this.$t("pluginList.statusEnable") },
+        { key: "1", display_name: this.$t("pluginList.statusDisable") },
+        { key: "2", display_name: this.$t("pluginList.statusUninstall") }
+      ];
+      // arr to obj, such as { CN : "China", US : "USA" }
+      this.pluginStatusKeyValue = pluginStatusOptions.reduce((acc, cur) => {
+        acc[cur.key] = cur.display_name;
+        return acc;
+      }, {});
+    },
     async loadInfo() {
       var pluginId = this.$route.params.pluginId;
       var res = await detailsAction(pluginId);

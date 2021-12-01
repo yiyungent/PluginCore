@@ -123,6 +123,18 @@ eval("\n\nexports.__esModule = true;\nexports.i18n = exports.use = exports.t = u
 
 /***/ }),
 
+/***/ "./node_modules/element-ui/lib/locale/lang/en.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/element-ui/lib/locale/lang/en.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nexports.__esModule = true;\nexports.default = {\n  el: {\n    colorpicker: {\n      confirm: 'OK',\n      clear: 'Clear'\n    },\n    datepicker: {\n      now: 'Now',\n      today: 'Today',\n      cancel: 'Cancel',\n      clear: 'Clear',\n      confirm: 'OK',\n      selectDate: 'Select date',\n      selectTime: 'Select time',\n      startDate: 'Start Date',\n      startTime: 'Start Time',\n      endDate: 'End Date',\n      endTime: 'End Time',\n      prevYear: 'Previous Year',\n      nextYear: 'Next Year',\n      prevMonth: 'Previous Month',\n      nextMonth: 'Next Month',\n      year: '',\n      month1: 'January',\n      month2: 'February',\n      month3: 'March',\n      month4: 'April',\n      month5: 'May',\n      month6: 'June',\n      month7: 'July',\n      month8: 'August',\n      month9: 'September',\n      month10: 'October',\n      month11: 'November',\n      month12: 'December',\n      week: 'week',\n      weeks: {\n        sun: 'Sun',\n        mon: 'Mon',\n        tue: 'Tue',\n        wed: 'Wed',\n        thu: 'Thu',\n        fri: 'Fri',\n        sat: 'Sat'\n      },\n      months: {\n        jan: 'Jan',\n        feb: 'Feb',\n        mar: 'Mar',\n        apr: 'Apr',\n        may: 'May',\n        jun: 'Jun',\n        jul: 'Jul',\n        aug: 'Aug',\n        sep: 'Sep',\n        oct: 'Oct',\n        nov: 'Nov',\n        dec: 'Dec'\n      }\n    },\n    select: {\n      loading: 'Loading',\n      noMatch: 'No matching data',\n      noData: 'No data',\n      placeholder: 'Select'\n    },\n    cascader: {\n      noMatch: 'No matching data',\n      loading: 'Loading',\n      placeholder: 'Select',\n      noData: 'No data'\n    },\n    pagination: {\n      goto: 'Go to',\n      pagesize: '/page',\n      total: 'Total {total}',\n      pageClassifier: ''\n    },\n    messagebox: {\n      title: 'Message',\n      confirm: 'OK',\n      cancel: 'Cancel',\n      error: 'Illegal input'\n    },\n    upload: {\n      deleteTip: 'press delete to remove',\n      delete: 'Delete',\n      preview: 'Preview',\n      continue: 'Continue'\n    },\n    table: {\n      emptyText: 'No Data',\n      confirmFilter: 'Confirm',\n      resetFilter: 'Reset',\n      clearFilter: 'All',\n      sumText: 'Sum'\n    },\n    tree: {\n      emptyText: 'No Data'\n    },\n    transfer: {\n      noMatch: 'No matching data',\n      noData: 'No data',\n      titles: ['List 1', 'List 2'], // to be translated\n      filterPlaceholder: 'Enter keyword', // to be translated\n      noCheckedFormat: '{total} items', // to be translated\n      hasCheckedFormat: '{checked}/{total} checked' // to be translated\n    },\n    image: {\n      error: 'FAILED'\n    },\n    pageHeader: {\n      title: 'Back' // to be translated\n    },\n    popconfirm: {\n      confirmButtonText: 'Yes',\n      cancelButtonText: 'No'\n    }\n  }\n};\n\n//# sourceURL=webpack:///./node_modules/element-ui/lib/locale/lang/en.js?");
+
+/***/ }),
+
 /***/ "./node_modules/element-ui/lib/locale/lang/zh-CN.js":
 /*!**********************************************************!*\
   !*** ./node_modules/element-ui/lib/locale/lang/zh-CN.js ***!
