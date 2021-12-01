@@ -26,6 +26,7 @@
     "path-to-regexp": "2.4.0",
     "script-loader": "^0.7.2",
     "vue": "2.6.10",
+    "vue-i18n": "^8.26.7",
     "vue-meditor": "^2.1.1",
     "vue-router": "3.0.6",
     "vuex": "3.1.0"

@@ -3,7 +3,10 @@
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
 
       <div class="title-container">
-        <h3 class="title">PluginCore Admin</h3>
+        <h3 class="title">
+          {{ $t('login.title') }}
+        </h3>
+        <lang-select class="set-language" />
       </div>
 
       <el-form-item prop="username">
@@ -13,7 +16,7 @@
         <el-input
           ref="username"
           v-model="loginForm.username"
-          placeholder="UserName"
+          :placeholder="$t('login.username')"
           name="username"
           type="text"
           tabindex="1"
@@ -30,7 +33,7 @@
           ref="password"
           v-model="loginForm.password"
           :type="passwordType"
-          placeholder="Password"
+          :placeholder="$t('login.password')"
           name="password"
           tabindex="2"
           auto-complete="on"
@@ -41,11 +44,13 @@
         </span>
       </el-form-item>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
+      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">
+        {{ $t('login.logIn') }}
+      </el-button>
 
       <div class="tips">
-        <span style="margin-right:20px;">初始用户名: admin</span>
-        <span>初始密码: ABC12345</span>
+        <span style="margin-right:20px;">{{ $t('login.username') }} : admin</span>
+        <span>{{ $t('login.password') }} : ABC12345</span>
       </div>
 
     </el-form>
@@ -54,21 +59,23 @@
 
 <script>
 import { validUsername } from '@/utils/validate'
+import LangSelect from '@/components/LangSelect'
 import { showMessage } from '@/utils/tools'
 
 export default {
   name: 'Login',
+  components: { LangSelect },
   data() {
     const validateUsername = (rule, value, callback) => {
       if (!validUsername(value)) {
-        callback(new Error('Please enter the correct user name'))
+        callback(new Error(this.$t('login.validUsernameError')))
       } else {
         callback()
       }
     }
     const validatePassword = (rule, value, callback) => {
       if (value.length < 6) {
-        callback(new Error('The password can not be less than 6 digits'))
+        callback(new Error(this.$t('login.validatePasswordError')))
       } else {
         callback()
       }
@@ -228,6 +235,16 @@ $light_gray:#eee;
       text-align: center;
       font-weight: bold;
     }
+
+    .set-language {
+      color: #fff;
+      position: absolute;
+      top: 3px;
+      font-size: 18px;
+      right: 0px;
+      cursor: pointer;
+    }
+
   }
 
   .show-pwd {

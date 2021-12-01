@@ -56,7 +56,7 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: 'dashboard', icon: 'dashboard' }
     }]
   },
 
@@ -65,39 +65,39 @@ export const constantRoutes = [
     component: Layout,
     redirect: "/plugins/list",
     name: "Plugins",
-    meta: { title: "插件管理", icon: "el-icon-s-help" },
+    meta: { title: "plugin", icon: "el-icon-s-help" },
     children: [
       {
         path: "list",
         name: "Plugins_List",
         component: () => import("@/views/plugins/index"),
-        meta: { title: "插件列表", icon: "table" }
+        meta: { title: "pluginList", icon: "table" }
       },
       {
         path: "upload",
         name: "Plugins_Upload",
         component: () => import("@/views/plugins/upload"),
-        meta: { title: "上传插件", icon: "tree" }
+        meta: { title: "pluginUpload", icon: "tree" }
       },
       {
         path: "details/:pluginId",
         name: "Plugins_Details",
         component: () => import("@/views/plugins/details"),
-        meta: { title: "插件详细", icon: "tree" },
+        meta: { title: "pluginDetails", icon: "tree" },
         hidden: true
       },
       {
         path: "readme/:pluginId",
         name: "Plugins_Readme",
         component: () => import("@/views/plugins/readme"),
-        meta: { title: "插件文档", icon: "tree" },
+        meta: { title: "pluginReadme", icon: "tree" },
         hidden: true
       },
       {
         path: "settings/:pluginId",
         name: "Plugins_Settings",
         component: () => import("@/views/plugins/settings"),
-        meta: { title: "插件设置", icon: "tree" },
+        meta: { title: "pluginSettings", icon: "tree" },
         hidden: true
       }
     ]

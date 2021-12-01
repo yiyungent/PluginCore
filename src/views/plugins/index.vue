@@ -13,33 +13,49 @@
           {{ scope.row.pluginId }}
         </template>
       </el-table-column>
-      <el-table-column align="center" label="插件名" width="110">
+      <el-table-column
+        align="center"
+        :label="$t('pluginList.displayName')"
+        width="110"
+      >
         <template slot-scope="scope">
           {{ scope.row.displayName }}
         </template>
       </el-table-column>
-      <el-table-column align="center" label="描述">
+      <el-table-column align="center" :label="$t('pluginList.desc')">
         <template slot-scope="scope">
           {{ scope.row.description }}
         </template>
       </el-table-column>
-      <el-table-column label="作者" width="110" align="center">
+      <el-table-column
+        :label="$t('pluginList.author')"
+        width="110"
+        align="center"
+      >
         <template slot-scope="scope">
           <span>{{ scope.row.author }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="状态" width="110" align="center">
+      <el-table-column
+        :label="$t('pluginList.status')"
+        width="110"
+        align="center"
+      >
         <template slot-scope="scope">
           <el-tag>{{ scope.row.status | statusFilter }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column label="版本" width="110" align="center">
+      <el-table-column
+        :label="$t('pluginList.version')"
+        width="110"
+        align="center"
+      >
         <template slot-scope="scope">
           <el-tag>{{ scope.row.version }}</el-tag>
         </template>
       </el-table-column>
       <el-table-column
-        label="操作"
+        :label="$t('pluginList.operation')"
         align="center"
         class-name="small-padding fixed-width"
       >
@@ -50,7 +66,7 @@
             type="success"
             @click="installClick(row.pluginId)"
           >
-            安装
+            {{ $t("pluginList.clickInstall") }}
           </el-button>
           <el-button
             v-if="row.status == '0'"
@@ -58,14 +74,14 @@
             type="success"
             @click="disableClick(row.pluginId)"
           >
-            禁用
+            {{ $t("pluginList.clickDisable") }}
           </el-button>
           <el-button
             v-if="row.status == '1'"
             size="mini"
             @click="enableClick(row.pluginId)"
           >
-            启用
+            {{ $t("pluginList.clickEnable") }}
           </el-button>
           <el-button
             v-if="row.status == '1'"
@@ -73,7 +89,7 @@
             type="danger"
             @click="uninstallClick(row.pluginId)"
           >
-            卸载
+            {{ $t("pluginList.clickUninstall") }}
           </el-button>
           <el-button
             v-if="row.status == '2'"
@@ -81,7 +97,7 @@
             type="danger"
             @click="deleteClick(row.pluginId)"
           >
-            删除
+            {{ $t("pluginList.clickDelete") }}
           </el-button>
           <el-button
             v-if="row.status == '0' || row.status == '1'"
@@ -89,17 +105,17 @@
             type="info"
             @click="settingsClick(row.pluginId)"
           >
-            设置
+            {{ $t("pluginList.clickSettings") }}
           </el-button>
           <el-button
             size="mini"
             type="info"
             @click="detailsClick(row.pluginId)"
           >
-            详细
+            {{ $t("pluginList.clickDetails") }}
           </el-button>
           <el-button size="mini" type="info" @click="readmeClick(row.pluginId)">
-            文档
+            {{ $t("pluginList.clickReadme") }}
           </el-button>
         </template>
       </el-table-column>
@@ -118,32 +134,21 @@ import {
 } from "@/api/plugins";
 import { Message } from "element-ui";
 
-const pluginStatusOptions = [
-  { key: "-1", display_name: "已安装" },
-  { key: "0", display_name: "已启用" },
-  { key: "1", display_name: "未启用" },
-  { key: "2", display_name: "未安装" }
-];
-
-// arr to obj, such as { CN : "China", US : "USA" }
-const pluginStatusKeyValue = pluginStatusOptions.reduce((acc, cur) => {
-  acc[cur.key] = cur.display_name;
-  return acc;
-}, {});
-
 export default {
   filters: {
     statusFilter(status) {
-      return pluginStatusKeyValue[status];
+      return this.pluginStatusKeyValue[status];
     }
   },
   data() {
     return {
       list: null,
-      listLoading: true
+      listLoading: true,
+      pluginStatusKeyValue: null
     };
   },
   created() {
+    this.loadPluginStatusKeyValue();
     this.loadList();
   },
   methods: {
@@ -153,6 +158,19 @@ export default {
         this.list = response.data;
         this.listLoading = false;
       });
+    },
+    loadPluginStatusKeyValue() {
+      let pluginStatusOptions = [
+        { key: "-1", display_name: this.$t("pluginList.statusInstall") },
+        { key: "0", display_name: this.$t("pluginList.statusEnable") },
+        { key: "1", display_name: this.$t("pluginList.statusDisable") },
+        { key: "2", display_name: this.$t("pluginList.statusUninstall") }
+      ];
+      // arr to obj, such as { CN : "China", US : "USA" }
+      this.pluginStatusKeyValue = pluginStatusOptions.reduce((acc, cur) => {
+        acc[cur.key] = cur.display_name;
+        return acc;
+      }, {});
     },
     installClick(pluginId) {
       installAction(pluginId).then(this.showMessage);
