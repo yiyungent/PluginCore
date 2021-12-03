@@ -3,14 +3,14 @@
 </p>
 <h1 align="center">PluginCore</h1>
 
-[中文](README_zh.md)
+English | [中文](README_zh.md)
 
 > ASP.NET Core lightweight plugin framework
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/github/license/yiyungent/PluginCore.svg?style=flat)](https://github.com/yiyungent/PluginCore/blob/master/LICENSE)
 [![CodeFactor](https://www.codefactor.io/repository/github/yiyungent/plugincore/badge)](https://www.codefactor.io/repository/github/yiyungent/plugincore)
-![GitHub all releases](https://img.shields.io/github/downloads/yiyungent/PluginCore/total)
+[![downloads](https://img.shields.io/nuget/dt/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/)
 
 
 
