@@ -3,6 +3,6 @@
     "version": "1.0.0",
     "private": true,
     "dependencies": {
-        "plugincore-admin-frontend": "0.2.3"
+        "plugincore-admin-frontend": "0.3.0"
     }
 }
