@@ -2,8 +2,13 @@
 
 
 
+# PluginCore-v0.8.5
 
-# PluginCore-v0.8.3
+## Updated
+
+- Reference: plugincore-admin-frontend v0.3.0
+
+# PluginCore-v0.8.4
 
 ## Updated
 
