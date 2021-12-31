@@ -291,6 +291,7 @@ PluginCore is an Apache-2.0 licensed open source project and completely free to 
 We accept donations through these channels:
 
 - <a href="https://afdian.net/@yiyun" target="_blank">爱发电</a>
+- <a href="https://dun.mianbaoduo.com/@yiyun" target="_blank">面包多</a>
 
 ## Author
 
