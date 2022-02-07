@@ -47,6 +47,7 @@ namespace PluginCore.Controllers
         /// </summary>
         /// <param name="status">插件状态</param>
         /// <returns></returns>
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> List(string status = "all")
         {
             CommonResponseModel responseData = new ResponseModel.CommonResponseModel();
@@ -88,6 +89,7 @@ namespace PluginCore.Controllers
         #endregion
 
         #region 安装插件
+        [HttpGet, HttpPost]
         public async Task<ActionResult<ResponseModel.CommonResponseModel>> Install(string pluginId)
         {
             CommonResponseModel responseData = new CommonResponseModel();
@@ -125,6 +127,7 @@ namespace PluginCore.Controllers
         #endregion
 
         #region 删除插件
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Delete(string pluginId)
         {
             CommonResponseModel responseData = new CommonResponseModel();
@@ -162,6 +165,7 @@ namespace PluginCore.Controllers
         #endregion
 
         #region 卸载插件
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Uninstall(string pluginId)
         {
             CommonResponseModel responseData = new CommonResponseModel();
@@ -211,6 +215,7 @@ namespace PluginCore.Controllers
         #endregion
 
         #region 启用插件
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Enable(string pluginId)
         {
             CommonResponseModel responseData = new CommonResponseModel();
@@ -293,6 +298,7 @@ namespace PluginCore.Controllers
         #endregion
 
         #region 禁用插件
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Disable(string pluginId)
         {
             CommonResponseModel responseData = new CommonResponseModel();
@@ -373,6 +379,7 @@ namespace PluginCore.Controllers
         /// </summary>
         /// <param name="file">注意: 参数名一定为 file， 对应前端传过来时以 file 为名</param>
         /// <returns></returns>
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Upload([FromForm] IFormFile file)
         {
             CommonResponseModel responseData = new CommonResponseModel();
@@ -497,6 +504,7 @@ namespace PluginCore.Controllers
         #endregion
 
         #region 查看详细
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Details(string pluginId)
         {
             CommonResponseModel responseData = new CommonResponseModel();
@@ -536,6 +544,7 @@ namespace PluginCore.Controllers
         #endregion
 
         #region 查看文档
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Readme(string pluginId)
         {
             CommonResponseModel responseData = new CommonResponseModel();

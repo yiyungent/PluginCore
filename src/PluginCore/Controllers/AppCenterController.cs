@@ -50,6 +50,7 @@ namespace PluginCore.Controllers
         /// </summary>
         /// <param name="query"></param>
         /// <returns></returns>
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Plugins(string query = "")
         {
             CommonResponseModel responseDTO = new CommonResponseModel();
@@ -83,6 +84,7 @@ namespace PluginCore.Controllers
         #endregion
 
         #region 下载插件
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> DownloadPlugin(string pluginDownloadUrl = "")
         {
             CommonResponseModel responseDTO = new CommonResponseModel();
@@ -131,6 +133,7 @@ namespace PluginCore.Controllers
         #endregion
 
         #region 获取插件下载进度
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> DownloadPluginProgress()
         {
             CommonResponseModel responseDTO = new CommonResponseModel();

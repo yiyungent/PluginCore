@@ -29,6 +29,7 @@ namespace PluginCore.Controllers
             _accountManager = accountManager;
         }
 
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Login([FromBody] LoginRequestModel requestModel)
         {
             CommonResponseModel responseModel = new CommonResponseModel();
@@ -62,6 +63,7 @@ namespace PluginCore.Controllers
             return await Task.FromResult(responseModel);
         }
 
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Logout()
         {
             CommonResponseModel responseModel = new CommonResponseModel()
@@ -74,6 +76,7 @@ namespace PluginCore.Controllers
         }
 
         [PluginCoreAdminAuthorize]
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Info()
         {
             CommonResponseModel responseModel = new CommonResponseModel();
@@ -101,6 +104,7 @@ namespace PluginCore.Controllers
         }
 
         [PluginCoreAdminAuthorize]
+        [HttpGet, HttpPost]
         public async Task<ActionResult<CommonResponseModel>> Update([FromBody] UpdateRequestModel requestModel)
         {
             CommonResponseModel responseModel = new CommonResponseModel();
