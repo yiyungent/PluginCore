@@ -344,10 +344,16 @@ examples/AspNetCore3_1/App_Data/
 examples/AspNetCore3_1/PluginCoreAdmin/
 examples/AspNetCore3_1/Plugins/
 examples/AspNetCore3_1/Plugins_wwwroot/
+
 examples/AspNetCore5/App_Data/
 examples/AspNetCore5/PluginCoreAdmin/
 examples/AspNetCore5/Plugins/
 examples/AspNetCore5/Plugins_wwwroot/
+
+examples/AspNetCore6/App_Data/
+examples/AspNetCore6/PluginCoreAdmin/
+examples/AspNetCore6/Plugins/
+examples/AspNetCore6/Plugins_wwwroot/
 
 # PluginCore
 src/PluginCore/package-lock.json
