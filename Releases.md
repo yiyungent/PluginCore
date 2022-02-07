@@ -2,6 +2,18 @@
 
 
 
+
+
+
+
+# PluginCore-v0.8.6
+
+
+## Fixed
+
+- 若 `PluginCore` + `Swashbuckle.AspNetCore` 配合使用, 导致 `SwaggerGeneratorException: Ambiguous HTTP method for action`
+
+
 # PluginCore-v0.8.5
 
 ## Updated
