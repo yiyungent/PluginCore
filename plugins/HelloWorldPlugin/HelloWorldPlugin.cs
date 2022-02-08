@@ -57,8 +57,9 @@ namespace HelloWorldPlugin
                 {
                     Console.WriteLine(string.Join(",", extraPars));
                 }
-                rtnStr = @"<div>
+                rtnStr = @"<div style=""border:1px solid green;width:300px;"">
                                 <h3>HelloWorldPlugin 注入</h3>
+                                <div>HelloWorldPlugin 挂件</div>
                            </div>";
 
             }
