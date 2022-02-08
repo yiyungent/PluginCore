@@ -37,18 +37,20 @@ namespace PluginCore.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Widget(string widgetKey, string extraPars = "")
+        //public async Task<ActionResult<CommonResponseModel>> Widget(string widgetKey, string extraPars = "")
+        public async Task<ActionResult> Widget(string widgetKey, string extraPars = "")
         {
             CommonResponseModel responseModel = new ResponseModel.CommonResponseModel();
             string responseData = "";
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"<!-- start:PluginCore.IPlugins.IWidgetPlugin.Widget({widgetKey},{extraPars}) -->");
+            widgetKey = widgetKey.Trim('"', '\'');
             string[] extraParsArr = null;
             if (!string.IsNullOrEmpty(extraPars))
             {
                 extraParsArr = extraPars.Split(",", StringSplitOptions.RemoveEmptyEntries);
                 extraParsArr = extraParsArr.Select(m => m.Trim('"', '\'')).ToArray();
             }
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"<!-- start:PluginCore.IPlugins.IWidgetPlugin.Widget({widgetKey},{extraPars}) -->");
             try
             {
                 List<IWidgetPlugin> plugins = this._pluginFinder.EnablePlugins<IWidgetPlugin>().ToList();
@@ -78,7 +80,8 @@ namespace PluginCore.Controllers
             responseModel.message = "Load Widget Success";
             responseModel.data = responseData;
 
-            return await Task.FromResult(responseModel);
+            //return await Task.FromResult(responseModel);
+            return Content(responseData, "text/html;charset=utf-8");
         }
         #endregion
 
