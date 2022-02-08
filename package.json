@@ -20,7 +20,9 @@
     "url": "https://github.com/yiyungent/daylib/issues"
   },
   "homepage": "https://github.com/yiyungent/daylib#readme",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.25.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
