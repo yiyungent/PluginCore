@@ -30,6 +30,17 @@ namespace PluginCore.Utils
             Console.WriteLine(message);
         }
 
+        public static void Exception(Exception ex)
+        {
+            Error(ex.ToString());
+            Exception exception = ex;
+            while (exception.InnerException != null)
+            {
+                exception = ex.InnerException;
+                Error(exception.Message);
+            }
+        }
+
 
         public static void PluginBehavior<T>(T plugin, Type iplugin, string methodName)
             where T : IPlugins.IPlugin

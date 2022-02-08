@@ -22,6 +22,12 @@ namespace PluginCore.Config
 
         public string RemoteFrontend { get; set; } = "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.3.0/dist-cdn";
 
+        /// <summary>
+        /// 开启后:
+        /// 1. 页面的 Widget 会显示插件的详细插入点
+        /// </summary>
+        public bool PluginWidgetDebug { get; set; } = false;
+
         public sealed class AdminModel
         {
             public string UserName { get; set; } = "admin";
