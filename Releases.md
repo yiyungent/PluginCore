@@ -1,13 +1,22 @@
 
 
 
+# PluginCore-v0.9.0
+
+## Added
+
+- 挂件 (Plugin Widget) 相关
 
 
+# PluginCore.IPlugins-v0.7.0
+
+## Added
+
+- `PluginCore.IPlugins.IWidgetPlugin.Widget` 前端挂件接口
 
 
 
 # PluginCore-v0.8.6
-
 
 ## Fixed
 
