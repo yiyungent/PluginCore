@@ -37,7 +37,7 @@ npm install @yiyungent/plugincore --save
 
 ## Usage
 
-## 首先需要先在 扩展的前端页面 埋点 (扩展点 / Plugin Widget)
+### 首先 需扩展的前端页面 埋点 (扩展点 / Plugin Widget)
 
 > 例如下方: 第一个扩展点    
 > 在 `body` 最后 插入扩展点, 并且 `widgetKey`: `PluginCore.Admin.Footer`, 传递额外参数: `a,b,c`      
@@ -58,6 +58,8 @@ npm install @yiyungent/plugincore --save
     </body>
 </html>
 ```
+
+> 引入 plugincore-js-sdk 有两种方式
 
 ### 使用模块管理器
 ```js
