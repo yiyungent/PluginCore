@@ -27,7 +27,7 @@ PluginCore JavaScript SDK
 
 #### CDN
 ```html
-<script src="https://cdn.jsdelivr.net/npm/plugincore-js-sdk/dist/PluginCore.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@yiyungent/plugincore/dist/PluginCore.min.js"></script>
 ```
 
 #### npm
