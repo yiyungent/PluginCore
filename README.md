@@ -74,7 +74,7 @@ const p = new PluginCore();
             <h2 style="margin: 0 auto;text-align: center;">plugincore-js-sdk</h2>
             <div style="margin: 0 auto;text-align: center;">尝试使用插件 注入/修改 页面</div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/plugincore-js-sdk/dist/PluginCore.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@yiyungent/plugincore/dist/PluginCore.min.js"></script>
         <script>
 			var p = new PluginCore({
                 baseUrl: "your PluginCore url"
