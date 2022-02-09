@@ -24,8 +24,7 @@ jobs:
     - name: Build
       run: |
         npm install
-        npm run build:prod
-        npm run build:cdn
+        npm run build
     
     - name: Publish to npm
       run: |
