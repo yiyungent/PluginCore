@@ -28,14 +28,14 @@ PluginCore JavaScript SDK
 
 #### npm
 ```bash
-npm install plugincore --save
+npm install @yiyungent/plugincore --save
 ```
 
 ## 使用
 
 ### 使用模块管理器
 ```js
-import PluginCore from 'plugincore';
+import PluginCore from '@yiyungent/plugincore';
 
 const p = new PluginCore();
 ```
