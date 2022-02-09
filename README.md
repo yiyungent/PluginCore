@@ -7,9 +7,9 @@
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/plugincore-js-sdk.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/github/license/yiyungent/plugincore-js-sdk.svg?style=flat)](https://github.com/yiyungent/plugincore-js-sdk/blob/master/LICENSE)
-[![NPM version](https://img.shields.io/npm/v/plugincore-js-sdk.svg)](https://www.npmjs.com/package/@yiyungent/plugincore)
-[![NPM downloads](https://img.shields.io/npm/dt/plugincore-js-sdk)](https://www.npmjs.com/package/@yiyungent/plugincore)
-[![jsDelivr](https://img.shields.io/jsdelivr/npm/hy/plugincore-js-sdk)](https://www.jsdelivr.com/package/npm/@yiyungent/plugincore)
+[![NPM version](https://img.shields.io/npm/v/@yiyungent/plugincore.svg)](https://www.npmjs.com/package/@yiyungent/plugincore)
+[![NPM downloads](https://img.shields.io/npm/dt/@yiyungent/plugincore)](https://www.npmjs.com/package/@yiyungent/plugincore)
+[![jsDelivr](https://img.shields.io/jsdelivr/npm/hy/@yiyungent/plugincore)](https://www.jsdelivr.com/package/npm/@yiyungent/plugincore)
 
 
 ## 介绍
