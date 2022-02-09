@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
-    <title>daylib</title>
+    <title>plugincore-js-sdk</title>
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
@@ -16,30 +16,40 @@
   </head>
 
   <body>
-    <div id="app" class="container" style="margin: 200px auto;">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <div class="form">
-            <div class="form-group">
-              <label>用户名</label>
-              <input id="js-input-userName" type="text" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label>密码</label>
-              <input
-                id="js-input-password"
-                type="password"
-                class="form-control"
-              />
-            </div>
-            <button
-              id="js-btn-login"
-              class="btn btn-info btn-block"
-              style="margin-top: 14px;"
-            >
-              登陆
-            </button>
+    <div id="app" class="container" style="margin: 200px auto">
+      <h2 style="margin: 0 auto;text-align: center;">plugincore-js-sdk</h2>
+      <div style="margin: 0 auto;text-align: center;">尝试使用插件 注入/修改 页面</div>
+      <div>
+        <div>
+          <div>
+            <!-- PluginCore.IPlugins.IWidgetPlugin.Widget(PluginCore.Admin.Footer,a,b,c) -->
           </div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>
+            <!-- PluginCore.IPlugins.IWidgetPlugin.Widget(PluginCore.Admin.Footer,d,e,f) -->
+          </p>
+
+          <p></p>
+        </div>
+
+        <div>
+          <div></div>
+        </div>
+      </div>
+      <!-- PluginCore.IPlugins.IWidgetPlugin.Widget(PluginCore.Admin.Footer,g,h) -->
+      <div>
+        <div>
+          <div></div>
+        </div>
+        <!-- note4 -->
+        <div>
+          <div></div>
         </div>
       </div>
     </div>
@@ -48,12 +58,21 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/daylib/dist/DayLib.min.js"></script> -->
-    <script src="/dist/DayLib.min.js"></script>
+    <script src="/dist/PluginCore.min.js"></script>
     <script>
-      // window.daylib = new DayLib();
+      window.p = new PluginCore({
+        // 后缀不要带 /
+        baseUrl:"https://localhost:5001",
+        debug: true
+      });
+
+      p.start();
 
 
-        
+
+
+      // PS: `npm run dev` 生成的 `/dist/PluginCore.min.js` 并不需要重新 build, 一改动源代码, 就会自动重新 complie 成 PluginCore.min.js
+      // 不过需要刷新, 不会自动热重载
     </script>
   </body>
 </html>

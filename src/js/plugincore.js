@@ -1,6 +1,10 @@
 ﻿import handleOption from "./options.js";
-import { util } from "./utils.js";
+import utils from "./utils.js";
 import requestHtml from "./requestHtml.js";
+
+
+let _options = {};
+
 
 /**
  * 搜索注释节点
@@ -14,15 +18,9 @@ function eachComment(ele, callback) {
       // console.log(child.nodeValue);
       callback(child);
     } else if (child.childNodes) {
-      eachComment(child);
+      eachComment(child, callback);
     }
   }
-}
-
-function start() {
-  console.log("plugincore-js-sdk: start");
-  let bodyElement = document.getElementsByTagName("body")[0];
-  eachComment(bodyElement, processComment);
 }
 
 function processComment(node) {
@@ -42,25 +40,37 @@ function processComment(node) {
     // a,b,c
     let extraPars = temp2.substring(temp2.indexOf(",") + 1);
     // 发送请求, 获取 html
-    requestHtml(this.options.baseUrl + "/api/plugincore/PluginWidget/Widget", {
+    requestHtml(_options.baseUrl + "/api/plugincore/PluginWidget/Widget", {
       widgetKey: widgetKey,
       extraPars: extraPars,
     }).then((res) => {
       // 用 widget html 替换注释节点
-      let widgetHtml = util.parseDOM(res.data);
-      console.log("widgetHtml", widgetHtml);
-      node.replaceWith(widgetHtml);
+      let widgetHtml = utils.parseDOM(res);
+
+      if (_options.debug) {
+        console.log("widgetHtml", widgetHtml);
+      }
+
+      node.replaceWith(...widgetHtml);
     });
 
     
   }
 }
 
+
+function start() {
+  console.log("plugincore-js-sdk: start");
+  let bodyElement = document.getElementsByTagName("body")[0];
+  eachComment(bodyElement, processComment);
+}
+
 function PluginCore(options) {
   // 处理 options
   this.options = handleOption(options);
+  _options = this.options;
 
-  this.util = util;
+  this.utils = utils;
 }
 PluginCore.prototype = {
   constructor: PluginCore,

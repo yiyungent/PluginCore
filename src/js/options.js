@@ -3,8 +3,10 @@
  * @Description:
  */
 export default (options) => {
+    options = options || {};
     // default options
     const defaultOption = {
+      debug: options.debug || false,
       baseUrl: options.baseUrl || "",
     };
     // 附上默认值
