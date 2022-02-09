@@ -1,25 +1,25 @@
 {
-  "name": "daylib",
+  "name": "plugincore",
   "version": "0.1.0",
-  "description": "JavaScript Library.",
-  "main": "dist/DayLib.min.js",
+  "description": "PluginCore JavaScript SDK.",
+  "main": "dist/PluginCore.min.js",
   "scripts": {
     "dev": "webpack serve --open",
     "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yiyungent/daylib.git"
+    "url": "git+https://github.com/yiyungent/plugincore-js-sdk.git"
   },
   "keywords": [
-    "daylib"
+    "plugincore"
   ],
   "author": "yiyun <yiyungent@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yiyungent/daylib/issues"
+    "url": "https://github.com/yiyungent/plugincore-js-sdk/issues"
   },
-  "homepage": "https://github.com/yiyungent/daylib#readme",
+  "homepage": "https://github.com/yiyungent/plugincore-js-sdk#readme",
   "dependencies": {
     "axios": "^0.25.0"
   },

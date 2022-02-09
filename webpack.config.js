@@ -8,15 +8,15 @@ module.exports = {
   mode: 'production',
   entry: './src/main.js',
   output: {
-    filename: "DayLib.min.js",
+    filename: "PluginCore.min.js",
     library: {
-        name: 'DayLib',
+        name: 'PluginCore',
         type: 'umd',
     },
-    // 注意: 直接暴露 .default，这样 在浏览器中 就可以直接使用 DayLib
-    // 加上后: DayLib:  ƒ r(){this.util=n}
-    // 不加此项，就需要再次 DayLib.default
-    // DayLib: Module {__esModule: true, Symbol(Symbol.toStringTag): "Module", default: ƒ r()}
+    // 注意: 直接暴露 .default，这样 在浏览器中 就可以直接使用 PluginCore
+    // 加上后: PluginCore:  ƒ r(){this.util=n}
+    // 不加此项，就需要再次 PluginCore.default
+    // PluginCore: Module {__esModule: true, Symbol(Symbol.toStringTag): "Module", default: ƒ r()}
     libraryExport: "default",
     umdNamedDefine: true,
     path: path.resolve(__dirname, "dist"),
