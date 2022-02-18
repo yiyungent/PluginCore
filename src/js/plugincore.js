@@ -23,6 +23,30 @@ function eachComment(ele, callback) {
   }
 }
 
+/**
+ * 搜索 <script></script>
+ * @param {Element} ele 需要多次, 对 插件返回的每一个节点搜索
+ * @param {Function} callback script节点 回调函数
+ */
+function eachScript(ele, callback) {
+  // 注意: 当前节点也要算
+  if (ele.nodeType == 1 && ele.nodeName == "SCRIPT") {
+    callback(ele);
+  } else {
+
+    for (var i = 0; i < ele.childNodes.length; i++) {
+      var child = ele.childNodes[i];
+      if (child.nodeType == 1 && child.nodeName == "SCRIPT") {
+        // console.log(child.text); // 注意: 这里需要通过 .text 获取 script 内容, nodeValue 为 null
+        callback(child);
+      } else if (child.childNodes) {
+        eachScript(child, callback);
+      }
+    }
+
+  }
+}
+
 function processComment(node) {
   const pluginWidgetFlag = "PluginCore.IPlugins.IWidgetPlugin.Widget";
   // <!-- PluginCore.IPlugins.IWidgetPlugin.Widget(PluginCore.Admin.Footer,a,b,c) -->
@@ -51,7 +75,26 @@ function processComment(node) {
         console.log("widgetHtml", widgetHtml);
       }
 
+      let scriptStr = "";
+      // 对 widgetHtml 搜索 script
+      widgetHtml.forEach(
+        tempNode => { 
+          eachScript(tempNode, scriptNode => {
+            // 末尾加个 ; 防止有不规范的代码 影响之后的执行
+            scriptStr += scriptNode.text + ";";
+          });          
+        }
+      );
+
+      if (_options.debug) {
+        console.log("scriptStr", scriptStr);
+      }
+
+      // 1. 替换 html
       node.replaceWith(...widgetHtml);
+      // 2. 解析 执行 js
+      eval(scriptStr);
+
     });
 
     
