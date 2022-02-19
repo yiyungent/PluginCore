@@ -1,6 +1,6 @@
 {
   "name": "@yiyungent/plugincore",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "PluginCore JavaScript SDK.",
   "main": "dist/PluginCore.min.js",
   "scripts": {

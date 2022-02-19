@@ -104,8 +104,10 @@ function processComment(node) {
 
 function start() {
   console.log("plugincore-js-sdk: start");
-  let bodyElement = document.getElementsByTagName("body")[0];
-  eachComment(bodyElement, processComment);
+  // let rootElement = document.getElementsByTagName("body")[0];
+  // 直接从 document 开始搜索, 这样 可以在 <head></head> 中插入扩展点
+  let rootElement = document;
+  eachComment(rootElement, processComment);
 }
 
 function PluginCore(options) {
