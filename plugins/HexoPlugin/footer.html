@@ -1,14 +1,20 @@
-﻿<link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+﻿<script>
+    // hexo-encrypt-token: 用于第一次访问时, 在获取到 password 后, 自动解密
+    window.onload = function () {
+        window.het.hbeLoader();
+    }
+</script>
+
+<link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
 <div id="aplayer"></div>
 <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script>
-    p.addEventListener("load", (src) => {
+<script>p.addEventListener("load", (src) => {
 
         if (src != "https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js") {
             return;
         }
 
-        // 参考:  
+        // 参考:
         // https://aplayer.js.org/config.js
         // https://api.i-meto.com/meting/api/index.php?server=netease
         const ap = new APlayer({
@@ -39,5 +45,4 @@
             }]
         });
 
-    })
-</script>
+    })</script>
