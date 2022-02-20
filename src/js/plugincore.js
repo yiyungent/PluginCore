@@ -5,6 +5,12 @@ import requestHtml from "./requestHtml.js";
 
 let _options = {};
 
+let _eachFinishCallback = (pluginPars)=>{
+  if(_options.debug) {
+    console.info(`plugincore-js-sdk: eachFinish: ${pluginPars.widgetKey},${pluginPars.extraPars}`);
+  }
+};
+
 
 /**
  * 搜索注释节点
@@ -47,6 +53,40 @@ function eachScript(ele, callback) {
   }
 }
 
+/**
+ * 处理插件返回的 html 字符串
+ * @param {Element} node 
+ * @param {String} res 
+ */
+function processHtml(node, res) {
+  // 用 widget html 替换注释节点
+  let widgetHtml = utils.parseDOM(res);
+
+  if (_options.debug) {
+    console.info("widgetHtml", widgetHtml);
+  }
+
+  let scriptStr = "";
+  // 对 widgetHtml 搜索 script
+  widgetHtml.forEach(
+    tempNode => { 
+      eachScript(tempNode, scriptNode => {
+        // 末尾加个 ; 防止有不规范的代码 影响之后的执行
+        scriptStr += scriptNode.text + ";";
+      });          
+    }
+  );
+
+  if (_options.debug) {
+    console.info("scriptStr", scriptStr);
+  }
+
+  // 1. 替换 html
+  node.replaceWith(...widgetHtml);
+  // 2. 解析 执行 js
+  eval(scriptStr);
+}
+
 function processComment(node) {
   const pluginWidgetFlag = "PluginCore.IPlugins.IWidgetPlugin.Widget";
   // <!-- PluginCore.IPlugins.IWidgetPlugin.Widget(PluginCore.Admin.Footer,a,b,c) -->
@@ -68,32 +108,12 @@ function processComment(node) {
       widgetKey: widgetKey,
       extraPars: extraPars,
     }).then((res) => {
-      // 用 widget html 替换注释节点
-      let widgetHtml = utils.parseDOM(res);
 
-      if (_options.debug) {
-        console.log("widgetHtml", widgetHtml);
-      }
-
-      let scriptStr = "";
-      // 对 widgetHtml 搜索 script
-      widgetHtml.forEach(
-        tempNode => { 
-          eachScript(tempNode, scriptNode => {
-            // 末尾加个 ; 防止有不规范的代码 影响之后的执行
-            scriptStr += scriptNode.text + ";";
-          });          
-        }
-      );
-
-      if (_options.debug) {
-        console.log("scriptStr", scriptStr);
-      }
-
-      // 1. 替换 html
-      node.replaceWith(...widgetHtml);
-      // 2. 解析 执行 js
-      eval(scriptStr);
+      processHtml(node, res);
+      _eachFinishCallback({
+        widgetKey: widgetKey,
+        extraPars: extraPars,
+      });
 
     });
 
@@ -102,8 +122,9 @@ function processComment(node) {
 }
 
 
-function start() {
-  console.log("plugincore-js-sdk: start");
+function start(eachFinishCallback) {
+  _eachFinishCallback = eachFinishCallback || _eachFinishCallback;
+  console.info("plugincore-js-sdk: start");
   // let rootElement = document.getElementsByTagName("body")[0];
   // 直接从 document 开始搜索, 这样 可以在 <head></head> 中插入扩展点
   let rootElement = document;
