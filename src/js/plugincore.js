@@ -47,6 +47,62 @@ function eachComment(ele, callback) {
   }
 }
 
+
+//#region link
+function processLink(linkNode) {
+  if (linkNode.textContent == "" && linkNode.href != "") {
+      // src
+      // 注意: 此种方法, 需要 至少当前页面已经存在一个 <script></script>
+      let loadHrefStr = `var _hmt = _hmt || [];
+      (function () {
+          var hm = document.createElement("link");
+          hm.href = "${linkNode.href}";
+          hm.onload = () => {
+            if (${_options.debug}) {
+              console.log("load finished: ${linkNode.href}");
+            }
+            window.plugincore.invokeEvent("load", "${linkNode.href}");
+
+            // 加载完就删除, 因为在 widgetHtml 中有这个内容了
+            hm.remove();
+          };
+          var s = document.getElementsByTagName("link")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();`;
+
+      if (_options.debug) {
+        console.info("linkStr", loadHrefStr);
+      }
+
+      eval(loadHrefStr);
+  }
+}
+
+/**
+ * 搜索 <link>
+ * @param {Element} ele 需要多次, 对 插件返回的每一个节点搜索
+ * @param {Function} callback link节点 回调函数
+ */
+ function eachLink(ele, callback) {
+  // 注意: 当前节点也要算
+  if (ele.nodeType == 1 && ele.nodeName == "LINK") {
+    callback(ele);
+  } else {
+
+    for (var i = 0; i < ele.childNodes.length; i++) {
+      var child = ele.childNodes[i];
+      if (child.nodeType == 1 && child.nodeName == "LINK") {
+        callback(child);
+      } else if (child.childNodes) {
+        eachLink(child, callback);
+      }
+    }
+
+  }
+}
+//#endregion
+
+//#region script
 function processScript(scriptNode) {
   if (scriptNode.text == "" && scriptNode.src != "") {
       // src
@@ -107,6 +163,7 @@ function eachScript(ele, callback) {
 
   }
 }
+//#endregion
 
 /**
  * 处理插件返回的 html 字符串
@@ -133,15 +190,19 @@ function processHtml(node, res) {
     console.info("tempWidgetHtml", tempWidgetHtml);
   }
 
+  // 2. 解析执行 js 及 加载外部资源
   // let scriptStr = "";
   // 对 widgetHtml 搜索 script
   tempWidgetHtml.forEach(
     tempNode => { 
+      eachLink(tempNode, linkNode => {
+        processLink(linkNode);
+      });
       eachScript(tempNode, scriptNode => {
         // 末尾加个 ; 防止有不规范的代码 影响之后的执行
         // scriptStr += processScript(scriptNode) + ";";
         processScript(scriptNode);
-      });          
+      });
     }
   );
 
