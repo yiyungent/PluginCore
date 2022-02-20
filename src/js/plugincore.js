@@ -11,6 +11,24 @@ let _eachFinishCallback = (pluginPars)=>{
   }
 };
 
+//#region Event
+let _eventSet = {};
+
+function addEventListener(eventKey, callback) {
+  if (!_eventSet[eventKey]) {
+    _eventSet[eventKey] = []
+  }
+  _eventSet[eventKey].push(callback);
+}
+
+function invokeEvent(eventKey, pars) {
+  let callbacks = _eventSet[eventKey];
+  callbacks.forEach(c => {
+    c(pars);
+  });
+}
+//#endregion
+
 
 /**
  * 搜索注释节点
@@ -26,6 +44,43 @@ function eachComment(ele, callback) {
     } else if (child.childNodes) {
       eachComment(child, callback);
     }
+  }
+}
+
+function processScript(scriptNode) {
+  if (scriptNode.text == "" && scriptNode.src != "") {
+      // src
+      // 注意: 此种方法, 需要 至少当前页面已经存在一个 <script></script>
+      let loadSrcStr = `var _hmt = _hmt || [];
+      (function () {
+          var hm = document.createElement("script");
+          hm.src = "${scriptNode.src}";
+          hm.onload = () => {
+            if (${_options.debug}) {
+              console.log("load finished: ${scriptNode.src}");
+            }
+            window.plugincore.invokeEvent("load", "${scriptNode.src}");
+
+            // 加载完就删除, 因为在 widgetHtml 中有这个内容了
+            hm.remove();
+          };
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();`;
+
+      if (_options.debug) {
+        console.info("scriptStr", loadSrcStr);
+      }
+
+      // return loadSrcStr;
+      eval(loadSrcStr);
+  } else {
+      // script 内容
+      // return scriptNode.text;
+      if (_options.debug) {
+        console.info("scriptStr", scriptNode.text);
+      }
+      eval(scriptNode.text);
   }
 }
 
@@ -66,25 +121,39 @@ function processHtml(node, res) {
     console.info("widgetHtml", widgetHtml);
   }
 
-  let scriptStr = "";
+  // 注意: 深度克隆, 不要赋值传地址
+  let tempWidgetHtml = utils.cloneNodes(widgetHtml);
+
+  // 1. 替换 html
+  node.replaceWith(...widgetHtml);
+
+  // 注意: widgetHtml 被 node.replaceWith 后 为 NodeList()[], 因此需要先存起来
+
+  if (_options.debug) {
+    console.info("tempWidgetHtml", tempWidgetHtml);
+  }
+
+  // let scriptStr = "";
   // 对 widgetHtml 搜索 script
-  widgetHtml.forEach(
+  tempWidgetHtml.forEach(
     tempNode => { 
       eachScript(tempNode, scriptNode => {
         // 末尾加个 ; 防止有不规范的代码 影响之后的执行
-        scriptStr += scriptNode.text + ";";
+        // scriptStr += processScript(scriptNode) + ";";
+        processScript(scriptNode);
       });          
     }
   );
 
-  if (_options.debug) {
-    console.info("scriptStr", scriptStr);
-  }
+  // if (_options.debug) {
+  //   console.info("scriptStr", scriptStr);
+  // }
 
   // 1. 替换 html
-  node.replaceWith(...widgetHtml);
+  // node.replaceWith(...widgetHtml);
+  // 取消: 不再一个扩展点, 一次执行, 而是一个扩展点内的内容一步步执行
   // 2. 解析 执行 js
-  eval(scriptStr);
+  // eval(scriptStr);
 }
 
 function processComment(node) {
@@ -144,6 +213,9 @@ PluginCore.prototype = {
   // 以下只会出现在 __proto__ 中
 
   start: start,
+
+  addEventListener: addEventListener,
+
 };
 
 String.prototype.format = function () {
@@ -152,5 +224,8 @@ String.prototype.format = function () {
     return args[i];
   });
 };
+
+window.plugincore = {};
+window.plugincore.invokeEvent = invokeEvent;
 
 export default PluginCore;

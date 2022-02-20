@@ -59,4 +59,14 @@ utils.parseDOM = function (arg) {
   return objE.childNodes;
 };
 
+utils.cloneNodes = function (nodeList) {
+  // 注意: NodeList 不是数组, 实际上这里有问题
+  let rtn = [];
+  nodeList.forEach(node => {
+    rtn.push(node.cloneNode(true));
+  });
+
+  return rtn;
+}
+
 export default utils;
