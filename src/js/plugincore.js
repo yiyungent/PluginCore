@@ -57,6 +57,9 @@ function processLink(linkNode) {
       (function () {
           var hm = document.createElement("link");
           hm.href = "${linkNode.href}";
+          // 注意: 需要设置以下两项, 浏览器才会加载
+          hm.setAttribute("rel", "stylesheet");
+          hm.setAttribute("type", "text/css");
           hm.onload = () => {
             if (${_options.debug}) {
               console.log("load finished: ${linkNode.href}");
