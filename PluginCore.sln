@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTimeJobPlugin", "plugin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoModePlugin", "plugins\DemoModePlugin\DemoModePlugin.csproj", "{386ED921-054C-4BB3-A5FF-39011FDD574B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore6", "examples\AspNetCore6\AspNetCore6.csproj", "{601F78E5-D68D-4B79-BE56-A3F731E37511}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6", "examples\AspNetCore6\AspNetCore6.csproj", "{601F78E5-D68D-4B79-BE56-A3F731E37511}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexoPlugin", "plugins\HexoPlugin\HexoPlugin.csproj", "{93F2ABF9-64E2-4093-B23A-F22FF1981394}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{601F78E5-D68D-4B79-BE56-A3F731E37511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{601F78E5-D68D-4B79-BE56-A3F731E37511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{601F78E5-D68D-4B79-BE56-A3F731E37511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F2ABF9-64E2-4093-B23A-F22FF1981394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F2ABF9-64E2-4093-B23A-F22FF1981394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F2ABF9-64E2-4093-B23A-F22FF1981394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F2ABF9-64E2-4093-B23A-F22FF1981394}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +103,7 @@ Global
 		{CEB43796-AB46-4A99-8003-475B6880DBAC} = {D8255E7B-33DD-40B1-95A7-2B4F45BFE0F4}
 		{386ED921-054C-4BB3-A5FF-39011FDD574B} = {D8255E7B-33DD-40B1-95A7-2B4F45BFE0F4}
 		{601F78E5-D68D-4B79-BE56-A3F731E37511} = {F7651716-CAC1-42B3-9D95-2C7C835F17CB}
+		{93F2ABF9-64E2-4093-B23A-F22FF1981394} = {D8255E7B-33DD-40B1-95A7-2B4F45BFE0F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5B7D6AB-2647-419D-93CB-5475018BA79C}
