@@ -1,6 +1,11 @@
 
 
+# @yiyungent/plugincore-0.4.0
 
+## Added
+
+- 支持加载 `外部 css`, 即 `<link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">`
+- `addEventListener` 公开, 即 `window.plugincore.addEventListener = addEventListener;`
 
 
 # @yiyungent/plugincore-0.3.0
