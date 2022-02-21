@@ -1,6 +1,6 @@
 
 
-# @yiyungent/plugincore-0.4.0
+# @yiyungent/plugincore-v0.4.0
 
 ## Added
 
@@ -8,7 +8,7 @@
 - `addEventListener` 公开, 即 `window.plugincore.addEventListener = addEventListener;`
 
 
-# @yiyungent/plugincore-0.3.0
+# @yiyungent/plugincore-v0.3.0
 
 ## Added
 
@@ -23,6 +23,7 @@
 <div id="aplayer"></div>
 <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <script>
+    // p 为 PluginCore 对象实例
     p.addEventListener("load", (src) => {
 
         if (src != "https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js") {
