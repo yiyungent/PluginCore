@@ -1,4 +1,4 @@
-import { util } from "webpack";
+// import { util } from "webpack"; // 不要导入这个, 会报错
 
 var utils = {};
 
