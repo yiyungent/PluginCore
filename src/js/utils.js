@@ -1,3 +1,5 @@
+import { util } from "webpack";
+
 var utils = {};
 
 // 字符串格式化
@@ -68,5 +70,52 @@ utils.cloneNodes = function (nodeList) {
 
   return rtn;
 }
+
+utils.dynamicLoad = {
+  css: (href, onloadCallbackStr) => {
+    let loadStr = `
+      (function () {
+          var hm = document.createElement("link");
+          hm.href = "${href}";
+          // 注意: 需要设置以下两项, 浏览器才会加载
+          hm.setAttribute("rel", "stylesheet");
+          hm.setAttribute("type", "text/css");
+          hm.onload = () => {
+            ${onloadCallbackStr};
+
+            // 加载完就删除
+            // hm.remove();
+          };
+          var heads = document.getElementsByTagName("head"); 
+          if(heads.length) 
+            heads[0].appendChild(hm); 
+          else 
+            document.documentElement.appendChild(hm);
+      })();`;
+
+    return loadStr;
+  },
+
+  js: (src, onloadCallbackStr) => {
+    let loadStr = `
+      (function () {
+          var hm = document.createElement("script");
+          hm.src = "${src}";
+          hm.onload = () => {
+            ${onloadCallbackStr};
+
+            // 加载完就删除
+            // hm.remove();
+          };
+          var heads = document.getElementsByTagName("head"); 
+          if(heads.length) 
+            heads[0].appendChild(hm); 
+          else 
+            document.documentElement.appendChild(hm);
+      })();`;
+
+    return loadStr;
+  }
+};
 
 export default utils;

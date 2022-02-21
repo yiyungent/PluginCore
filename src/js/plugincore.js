@@ -52,26 +52,15 @@ function eachComment(ele, callback) {
 function processLink(linkNode) {
   if (linkNode.textContent == "" && linkNode.href != "") {
       // src
-      // 注意: 此种方法, 需要 至少当前页面已经存在一个 <script></script>
-      let loadHrefStr = `var _hmt = _hmt || [];
-      (function () {
-          var hm = document.createElement("link");
-          hm.href = "${linkNode.href}";
-          // 注意: 需要设置以下两项, 浏览器才会加载
-          hm.setAttribute("rel", "stylesheet");
-          hm.setAttribute("type", "text/css");
-          hm.onload = () => {
-            if (${_options.debug}) {
-              console.log("load finished: ${linkNode.href}");
-            }
-            window.plugincore.invokeEvent("load", "${linkNode.href}");
+      let onloadCallbackStr = `
+          if (${_options.debug}) {
+            console.log("load finished: ${linkNode.href}");
+          }
+          window.plugincore.invokeEvent("load", "${linkNode.href}");
 
-            // 加载完就删除, 因为在 widgetHtml 中有这个内容了
-            hm.remove();
-          };
-          var s = document.getElementsByTagName("link")[0];
-          s.parentNode.insertBefore(hm, s);
-      })();`;
+          // 加载完就删除, 因为在 widgetHtml 中有这个内容了
+          hm.remove();`;
+      let loadHrefStr = utils.dynamicLoad.css(linkNode.href, onloadCallbackStr);
 
       if (_options.debug) {
         console.info("linkStr", loadHrefStr);
@@ -109,23 +98,15 @@ function processLink(linkNode) {
 function processScript(scriptNode) {
   if (scriptNode.text == "" && scriptNode.src != "") {
       // src
-      // 注意: 此种方法, 需要 至少当前页面已经存在一个 <script></script>
-      let loadSrcStr = `var _hmt = _hmt || [];
-      (function () {
-          var hm = document.createElement("script");
-          hm.src = "${scriptNode.src}";
-          hm.onload = () => {
-            if (${_options.debug}) {
-              console.log("load finished: ${scriptNode.src}");
-            }
-            window.plugincore.invokeEvent("load", "${scriptNode.src}");
+      let onloadCallbackStr = `
+          if (${_options.debug}) {
+            console.log("load finished: ${scriptNode.src}");
+          }
+          window.plugincore.invokeEvent("load", "${scriptNode.src}");
 
-            // 加载完就删除, 因为在 widgetHtml 中有这个内容了
-            hm.remove();
-          };
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(hm, s);
-      })();`;
+          // 加载完就删除, 因为在 widgetHtml 中有这个内容了
+          hm.remove();`;
+      let loadSrcStr = utils.dynamicLoad.js(scriptNode.src, onloadCallbackStr);
 
       if (_options.debug) {
         console.info("scriptStr", loadSrcStr);
