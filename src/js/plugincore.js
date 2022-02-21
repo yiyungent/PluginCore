@@ -272,5 +272,6 @@ String.prototype.format = function () {
 
 window.plugincore = {};
 window.plugincore.invokeEvent = invokeEvent;
+window.plugincore.addEventListener = addEventListener;
 
 export default PluginCore;
