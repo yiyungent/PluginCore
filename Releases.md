@@ -1,6 +1,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+# PluginCore-v0.9.1
+
+## Fixed
+
+- `ITimeJobPlugin` 多线程定时任务 执行问题
+  - 当上一个任务未完成, 下个任务就开始时导致, 修复: 加锁, 下个任务线程阻塞等待
+
 # PluginCore-v0.9.0
 
 ## Added
