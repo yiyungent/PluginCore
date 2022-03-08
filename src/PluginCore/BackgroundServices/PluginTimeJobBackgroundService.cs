@@ -19,6 +19,8 @@ namespace PluginCore.BackgroundServices
 
         private readonly IPluginFinder _pluginFinder;
 
+        private static readonly object _doWorklock = new object();
+
         public PluginTimeJobBackgroundService(IPluginFinder pluginFinder)
         {
             _pluginFinder = pluginFinder;
@@ -28,44 +30,46 @@ namespace PluginCore.BackgroundServices
 
         protected override void DoWork(object state)
         {
-            var plugins = this._pluginFinder.EnablePlugins<ITimeJobPlugin>().ToList();
-
-            List<string> enabledPluginKeyList = new List<string>();
-            foreach (var item in plugins)
+            lock (_doWorklock)
             {
-                string pluginKey = item.GetType().ToString();
-                enabledPluginKeyList.Add(pluginKey);
-                if (this._pluginAndLastExecuteTimeDic.ContainsKey(pluginKey))
+                var plugins = this._pluginFinder.EnablePlugins<ITimeJobPlugin>().ToList();
+
+                List<string> enabledPluginKeyList = new List<string>();
+                foreach (var item in plugins)
                 {
-                    long lastExecuteTime = this._pluginAndLastExecuteTimeDic[pluginKey];
-                    long nowTime = DateTime.Now.ToTimeStamp10();
-                    if (nowTime - lastExecuteTime >= item.SecondsPeriod)
+                    string pluginKey = item.GetType().ToString();
+                    enabledPluginKeyList.Add(pluginKey);
+                    if (this._pluginAndLastExecuteTimeDic.ContainsKey(pluginKey))
+                    {
+                        long lastExecuteTime = this._pluginAndLastExecuteTimeDic[pluginKey];
+                        long nowTime = DateTime.Now.ToTimeStamp10();
+                        if (nowTime - lastExecuteTime >= item.SecondsPeriod)
+                        {
+                            // 调用
+                            Utils.LogUtil.Info($"{pluginKey} {nameof(ITimeJobPlugin)}.{nameof(ITimeJobPlugin.ExecuteAsync)}");
+                            Task task = item?.ExecuteAsync();
+                            this._pluginAndLastExecuteTimeDic[pluginKey] = DateTime.Now.ToTimeStamp10();
+                        }
+                    }
+                    else
                     {
                         // 调用
                         Utils.LogUtil.Info($"{pluginKey} {nameof(ITimeJobPlugin)}.{nameof(ITimeJobPlugin.ExecuteAsync)}");
                         Task task = item?.ExecuteAsync();
-                        this._pluginAndLastExecuteTimeDic[pluginKey] = DateTime.Now.ToTimeStamp10();
+                        this._pluginAndLastExecuteTimeDic.Add(pluginKey, DateTime.Now.ToTimeStamp10());
                     }
                 }
-                else
+                // 所有插件遍历结束
+                // 出现在了 _pluginAndLastExecuteTimeDic 中，但没有出现在 enabledPluginKeyList, 说明为之前启用过，但现在已禁用的插件，需要去除掉
+                List<string> keys = this._pluginAndLastExecuteTimeDic.Select(m => m.Key).ToList();
+                foreach (string key in keys)
                 {
-                    // 调用
-                    Utils.LogUtil.Info($"{pluginKey} {nameof(ITimeJobPlugin)}.{nameof(ITimeJobPlugin.ExecuteAsync)}");
-                    Task task = item?.ExecuteAsync();
-                    this._pluginAndLastExecuteTimeDic.Add(pluginKey, DateTime.Now.ToTimeStamp10());
+                    if (!enabledPluginKeyList.Contains(key))
+                    {
+                        this._pluginAndLastExecuteTimeDic.Remove(key);
+                    }
                 }
             }
-            // 所有插件遍历结束
-            // 出现在了 _pluginAndLastExecuteTimeDic 中，但没有出现在 enabledPluginKeyList, 说明为之前启用过，但现在已禁用的插件，需要去除掉
-            List<string> keys = this._pluginAndLastExecuteTimeDic.Select(m => m.Key).ToList();
-            foreach (string key in keys)
-            {
-                if (!enabledPluginKeyList.Contains(key))
-                {
-                    this._pluginAndLastExecuteTimeDic.Remove(key);
-                }
-            }
-
         }
     }
 }
