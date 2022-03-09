@@ -3,10 +3,12 @@
 
 
 
+# PluginCore-v0.9.2
 
+## Fixed
 
-
-
+- `tokenCookieName = "PluginCore.Admin.Token"` 与 `PluginCore Admin` 前端一致, 而不是后端检索 `tokenCookieName = "token"`
+  - 插件可在 `Controller,Action` 上使用 `[Authorize("PluginCoreAdmin")]`, 来达到与 `PluginCore Admin` 相同的权限策略
 
 
 

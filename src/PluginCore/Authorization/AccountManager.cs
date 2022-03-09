@@ -68,7 +68,8 @@ namespace PluginCore.Authorization
                 if (string.IsNullOrEmpty(token))
                 {
                     // cookie 中找 token
-                    string tokenCookieName = "token";
+                    //string tokenCookieName = "token";
+                    string tokenCookieName = "PluginCore.Admin.Token";
                     if (request.Cookies.Keys.Contains(tokenCookieName))
                     {
                         if (request.Cookies[tokenCookieName] != null && string.IsNullOrEmpty(request.Cookies[tokenCookieName]) == false)
