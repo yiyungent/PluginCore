@@ -276,6 +276,7 @@ PluginCore supports 3 front-end file loading methods
 - [plugincore-admin-frontend](https://github.com/yiyungent/plugincore-admin-frontend) PluginCore Admin 前端实现
 - [plugincore-js-sdk](https://github.com/yiyungent/plugincore-js-sdk) - 前端挂件 依赖
 - [Remember.Core](https://github.com/yiyungent/Remember.Core)  插件框架提取处
+- [Dragonfly](https://github.com/yiyungent/Dragonfly) - ASP.NET Core + Selenium 实现 Web 自动化
 
 
 ## 赞助者
