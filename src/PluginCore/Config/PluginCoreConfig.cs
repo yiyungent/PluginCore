@@ -20,7 +20,7 @@ namespace PluginCore.Config
         /// </summary>
         public string FrontendMode { get; set; } = "LocalEmbedded";
 
-        public string RemoteFrontend { get; set; } = "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.3.0/dist-cdn";
+        public string RemoteFrontend { get; set; } = "https://cdn.jsdelivr.net/gh/yiyungent/plugincore-admin-frontend@0.3.1/dist-cdn";
 
         /// <summary>
         /// 开启后:

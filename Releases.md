@@ -1,6 +1,11 @@
 
 
+# PluginCore-v0.9.3
 
+## Fixed
+
+- 更新 PluginCore Admin 前端: `plugincore-admin-frontend-v0.3.1`
+  - Fixed: 用户名验证错误
 
 
 # PluginCore-v0.9.2
