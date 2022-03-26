@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+    <Version>0.0.1</Version>
+    <Company>yiyun</Company>
+    <Authors>yiyun</Authors>
+    <Description>PluginCore.AspNetCore</Description>
+    <Copyright>Copyright (c) 2021-present yiyun</Copyright>
+    <RepositoryUrl>https://github.com/yiyungent/PluginCore</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageTags>PluginCore PluginCore.AspNetCore</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <!-- 生成注释xml -->
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp3.1|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp3.1\PluginCore.AspNetCore.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net5.0|AnyCPU'">
+    <DocumentationFile>bin\Release\net5.0\PluginCore.AspNetCore.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>
