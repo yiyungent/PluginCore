@@ -35,14 +35,14 @@ function invokeEvent(eventKey, pars) {
  * @param {Element} ele 最好从 body element 开始搜索
  * @param {Function} callback 注释节点 回调函数
  */
-function eachComment(ele, callback) {
+function eachComment(ele, callback, headers) {
   for (var i = 0; i < ele.childNodes.length; i++) {
     var child = ele.childNodes[i];
     if (child.nodeType == 8) {
       // console.log(child.nodeValue);
-      callback(child);
+      callback(child, headers);
     } else if (child.childNodes) {
-      eachComment(child, callback);
+      eachComment(child, callback, headers);
     }
   }
 }
@@ -201,7 +201,7 @@ function processHtml(node, res) {
   // eval(scriptStr);
 }
 
-function processComment(node) {
+function processComment(node, headers) {
   const pluginWidgetFlag = "PluginCore.IPlugins.IWidgetPlugin.Widget";
   // <!-- PluginCore.IPlugins.IWidgetPlugin.Widget(PluginCore.Admin.Footer,a,b,c) -->
   if (node.nodeValue.indexOf(pluginWidgetFlag) != -1) {
@@ -221,7 +221,7 @@ function processComment(node) {
     requestHtml(_options.baseUrl + "/api/plugincore/PluginWidget/Widget", {
       widgetKey: widgetKey,
       extraPars: extraPars,
-    }).then((res) => {
+    }, headers).then((res) => {
 
       processHtml(node, res);
       _eachFinishCallback({
@@ -236,13 +236,13 @@ function processComment(node) {
 }
 
 
-function start(eachFinishCallback) {
+function start(eachFinishCallback, headers) {
   _eachFinishCallback = eachFinishCallback || _eachFinishCallback;
   console.info("plugincore-js-sdk: start");
   // let rootElement = document.getElementsByTagName("body")[0];
   // 直接从 document 开始搜索, 这样 可以在 <head></head> 中插入扩展点
   let rootElement = document;
-  eachComment(rootElement, processComment);
+  eachComment(rootElement, processComment, headers);
 }
 
 function PluginCore(options) {

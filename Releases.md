@@ -1,5 +1,15 @@
 
 
+
+# # @yiyungent/plugincore-v0.5.0
+
+## Added
+
+- 支持 `headers` 自定义请求头
+  - `plugincoreInstance.start(null, {'X-Custom-Header': 'foobar'});`
+
+
+
 # @yiyungent/plugincore-v0.4.0
 
 ## Added
