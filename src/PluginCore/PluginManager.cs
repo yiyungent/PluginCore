@@ -43,6 +43,9 @@ namespace PluginCore
                 this.SkipDlls.Add($"{name}.dll");
             }
             #endregion
+
+            // TODO: 测试
+            SkipDlls = new List<string>();
         }
 
         /// <summary>
@@ -51,8 +54,11 @@ namespace PluginCore
         /// <param name="pluginId"></param>
         public void LoadPlugin(string pluginId)
         {
+#if DEBUG
+            Console.WriteLine($"加载插件程序集 {pluginId}");
+#endif
             // 此插件的 加载上下文
-            var context = new CollectibleAssemblyLoadContext();
+            var context = new CollectibleAssemblyLoadContext(name: pluginId);
 
             // TODO:未测试 加载插件引用的dll: 方法二: 
             //AssemblyName[] referenceAssemblyNames = pluginMainAssembly.GetReferencedAssemblies();
@@ -103,9 +109,63 @@ namespace PluginCore
             }
             #endregion
 
+            // 插件 context 的依赖解析
+            // 插件运行中碰到第三包类型 -> pluginALC.Load()
+            //context.Resolving += Context_Resolving;
 
             // 这个插件加载上下文 放入 集合中
             PluginsLoadContexts.Add(pluginId, context);
+        }
+
+        private Assembly Context_Resolving(AssemblyLoadContext context, AssemblyName assemblyName)
+        {
+            Assembly assembly = null;
+            string pluginId = context.Name;
+
+#if DEBUG
+            Console.WriteLine($"{nameof(Context_Resolving)}: {context.Name}, {assemblyName.FullName} {assemblyName.CodeBase}");
+#endif
+            try
+            {
+                // 先从默认中搜索
+                assembly = AssemblyLoadContext.Default.LoadFromAssemblyName(assemblyName);
+                if (assembly != null)
+                {
+#if DEBUG
+                    Console.WriteLine($"{nameof(Context_Resolving)}: {context.Name} 成功从默认Context中加载 {assemblyName.FullName}");
+#endif
+                    return assembly;
+                }
+            }
+            catch (Exception ex)
+            {
+#if DEBUG
+                Console.WriteLine($"{nameof(Context_Resolving)}: {context.Name}, AssemblyLoadContext.Default.LoadFromAssemblyName 出错");
+                Console.WriteLine(ex.ToString());
+#endif
+            }
+
+            // 再从当前中搜索
+            try
+            {
+                assembly = context.LoadFromAssemblyName(assemblyName);
+                if (assembly != null)
+                {
+#if DEBUG
+                    Console.WriteLine($"{nameof(Context_Resolving)}: {context.Name} 成功从当前Context中加载 {assemblyName.FullName}");
+#endif
+                    return assembly;
+                }
+            }
+            catch (Exception ex)
+            {
+#if DEBUG
+                Console.WriteLine($"{nameof(Context_Resolving)}: {context.Name}, context.LoadFromAssemblyName 出错");
+                Console.WriteLine(ex.ToString());
+#endif
+            }
+
+            return assembly;
         }
 
         public void UnloadPlugin(string pluginId)
