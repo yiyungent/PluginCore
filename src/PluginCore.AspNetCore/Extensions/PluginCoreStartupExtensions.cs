@@ -64,8 +64,8 @@ namespace PluginCore.AspNetCore.Extensions
             // 上方等同下方
             //services.TryAddTransient<IPluginManager, AspNetCorePluginManager<CollectibleAssemblyLoadContext>>();
 
-            services.AddTransient<PluginFinder>();
-            services.AddTransient<IPluginFinder, PluginFinder>();
+            services.TryAddTransient<PluginFinder>();
+            services.TryAddTransient<IPluginFinder, PluginFinder>();
             #endregion
 
 
