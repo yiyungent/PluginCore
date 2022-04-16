@@ -26,7 +26,7 @@ namespace PluginCore.lmplements
     /// 注意: 这意味着一个启用的插件需同时满足这两个条件
     /// </summary>
     public class PluginFinder<TCollectibleAssemblyLoadContext> : IPluginFinder
-        where TCollectibleAssemblyLoadContext : CollectibleAssemblyLoadContext, ICollectibleAssemblyLoadContext, new()
+        where TCollectibleAssemblyLoadContext : CollectibleAssemblyLoadContext, ICollectibleAssemblyLoadContext
     {
         #region Fields
         private readonly IServiceProvider _serviceProvider;
