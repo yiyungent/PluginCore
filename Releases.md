@@ -1,5 +1,14 @@
 
 
+
+# PluginCore.AspNetCore-v0.0.4
+
+## Fixed
+
+- 修复由于 `GitHub Action` 引起 没有安装 `Node.js` 导致没有成功 `npm install` 最终导致没有将前端文件成功打包进入 dll
+
+
+
 # PluginCore.AspNetCore-v0.0.3
 
 ## Fixed

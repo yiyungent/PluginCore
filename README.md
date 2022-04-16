@@ -55,8 +55,11 @@ ASP.NET Core lightweight plugin framework
 
 Recommended Use [NuGet](https://www.nuget.org/packages/PluginCore), Execute the following commands in the root directory of your project. If you use Visual Studio, then click **Tools** -> **NuGet Package Manager** -> **Package Manager Console**, make sure "Default project" It is the item you want to install, enter the command below to install it.
 
+
+### ASP.NET Core Project
+
 ```bash
-PM> Install-Package PluginCore
+PM> Install-Package PluginCore.AspNetCore
 ```
 
 > Modify the code in your ASP.NET Core application
@@ -64,7 +67,7 @@ PM> Install-Package PluginCore
 > Startup.cs
 
 ```C#
-using PluginCore.Extensions;
+using PluginCore.AspNetCore.Extensions;
 
 // This method gets called by the runtime. Use this method to add services to the container.
 public void ConfigureServices(IServiceCollection services)
@@ -253,13 +256,13 @@ PluginCore supports 3 front-end file loading methods
 
 > 自 `PluginCore.IPlugins-v0.8.0` 起, `PluginCore` 项目重构, `PluginCore` 只包含核心插件逻辑, `ASP.NET Core` 需要使用 `PluginCore.AspNetCore`
 
-|      PluginCore.IPlugins       |     0.8.0     |     0.8.0     |
-| :----------------------------: | :-----------: | :-----------: |
-|           PluginCore           |     1.0.0     |     1.0.0     |
-| PluginCore.IPlugins.AspNetCore |     0.0.1     |     0.0.1     |
-|     PluginCore.AspNetCore      |     0.0.2     |     0.0.3     |
-|   plugincore-admin-frontend    | 0.1.0 - 0.3.1 | 0.1.0 - 0.3.1 |
-|       plugincore-js-sdk        | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 |
+|      PluginCore.IPlugins       |     0.8.0     |     0.8.0     |     0.8.0     |
+| :----------------------------: | :-----------: | :-----------: | :-----------: |
+|           PluginCore           |     1.0.0     |     1.0.0     |     1.0.0     |
+| PluginCore.IPlugins.AspNetCore |     0.0.1     |     0.0.1     |     0.0.1     |
+|     PluginCore.AspNetCore      |     0.0.2     |     0.0.3     |     0.0.4     |
+|   plugincore-admin-frontend    | 0.1.0 - 0.3.1 | 0.1.0 - 0.3.1 | 0.1.0 - 0.3.1 |
+|       plugincore-js-sdk        | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 |
 
 > 下方为旧版依赖, 仅作存档
 
