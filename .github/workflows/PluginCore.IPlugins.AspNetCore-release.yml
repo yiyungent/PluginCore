@@ -1,0 +1,49 @@
+name: PluginCore.IPlugins.AspNetCore Release
+
+on: 
+  push:
+    tags:
+      - 'PluginCore.IPlugins.AspNetCore-v*'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v2
+      
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.102
+        
+    - name: Build
+      run: |
+        cd ./src/PluginCore.IPlugins.AspNetCore
+        dotnet build --configuration Release
+        ls
+        ls ./bin/Release/
+      
+    - name: Zip the Build
+      run: |
+        cd ./src/PluginCore.IPlugins.AspNetCore/bin/Release
+        zip -r PluginCore.IPlugins.AspNetCore-netstandard2.0.zip ./netstandard2.0/ 
+        cd ../../../../
+        mv ./src/PluginCore.IPlugins.AspNetCore/bin/Release/*.zip ./
+      
+    - name: Create Release and Upload Release Asset
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        #tag_name: ${{ github.ref }}
+        #name: ${{ github.ref }}
+        body: TODO New Release.
+        #body_path: CHANGELOG.txt
+        draft: false
+        prerelease: false
+        files: |
+          PluginCore.IPlugins.AspNetCore-netstandard2.0.zip
+          LICENSE 
+          README.md
