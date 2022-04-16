@@ -1,29 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-	  <PackageId>PluginCore.IPlugins</PackageId>
-    <Version>0.7.0</Version>
-    <Company>yiyun</Company>
-    <Authors>yiyun</Authors>
-    <Description>PluginCore 插件开发包</Description>
-    <Copyright>Copyright (c) 2021-present yiyun</Copyright>
-    <RepositoryUrl>https://github.com/yiyungent/PluginCore</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
-    <PackageTags>PluginCore PluginCore.IPlugin</PackageTags>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>PluginCore.IPlugins</PackageId>
+		<Version>0.8.0</Version>
+		<Company>yiyun</Company>
+		<Authors>yiyun</Authors>
+		<Description>PluginCore 插件开发包</Description>
+		<Copyright>Copyright (c) 2021-present yiyun</Copyright>
+		<RepositoryUrl>https://github.com/yiyungent/PluginCore</RepositoryUrl>
+		<PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
+		<PackageTags>PluginCore PluginCore.IPlugin</PackageTags>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
 
-  <!-- 生成注释xml -->
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard2.0\PluginCore.IPlugins.xml</DocumentationFile>
-  </PropertyGroup>
+	<!-- 生成注释xml -->
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+		<DocumentationFile>bin\Release\netstandard2.0\PluginCore.IPlugins.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <!--<PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+	<ItemGroup>
+		<!--<PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />-->
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
-    <PackageReference Include="System.Text.Json" Version="5.0.2" />
-  </ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+		<PackageReference Include="System.Text.Json" Version="5.0.2" />
+	</ItemGroup>
 
 </Project>
