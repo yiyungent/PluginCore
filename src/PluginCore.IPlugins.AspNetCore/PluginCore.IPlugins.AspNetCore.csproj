@@ -16,7 +16,7 @@
 
 	<!-- 方便开发debug,与发布到nuget -->
 	<ItemGroup Condition="'$(Configuration)' == 'Release'">
-		<PackageReference Include="PluginCore.IPlugins" Version="0.7.0" />
+		<PackageReference Include="PluginCore.IPlugins" Version="0.8.0" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
 		<ProjectReference Include="..\PluginCore.IPlugins\PluginCore.IPlugins.csproj" />
@@ -35,9 +35,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Infrastructure\" />
-	  <Folder Include="Interfaces\" />
-	  <Folder Include="Models\" />
+		<Folder Include="Infrastructure\" />
+		<Folder Include="Interfaces\" />
+		<Folder Include="Models\" />
 	</ItemGroup>
 
 </Project>
