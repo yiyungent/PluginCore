@@ -1,13 +1,13 @@
 
 
-# PluginCore.AspNetCore-0.0.3
+# PluginCore.AspNetCore-v0.0.3
 
 ## Fixed
 
 - `services.TryAddTransient<IPluginFinder, PluginFinder>();`
 
 
-# PluginCore.AspNetCore-0.0.2
+# PluginCore.AspNetCore-v0.0.2
 
 - 仅 `ASP.NET Core` 相关
 
