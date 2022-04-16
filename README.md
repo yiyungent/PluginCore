@@ -251,6 +251,18 @@ PluginCore supports 3 front-end file loading methods
 
 ## 版本依赖
 
+> 自 `PluginCore.IPlugins-v0.8.0` 起, `PluginCore` 项目重构, `PluginCore` 只包含核心插件逻辑, `ASP.NET Core` 需要使用 `PluginCore.AspNetCore`
+
+|      PluginCore.IPlugins       |     0.8.0     |
+| :----------------------------: | :-----------: |
+|           PluginCore           |     1.0.0     |
+| PluginCore.IPlugins.AspNetCore |     0.0.1     |
+|     PluginCore.AspNetCore      |     0.0.2     |
+|   plugincore-admin-frontend    | 0.1.0 - 0.3.1 |
+|       plugincore-js-sdk        | 0.1.0 - 0.5.0 |
+
+> 下方为旧版依赖, 仅作存档
+
 |    PluginCore.IPlugins    | 0.1.0 | 0.1.0 | 0.2.0 | 0.2.0 | 0.2.0 | 0.3.0 | 0.3.0 | 0.4.0 | 0.5.0 | 0.6.0 | 0.6.0 | 0.6.0 | 0.6.0 | 0.6.1 | 0.6.1 | 0.6.1 | 0.7.0 | 0.7.0 | 0.7.0 | 0.7.0 |
 | :-----------------------: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |        PluginCore         | 0.1.0 | 0.2.0 | 0.3.0 | 0.3.1 | 0.4.0 | 0.5.0 | 0.5.1 | 0.6.0 | 0.7.0 | 0.8.0 | 0.8.1 | 0.8.2 | 0.8.3 | 0.8.4 | 0.8.5 | 0.8.6 | 0.9.0 | 0.9.1 | 0.9.2 | 0.9.3 |
@@ -259,10 +271,12 @@ PluginCore supports 3 front-end file loading methods
 
 
 
-| PluginCore.IPlugins | [![nuget](https://img.shields.io/nuget/v/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) |
-| :-----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|     PluginCore      | [![nuget](https://img.shields.io/nuget/v/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) |
-| PluginCore.Template | [![nuget](https://img.shields.io/nuget/v/PluginCore.Template.svg?style=flat)](https://www.nuget.org/packages/PluginCore.Template/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.Template.svg?style=flat)](https://www.nuget.org/packages/PluginCore.Template/) |
+|      PluginCore.IPlugins       | [![nuget](https://img.shields.io/nuget/v/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.IPlugins.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins/) |
+| :----------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|           PluginCore           | [![nuget](https://img.shields.io/nuget/v/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/) |
+| PluginCore.IPlugins.AspNetCore | [![nuget](https://img.shields.io/nuget/v/PluginCore.IPlugins.AspNetCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins.AspNetCore/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.IPlugins.AspNetCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore.IPlugins.AspNetCore/) |
+|     PluginCore.AspNetCore      | [![nuget](https://img.shields.io/nuget/v/PluginCore.AspNetCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore.AspNetCore/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.AspNetCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore.AspNetCore/) |
+|      PluginCore.Template       | [![nuget](https://img.shields.io/nuget/v/PluginCore.Template.svg?style=flat)](https://www.nuget.org/packages/PluginCore.Template/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.Template.svg?style=flat)](https://www.nuget.org/packages/PluginCore.Template/) |
 
 
 
