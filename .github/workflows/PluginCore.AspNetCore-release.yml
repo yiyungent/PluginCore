@@ -1,0 +1,57 @@
+name: PluginCore.AspNetCore Release
+
+on: 
+  push:
+    tags:
+      - 'PluginCore.AspNetCore-v*'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v2
+      
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.102
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 12
+        
+    - name: Build
+      run: |
+        cd ./src/PluginCore.AspNetCore
+        npm install
+        dotnet build --configuration Release
+        ls
+        ls ./bin/Release/
+      
+    - name: Zip the Build
+      run: |
+        cd ./src/PluginCore.AspNetCore/bin/Release
+        zip -r PluginCore.AspNetCore-netcoreapp3.1.zip ./netcoreapp3.1/ 
+        zip -r PluginCore.AspNetCore-net5.0.zip ./net5.0/
+        cd ../../../../
+        mv ./src/PluginCore.AspNetCore/bin/Release/*.zip ./
+      
+    - name: Create Release and Upload Release Asset
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        #tag_name: ${{ github.ref }}
+        #name: ${{ github.ref }}
+        body: TODO New Release.
+        #body_path: CHANGELOG.txt
+        draft: false
+        prerelease: false
+        files: |
+          PluginCore.AspNetCore-netcoreapp3.1.zip
+          PluginCore.AspNetCore-net5.0.zip
+          LICENSE 
+          README.md
