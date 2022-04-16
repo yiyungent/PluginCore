@@ -21,7 +21,6 @@ jobs:
     - name: Build and Pack
       run: |
         cd ./src/PluginCore
-        npm install
         dotnet build --configuration Release
         dotnet pack --configuration Release
         dotnet pack --configuration Release -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg

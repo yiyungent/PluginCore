@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 5.0.102
 
-    # 注意: 一定要有此步, 打包前端文件进入 dll, 需要在 dotnet build 前自动 npm install
+    # 注意: 一定要有此步, 打包前端文件进入 dll, 需要在 dotnet build 前手动 npm install, csproj 中 NpmInstall 的仅对 vs 有效
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
@@ -27,6 +27,8 @@ jobs:
     - name: Build and Pack
       run: |
         cd ./src/PluginCore.AspNetCore
+        # 注意: 一定要有此步
+        npm install
         dotnet build --configuration Release
         dotnet pack --configuration Release
         dotnet pack --configuration Release -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg
