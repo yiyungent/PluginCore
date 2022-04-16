@@ -1,6 +1,14 @@
 
 
 
+# PluginCore.AspNetCore-v0.0.5
+
+## Fixed
+
+- 修复由于 `GitHub Action` 缺少 `npm install` 引起的 没有将前端文件打包进入 dll
+
+
+
 # PluginCore.AspNetCore-v0.0.4
 
 ## Fixed
