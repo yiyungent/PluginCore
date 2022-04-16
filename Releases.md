@@ -1,5 +1,48 @@
 
 
+
+
+# PluginCore.AspNetCore-0.0.2
+
+- 仅 `ASP.NET Core` 相关
+
+> PS: 注意: 之前的 `PluginCore.AspNetCore-0.0.1` 无用, 只是为了占用住 在 NuGet 的 PackageId
+
+# PluginCore.IPlugins.AspNetCore-v0.0.1
+
+
+- 仅 `ASP.NET Core` 相关
+
+# PluginCore-v1.0.0
+
+## Refactor
+
+- 重大更新: 重构
+  - 在 `ASP.NET Core` 中的内容移动到 `PluginCore.AspNetCore`
+  - 接口更新
+
+## Added
+
+- 开放更多接口, 可自由替换内部实现
+  - `services.TryAddTransient<IPluginControllerManager, PluginControllerManager>();`
+  - `services.TryAddTransient<IPluginApplicationBuilderManager, PluginApplicationBuilderManager>();`
+  - `services.TryAddTransient<IPluginManager, AspNetCorePluginManager>();`
+  - `services.AddTransient<IPluginFinder, PluginFinder>();`
+    - **注意:** 此项忘记 用 `TryAdd` 了, 在 `AddPluginCore()` 前 添加会导致无法替换内部, 下个版本修复
+
+# PluginCore.IPlugins-v0.8.0
+
+## Refactor
+
+- 重大更新: 重构
+  - 在 `ASP.NET Core` 中的内容移动到 `PluginCore.IPlugins.AspNetCore`
+
+
+
+---
+
+
+
 # PluginCore-v0.9.3
 
 ## Fixed
