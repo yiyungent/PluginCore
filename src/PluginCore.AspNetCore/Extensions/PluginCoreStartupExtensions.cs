@@ -79,7 +79,7 @@ namespace PluginCore.AspNetCore.Extensions
                     // 初始化 PluginCore 相关目录
                     PluginPathProvider.PluginsRootPath();
 
-                    // 在程序启动时加载所有 已安装的插件
+                    // 在程序启动时加载所有 已安装并启用 的插件
 
                     // 获取PluginConfigModel
                     #region 获取 获取PluginConfigModel
