@@ -18,6 +18,12 @@ jobs:
       with:
         dotnet-version: 5.0.102
 
+    # 注意: 一定要有此步, 打包前端文件进入 dll, 需要在 dotnet build 前自动 npm install
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 12
+
     - name: Build and Pack
       run: |
         cd ./src/PluginCore.AspNetCore
