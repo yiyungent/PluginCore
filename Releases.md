@@ -1,5 +1,10 @@
 
 
+# PluginCore.AspNetCore-0.0.3
+
+## Fixed
+
+- `services.TryAddTransient<IPluginFinder, PluginFinder>();`
 
 
 # PluginCore.AspNetCore-0.0.2
