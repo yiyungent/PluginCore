@@ -14,7 +14,7 @@ namespace PluginCore.lmplements
     /// 虽然官方文档没写, 但最好还带上 HelloWorldPlugin.runtimeconfig.json
     /// 插件项目 .csproj 其它注意, 看文档
     /// </summary>
-    public class PluginLoadContext : CollectibleAssemblyLoadContext /*AssemblyLoadContext*/
+    public class PluginLoadContext : CollectibleAssemblyLoadContext, IPluginContext
     {
         private AssemblyDependencyResolver _resolver;
 

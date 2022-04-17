@@ -9,11 +9,11 @@ using System.Text;
 
 namespace PluginCore.lmplements
 {
-    public class DefaultAssemblyLoadContextPack : IAssemblyLoadContextPack
+    public class PluginContextPackV1 : IPluginContextPack
     {
         public IList<string> SkipDlls { get; set; }
 
-        public AssemblyLoadContext Pack(string pluginId)
+        public IPluginContext Pack(string pluginId)
         {
             SkipDlls = new List<string>();
 
@@ -87,7 +87,7 @@ namespace PluginCore.lmplements
             }
             #endregion
 
-         
+
             return context;
         }
     }

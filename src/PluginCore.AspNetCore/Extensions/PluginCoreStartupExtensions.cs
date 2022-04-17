@@ -58,18 +58,25 @@ namespace PluginCore.AspNetCore.Extensions
             #endregion
 
             #region 通用
+
+            // v1 旧版
+            //services.TryAddTransient<PluginContextPackV1>();
+            //services.TryAddTransient<IPluginContextPack, PluginContextPackV1>();
+            //services.TryAddTransient<AspNetCorePluginManagerV1>();
+            //services.TryAddTransient<IPluginManager, AspNetCorePluginManagerV1>();
+
+            services.TryAddTransient<PluginContextPack>();
+            services.TryAddTransient<IPluginContextPack, PluginContextPack>();
+
             services.TryAddTransient<AspNetCorePluginManager>();
-            // 使用 AspNetCorePluginManager
             services.TryAddTransient<IPluginManager, AspNetCorePluginManager>();
-            // 上方等同下方
-            //services.TryAddTransient<IPluginManager, AspNetCorePluginManager<CollectibleAssemblyLoadContext>>();
 
             services.TryAddTransient<PluginFinder>();
             services.TryAddTransient<IPluginFinder, PluginFinder>();
 
             // 注意: 它必须单例
-            services.TryAddSingleton<PluginsLoadContexts>();
-            services.TryAddSingleton<IPluginsLoadContexts, PluginsLoadContexts>();
+            services.TryAddSingleton<PluginContextManager>();
+            services.TryAddSingleton<IPluginContextManager, PluginContextManager>();
             #endregion
 
 

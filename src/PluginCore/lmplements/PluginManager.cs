@@ -16,13 +16,12 @@ namespace PluginCore.lmplements
     /// <see cref="PluginManager"/> 是对 <see cref="PluginsLoadContexts"/>的封装, 使其更好管理插件加载释放的行为
     /// </summary>
     public class PluginManager<TAssemblyLoadContext> : IPluginManager
-        where TAssemblyLoadContext : AssemblyLoadContext
     {
-        public IPluginsLoadContexts<TAssemblyLoadContext> PluginsLoadContexts { get; set; }
+        public IPluginContextManager PluginsLoadContexts { get; set; }
 
-        public IAssemblyLoadContextPack AssemblyLoadContextPack { get; set; }
+        public IPluginContextPack AssemblyLoadContextPack { get; set; }
 
-        public PluginManager(IPluginsLoadContexts<TAssemblyLoadContext> pluginsLoadContexts, IAssemblyLoadContextPack assemblyLoadContextPack)
+        public PluginManager(IPluginContextManager pluginsLoadContexts, IPluginContextPack assemblyLoadContextPack)
         {
             this.PluginsLoadContexts = pluginsLoadContexts;
             this.AssemblyLoadContextPack = assemblyLoadContextPack;
@@ -41,7 +40,7 @@ namespace PluginCore.lmplements
             #endregion
 
             #region 方案2
-            TAssemblyLoadContext context = (TAssemblyLoadContext)this.AssemblyLoadContextPack.Pack(pluginId);
+            IPluginContext context = this.AssemblyLoadContextPack.Pack(pluginId);
             #endregion
 
             // 这个插件加载上下文 放入 集合中

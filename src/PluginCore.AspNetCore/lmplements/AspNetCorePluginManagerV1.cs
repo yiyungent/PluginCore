@@ -12,21 +12,23 @@ using PluginCore.Infrastructure;
 
 namespace PluginCore.AspNetCore.lmplements
 {
+
+    // ********* 虽然 看上去和 AspNetCorePluginManager 一样, 但特别保留, 防止需要不一样的处理, 后续更新维护方便
+
     /// <summary>
     /// 一个插件的所有dll由 一个 <see cref="CollectibleAssemblyLoadContext"/> 管理
     /// <see cref="PluginsLoadContexts"/> 记录管理了所有 插件的<see cref="CollectibleAssemblyLoadContext"/>
-    /// <see cref="AspNetCorePluginManager"/> 是对 <see cref="PluginsLoadContexts"/>的封装, 使其更好管理插件加载释放的行为
+    /// <see cref="AspNetCorePluginManagerV1"/> 是对 <see cref="PluginsLoadContexts"/>的封装, 使其更好管理插件加载释放的行为
     /// </summary>
-    public class AspNetCorePluginManagerBeta<TAssemblyLoadContext> : IPluginManager
-        where TAssemblyLoadContext : AssemblyLoadContext
+    public class AspNetCorePluginManagerV1 : IPluginManager
     {
         private readonly IPluginControllerManager _pluginControllerManager;
 
-        public IPluginsLoadContexts<TAssemblyLoadContext> PluginsLoadContexts { get; set; }
+        public IPluginContextManager PluginsLoadContexts { get; set; }
 
-        public IAssemblyLoadContextPack AssemblyLoadContextPack { get; set; }
+        public IPluginContextPack AssemblyLoadContextPack { get; set; }
 
-        public AspNetCorePluginManagerBeta(IPluginsLoadContexts<TAssemblyLoadContext> pluginsLoadContexts, IAssemblyLoadContextPack assemblyLoadContextPack, IPluginControllerManager pluginControllerManager)
+        public AspNetCorePluginManagerV1(IPluginContextManager pluginsLoadContexts, IPluginContextPack assemblyLoadContextPack, IPluginControllerManager pluginControllerManager)
         {
             this.PluginsLoadContexts = pluginsLoadContexts;
             this.AssemblyLoadContextPack = assemblyLoadContextPack;
@@ -39,9 +41,11 @@ namespace PluginCore.AspNetCore.lmplements
         /// <param name="pluginId"></param>
         public void LoadPlugin(string pluginId)
         {
-            TAssemblyLoadContext context = (TAssemblyLoadContext)this.AssemblyLoadContextPack.Pack(pluginId);
-            Assembly pluginMainAssembly = context.LoadFromAssemblyName(new AssemblyName(pluginId));
+            // 此插件的 加载上下文
+            IPluginContext context = this.AssemblyLoadContextPack.Pack(pluginId);
 
+            // TODO: 注意: 未测试: 不清除 对于 旧版加载 dll 方式, 再结合 LoadFromAssemblyName 是否有效
+            Assembly pluginMainAssembly = context.LoadFromAssemblyName(new AssemblyName(pluginId));
             // 加载其中的控制器
             _pluginControllerManager.AddControllers(pluginMainAssembly);
 
@@ -56,6 +60,5 @@ namespace PluginCore.AspNetCore.lmplements
             // 移除其中的控制器
             _pluginControllerManager.RemoveControllers(pluginId);
         }
-
     }
 }

@@ -8,9 +8,9 @@ using System.Text;
 
 namespace PluginCore.lmplements
 {
-    public class BetaAssemblyLoadContextPack : IAssemblyLoadContextPack
+    public class PluginContextPack : IPluginContextPack
     {
-        public AssemblyLoadContext Pack(string pluginId)
+        public IPluginContext Pack(string pluginId)
         {
             #region 加载插件主dll
 

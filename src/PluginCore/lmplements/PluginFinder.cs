@@ -13,22 +13,13 @@ using PluginCore.IPlugins;
 
 namespace PluginCore.lmplements
 {
-    //public class PluginFinder : PluginFinder<CollectibleAssemblyLoadContext>
-    //{
-    //    public PluginFinder(IServiceProvider serviceProvider) : base(serviceProvider)
-    //    {
-    //        // 不在这里使用默认 泛型, 尽量将 修改 统一到 IOC 容器管理 那里
-    //    }
-    //}
-
 
     /// <summary>
     /// 插件发现者: 找启用的插件(1.plugin.config.json中启用 2. 有插件上下文)
     /// TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的插件才有上下文, 为了保险，暂时这么做
     /// 注意: 这意味着一个启用的插件需同时满足这两个条件
     /// </summary>
-    public class PluginFinder<TAssemblyLoadContext> : IPluginFinder
-        where TAssemblyLoadContext : AssemblyLoadContext
+    public class PluginFinder : IPluginFinder
     {
         #region Fields
         private readonly IServiceProvider _serviceProvider;
@@ -41,13 +32,13 @@ namespace PluginCore.lmplements
         private static ConcurrentDictionary<Type, List<Type>> _pluginAllowedBehavior;
         #endregion
 
-        public IPluginsLoadContexts<TAssemblyLoadContext> PluginsLoadContexts { get; set; }
+        public IPluginContextManager PluginsLoadContexts { get; set; }
 
         #region Ctor
         public PluginFinder(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            this.PluginsLoadContexts = _serviceProvider.GetService<IPluginsLoadContexts<TAssemblyLoadContext>>();
+            this.PluginsLoadContexts = _serviceProvider.GetService<IPluginContextManager>();
         }
 
         static PluginFinder()
