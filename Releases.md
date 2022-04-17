@@ -1,6 +1,20 @@
 
 
 
+# PluginCore.AspNetCore-v1.0.1
+
+## Updated
+
+- 更新到 `PluginCore-v2.0.1`
+
+
+# PluginCore-v2.0.1
+
+## Fixed
+
+- 修复 插件dll 被锁定 导致的删除失败
+
+
 
 # PluginCore.AspNetCore-v1.0.0
 
