@@ -1,6 +1,7 @@
 ﻿using PluginCore.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
 using System.Runtime.Loader;
 using System.Text;
@@ -32,7 +33,13 @@ namespace PluginCore.lmplements
             string assemblyPath = _resolver.ResolveAssemblyToPath(assemblyName);
             if (assemblyPath != null)
             {
-                return LoadFromAssemblyPath(assemblyPath);
+                //return LoadFromAssemblyPath(assemblyPath);
+                using (var fs = new FileStream(assemblyPath, FileMode.Open))
+                {
+                    // 使用此方法, 就不会导致dll被锁定
+                    // 锁定dll 会导致: 1. 无法通过复制粘贴替换 更新 2. 无法删除
+                    return LoadFromStream(fs);
+                }
             }
 
             return null;
