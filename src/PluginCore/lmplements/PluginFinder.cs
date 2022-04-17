@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Runtime.Loader;
 using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using PluginCore.Infrastructure;
@@ -12,12 +13,13 @@ using PluginCore.IPlugins;
 
 namespace PluginCore.lmplements
 {
-    public class PluginFinder : PluginFinder<CollectibleAssemblyLoadContext>
-    {
-        public PluginFinder(IServiceProvider serviceProvider) : base(serviceProvider)
-        {
-        }
-    }
+    //public class PluginFinder : PluginFinder<CollectibleAssemblyLoadContext>
+    //{
+    //    public PluginFinder(IServiceProvider serviceProvider) : base(serviceProvider)
+    //    {
+    //        // 不在这里使用默认 泛型, 尽量将 修改 统一到 IOC 容器管理 那里
+    //    }
+    //}
 
 
     /// <summary>
@@ -25,8 +27,8 @@ namespace PluginCore.lmplements
     /// TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的插件才有上下文, 为了保险，暂时这么做
     /// 注意: 这意味着一个启用的插件需同时满足这两个条件
     /// </summary>
-    public class PluginFinder<TCollectibleAssemblyLoadContext> : IPluginFinder
-        where TCollectibleAssemblyLoadContext : CollectibleAssemblyLoadContext, ICollectibleAssemblyLoadContext
+    public class PluginFinder<TAssemblyLoadContext> : IPluginFinder
+        where TAssemblyLoadContext : AssemblyLoadContext
     {
         #region Fields
         private readonly IServiceProvider _serviceProvider;
@@ -39,10 +41,13 @@ namespace PluginCore.lmplements
         private static ConcurrentDictionary<Type, List<Type>> _pluginAllowedBehavior;
         #endregion
 
+        public IPluginsLoadContexts<TAssemblyLoadContext> PluginsLoadContexts { get; set; }
+
         #region Ctor
         public PluginFinder(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
+            this.PluginsLoadContexts = _serviceProvider.GetService<IPluginsLoadContexts<TAssemblyLoadContext>>();
         }
 
         static PluginFinder()
@@ -91,10 +96,10 @@ namespace PluginCore.lmplements
             IList<string> enablePluginIds = pluginConfigModel.EnabledPlugins;
             foreach (var pluginId in enablePluginIds)
             {
-                if (PluginsLoadContexts<TCollectibleAssemblyLoadContext>.Any(pluginId))
+                if (this.PluginsLoadContexts.Any(pluginId))
                 {
                     // 2.找到插件对应的Context
-                    var context = PluginsLoadContexts<TCollectibleAssemblyLoadContext>.Get(pluginId);
+                    var context = this.PluginsLoadContexts.Get(pluginId);
                     // 3.找插件 主 Assembly
                     // Assembly.FullName: HelloWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
                     Assembly pluginMainAssembly = context.Assemblies.Where(m => m.FullName.StartsWith($"{pluginId}, Version=")).FirstOrDefault();
@@ -162,13 +167,13 @@ namespace PluginCore.lmplements
             }
 
             // 找不到此插件上下文返回null
-            if (!PluginsLoadContexts<TCollectibleAssemblyLoadContext>.Any(pluginId))
+            if (!this.PluginsLoadContexts.Any(pluginId))
             {
                 return null;
             }
 
             // 2.找到插件对应的Context
-            var context = PluginsLoadContexts<TCollectibleAssemblyLoadContext>.Get(pluginId);
+            var context = this.PluginsLoadContexts.Get(pluginId);
             // 3.找插件 主 Assembly
             // Assembly.FullName: HelloWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
             Assembly pluginMainAssembly = context.Assemblies.Where(m => m.FullName.StartsWith($"{pluginId}, Version=")).FirstOrDefault();

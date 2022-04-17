@@ -17,12 +17,19 @@ namespace PluginCore.AspNetCore.lmplements
     /// <see cref="PluginsLoadContexts"/> 记录管理了所有 插件的<see cref="CollectibleAssemblyLoadContext"/>
     /// <see cref="AspNetCorePluginManager"/> 是对 <see cref="PluginsLoadContexts"/>的封装, 使其更好管理插件加载释放的行为
     /// </summary>
-    public class AspNetCorePluginManagerBeta : IPluginManager
+    public class AspNetCorePluginManagerBeta<TAssemblyLoadContext> : IPluginManager
+        where TAssemblyLoadContext : AssemblyLoadContext
     {
         private readonly IPluginControllerManager _pluginControllerManager;
 
-        public AspNetCorePluginManagerBeta(IPluginControllerManager pluginControllerManager)
+        public IPluginsLoadContexts<TAssemblyLoadContext> PluginsLoadContexts { get; set; }
+
+        public IAssemblyLoadContextPack AssemblyLoadContextPack { get; set; }
+
+        public AspNetCorePluginManagerBeta(IPluginsLoadContexts<TAssemblyLoadContext> pluginsLoadContexts, IAssemblyLoadContextPack assemblyLoadContextPack, IPluginControllerManager pluginControllerManager)
         {
+            this.PluginsLoadContexts = pluginsLoadContexts;
+            this.AssemblyLoadContextPack = assemblyLoadContextPack;
             _pluginControllerManager = pluginControllerManager;
         }
 
@@ -32,40 +39,19 @@ namespace PluginCore.AspNetCore.lmplements
         /// <param name="pluginId"></param>
         public void LoadPlugin(string pluginId)
         {
+            TAssemblyLoadContext context = (TAssemblyLoadContext)this.AssemblyLoadContextPack.Pack(pluginId);
+            Assembly pluginMainAssembly = context.LoadFromAssemblyName(new AssemblyName(pluginId));
 
-            #region 加载插件主dll
-
-            // 插件的主dll, 不包括插件项目引用的dll
-            string pluginMainDllFilePath = Path.Combine(PluginPathProvider.PluginsRootPath(), pluginId, $"{pluginId}.dll");
-            // 此插件的 加载上下文
-            var context = new PluginLoadContext(pluginMainDllFilePath);
-            Assembly pluginMainAssembly;
-            // 微软文档推荐 LoadFromAssemblyName
-            pluginMainAssembly = context.LoadFromAssemblyName(new AssemblyName(Path.GetFileNameWithoutExtension(pluginMainDllFilePath)));
             // 加载其中的控制器
             _pluginControllerManager.AddControllers(pluginMainAssembly);
 
-            #region 第2种方法: 未在这种情况下测试
-            //using (var fs = new FileStream(pluginMainDllFilePath, FileMode.Open))
-            //{
-            //    // 使用此方法, 就不会导致dll被锁定
-            //    pluginMainAssembly = context.LoadFromStream(fs);
-
-            //    // 加载其中的控制器
-            //    _pluginControllerManager.AddControllers(pluginMainAssembly);
-            //} 
-            #endregion
-
-            #endregion
-
-
             // 这个插件加载上下文 放入 集合中
-            PluginsLoadContexts<PluginLoadContext>.Add(pluginId, context);
+            this.PluginsLoadContexts.Add(pluginId, context);
         }
 
         public void UnloadPlugin(string pluginId)
         {
-            PluginsLoadContexts<PluginLoadContext>.Remove(pluginId);
+            this.PluginsLoadContexts.Remove(pluginId);
 
             // 移除其中的控制器
             _pluginControllerManager.RemoveControllers(pluginId);

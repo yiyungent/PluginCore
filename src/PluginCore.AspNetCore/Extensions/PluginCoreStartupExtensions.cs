@@ -66,6 +66,10 @@ namespace PluginCore.AspNetCore.Extensions
 
             services.TryAddTransient<PluginFinder>();
             services.TryAddTransient<IPluginFinder, PluginFinder>();
+
+            // 注意: 它必须单例
+            services.TryAddSingleton<PluginsLoadContexts>();
+            services.TryAddSingleton<IPluginsLoadContexts, PluginsLoadContexts>();
             #endregion
 
 
