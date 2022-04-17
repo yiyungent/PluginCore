@@ -22,7 +22,6 @@ jobs:
     - name: Build
       run: |
         cd ./src/PluginCore
-        npm install
         dotnet build --configuration Release
         ls
         ls ./bin/Release/
