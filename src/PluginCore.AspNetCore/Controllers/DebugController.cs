@@ -29,9 +29,9 @@ namespace PluginCore.AspNetCore.Controllers
         #region Actions
 
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> PluginContext()
+        public async Task<ActionResult<BaseResponseModel>> PluginContext()
         {
-            CommonResponseModel responseModel = new CommonResponseModel();
+            BaseResponseModel responseModel = new BaseResponseModel();
             try
             {
                 var pluginContextList = _pluginContextManager.All();
@@ -41,15 +41,15 @@ namespace PluginCore.AspNetCore.Controllers
                     keyValuePairs.Add($"{pluginContext.GetType().ToString()} - {pluginContext.GetHashCode()}", pluginContext.Assemblies.Select(m => m.FullName).ToList());
                 }
 
-                responseModel.code = 1;
-                responseModel.message = "success";
-                responseModel.data = keyValuePairs;
+                responseModel.Code = 1;
+                responseModel.Message = "success";
+                responseModel.Data = keyValuePairs;
             }
             catch (Exception ex)
             {
-                responseModel.code = -1;
-                responseModel.message = "error";
-                responseModel.data = ex.ToString();
+                responseModel.Code = -1;
+                responseModel.Message = "error";
+                responseModel.Data = ex.ToString();
             }
 
             return await Task.FromResult(responseModel);

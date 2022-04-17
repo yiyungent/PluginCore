@@ -51,9 +51,9 @@ namespace PluginCore.AspNetCore.Controllers
         /// <param name="query"></param>
         /// <returns></returns>
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Plugins(string query = "")
+        public async Task<ActionResult<BaseResponseModel>> Plugins(string query = "")
         {
-            CommonResponseModel responseDTO = new CommonResponseModel();
+            BaseResponseModel responseDTO = new BaseResponseModel();
             IList<PluginRegistryResponseModel> pluginRegistryModels = new List<PluginRegistryResponseModel>();
             try
             {
@@ -68,15 +68,15 @@ namespace PluginCore.AspNetCore.Controllers
 
 
 
-                responseDTO.code = 1;
-                responseDTO.message = "获取远程插件数据成功";
-                responseDTO.data = pluginRegistryModels;
+                responseDTO.Code = 1;
+                responseDTO.Message = "获取远程插件数据成功";
+                responseDTO.Data = pluginRegistryModels;
             }
             catch (Exception ex)
             {
-                responseDTO.code = -1;
-                responseDTO.message = "获取远程插件数据失败: " + ex.Message;
-                responseDTO.data = pluginRegistryModels;
+                responseDTO.Code = -1;
+                responseDTO.Message = "获取远程插件数据失败: " + ex.Message;
+                responseDTO.Data = pluginRegistryModels;
             }
 
             return await Task.FromResult(responseDTO);
@@ -85,15 +85,15 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 下载插件
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> DownloadPlugin(string pluginDownloadUrl = "")
+        public async Task<ActionResult<BaseResponseModel>> DownloadPlugin(string pluginDownloadUrl = "")
         {
-            CommonResponseModel responseDTO = new CommonResponseModel();
+            BaseResponseModel responseDTO = new BaseResponseModel();
 
             #region 效验
             if (string.IsNullOrEmpty(pluginDownloadUrl))
             {
-                responseDTO.code = -1;
-                responseDTO.message = "插件下载地址不正确";
+                responseDTO.Code = -1;
+                responseDTO.Message = "插件下载地址不正确";
                 return responseDTO;
             }
             // TODO: 效验是否本地已经存在相同pluginId的插件
@@ -115,13 +115,13 @@ namespace PluginCore.AspNetCore.Controllers
                 webClient.DownloadProgressChanged += Plugin_DownloadProgressChanged;
                 webClient.Disposed += WebClient_Disposed;
 
-                responseDTO.code = 1;
-                responseDTO.message = "开始下载插件";
+                responseDTO.Code = 1;
+                responseDTO.Message = "开始下载插件";
             }
             catch (Exception ex)
             {
-                responseDTO.code = -1;
-                responseDTO.message = "下载插件失败: " + ex.Message;
+                responseDTO.Code = -1;
+                responseDTO.Message = "下载插件失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseDTO);
@@ -134,22 +134,22 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 获取插件下载进度
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> DownloadPluginProgress()
+        public async Task<ActionResult<BaseResponseModel>> DownloadPluginProgress()
         {
-            CommonResponseModel responseDTO = new CommonResponseModel();
+            BaseResponseModel responseDTO = new BaseResponseModel();
             try
             {
-                responseDTO.data = new { };
+                responseDTO.Data = new { };
 
 
 
-                responseDTO.code = 1;
-                responseDTO.message = "获取插件下载进度成功";
+                responseDTO.Code = 1;
+                responseDTO.Message = "获取插件下载进度成功";
             }
             catch (Exception ex)
             {
-                responseDTO.code = -1;
-                responseDTO.message = "获取插件下载进度失败: " + ex.Message;
+                responseDTO.Code = -1;
+                responseDTO.Message = "获取插件下载进度失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseDTO);

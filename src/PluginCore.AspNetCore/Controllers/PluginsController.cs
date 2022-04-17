@@ -50,9 +50,9 @@ namespace PluginCore.AspNetCore.Controllers
         /// <param name="status">插件状态</param>
         /// <returns></returns>
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> List(string status = "all")
+        public async Task<ActionResult<BaseResponseModel>> List(string status = "all")
         {
-            CommonResponseModel responseData = new ResponseModel.CommonResponseModel();
+            BaseResponseModel responseData = new ResponseModel.BaseResponseModel();
             var pluginConfigModel = PluginConfigModelFactory.Create();
 
             // 获取所有插件信息
@@ -82,9 +82,9 @@ namespace PluginCore.AspNetCore.Controllers
             }
             #endregion
 
-            responseData.code = 1;
-            responseData.message = "加载插件列表成功";
-            responseData.data = responseModels;
+            responseData.Code = 1;
+            responseData.Message = "加载插件列表成功";
+            responseData.Data = responseModels;
 
             return await Task.FromResult(responseData);
         }
@@ -92,16 +92,16 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 安装插件
         [HttpGet, HttpPost]
-        public async Task<ActionResult<ResponseModel.CommonResponseModel>> Install(string pluginId)
+        public async Task<ActionResult<ResponseModel.BaseResponseModel>> Install(string pluginId)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
             PluginConfigModel pluginConfigModel = PluginConfigModelFactory.Create();
             // TODO: 效验
             #region 效验
             if (string.IsNullOrEmpty(pluginId))
             {
-                responseData.code = -1;
-                responseData.message = "安装失败, pluginId不能为空";
+                responseData.Code = -1;
+                responseData.Message = "安装失败, pluginId不能为空";
                 return await Task.FromResult(responseData);
             }
             #endregion
@@ -114,13 +114,13 @@ namespace PluginCore.AspNetCore.Controllers
                 // 2.保存到 plugin.config.json
                 PluginConfigModelFactory.Save(pluginConfigModel);
 
-                responseData.code = 1;
-                responseData.message = "安装成功";
+                responseData.Code = 1;
+                responseData.Message = "安装成功";
             }
             catch (Exception ex)
             {
-                responseData.code = -1;
-                responseData.message = "安装失败: " + ex.Message;
+                responseData.Code = -1;
+                responseData.Message = "安装失败: " + ex.Message;
                 return await Task.FromResult(responseData);
             }
 
@@ -130,15 +130,15 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 删除插件
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Delete(string pluginId)
+        public async Task<ActionResult<BaseResponseModel>> Delete(string pluginId)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
             var pluginConfigModel = PluginConfigModelFactory.Create();
             // 效验是否存在于 已卸载插件列表
             if (!pluginConfigModel.UninstalledPlugins.Contains(pluginId))
             {
-                responseData.code = -1;
-                responseData.message = "删除失败: 此插件不存在, 或未卸载";
+                responseData.Code = -1;
+                responseData.Message = "删除失败: 此插件不存在, 或未卸载";
                 return await Task.FromResult(responseData);
             }
 
@@ -153,13 +153,13 @@ namespace PluginCore.AspNetCore.Controllers
                 // 3.保存到 plugin.config.json
                 PluginConfigModelFactory.Save(pluginConfigModel);
 
-                responseData.code = 1;
-                responseData.message = "删除成功";
+                responseData.Code = 1;
+                responseData.Message = "删除成功";
             }
             catch (Exception ex)
             {
-                responseData.code = -2;
-                responseData.message = "删除失败: " + ex.Message;
+                responseData.Code = -2;
+                responseData.Message = "删除失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseData);
@@ -168,28 +168,28 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 卸载插件
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Uninstall(string pluginId)
+        public async Task<ActionResult<BaseResponseModel>> Uninstall(string pluginId)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
             var pluginConfigModel = PluginConfigModelFactory.Create();
             // 卸载插件 必须 先禁用插件
             #region 效验
             if (pluginConfigModel.UninstalledPlugins.Contains(pluginId))
             {
-                responseData.code = -3;
-                responseData.message = "卸载失败: 此插件已卸载";
+                responseData.Code = -3;
+                responseData.Message = "卸载失败: 此插件已卸载";
                 return await Task.FromResult(responseData);
             }
             if (pluginConfigModel.EnabledPlugins.Contains(pluginId))
             {
-                responseData.code = -1;
-                responseData.message = "卸载失败: 请先禁用此插件";
+                responseData.Code = -1;
+                responseData.Message = "卸载失败: 请先禁用此插件";
                 return await Task.FromResult(responseData);
             }
             if (!pluginConfigModel.DisabledPlugins.Contains(pluginId))
             {
-                responseData.code = -2;
-                responseData.message = "卸载失败: 此插件不存在";
+                responseData.Code = -2;
+                responseData.Message = "卸载失败: 此插件不存在";
                 return await Task.FromResult(responseData);
             }
             #endregion
@@ -203,13 +203,13 @@ namespace PluginCore.AspNetCore.Controllers
                 // 2.保存到 plugin.config.json
                 PluginConfigModelFactory.Save(pluginConfigModel);
 
-                responseData.code = 1;
-                responseData.message = "卸载成功";
+                responseData.Code = 1;
+                responseData.Message = "卸载成功";
             }
             catch (Exception ex)
             {
-                responseData.code = -1;
-                responseData.message = "卸载失败: " + ex.Message;
+                responseData.Code = -1;
+                responseData.Message = "卸载失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseData);
@@ -218,16 +218,16 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 启用插件
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Enable(string pluginId)
+        public async Task<ActionResult<BaseResponseModel>> Enable(string pluginId)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
             var pluginConfigModel = PluginConfigModelFactory.Create();
             // 效验是否存在于 已禁用插件列表
             #region 效验
             if (!pluginConfigModel.DisabledPlugins.Contains(pluginId))
             {
-                responseData.code = -1;
-                responseData.message = "启用失败: 此插件不存在, 或未安装";
+                responseData.Code = -1;
+                responseData.Message = "启用失败: 此插件不存在, 或未安装";
                 return await Task.FromResult(responseData);
             }
             #endregion
@@ -247,8 +247,8 @@ namespace PluginCore.AspNetCore.Controllers
                 IPlugin plugin = _pluginFinder.Plugin(pluginId);
                 if (plugin == null)
                 {
-                    responseData.code = -1;
-                    responseData.message = "启用失败: 此插件不存在, 或未安装";
+                    responseData.Code = -1;
+                    responseData.Message = "启用失败: 此插件不存在, 或未安装";
                     return await Task.FromResult(responseData);
                 }
                 // 6.调取插件的 AfterEnable(), 插件开发者可在此回收资源
@@ -270,8 +270,8 @@ namespace PluginCore.AspNetCore.Controllers
                     // 保存到 plugin.config.json
                     PluginConfigModelFactory.Save(pluginConfigModel);
 
-                    responseData.code = -1;
-                    responseData.message = "启用失败: 来自插件的错误信息: " + pluginEnableResult.Message;
+                    responseData.Code = -1;
+                    responseData.Message = "启用失败: 来自插件的错误信息: " + pluginEnableResult.Message;
                     return await Task.FromResult(responseData);
                 }
 
@@ -286,13 +286,13 @@ namespace PluginCore.AspNetCore.Controllers
                     Utils.FileUtil.CopyFolder(wwwRootDir, targetDir);
                 }
 
-                responseData.code = 1;
-                responseData.message = "启用成功";
+                responseData.Code = 1;
+                responseData.Message = "启用成功";
             }
             catch (Exception ex)
             {
-                responseData.code = -2;
-                responseData.message = "启用失败: " + ex.Message;
+                responseData.Code = -2;
+                responseData.Message = "启用失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseData);
@@ -301,16 +301,16 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 禁用插件
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Disable(string pluginId)
+        public async Task<ActionResult<BaseResponseModel>> Disable(string pluginId)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
             var pluginConfigModel = PluginConfigModelFactory.Create();
             // 效验是否存在于 已启用插件列表
             #region 效验
             if (!pluginConfigModel.EnabledPlugins.Contains(pluginId))
             {
-                responseData.code = -1;
-                responseData.message = "禁用失败: 此插件不存在, 或未安装";
+                responseData.Code = -1;
+                responseData.Message = "禁用失败: 此插件不存在, 或未安装";
                 return await Task.FromResult(responseData);
             }
             #endregion
@@ -321,8 +321,8 @@ namespace PluginCore.AspNetCore.Controllers
                 IPlugin plugin = _pluginFinder.Plugin(pluginId);
                 if (plugin == null)
                 {
-                    responseData.code = -1;
-                    responseData.message = "禁用失败: 此插件不存在, 或未启用";
+                    responseData.Code = -1;
+                    responseData.Message = "禁用失败: 此插件不存在, 或未启用";
                     return await Task.FromResult(responseData);
                 }
                 try
@@ -331,8 +331,8 @@ namespace PluginCore.AspNetCore.Controllers
                     var pluginDisableResult = plugin.BeforeDisable();
                     if (!pluginDisableResult.IsSuccess)
                     {
-                        responseData.code = -1;
-                        responseData.message = "禁用失败: 来自插件的错误信息: " + pluginDisableResult.Message;
+                        responseData.Code = -1;
+                        responseData.Message = "禁用失败: 来自插件的错误信息: " + pluginDisableResult.Message;
                         return await Task.FromResult(responseData);
                     }
                     // 3.移除插件对应的程序集加载上下文
@@ -349,8 +349,8 @@ namespace PluginCore.AspNetCore.Controllers
                 catch (Exception ex)
                 {
                     Utils.LogUtil.Error(ex.ToString());
-                    responseData.code = -1;
-                    responseData.message = "禁用失败: 此插件不存在, 或未启用";
+                    responseData.Code = -1;
+                    responseData.Message = "禁用失败: 此插件不存在, 或未启用";
                     return await Task.FromResult(responseData);
                 }
 
@@ -362,13 +362,13 @@ namespace PluginCore.AspNetCore.Controllers
                 }
 
 
-                responseData.code = 1;
-                responseData.message = "禁用成功";
+                responseData.Code = 1;
+                responseData.Message = "禁用成功";
             }
             catch (Exception ex)
             {
-                responseData.code = -2;
-                responseData.message = "禁用失败: " + ex.Message;
+                responseData.Code = -2;
+                responseData.Message = "禁用失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseData);
@@ -382,15 +382,15 @@ namespace PluginCore.AspNetCore.Controllers
         /// <param name="file">注意: 参数名一定为 file， 对应前端传过来时以 file 为名</param>
         /// <returns></returns>
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Upload([FromForm] IFormFile file)
+        public async Task<ActionResult<BaseResponseModel>> Upload([FromForm] IFormFile file)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
 
             #region 效验
             if (file == null)
             {
-                responseData.code = -1;
-                responseData.message = "上传的文件不能为空";
+                responseData.Code = -1;
+                responseData.Message = "上传的文件不能为空";
                 return responseData;
             }
             //文件后缀
@@ -409,17 +409,17 @@ namespace PluginCore.AspNetCore.Controllers
 
             if (fileExtension != ".zip" && fileExtension != ".nupkg")
             {
-                responseData.code = -1;
+                responseData.Code = -1;
                 // nupkg 其实就是 zip
-                responseData.message = "只能上传 zip 或 nupkg 格式文件";
+                responseData.Message = "只能上传 zip 或 nupkg 格式文件";
                 return responseData;
             }
             //判断文件大小
             var fileSize = file.Length;
             if (fileSize > 1024 * 1024 * 5) // 5M
             {
-                responseData.code = -1;
-                responseData.message = "上传的文件不能大于5MB";
+                responseData.Code = -1;
+                responseData.Message = "上传的文件不能大于5MB";
                 return responseData;
             }
             #endregion
@@ -448,8 +448,8 @@ namespace PluginCore.AspNetCore.Controllers
                 System.IO.File.Delete(tempZipFilePath);
                 if (!isDecomparessSuccess)
                 {
-                    responseData.code = -1;
-                    responseData.message = "解压插件压缩包失败";
+                    responseData.Code = -1;
+                    responseData.Message = "解压插件压缩包失败";
                     return responseData;
                 }
                 // 4.读取其中的info.json, 获取 PluginId 值
@@ -459,8 +459,8 @@ namespace PluginCore.AspNetCore.Controllers
                     // 记得删除已不再需要的临时插件文件夹
                     Directory.Delete(tempZipFilePath.Replace(".zip", ""), true);
 
-                    responseData.code = -1;
-                    responseData.message = "不合法的插件";
+                    responseData.Code = -1;
+                    responseData.Message = "不合法的插件";
                     return responseData;
                 }
                 string pluginId = pluginInfoModel.PluginId;
@@ -473,8 +473,8 @@ namespace PluginCore.AspNetCore.Controllers
                     // 记得删除已不再需要的临时插件文件夹
                     Directory.Delete(tempZipFilePath.Replace(".zip", ""), true);
 
-                    responseData.code = -1;
-                    responseData.message = $"本地已有此插件 (PluginId: {pluginId}), 请前往插件列表删除后, 再上传";
+                    responseData.Code = -1;
+                    responseData.Message = $"本地已有此插件 (PluginId: {pluginId}), 请前往插件列表删除后, 再上传";
                     return responseData;
                 }
                 // 6.本地无此插件 -> 移动插件文件夹到 Plugins 下, 并以 PluginId 为插件文件夹名
@@ -486,17 +486,17 @@ namespace PluginCore.AspNetCore.Controllers
                 pluginConfigModel.UninstalledPlugins.Add(pluginId);
                 PluginConfigModelFactory.Save(pluginConfigModel);
 
-                responseData.code = 1;
-                responseData.message = $"上传插件成功 (PluginId: {pluginId})";
+                responseData.Code = 1;
+                responseData.Message = $"上传插件成功 (PluginId: {pluginId})";
             }
             catch (Exception ex)
             {
-                responseData.code = -1;
-                responseData.message = "上传插件失败: " + ex.Message;
+                responseData.Code = -1;
+                responseData.Message = "上传插件失败: " + ex.Message;
                 ex = ex.InnerException;
                 while (ex != null)
                 {
-                    responseData.message += " - " + ex.InnerException.Message;
+                    responseData.Message += " - " + ex.InnerException.Message;
                     ex = ex.InnerException;
                 }
             }
@@ -507,9 +507,9 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 查看详细
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Details(string pluginId)
+        public async Task<ActionResult<BaseResponseModel>> Details(string pluginId)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
 
             try
             {
@@ -520,8 +520,8 @@ namespace PluginCore.AspNetCore.Controllers
 
                 if (!allPluginConfigModels.Contains(pluginId))
                 {
-                    responseData.code = -1;
-                    responseData.message = $"查看详细失败: 不存在 {pluginId} 插件";
+                    responseData.Code = -1;
+                    responseData.Message = $"查看详细失败: 不存在 {pluginId} 插件";
                     return await Task.FromResult(responseData);
                 }
 
@@ -531,14 +531,14 @@ namespace PluginCore.AspNetCore.Controllers
                 PluginInfoResponseModel pluginInfoResponseModel = PluginInfoModelToResponseModel(new List<PluginInfoModel>() { pluginInfoModel }, pluginConfigModel).FirstOrDefault();
 
 
-                responseData.code = 1;
-                responseData.message = "查看详细成功";
-                responseData.data = pluginInfoResponseModel;
+                responseData.Code = 1;
+                responseData.Message = "查看详细成功";
+                responseData.Data = pluginInfoResponseModel;
             }
             catch (Exception ex)
             {
-                responseData.code = -1;
-                responseData.message = "查看详细失败: " + ex.Message;
+                responseData.Code = -1;
+                responseData.Message = "查看详细失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseData);
@@ -547,9 +547,9 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 查看文档
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Readme(string pluginId)
+        public async Task<ActionResult<BaseResponseModel>> Readme(string pluginId)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
 
             try
             {
@@ -560,8 +560,8 @@ namespace PluginCore.AspNetCore.Controllers
 
                 if (!allPluginConfigModels.Contains(pluginId))
                 {
-                    responseData.code = -1;
-                    responseData.message = $"查看文档失败: 不存在 {pluginId} 插件";
+                    responseData.Code = -1;
+                    responseData.Message = $"查看文档失败: 不存在 {pluginId} 插件";
                     return await Task.FromResult(responseData);
                 }
 
@@ -572,14 +572,14 @@ namespace PluginCore.AspNetCore.Controllers
                 readmeResponseModel.Content = readmeModel?.Content ?? "";
                 readmeResponseModel.PluginId = pluginId;
 
-                responseData.code = 1;
-                responseData.message = "查看文档成功";
-                responseData.data = readmeResponseModel;
+                responseData.Code = 1;
+                responseData.Message = "查看文档成功";
+                responseData.Data = readmeResponseModel;
             }
             catch (Exception ex)
             {
-                responseData.code = -1;
-                responseData.message = "查看文档失败: " + ex.Message;
+                responseData.Code = -1;
+                responseData.Message = "查看文档失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseData);
@@ -588,9 +588,9 @@ namespace PluginCore.AspNetCore.Controllers
 
         #region 设置
         [HttpGet]
-        public async Task<ActionResult<CommonResponseModel>> Settings(string pluginId)
+        public async Task<ActionResult<BaseResponseModel>> Settings(string pluginId)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
 
             try
             {
@@ -601,8 +601,8 @@ namespace PluginCore.AspNetCore.Controllers
 
                 if (!allPluginConfigModels.Contains(pluginId))
                 {
-                    responseData.code = -1;
-                    responseData.message = $"查看设置失败: 不存在 {pluginId} 插件";
+                    responseData.Code = -1;
+                    responseData.Message = $"查看设置失败: 不存在 {pluginId} 插件";
                     return await Task.FromResult(responseData);
                 }
 
@@ -611,23 +611,23 @@ namespace PluginCore.AspNetCore.Controllers
                 string settingsJsonStr = PluginSettingsModelFactory.Create(pluginId);
 
 
-                responseData.code = 1;
-                responseData.message = "查看设置成功";
-                responseData.data = settingsJsonStr ?? "无设置项";
+                responseData.Code = 1;
+                responseData.Message = "查看设置成功";
+                responseData.Data = settingsJsonStr ?? "无设置项";
             }
             catch (Exception ex)
             {
-                responseData.code = -1;
-                responseData.message = "查看设置失败: " + ex.Message;
+                responseData.Code = -1;
+                responseData.Message = "查看设置失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseData);
         }
 
         [HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Settings(PluginSettingsInputModel inputModel)
+        public async Task<ActionResult<BaseResponseModel>> Settings(PluginSettingsInputModel inputModel)
         {
-            CommonResponseModel responseData = new CommonResponseModel();
+            BaseResponseModel responseData = new BaseResponseModel();
 
             try
             {
@@ -638,8 +638,8 @@ namespace PluginCore.AspNetCore.Controllers
 
                 if (!allPluginConfigModels.Contains(inputModel.PluginId))
                 {
-                    responseData.code = -1;
-                    responseData.message = $"设置失败: 不存在 {inputModel.PluginId} 插件";
+                    responseData.Code = -1;
+                    responseData.Message = $"设置失败: 不存在 {inputModel.PluginId} 插件";
                     return await Task.FromResult(responseData);
                 }
 
@@ -649,14 +649,14 @@ namespace PluginCore.AspNetCore.Controllers
                 PluginSettingsModelFactory.Save(pluginSettingsJsonStr: inputModel.Data, pluginId: inputModel.PluginId);
 
 
-                responseData.code = 1;
-                responseData.message = "设置成功";
-                responseData.data = inputModel.Data;
+                responseData.Code = 1;
+                responseData.Message = "设置成功";
+                responseData.Data = inputModel.Data;
             }
             catch (Exception ex)
             {
-                responseData.code = -1;
-                responseData.message = "设置失败: " + ex.Message;
+                responseData.Code = -1;
+                responseData.Message = "设置失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseData);

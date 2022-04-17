@@ -41,7 +41,7 @@ namespace PluginCore.AspNetCore.Controllers
         //public async Task<ActionResult<CommonResponseModel>> Widget(string widgetKey, string extraPars = "")
         public async Task<ActionResult> Widget(string widgetKey, string extraPars = "")
         {
-            CommonResponseModel responseModel = new ResponseModel.CommonResponseModel();
+            BaseResponseModel responseModel = new ResponseModel.BaseResponseModel();
             string responseData = "";
             widgetKey = widgetKey.Trim('"', '\'');
             string[] extraParsArr = null;
@@ -77,9 +77,9 @@ namespace PluginCore.AspNetCore.Controllers
             sb.AppendLine($"<!-- end:PluginCore.IPlugins.IWidgetPlugin.Widget({widgetKey},{extraPars}) -->");
             responseData = sb.ToString();
 
-            responseModel.code = 1;
-            responseModel.message = "Load Widget Success";
-            responseModel.data = responseData;
+            responseModel.Code = 1;
+            responseModel.Message = "Load Widget Success";
+            responseModel.Data = responseData;
 
             //return await Task.FromResult(responseModel);
             return Content(responseData, "text/html;charset=utf-8");

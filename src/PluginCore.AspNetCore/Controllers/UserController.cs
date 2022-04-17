@@ -30,9 +30,9 @@ namespace PluginCore.AspNetCore.Controllers
         }
 
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Login([FromBody] LoginRequestModel requestModel)
+        public async Task<ActionResult<BaseResponseModel>> Login([FromBody] LoginRequestModel requestModel)
         {
-            CommonResponseModel responseModel = new CommonResponseModel();
+            BaseResponseModel responseModel = new BaseResponseModel();
 
             try
             {
@@ -40,15 +40,15 @@ namespace PluginCore.AspNetCore.Controllers
                 bool isAdmin = this._accountManager.IsAdminToken(token);
                 if (!isAdmin)
                 {
-                    responseModel.code = -1;
-                    responseModel.message = "用户名或密码不正确";
+                    responseModel.Code = -1;
+                    responseModel.Message = "用户名或密码不正确";
 
                     return await Task.FromResult(responseModel);
                 }
 
-                responseModel.code = 1;
-                responseModel.message = "登录成功";
-                responseModel.data = new
+                responseModel.Code = 1;
+                responseModel.Message = "登录成功";
+                responseModel.Data = new
                 {
                     token = token,
                     userName = requestModel.UserName
@@ -56,20 +56,20 @@ namespace PluginCore.AspNetCore.Controllers
             }
             catch (Exception ex)
             {
-                responseModel.code = -1;
-                responseModel.message = "失败: " + ex.Message;
+                responseModel.Code = -1;
+                responseModel.Message = "失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseModel);
         }
 
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Logout()
+        public async Task<ActionResult<BaseResponseModel>> Logout()
         {
-            CommonResponseModel responseModel = new CommonResponseModel()
+            BaseResponseModel responseModel = new BaseResponseModel()
             {
-                code = 1,
-                message = "退出登录成功"
+                Code = 1,
+                Message = "退出登录成功"
             };
 
             return await Task.FromResult(responseModel);
@@ -77,17 +77,17 @@ namespace PluginCore.AspNetCore.Controllers
 
         [PluginCoreAdminAuthorize]
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Info()
+        public async Task<ActionResult<BaseResponseModel>> Info()
         {
-            CommonResponseModel responseModel = new CommonResponseModel();
+            BaseResponseModel responseModel = new BaseResponseModel();
 
             try
             {
                 string adminUserName = PluginCoreConfigFactory.Create().Admin.UserName;
 
-                responseModel.code = 1;
-                responseModel.message = "成功";
-                responseModel.data = new
+                responseModel.Code = 1;
+                responseModel.Message = "成功";
+                responseModel.Data = new
                 {
                     name = adminUserName,
                     //avatar = this.RemoteFronted + "/images/avatar.gif"
@@ -96,8 +96,8 @@ namespace PluginCore.AspNetCore.Controllers
             }
             catch (Exception ex)
             {
-                responseModel.code = -1;
-                responseModel.message = "失败: " + ex.Message;
+                responseModel.Code = -1;
+                responseModel.Message = "失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseModel);
@@ -105,9 +105,9 @@ namespace PluginCore.AspNetCore.Controllers
 
         [PluginCoreAdminAuthorize]
         [HttpGet, HttpPost]
-        public async Task<ActionResult<CommonResponseModel>> Update([FromBody] UpdateRequestModel requestModel)
+        public async Task<ActionResult<BaseResponseModel>> Update([FromBody] UpdateRequestModel requestModel)
         {
-            CommonResponseModel responseModel = new CommonResponseModel();
+            BaseResponseModel responseModel = new BaseResponseModel();
 
             try
             {
@@ -116,13 +116,13 @@ namespace PluginCore.AspNetCore.Controllers
                 pluginCoreConfig.Admin.Password = requestModel.Password;
                 PluginCoreConfigFactory.Save(pluginCoreConfig);
 
-                responseModel.code = 1;
-                responseModel.message = "修改成功, 需要重新登录";
+                responseModel.Code = 1;
+                responseModel.Message = "修改成功, 需要重新登录";
             }
             catch (Exception ex)
             {
-                responseModel.code = -1;
-                responseModel.message = "失败: " + ex.Message;
+                responseModel.Code = -1;
+                responseModel.Message = "失败: " + ex.Message;
             }
 
             return await Task.FromResult(responseModel);
