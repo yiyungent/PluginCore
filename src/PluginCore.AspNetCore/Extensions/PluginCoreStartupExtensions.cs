@@ -37,12 +37,16 @@ namespace PluginCore.AspNetCore.Extensions
 
         private static IServiceCollection _services;
 
+        private static IServiceProvider _serviceProvider;
+
         /// <summary>
         /// 若需要替换默认实现, 请在 <see cref="AddPluginCore(IServiceCollection)"/> 之前, 若在之后, 则无法影响 主程序启动时默认行为
         /// </summary>
         /// <param name="services"></param>
         public static void AddPluginCore(this IServiceCollection services)
         {
+            #region 注册服务
+
             #region 仅适用于 ASP.NET Core
             // start: 仅用于 ASP.NET Core
             // 用于添加插件Controller 时，通知Controller.Action发生变化
@@ -75,50 +79,52 @@ namespace PluginCore.AspNetCore.Extensions
             services.TryAddTransient<IPluginFinder, PluginFinder>();
 
             // 注意: 它必须单例
+            // TODO: 不知道原因, 单例失败, 每次 获取 IPluginFinder 都会获取新的 IPluginContextManager
             services.TryAddSingleton<PluginContextManager>();
             services.TryAddSingleton<IPluginContextManager, PluginContextManager>();
+            #endregion 
+
             #endregion
 
 
+
+            // ************************* 注意: IServiceCollection 是服务列表, 但由 IServiceProvider 来负责解析, AClass 单例 仅在 AServiceProvider 范围内
+            _serviceProvider = services.BuildServiceProvider();
+
             #region ASP.NET Core
-            using (var serviceProvider = services.BuildServiceProvider())
+            //IPluginManager pluginManager = services.BuildServiceProvider().GetService<IPluginManager>();
+            IPluginManager pluginManager = _serviceProvider.GetService<IPluginManager>();
+
+            // 初始化 PluginCore 相关目录
+            PluginPathProvider.PluginsRootPath();
+
+            // 在程序启动时加载所有 已安装并启用 的插件
+
+            // 获取 PluginConfigModel
+            #region 获取 PluginConfigModel
+            PluginConfigModel pluginConfigModel = PluginConfigModelFactory.Create();
+            #endregion
+
+            // 已启用的插件
+            #region 加载 已启用插件的Assemblies
+            IList<string> enabledPluginIds = pluginConfigModel.EnabledPlugins;
+            foreach (var pluginId in enabledPluginIds)
             {
-                using (var scope = serviceProvider.GetRequiredService<IServiceScopeFactory>().CreateScope())
-                {
-                    IPluginManager pluginManager = scope.ServiceProvider.GetService<IPluginManager>();
-
-                    // 初始化 PluginCore 相关目录
-                    PluginPathProvider.PluginsRootPath();
-
-                    // 在程序启动时加载所有 已安装并启用 的插件
-
-                    // 获取PluginConfigModel
-                    #region 获取 获取PluginConfigModel
-                    PluginConfigModel pluginConfigModel = PluginConfigModelFactory.Create();
-                    #endregion
-
-                    // 已启用的插件
-                    #region 加载 已启用插件的Assemblies
-                    IList<string> enabledPluginIds = pluginConfigModel.EnabledPlugins;
-                    foreach (var pluginId in enabledPluginIds)
-                    {
-                        pluginManager.LoadPlugin(pluginId);
-                    }
-                    #endregion
-
-
-
-                    // 将本 Assembly 内的 Controller 添加
-                    var ass = Assembly.GetExecutingAssembly();
-                    IPluginControllerManager pluginControllerManager = scope.ServiceProvider.GetService<IPluginControllerManager>();
-                    pluginControllerManager.AddControllers(ass);
-
-
-                    // IWebHostEnvironment
-                    _webHostEnvironment = scope.ServiceProvider.GetService<IWebHostEnvironment>();
-
-                }
+                pluginManager.LoadPlugin(pluginId);
             }
+            #endregion
+
+
+
+            // 将本 Assembly 内的 Controller 添加
+            var ass = Assembly.GetExecutingAssembly();
+            //IPluginControllerManager pluginControllerManager = services.BuildServiceProvider().GetService<IPluginControllerManager>();
+            IPluginControllerManager pluginControllerManager = _serviceProvider.GetService<IPluginControllerManager>();
+            pluginControllerManager.AddControllers(ass);
+
+
+            // IWebHostEnvironment
+            _webHostEnvironment = services.BuildServiceProvider().GetService<IWebHostEnvironment>();
             #endregion
 
             #region PluginCore Admin 权限
@@ -156,7 +162,8 @@ namespace PluginCore.AspNetCore.Extensions
             //services.AddHttpContextAccessor(); 
             #endregion
 
-            IPluginFinder pluginFinder = services.BuildServiceProvider().GetService<IPluginFinder>();
+            //IPluginFinder pluginFinder = services.BuildServiceProvider().GetService<IPluginFinder>();
+            IPluginFinder pluginFinder = _serviceProvider.GetService<IPluginFinder>();
 
             #region IStartupPlugin
 
@@ -211,7 +218,8 @@ namespace PluginCore.AspNetCore.Extensions
             #endregion
 
 
-            IPluginFinder pluginFinder = _services.BuildServiceProvider().GetService<IPluginFinder>();
+            //IPluginFinder pluginFinder = _services.BuildServiceProvider().GetService<IPluginFinder>();
+            IPluginFinder pluginFinder = _serviceProvider.GetService<IPluginFinder>();
 
             #region IStartupPlugin
 

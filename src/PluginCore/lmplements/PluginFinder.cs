@@ -40,10 +40,10 @@ namespace PluginCore.lmplements
         public IPluginContextManager PluginContextManager { get; set; }
 
         #region Ctor
-        public PluginFinder(IServiceProvider serviceProvider)
+        public PluginFinder(IPluginContextManager pluginContextManager, IServiceProvider serviceProvider)
         {
+            this.PluginContextManager = pluginContextManager;
             _serviceProvider = serviceProvider;
-            this.PluginContextManager = _serviceProvider.GetService<IPluginContextManager>();
         }
 
         static PluginFinder()

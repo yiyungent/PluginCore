@@ -19,15 +19,35 @@ namespace PluginCore.lmplements
     {
         #region Fields
 
-        private Dictionary<string, IPluginContext>
-            _pluginContexts;
+        private static int _newCount;
+
+        //private Dictionary<string, IPluginContext>
+        //    _pluginContexts;
+
+        private Dictionary<string, IPluginContext> _pluginContexts
+        {
+            get
+            {
+                return PluginContextStore.PluginContexts;
+            }
+        }
 
         #endregion
 
         #region Ctor
         public PluginContextManager()
         {
-            _pluginContexts = new Dictionary<string, IPluginContext>();
+            //_pluginContexts = new Dictionary<string, IPluginContext>();
+
+            #region 计数
+            _newCount++;
+            if (_newCount > 1)
+            {
+#if DEBUG
+                Utils.LogUtil.Error($"警告: {nameof(PluginContextManager)} 被 new {_newCount} 次");
+#endif
+            }
+            #endregion
         }
         #endregion
 
@@ -64,4 +84,15 @@ namespace PluginCore.lmplements
         #endregion
 
     }
+
+    /// <summary>
+    /// fixed: 由于 <see cref="IPluginContextManager"/> 单例失败, 因此临时解决方案
+    /// </summary>
+    public static class PluginContextStore
+    {
+        public static Dictionary<string, IPluginContext> PluginContexts = new Dictionary<string, IPluginContext>();
+    }
+
+
+
 }
