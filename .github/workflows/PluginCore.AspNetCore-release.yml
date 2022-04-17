@@ -17,7 +17,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.102
+        dotnet-version: 6.0.100
     
     - name: Setup Node.js
       uses: actions/setup-node@v2
@@ -37,6 +37,7 @@ jobs:
         cd ./src/PluginCore.AspNetCore/bin/Release
         zip -r PluginCore.AspNetCore-netcoreapp3.1.zip ./netcoreapp3.1/ 
         zip -r PluginCore.AspNetCore-net5.0.zip ./net5.0/
+        zip -r PluginCore.AspNetCore-net6.0.zip ./net6.0/
         cd ../../../../
         mv ./src/PluginCore.AspNetCore/bin/Release/*.zip ./
       
@@ -53,5 +54,6 @@ jobs:
         files: |
           PluginCore.AspNetCore-netcoreapp3.1.zip
           PluginCore.AspNetCore-net5.0.zip
+          PluginCore.AspNetCore-net6.0.zip
           LICENSE 
           README.md

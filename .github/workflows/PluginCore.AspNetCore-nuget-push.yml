@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.102
+        dotnet-version: 6.0.100
 
     # 注意: 一定要有此步, 打包前端文件进入 dll, 需要在 dotnet build 前手动 npm install, csproj 中 NpmInstall 的仅对 vs 有效
     - name: Setup Node.js
