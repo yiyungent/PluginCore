@@ -11,20 +11,20 @@ using System.Text;
 namespace PluginCore.lmplements
 {
     /// <summary>
-    /// 一个插件的所有dll由 一个 <see cref="CollectibleAssemblyLoadContext"/> 管理
-    /// <see cref="PluginsLoadContexts"/> 记录管理了所有 插件的<see cref="CollectibleAssemblyLoadContext"/>
-    /// <see cref="PluginManager"/> 是对 <see cref="PluginsLoadContexts"/>的封装, 使其更好管理插件加载释放的行为
+    /// 一个插件的所有dll由 一个 <see cref="IPluginContext"/> 管理
+    /// <see cref="PluginContextManager"/> 记录管理了所有 插件的<see cref="IPluginContext"/>
+    /// <see cref="PluginManager"/> 是对 <see cref="PluginContextManager"/>的封装, 使其更好管理插件加载释放的行为
     /// </summary>
-    public class PluginManager<TAssemblyLoadContext> : IPluginManager
+    public class PluginManager : IPluginManager
     {
-        public IPluginContextManager PluginsLoadContexts { get; set; }
+        public IPluginContextManager PluginContextManager { get; set; }
 
-        public IPluginContextPack AssemblyLoadContextPack { get; set; }
+        public IPluginContextPack PluginContextPack { get; set; }
 
-        public PluginManager(IPluginContextManager pluginsLoadContexts, IPluginContextPack assemblyLoadContextPack)
+        public PluginManager(IPluginContextManager pluginContextManager, IPluginContextPack pluginContextPack)
         {
-            this.PluginsLoadContexts = pluginsLoadContexts;
-            this.AssemblyLoadContextPack = assemblyLoadContextPack;
+            this.PluginContextManager = pluginContextManager;
+            this.PluginContextPack = pluginContextPack;
         }
 
         /// <summary>
@@ -33,23 +33,15 @@ namespace PluginCore.lmplements
         /// <param name="pluginId"></param>
         public void LoadPlugin(string pluginId)
         {
-            #region 方案1
-            //AssemblyLoadContext context = this.AssemblyLoadContextPack.Pack(pluginId);
-            //// 父类 -> 子类
-            //TAssemblyLoadContext newContext = (TAssemblyLoadContext)context;
-            #endregion
-
-            #region 方案2
-            IPluginContext context = this.AssemblyLoadContextPack.Pack(pluginId);
-            #endregion
+            IPluginContext context = this.PluginContextPack.Pack(pluginId);
 
             // 这个插件加载上下文 放入 集合中
-            this.PluginsLoadContexts.Add(pluginId, context);
+            this.PluginContextManager.Add(pluginId, context);
         }
 
         public void UnloadPlugin(string pluginId)
         {
-            this.PluginsLoadContexts.Remove(pluginId);
+            this.PluginContextManager.Remove(pluginId);
         }
     }
 }

@@ -22,6 +22,10 @@ namespace PluginCore.lmplements
     public class PluginFinder : IPluginFinder
     {
         #region Fields
+
+        /// <summary>
+        /// 用来解析插件构造函数需要的服务
+        /// </summary>
         private readonly IServiceProvider _serviceProvider;
 
         /// <summary>
@@ -30,15 +34,16 @@ namespace PluginCore.lmplements
         /// Value: 此插件类 允许的 行为(众多实现了 IPlugin 的钩子接口)
         /// </summary>
         private static ConcurrentDictionary<Type, List<Type>> _pluginAllowedBehavior;
+
         #endregion
 
-        public IPluginContextManager PluginsLoadContexts { get; set; }
+        public IPluginContextManager PluginContextManager { get; set; }
 
         #region Ctor
         public PluginFinder(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            this.PluginsLoadContexts = _serviceProvider.GetService<IPluginContextManager>();
+            this.PluginContextManager = _serviceProvider.GetService<IPluginContextManager>();
         }
 
         static PluginFinder()
@@ -87,10 +92,10 @@ namespace PluginCore.lmplements
             IList<string> enablePluginIds = pluginConfigModel.EnabledPlugins;
             foreach (var pluginId in enablePluginIds)
             {
-                if (this.PluginsLoadContexts.Any(pluginId))
+                if (this.PluginContextManager.Any(pluginId))
                 {
                     // 2.找到插件对应的Context
-                    var context = this.PluginsLoadContexts.Get(pluginId);
+                    var context = this.PluginContextManager.Get(pluginId);
                     // 3.找插件 主 Assembly
                     // Assembly.FullName: HelloWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
                     Assembly pluginMainAssembly = context.Assemblies.Where(m => m.FullName.StartsWith($"{pluginId}, Version=")).FirstOrDefault();
@@ -158,13 +163,13 @@ namespace PluginCore.lmplements
             }
 
             // 找不到此插件上下文返回null
-            if (!this.PluginsLoadContexts.Any(pluginId))
+            if (!this.PluginContextManager.Any(pluginId))
             {
                 return null;
             }
 
             // 2.找到插件对应的Context
-            var context = this.PluginsLoadContexts.Get(pluginId);
+            var context = this.PluginContextManager.Get(pluginId);
             // 3.找插件 主 Assembly
             // Assembly.FullName: HelloWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
             Assembly pluginMainAssembly = context.Assemblies.Where(m => m.FullName.StartsWith($"{pluginId}, Version=")).FirstOrDefault();
