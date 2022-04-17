@@ -1,5 +1,12 @@
 
 
+# PluginCore-v2.0.0
+
+## Refactor
+
+- 默认 使用 最新 微软推荐的 插件加载方案 `PluginLoadContext`
+- 很多接口变更, 类名变更
+
 
 # PluginCore.AspNetCore-v0.0.5
 
