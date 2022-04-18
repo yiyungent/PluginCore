@@ -1,3 +1,12 @@
+//===================================================
+//  License: Apache-2.0
+//  Contributors: yiyungent@gmail.com
+//  Project: https://moeci.com/PluginCore
+//  GitHub: https://github.com/yiyungent/PluginCore
+//===================================================
+
+
+
 ﻿using System;
 // Project: SimCaptcha
 // https://github.com/yiyungent/SimCaptcha
