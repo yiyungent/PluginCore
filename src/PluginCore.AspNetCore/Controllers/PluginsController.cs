@@ -414,14 +414,15 @@ namespace PluginCore.AspNetCore.Controllers
                 responseData.Message = "只能上传 zip 或 nupkg 格式文件";
                 return responseData;
             }
+            // PluginCore.AspNetCore-v1.0.2 起 不再限制插件上传大小
             //判断文件大小
-            var fileSize = file.Length;
-            if (fileSize > 1024 * 1024 * 5) // 5M
-            {
-                responseData.Code = -1;
-                responseData.Message = "上传的文件不能大于5MB";
-                return responseData;
-            }
+            //var fileSize = file.Length;
+            //if (fileSize > 1024 * 1024 * 5) // 5M
+            //{
+            //    responseData.Code = -1;
+            //    responseData.Message = "上传的文件不能大于5MB";
+            //    return responseData;
+            //}
             #endregion
 
             try
