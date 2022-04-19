@@ -1,6 +1,17 @@
 
 
 
+# PluginCore.AspNetCore-v1.0.2
+
+
+## Updated
+
+- 后端: 移除: 插件上传大小限制       
+- 前端: 使用 `plugincore-admin-frontend-v0.3.2`
+  - 移除: 插件上传大小限制
+
+
+
 # PluginCore.AspNetCore-v1.0.1
 
 ## Updated
