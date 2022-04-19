@@ -57,7 +57,7 @@ export default {
   pluginUpload: {
     uploadTip: "Drag the plugin package here, or",
     clickUpload: "Click on the upload",
-    uploadLimit: "Only ZIP or NUPkg files can be uploaded and cannot exceed 5MB"
+    uploadLimit: "Only zip or nupkg files can be uploaded"
   },
 
   pluginDetails: {

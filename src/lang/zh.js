@@ -57,7 +57,7 @@ export default {
   pluginUpload: {
     uploadTip: "将插件包拖到此处，或",
     clickUpload: "点击上传",
-    uploadLimit: "只能上传 zip 或 nupkg 文件，且不超过5MB"
+    uploadLimit: "只能上传 zip 或 nupkg 文件"
   },
 
   pluginDetails: {
