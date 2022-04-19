@@ -1,3 +1,12 @@
+//===================================================
+//  License: Apache-2.0
+//  Contributors: yiyungent@gmail.com
+//  Project: https://moeci.com/PluginCore
+//  GitHub: https://github.com/yiyungent/PluginCore
+//===================================================
+
+
+
 // 引入 PluginCore 相关命名空间
 using PluginCore.Extensions;
 
