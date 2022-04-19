@@ -1,7 +1,11 @@
 
 
 
+# plugincore-admin-frontend-v0.3.2
 
+## Updated
+
+- 移除: 插件上传大小限制
 
 
 
