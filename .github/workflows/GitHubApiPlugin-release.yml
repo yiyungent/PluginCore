@@ -17,21 +17,22 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.102
+        dotnet-version: 6.0.100
         
-    - name: Publish
+    - name: Build
       run: |
         cd ./plugins/GitHubApiPlugin
-        dotnet publish --configuration Release
+        dotnet build --configuration Release
         ls
         ls ./bin/Release/
+        ls ./bin/Release/netstandard2.0/
       
     - name: Zip the Build
       run: |
-        cd ./plugins/GitHubApiPlugin/bin/Release/netstandard2.0/publish
+        cd ./plugins/GitHubApiPlugin/bin/Release/netstandard2.0
         zip -r GitHubApiPlugin-netstandard2.0.zip *
-        cd ../../../../../../
-        mv ./plugins/GitHubApiPlugin/bin/Release/netstandard2.0/publish/*.zip ./
+        cd ../../../../../
+        mv ./plugins/GitHubApiPlugin/bin/Release/netstandard2.0/*.zip ./
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
@@ -45,3 +46,5 @@ jobs:
         prerelease: false
         files: |
           GitHubApiPlugin-netstandard2.0.zip
+          #LICENSE 
+          #README.md
