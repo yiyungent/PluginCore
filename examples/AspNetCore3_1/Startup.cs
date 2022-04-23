@@ -19,7 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PluginCore.Extensions;
+using PluginCore.AspNetCore.Extensions;
 
 namespace AspNetCore3_1
 {
@@ -32,7 +32,10 @@ namespace AspNetCore3_1
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration
+        {
+            get;
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)

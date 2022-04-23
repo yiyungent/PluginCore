@@ -12,10 +12,10 @@
 
 	<!-- 方便开发debug,与发布到nuget -->
 	<ItemGroup Condition="'$(Configuration)' == 'Release'">
-		<PackageReference Include="PluginCore" Version="0.8.2" />
+		<PackageReference Include="PluginCore.AspNetCore" Version="1.0.2" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
-		<ProjectReference Include="..\..\src\PluginCore\PluginCore.csproj" />
+		<ProjectReference Include="..\..\src\PluginCore.AspNetCore\PluginCore.AspNetCore.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -20,7 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PluginCore.Extensions;
+using PluginCore.AspNetCore.Extensions;
 
 namespace AspNetCore5
 {

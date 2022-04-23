@@ -8,7 +8,7 @@
 
 
 // 引入 PluginCore 相关命名空间
-using PluginCore.Extensions;
+using PluginCore.AspNetCore.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
