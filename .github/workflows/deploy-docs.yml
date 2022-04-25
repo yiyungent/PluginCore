@@ -29,3 +29,12 @@ jobs:
         BRANCH: gh-pages
         FOLDER: docs/docs/.vuepress/dist
 
+    - name: Upyun Refresh
+      uses: yiyungent/upyun-action@main
+      with:
+        # 在 Settings->Secrets 配置 UPYUN_USERNAME, UPYUN_PASSWORD
+        upyun_username: ${{ secrets.UPYUN_USERNAME }}
+        upyun_password: ${{ secrets.UPYUN_PASSWORD }}
+        # 要刷新的url, 支持匹配符 *, 多个url中间用 \n 隔开
+        refresh_cache_urls: "https://moeci.com/PluginCore/*\nhttps://moeci.com/PluginCore"
+        upyun_debug: true
