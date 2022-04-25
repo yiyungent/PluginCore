@@ -5,6 +5,12 @@
 
 > 插件开发 - 快速上手
 
+> - 2022年4月25日 更新   
+> 已适配最新 `PluginCore.AspNetCore` 插件加载机制
+>    
+> **注意**: 很多时候插件没有加载成功 / 出现异常, 都是由于没有正确的打包   
+
+
 # 快速上手
 
 ## 方式1 (推荐): 使用 `dotnet cli` 快速安装插件模板, 并创建插件项目
@@ -30,24 +36,26 @@ dotnet new plugincore -n MyFirstPlugin
 
 #### 1. 引入插件SDK
 
-[NuGet](https://www.nuget.org/packages/PluginCore.IPlugins/)
+[NuGet](https://www.nuget.org/packages/PluginCore.IPlugins.AspNetCore/)
 
 > 方式1: NuGet Package Manager
 
 ```shell
-Install-Package PluginCore.IPlugins
+Install-Package PluginCore.IPlugins.AspNetCore
 ```
 
 > 方式2: .NET CLI
 
 ```shell
-dotnet add package PluginCore.IPlugins
+dotnet add package PluginCore.IPlugins.AspNetCore
 ```
 
 > 方式3: PackageReference ( 在你的 `HelloWorldPlugin.csproj` `<ItemGroup>` 中 添加 )
 
 ```xml
-<PackageReference Include="PluginCore.IPlugins" Version="0.6.0" />
+<PackageReference Include="PluginCore.IPlugins.AspNetCore" Version="0.0.1">
+  <ExcludeAssets>runtime</ExcludeAssets>
+</PackageReference>
 ```
 
 
@@ -227,8 +235,16 @@ public class SettingsModel : PluginSettingsModel
 
 #### 3. 插件发布打包
 
-> 右键选择插件项目，点击发布（Publish），再将发布后的插件文件夹打包为 `xxx.zip` 即可     
-> 或者是 `Build`      
+> **注意:**
+> > 此项尤其重要, 很多时候插件没有加载成功 / 出现异常, 都是由于没有正确的打包   
+> 正确的打包:   
+> 1. `<TargetFramework>net6.0</TargetFramework>` 其中 `net6.0` 替换为你的 `PluginCore.AspNetCore` 所在主程序的 框架版本
+> 2. 使用 `dotnet build` / `Visual Studio` 编译后, 注意查看生成了哪些dll，是否有依赖遗漏
+> 3. 哪些 dll 使用主程序提供的？这些 dll 就不要打包进 插件, 例如 `Microsoft.AspNetCore.Mvc` 等 就不要打包进插件
+
+
+
+> 右键选择插件项目，点击 Build（Build），再将发布后的插件文件夹打包为 `xxx.zip` 即可     
 > 注意: 进入有 `HelloWorldPlugin.dll` 的文件夹内，再打包, (压缩包直接点击开, 就可以看到 `HelloWorldPlugin.dll`)    
 
 > 压缩包名可随意，框架将以 `info.json` 中 `PluginId` 作为插件标识    
@@ -238,19 +254,30 @@ public class SettingsModel : PluginSettingsModel
 
 > `HelloWorldPlugin.csproj` 参考
 
+- `<TargetFramework>net6.0</TargetFramework>` 最好是填写 `PluginCore.AspNetCore` 所在主程序的框架版本, 而不是 `netstandard2.0`, 如果非要使用, 则使用 `dotnet publish` 来发布插件，这样才能生成依赖的dll到输出目录, 然后输出目录中删除主程序已有的 dll, 即这些 dll 由主程序提供, 例如 `PluginCore.IPlugins`, `PluginCore.IPlugins.AspNetCore`
+
+- `<EnableDynamicLoading>true</EnableDynamicLoading>` 会在 `dotnet build` 时将所有依赖 dll 一起复制到输出目录
+
+- `<ExcludeAssets>runtime</ExcludeAssets>` 排除此包, 在 `dotnet build` 时不复制此 dll 到输出目录, 即使用主程序提供的 dll
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0">
+			<ExcludeAssets>runtime</ExcludeAssets>
+		</PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="PluginCore.IPlugins" Version="0.4.0" />
+    <PackageReference Include="PluginCore.IPlugins.AspNetCore" Version="0.0.1">
+			<ExcludeAssets>runtime</ExcludeAssets>
+		</PackageReference>
   </ItemGroup>
 
   <!-- 发布插件相关文件 -->

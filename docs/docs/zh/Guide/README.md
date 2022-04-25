@@ -5,16 +5,18 @@
 
 推荐使用 [NuGet](https://www.nuget.org/packages/PluginCore), 在你项目的根目录 执行下方的命令, 如果你使用 Visual Studio, 这时依次点击 **Tools** -> **NuGet Package Manager** -> **Package Manager Console** , 确保 "Default project" 是你想要安装的项目, 输入下方的命令进行安装.
 
+### 在你的 ASP.NET Core 项目中集成
+
 ```bash
-PM> Install-Package PluginCore
+PM> Install-Package PluginCore.AspNetCore
 ```
 
 > 在你的 ASP.NET Core 应用程序中修改代码
 >
 > Startup.cs
 
-```csharp
-using PluginCore.Extensions;
+```C#
+using PluginCore.AspNetCore.Extensions;
 
 // This method gets called by the runtime. Use this method to add services to the container.
 public void ConfigureServices(IServiceCollection services)
@@ -72,11 +74,37 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 修改后，立即生效，无需重启站点，需重新登录 `PluginCore Admin`
 
 
+## Docker 体验
+
+如果你需要在本地体验 PluginCore, 那么这里有一个 [例子(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
+
+```bash
+docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspnetcore3-1 yiyungent/plugincore-aspnetcore3-1
+```
+
+现在你可以访问 http://localhost:5004/PluginCore/Admin
+
+> 补充:     
+> 若使用 `Docker Compose`, 可参考仓库根目录下的 `docker-compose.yml`     
+
+> 补充:   
+> 使用 `ghcr.io`     
+> 
+> ```bash
+> docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspnetcore3-1 ghcr.io/yiyungent/plugincore-aspnetcore3-1
+> ```
+
+## 使用
+
+- [详细文档(/docs)](https://moeci.com/PluginCore "在线文档") 文档构建中
+- [见示例(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
+
+
 ### 添加插件钩子, 并应用
 
 > 1.例如，自定义插件钩子: `ITestPlugin`
 
-```csharp
+```C#
 using PluginCore.IPlugins;
 
 namespace PluginCore.IPlugins
@@ -90,7 +118,7 @@ namespace PluginCore.IPlugins
 
 > 2.在需要激活的地方，应用钩子，这样所有启用的插件中，实现了 `ITestPlugin` 的插件，都将调用 `Say()`
 
-```csharp
+```C#
 using PluginCore;
 using PluginCore.IPlugins;
 
@@ -170,9 +198,3 @@ PluginCore 支持3种前端文件加载方式
 > `PluginId` 为插件唯一标识
 
 
-
-
-## 环境
-
-- 运行环境: .NET Core 3.1 (+)
-- 开发环境: Visual Studio Community 2019
