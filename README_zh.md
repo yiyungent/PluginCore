@@ -292,7 +292,7 @@ PluginCore 支持3种前端文件加载方式
 - [plugincore-admin-frontend](https://github.com/yiyungent/plugincore-admin-frontend) PluginCore Admin 前端实现
 - [plugincore-js-sdk](https://github.com/yiyungent/plugincore-js-sdk) - 前端挂件 依赖
 - [Remember.Core](https://github.com/yiyungent/Remember.Core)  插件框架提取处
-
+- [QQBotHub](https://github.com/yiyungent/QQBotHub) - QQ 机器人 | 基于 Konata.Core | 一键免费部署
 
 ## 赞助者
 
