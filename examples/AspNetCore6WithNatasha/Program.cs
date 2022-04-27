@@ -9,7 +9,7 @@
 
 // 引入 PluginCore 相关命名空间
 using PluginCore.AspNetCore.Extensions;
-
+using PluginCore.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +21,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // 1. 添加 PluginCore
+builder.Services.AddTransient<IPluginContextPack, AspNetCore6WithNatasha.Natasha.NatashaPluginContextPack>();
 builder.Services.AddPluginCore();
 
 var app = builder.Build();

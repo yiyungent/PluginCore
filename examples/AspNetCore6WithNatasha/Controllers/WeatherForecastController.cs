@@ -9,7 +9,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCore6.Controllers
+namespace AspNetCore6WithNatasha.Controllers
 {
     [ApiController]
     [Route("[controller]")]
