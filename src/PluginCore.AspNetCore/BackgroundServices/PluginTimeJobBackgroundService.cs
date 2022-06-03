@@ -7,7 +7,7 @@
 
 
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
@@ -41,6 +41,8 @@ namespace PluginCore.AspNetCore.BackgroundServices
         {
             lock (_doWorklock)
             {
+                //Console.WriteLine("Memory used before collection: {0:N0}", GC.GetTotalMemory(false));
+
                 var plugins = this._pluginFinder.EnablePlugins<ITimeJobPlugin>().ToList();
 
                 List<string> enabledPluginKeyList = new List<string>();
@@ -78,6 +80,10 @@ namespace PluginCore.AspNetCore.BackgroundServices
                         this._pluginAndLastExecuteTimeDic.Remove(key);
                     }
                 }
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                //Console.WriteLine("Memory used after full collection: {0:N0}", GC.GetTotalMemory(true));
             }
         }
     }
