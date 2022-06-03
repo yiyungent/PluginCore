@@ -1,5 +1,12 @@
 
 
+# PluginCore.AspNetCore-v1.0.3
+
+## Fixed
+
+- 内存溢出
+  - 后台定时任务频率太高 (1s), GC 没有及时回收, 内存++ -> 每次任务完成 `GC.Collect()` 
+
 
 # PluginCore.AspNetCore-v1.0.2
 
