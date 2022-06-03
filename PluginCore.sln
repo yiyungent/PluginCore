@@ -42,6 +42,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginCore.AspNetCore", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginCore.IPlugins.AspNetCore", "src\PluginCore.IPlugins.AspNetCore\PluginCore.IPlugins.AspNetCore.csproj", "{003457E8-D13F-47C0-B07F-0CE5E6AD66F0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore6WithNatasha", "examples\AspNetCore6WithNatasha\AspNetCore6WithNatasha.csproj", "{73810C6C-4049-4382-8A96-D7B67B71CDDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{003457E8-D13F-47C0-B07F-0CE5E6AD66F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{003457E8-D13F-47C0-B07F-0CE5E6AD66F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{003457E8-D13F-47C0-B07F-0CE5E6AD66F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73810C6C-4049-4382-8A96-D7B67B71CDDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73810C6C-4049-4382-8A96-D7B67B71CDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73810C6C-4049-4382-8A96-D7B67B71CDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73810C6C-4049-4382-8A96-D7B67B71CDDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +129,7 @@ Global
 		{93F2ABF9-64E2-4093-B23A-F22FF1981394} = {D8255E7B-33DD-40B1-95A7-2B4F45BFE0F4}
 		{BED01456-858C-43A5-9B45-14E15F9F2D82} = {F4038C30-CEF3-406D-AAC6-1158BE61617D}
 		{003457E8-D13F-47C0-B07F-0CE5E6AD66F0} = {F4038C30-CEF3-406D-AAC6-1158BE61617D}
+		{73810C6C-4049-4382-8A96-D7B67B71CDDC} = {F7651716-CAC1-42B3-9D95-2C7C835F17CB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5B7D6AB-2647-419D-93CB-5475018BA79C}
