@@ -1,5 +1,27 @@
 
 
+
+
+
+
+# PluginCore.AspNetCore-v1.0.4
+
+## Updated
+
+- 使用 `PluginCore-v2.0.2`
+
+
+
+# PluginCore-v2.0.2
+
+## Fixed
+
+- B 插件依赖 A 插件时, B 插件无法启用
+  - 1.null异常: B 插件的 LoadContext 没有搜索到 A 插件的 assemblyName 
+  - 2.经过测试启用, 不同版本 dll 依然可以在不同插件中共存 (由于1插件一个LoadContext, 区分采用 `AssemblyName.FullName`)
+
+
+
 # PluginCore.AspNetCore-v1.0.3
 
 ## Fixed
