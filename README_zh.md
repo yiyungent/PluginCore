@@ -13,7 +13,7 @@
 [![downloads](https://img.shields.io/nuget/dt/PluginCore.svg?style=flat)](https://www.nuget.org/packages/PluginCore/)
 [![QQ Group](https://img.shields.io/badge/QQ%20Group-894031109-deepgreen)](https://jq.qq.com/?_wv=1027&k=q5R82fYN)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-deepgreen)](https://t.me/xx_dev_group)
-![hits](https://api-onetree.moeci.com/hits.svg?id=PluginCore_zh)
+<!-- ![hits](https://api-onetree.moeci.com/hits.svg?id=PluginCore_zh) -->
 
 
 ## 介绍
