@@ -7,13 +7,14 @@
 
 
 
-﻿using PluginCore.Interfaces;
+using PluginCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.Loader;
 using System.Text;
+using System.Linq;
 
 namespace PluginCore.lmplements
 {
@@ -39,6 +40,7 @@ namespace PluginCore.lmplements
 
         protected override Assembly Load(AssemblyName assemblyName)
         {
+            // 1. 先尝试 从本插件文件夹中搜索
             string assemblyPath = _resolver.ResolveAssemblyToPath(assemblyName);
             if (assemblyPath != null)
             {
@@ -50,6 +52,17 @@ namespace PluginCore.lmplements
                     return LoadFromStream(fs);
                 }
             }
+            // 2. 再尝试 从其他启用的插件文件夹中搜索
+            // 实测: 可在下方搜索, 主程序包括的 assemblyName 与 启用插件加载的 assemblyName 都会位于其中
+            var assList = AppDomain.CurrentDomain.GetAssemblies();
+            var temp = assList.FirstOrDefault(m => m.GetName().FullName == assemblyName.FullName);
+            if (temp != null)
+            {
+                return temp;
+            }
+
+            // 3. 最后搜索不到, 返回 null, 即代表使用主程序提供, 如果最后几次都为 null, 则会报错
+            // 当启用本插件/触碰到本插件中的一些类型时, 而当主程序中没有提供相关的此 assemblyName 时, 也会触发此方法 来尝试加载
 
             return null;
         }
