@@ -297,14 +297,18 @@ PluginCore supports 3 front-end file loading methods
 - [Dragonfly](https://github.com/yiyungent/Dragonfly) - ASP.NET Core + Selenium 实现 Web 自动化
 
 
-## 赞助者
-
-TODO: 
-
 ## 鸣谢
 
 - 插件系统设计参考自 <a href="https://github.com/lamondlu/CoolCat" target="_blank">CoolCat</a>，感谢作者 lamondlu 的贡献
 - 设计参考自 <a href="https://github.com/nopSolutions/nopCommerce" target="_blank">nopCommerce</a>，感谢作者 nopSolutions 的贡献
+
+
+## 赞助者
+
+感谢这些来自爱发电的赞助者：
+
+<!-- AFDIAN-ACTION:START -->
+<!-- AFDIAN-ACTION:END -->
 
 ## Donate
 
