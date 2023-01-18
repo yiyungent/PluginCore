@@ -305,6 +305,8 @@ PluginCore supports 3 front-end file loading methods
 
 ## 赞助者
 
+本列表由 [afdian-action](https://github.com/yiyungent/afdian-action) 自动更新
+
 感谢这些来自爱发电的赞助者：
 
 <!-- AFDIAN-ACTION:START -->
