@@ -330,3 +330,7 @@ We accept donations through these channels:
 Authored and maintained by yiyun with help from contributors ([list](https://github.com/yiyungent/PluginCore/contributors)).
 
 > GitHub [@yiyungent](https://github.com/yiyungent) Gitee [@yiyungent](https://gitee.com/yiyungent)
+
+<!-- Matomo Image Tracker-->
+<img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.moeci.com/matomo.php?idsite=2&amp;rec=1&amp;action_name=GitHub.PluginCore.README_zh" style="border:0" alt="" />
+<!-- End Matomo -->
