@@ -305,3 +305,9 @@ public class SettingsModel : PluginSettingsModel
 
 </Project>
 ```
+
+
+<!-- Matomo Image Tracker-->
+<img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.moeci.com/matomo.php?idsite=2&amp;rec=1&amp;action_name=GitHub.PluginCore.docs.zh.PluginDev.Guide.README.md" style="border:0" alt="" />
+<!-- End Matomo -->
+
