@@ -15,6 +15,8 @@ features:
   details: Automatic integration of front and back ends, enjoy one minute installation.
 - title: Dependency injection
   details: Enjoy full constructor injection.
+- title: Modular
+  details: Process modularization, full dependency injection, can be implemented by replacement to customize the plug-in mechanism.
 - title: Hot swap
   details: Uploading, installing, enabling, disabling, uninstalling, and deleting do not need to restart the site.
 - title: Dynamic WebAPI

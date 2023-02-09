@@ -26,6 +26,7 @@ ASP.NET Core lightweight plugin framework
 - **Front and back ends of the plug-in are separated** - You can place the front-end files (index.html,...) under the plugin `wwwroot` folder, and then visit `/plugins/pluginId/index.html`
 - **Hot swap** - Upload, install, enable, disable, uninstall, and delete without restarting the site; you can even add the `HTTP request pipeline middleware` at runtime through the plug-in, and there is no need to restart the site
 - **Dependency injection** - You can apply for dependency injection in the construction method of the plug-in class that implements IPlugin. Of course, dependency injection can also be used in the controller construction method
+- **Modular** - Process modularization, full dependency injection, can be implemented by replacement to customize the plug-in mechanism
 - **Easy to expand** - You can write your own plug-in SDK, then reference the plug-in SDK, write extension plug-ins-custom plug-in hooks, and apply
 - **Widget** - You can bury the extension point in the front end, and then insert the widget through the plugin
 - **No database required** - No database dependency

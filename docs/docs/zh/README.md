@@ -15,6 +15,8 @@ features:
   details: 前后端自动集成，享受一分钟安装。
 - title: 依赖注入
   details: 享受全程构造器注入。
+- title: 模块化
+  details: 过程模块化, 全程依赖注入, 可通过替换实现以便自定义插件机制。
 - title: 热插拔
   details: 上传、安装、启用、禁用、卸载、删除 均无需重启站点。
 - title: 动态 WebAPI
