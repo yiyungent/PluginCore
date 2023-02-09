@@ -283,6 +283,17 @@ PluginCore supports 3 front-end file loading methods
 |      PluginCore.Template       | [![nuget](https://img.shields.io/nuget/v/PluginCore.Template.svg?style=flat)](https://www.nuget.org/packages/PluginCore.Template/) | [![downloads](https://img.shields.io/nuget/dt/PluginCore.Template.svg?style=flat)](https://www.nuget.org/packages/PluginCore.Template/) |
 
 
+## Project structure
+
+```mermaid
+graph BT
+    iplugins_aspnetcore(PluginCore.IPlugins.AspNetCore) --> iplugins(PluginCore.IPlugins)
+    aspnetcore(PluginCore.AspNetCore) --> iplugins_aspnetcore
+    plugincore(PluginCore) --> iplugins
+    aspnetcore(PluginCore.AspNetCore) --> plugincore
+    admin_frontend(plugincore-admin-frontend) --> aspnetcore
+    jssdk(plugincore-js-sdk) --> aspnetcore
+```
 
 ## 环境
 
