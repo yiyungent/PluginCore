@@ -29,7 +29,7 @@ class IPluginContextManager {
 
 class IPluginFinder {
     <<interface>>
-    +IEnumerable<\TPlugin> EnablePlugins<TPlugin>()
+    +IEnumerable<\TPlugin> EnablePlugins<\TPlugin>()
     +IEnumerable<\IPlugin> EnablePlugins()
     +IPlugin Plugin(string pluginId)
 }
