@@ -40,6 +40,21 @@ class IPluginManager {
     +void UnloadPlugin(string pluginId)
 }
 
+IPluginContext <|.. PluginLoadContext
+CollectibleAssemblyLoadContext <|-- PluginLoadContext
+class PluginLoadContext {
+    -AssemblyDependencyResolver _resolver
+
+    #Assembly Load(AssemblyName assemblyName)
+    #IntPtr LoadUnmanagedDll(string unmanagedDllName)
+}
+
+IPluginContextPack <|.. PluginContextPack
+class PluginContextPack {
+    // 将 此插件 打包 到一个 IPluginContext 中
+    +IPluginContext Pack(string pluginId)
+}
+
 IPluginContextManager <|.. PluginContextManager
 PluginContextStore <-- PluginContextManager
 class PluginContextManager {
@@ -58,12 +73,6 @@ class PluginContextStore {
     +static Dictionary<\string, IPluginContext> PluginContexts = new Dictionary<\string, IPluginContext>()
 }
 
-IPluginContextPack <|.. PluginContextPack
-class PluginContextPack {
-    // 将 此插件 打包 到一个 IPluginContext 中
-    +IPluginContext Pack(string pluginId)
-}
-
 IPluginFinder <|.. PluginFinder
 class PluginFinder {
     +IPluginContextManager PluginContextManager
@@ -71,15 +80,6 @@ class PluginFinder {
     +IEnumerable<\TPlugin> EnablePlugins<\TPlugin>()
     +IEnumerable<\IPlugin> EnablePlugins()
     +IPlugin Plugin(string pluginId)
-}
-
-IPluginContext <|.. PluginLoadContext
-CollectibleAssemblyLoadContext <|-- PluginLoadContext
-class PluginLoadContext {
-    -AssemblyDependencyResolver _resolver
-
-    #Assembly Load(AssemblyName assemblyName)
-    #IntPtr LoadUnmanagedDll(string unmanagedDllName)
 }
 
 IPluginManager <|.. PluginManager
