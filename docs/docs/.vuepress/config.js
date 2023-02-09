@@ -6,6 +6,11 @@ module.exports = {
   title: "PluginCore",
   description: "ASP.NET Core 轻量级 插件框架",
   base: "/PluginCore/",
+  plugins: [
+    // https://github.com/eFrane/vuepress-plugin-mermaidjs
+    'vuepress-plugin-mermaidjs'
+    // "mermaidjs"
+  ],
   // 多语言配置: https://vuepress.vuejs.org/zh/guide/i18n.html#站点多语言配置
   locales: {
     // 键名是该语言所属的子路径
