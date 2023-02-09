@@ -8,8 +8,16 @@ module.exports = {
   base: "/PluginCore/",
   plugins: [
     // https://github.com/eFrane/vuepress-plugin-mermaidjs
-    'vuepress-plugin-mermaidjs'
+    'vuepress-plugin-mermaidjs',
     // "mermaidjs"
+    [
+      // https://github.com/lukemnet/vuepress-plugin-matomo
+      "@lukemnet/vuepress-plugin-matomo",
+      {
+        'siteId': 4,
+        'trackerUrl': "https://matomo.moeci.com/"
+      }
+    ]
   ],
   // 多语言配置: https://vuepress.vuejs.org/zh/guide/i18n.html#站点多语言配置
   locales: {
