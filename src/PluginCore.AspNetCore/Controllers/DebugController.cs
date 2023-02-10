@@ -19,6 +19,7 @@ using System.Linq;
 using System.Runtime.Loader;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Concurrent;
+using PluginCore.AspNetCore.Extensions;
 
 namespace PluginCore.AspNetCore.Controllers
 {
@@ -96,7 +97,11 @@ namespace PluginCore.AspNetCore.Controllers
                 responseDataModel.All = assemblyLoadContextAll.Select(item => new AssemblyLoadContextsResponseDataModel.AssemblyLoadContextModel
                 {
                     Name = item.Name,
-                    Assemblies = item.Assemblies.Select(m => (FullName: m.FullName, DefinedTypes: m.DefinedTypes.Select(m => m.FullName).ToList())).ToList()
+                    Assemblies = item.Assemblies.Select(m => (
+                            FullName: m.FullName, 
+                            DefinedTypes: m.DefinedTypes.Select(m => m.FullName).ToList()
+                        )
+                    ).ToList()
                 }).ToList();
 
                 responseModel.Code = 1;
@@ -120,10 +125,10 @@ namespace PluginCore.AspNetCore.Controllers
             try
             {
                 var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-                List<(string FullName, List<string> DefinedTypes)> keyValuePairs = new List<(string, List<string>)>();
+                Dictionary<string, List<string>> keyValuePairs = new Dictionary<string, List<string>>();
                 foreach (var item in assemblies)
                 {
-                    keyValuePairs.Add((item.FullName, item.DefinedTypes.Select(m => m.FullName).ToList()));
+                    keyValuePairs.Add($"{item.FullName} - {item.GetHashCode()}", item.DefinedTypes.Select(m => m.FullName).ToList());
                 }
 
                 responseModel.Code = 1;
@@ -147,17 +152,23 @@ namespace PluginCore.AspNetCore.Controllers
             try
             {
                 //IServiceProvider serviceProvider = HttpContext.RequestServices;
-                var provider = serviceProvider.GetType().GetProperty("RootProvider", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                var serviceField = provider.GetType().GetField("_realizedServices", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                var serviceValue = serviceField.GetValue(provider);
+                //var provider = serviceProvider.GetType().GetProperty("RootProvider", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                //var serviceField = provider.GetType().GetField("_realizedServices", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                //var serviceValue = serviceField.GetValue(provider);
                 //var funcType = serviceField.FieldType.GetGenericArguments()[1].GetGenericArguments()[0];
                 //ConcurrentDictionary<Type, Func<ServiceProviderEngineScope, object?>> realizedServices = (ConcurrentDictionary<Type, Func<ServiceProviderEngineScope, object?>>)serviceValue;
-                
+
                 // TODO: 获取所有已经注册的服务
-                
+                var allService = serviceProvider.GetAllServiceDescriptors();
 
-                List<(string FullName, List<string> DefinedTypes)> keyValuePairs = new List<(string, List<string>)>();
-
+                Dictionary<string, List<string>> keyValuePairs = new Dictionary<string, List<string>>();
+                foreach (var item in allService)
+                {
+                  keyValuePairs.Add($"{item.Key.ToString()} - {item.GetHashCode()}", new List<string> {
+                      item.Value.ImplementationType?.ToString() ?? "",
+                      item.Value.Lifetime.ToString()
+                  });
+                }
 
                 responseModel.Code = 1;
                 responseModel.Message = "success";
