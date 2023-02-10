@@ -1,8 +1,15 @@
 
 
 
+# PluginCore.AspNetCore-v1.1.0
 
+## Updated
 
+- `api/PluginCore/Admin/Debug`    
+  - `PluginContexts`     
+  - `AssemblyLoadContexts`    
+  - `Assemblies`     
+  - `Services`   
 
 # PluginCore.AspNetCore-v1.0.4
 
