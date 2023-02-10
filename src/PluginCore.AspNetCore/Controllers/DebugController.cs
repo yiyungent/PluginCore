@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 //===================================================
 //  License: Apache-2.0
 //  Contributors: yiyungent@gmail.com
@@ -170,7 +171,15 @@ namespace PluginCore.AspNetCore.Controllers
                     {
                         Type = item.Key.ToString(),
                         ImplementationType = item.Value.ImplementationType?.ToString() ?? "",
-                        Lifetime = item.Value.Lifetime.ToString()
+                        Lifetime = item.Value.Lifetime.ToString(),
+                        TypeAssembly = new AssemblyModel
+                        {
+                            FullName = item.Key.Assembly.FullName,
+                        },
+                        ImplementationTypeAssembly = new AssemblyModel
+                        {
+                            FullName = item.Value.ImplementationType?.Assembly?.FullName ?? ""
+                        }
                     });
                 }
 
@@ -237,6 +246,16 @@ namespace PluginCore.AspNetCore.Controllers
             }
 
             public string Lifetime
+            {
+                get; set;
+            }
+
+            public AssemblyModel TypeAssembly
+            {
+                get; set;
+            }
+
+            public AssemblyModel ImplementationTypeAssembly
             {
                 get; set;
             }
