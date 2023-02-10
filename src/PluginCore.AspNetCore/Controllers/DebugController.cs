@@ -92,16 +92,14 @@ namespace PluginCore.AspNetCore.Controllers
                 responseDataModel.Default = new AssemblyLoadContextsResponseDataModel.AssemblyLoadContextModel
                 {
                     Name = assemblyLoadContextDefault.Name,
-                    Assemblies = assemblyLoadContextDefault.Assemblies.Select(m => (FullName: m.FullName, DefinedTypes: m.DefinedTypes.Select(m => m.FullName).ToList())).ToList()
+                    Type = assemblyLoadContextDefault.GetType().ToString(),
+                    Assemblies = assemblyLoadContextDefault.Assemblies.Select(m => new AssemblyModel { FullName = m.FullName, DefinedTypes = m.DefinedTypes.Select(m => m.FullName).ToList() }).ToList()
                 };
                 responseDataModel.All = assemblyLoadContextAll.Select(item => new AssemblyLoadContextsResponseDataModel.AssemblyLoadContextModel
                 {
                     Name = item.Name,
-                    Assemblies = item.Assemblies.Select(m => (
-                            FullName: m.FullName, 
-                            DefinedTypes: m.DefinedTypes.Select(m => m.FullName).ToList()
-                        )
-                    ).ToList()
+                    Type = item.GetType().ToString(),
+                    Assemblies = item.Assemblies.Select(m => new AssemblyModel { FullName = m.FullName, DefinedTypes = m.DefinedTypes.Select(m => m.FullName).ToList() }).ToList()
                 }).ToList();
 
                 responseModel.Code = 1;
@@ -125,15 +123,19 @@ namespace PluginCore.AspNetCore.Controllers
             try
             {
                 var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-                Dictionary<string, List<string>> keyValuePairs = new Dictionary<string, List<string>>();
+                List<AssemblyModel> assemblyModels = new List<AssemblyModel>();
                 foreach (var item in assemblies)
                 {
-                    keyValuePairs.Add($"{item.FullName} - {item.GetHashCode()}", item.DefinedTypes.Select(m => m.FullName).ToList());
+                    assemblyModels.Add(new AssemblyModel
+                    {
+                        FullName = item.FullName,
+                        DefinedTypes = item.DefinedTypes.Select(m => m.FullName).ToList()
+                    });
                 }
 
                 responseModel.Code = 1;
                 responseModel.Message = "success";
-                responseModel.Data = keyValuePairs;
+                responseModel.Data = assemblyModels;
             }
             catch (Exception ex)
             {
@@ -158,21 +160,23 @@ namespace PluginCore.AspNetCore.Controllers
                 //var funcType = serviceField.FieldType.GetGenericArguments()[1].GetGenericArguments()[0];
                 //ConcurrentDictionary<Type, Func<ServiceProviderEngineScope, object?>> realizedServices = (ConcurrentDictionary<Type, Func<ServiceProviderEngineScope, object?>>)serviceValue;
 
-                // TODO: 获取所有已经注册的服务
+                // 获取所有已经注册的服务
                 var allService = serviceProvider.GetAllServiceDescriptors();
 
-                Dictionary<string, List<string>> keyValuePairs = new Dictionary<string, List<string>>();
+                List<ServiceModel> serviceModels = new List<ServiceModel>();
                 foreach (var item in allService)
                 {
-                  keyValuePairs.Add($"{item.Key.ToString()} - {item.GetHashCode()}", new List<string> {
-                      item.Value.ImplementationType?.ToString() ?? "",
-                      item.Value.Lifetime.ToString()
-                  });
+                    serviceModels.Add(new ServiceModel
+                    {
+                        Type = item.Key.ToString(),
+                        ImplementationType = item.Value.ImplementationType?.ToString() ?? "",
+                        Lifetime = item.Value.Lifetime.ToString()
+                    });
                 }
 
                 responseModel.Code = 1;
                 responseModel.Message = "success";
-                responseModel.Data = keyValuePairs;
+                responseModel.Data = serviceModels;
             }
             catch (Exception ex)
             {
@@ -204,7 +208,11 @@ namespace PluginCore.AspNetCore.Controllers
                 {
                     get; set;
                 }
-                public List<(string FullName, List<string> DefinedTypes)> Assemblies
+                public string Type
+                {
+                    get; set;
+                }
+                public List<AssemblyModel> Assemblies
                 {
                     get; set;
                 }
@@ -214,6 +222,37 @@ namespace PluginCore.AspNetCore.Controllers
         public sealed class AssembliesResponseDataModel
         {
 
+        }
+
+        public sealed class ServiceModel
+        {
+            public string Type
+            {
+                get; set;
+            }
+
+            public string ImplementationType
+            {
+                get; set;
+            }
+
+            public string Lifetime
+            {
+                get; set;
+            }
+        }
+
+        public sealed class AssemblyModel
+        {
+            public string FullName
+            {
+                get; set;
+            }
+
+            public List<string> DefinedTypes
+            {
+                get; set;
+            }
         }
 
     }
