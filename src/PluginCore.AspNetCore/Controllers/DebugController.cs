@@ -64,7 +64,7 @@ namespace PluginCore.AspNetCore.Controllers
                 Dictionary<string, List<string>> keyValuePairs = new Dictionary<string, List<string>>();
                 foreach (var pluginContext in pluginContextList)
                 {
-                    keyValuePairs.Add($"{pluginContext.GetType().ToString()} - {pluginContext.GetHashCode()}", pluginContext.Assemblies.Select(m => m.FullName).ToList());
+                    keyValuePairs.Add($"{pluginContext.GetType().ToString()} - {pluginContext.PluginId} - {pluginContext.GetHashCode()}", pluginContext.Assemblies.Select(m => m.FullName).ToList());
                 }
 
                 responseModel.Code = 1;
