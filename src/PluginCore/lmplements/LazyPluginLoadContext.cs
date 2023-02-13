@@ -33,7 +33,7 @@ namespace PluginCore.lmplements
         /// 加了一个可回收
         /// </summary>
         /// <param name="pluginMainDllFilePath"></param>
-        public LazyPluginLoadContext(string pluginMainDllFilePath) /*: base(isCollectible: true)*/
+        public LazyPluginLoadContext(string pluginId, string pluginMainDllFilePath) : base(name: pluginId)
         {
             _resolver = new AssemblyDependencyResolver(pluginMainDllFilePath);
         }

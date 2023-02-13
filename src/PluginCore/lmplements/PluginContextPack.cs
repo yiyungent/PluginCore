@@ -26,7 +26,7 @@ namespace PluginCore.lmplements
             // 插件的主dll, 不包括插件项目引用的dll
             string pluginMainDllFilePath = Path.Combine(PluginPathProvider.PluginsRootPath(), pluginId, $"{pluginId}.dll");
             // 此插件的 加载上下文
-            var context = new PluginLoadContext(pluginMainDllFilePath);
+            var context = new PluginLoadContext(pluginId, pluginMainDllFilePath);
             Assembly pluginMainAssembly;
             // 微软文档推荐 LoadFromAssemblyName
             pluginMainAssembly = context.LoadFromAssemblyName(new AssemblyName(Path.GetFileNameWithoutExtension(pluginMainDllFilePath)));

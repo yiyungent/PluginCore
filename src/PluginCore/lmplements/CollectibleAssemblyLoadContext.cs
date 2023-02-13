@@ -22,8 +22,8 @@ namespace PluginCore.lmplements
     /// </summary>
     public class CollectibleAssemblyLoadContext : AssemblyLoadContext, IPluginContext, ICollectibleAssemblyLoadContext
     {
-        public CollectibleAssemblyLoadContext()
-             : base(isCollectible: true)
+        public CollectibleAssemblyLoadContext(string? name)
+             : base(isCollectible: true, name: name)
         {
         }
 

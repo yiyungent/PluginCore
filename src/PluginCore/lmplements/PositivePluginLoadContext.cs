@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 //===================================================
 //  License: Apache-2.0
 //  Contributors: yiyungent@gmail.com
@@ -29,11 +30,18 @@ namespace PluginCore.lmplements
     {
         private AssemblyDependencyResolver _resolver;
 
+         /// <summary>
+        /// 即 插件的 Entrypoint Assembly
+        /// </summary>
+        public AssemblyName MainAssemblyName{ get; protected set; }
+
+        public IEnumerable<AssemblyName> ReferencedAssemblyNames { get; protected set; }
+
         /// <summary>
         /// 加了一个可回收
         /// </summary>
         /// <param name="pluginMainDllFilePath"></param>
-        public PositivePluginLoadContext(string pluginMainDllFilePath) /*: base(isCollectible: true)*/
+        public PositivePluginLoadContext(string pluginId, string pluginMainDllFilePath) : base(name: pluginId)
         {
             _resolver = new AssemblyDependencyResolver(pluginMainDllFilePath);
 
@@ -43,7 +51,14 @@ namespace PluginCore.lmplements
                 // 使用此方法, 就不会导致dll被锁定
                 // 锁定dll 会导致: 1. 无法通过复制粘贴替换 更新 2. 无法删除
                 Assembly mainAssembly = LoadFromStream(mainFs);
+                this.MainAssemblyName = AssemblyName.GetAssemblyName(pluginMainDllFilePath);
+                // this.MainAssemblyName = mainAssembly.GetName();
                 AssemblyName[] referencedAssemblies = mainAssembly.GetReferencedAssemblies();
+                this.ReferencedAssemblyNames = referencedAssemblies.AsEnumerable();
+                
+                // TODO:
+                AssemblyFile assemblyFile = new AssemblyFile();
+                
                 foreach (var referencedAssembly in referencedAssemblies)
                 {
                     string assemblyPath = _resolver.ResolveAssemblyToPath(referencedAssembly);

@@ -48,7 +48,7 @@ namespace PluginCore.lmplements
 
 
             // 此插件的 加载上下文
-            var context = new CollectibleAssemblyLoadContext();
+            var context = new CollectibleAssemblyLoadContext(pluginId);
 
             // TODO:未测试 加载插件引用的dll: 方法二: 
             //AssemblyName[] referenceAssemblyNames = pluginMainAssembly.GetReferencedAssemblies();
