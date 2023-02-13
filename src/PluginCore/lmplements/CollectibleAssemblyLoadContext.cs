@@ -7,7 +7,7 @@
 
 
 
-﻿using PluginCore.Interfaces;
+using PluginCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -22,6 +22,14 @@ namespace PluginCore.lmplements
     /// </summary>
     public class CollectibleAssemblyLoadContext : AssemblyLoadContext, IPluginContext, ICollectibleAssemblyLoadContext
     {
+        public string PluginId
+        {
+            get
+            {
+                return this.Name ?? "";
+            }
+        }
+
         public CollectibleAssemblyLoadContext(string? name)
              : base(isCollectible: true, name: name)
         {

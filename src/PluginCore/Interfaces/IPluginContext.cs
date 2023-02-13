@@ -21,6 +21,8 @@ namespace PluginCore.Interfaces
     /// </summary>
     public interface IPluginContext
     {
+        string PluginId { get; }
+
         IEnumerable<Assembly> Assemblies { get; }
 
         Assembly LoadFromAssemblyName(AssemblyName assemblyName);
