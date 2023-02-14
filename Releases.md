@@ -1,6 +1,24 @@
 
 
 
+# PluginCore.AspNetCore-v1.2.0
+
+## Updated
+
+- `DebugController`: `PluginContexts:PluginId`
+- `<PackageReference Include="PluginCore" Version="2.1.0" />`
+
+# PluginCore-v2.1.0
+
+## Fixed
+
+- 修复解压时没有子目录导致解压失败的问题
+
+## Updated
+
+- `IPluginContext.PluginId`
+- `LazyPluginLoadContext`, `PositivePluginLoadContext`
+
 # PluginCore.AspNetCore-v1.1.0
 
 ## Updated
