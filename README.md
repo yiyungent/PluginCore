@@ -14,6 +14,7 @@ English | [中文](README_zh.md)
 [![QQ Group](https://img.shields.io/badge/QQ%20Group-894031109-deepgreen)](https://jq.qq.com/?_wv=1027&k=q5R82fYN)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-deepgreen)](https://t.me/xx_dev_group)
 <!-- ![hits](https://api-onetree.moeci.com/hits.svg?id=PluginCore) -->
+[![CLA assistant](https://cla-assistant.io/readme/badge/yiyungent/PluginCore)](https://cla-assistant.io/yiyungent/PluginCore)
 
 
 ## Introduce
