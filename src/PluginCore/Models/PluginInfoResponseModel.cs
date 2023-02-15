@@ -24,7 +24,6 @@ namespace PluginCore.Models
     public enum PluginStatus
     {
         Enabled = 0,
-        Disabled = 1,
-        Uninstalled = 2
+        Disabled = 1
     }
 }

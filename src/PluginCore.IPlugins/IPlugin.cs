@@ -40,5 +40,16 @@ namespace PluginCore.IPlugins
         /// <returns></returns>
         (bool IsSuccess, string Message) Update(string currentVersion, string targetVersion);
 
+        /// <summary>
+        /// 主应用程序启动时
+        /// </summary>
+        void AppStart();
+
+        /// <summary>
+        /// 启动顺序: 此插件 所依赖的前置插件
+        /// </summary>
+        /// <value></value>
+        List<string> AppStartOrderDependPlugins { get; }
+
     }
 }

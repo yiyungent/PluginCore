@@ -25,6 +25,21 @@ namespace PluginCore.Interfaces
         /// <returns></returns>
         IEnumerable<TPlugin> EnablePlugins<TPlugin>()
            where TPlugin : IPlugin; // BasePlugin
+
+        /// <summary>
+        /// 实现了指定接口或类型 的启用插件
+        /// </summary>
+        /// <typeparam name="TPlugin">可以是一个接口，一个抽象类，一个普通实现类, 只要实现了 <see cref="IPlugin"/>即可</typeparam>
+        /// <returns></returns>
+        IEnumerable<(TPlugin PluginInstance, string PluginId)> EnablePluginsFull<TPlugin>()
+            where TPlugin : IPlugin; // BasePlugin
+
+        /// <summary>
+        /// 所有启用的插件 的 PluginId 
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<string> EnablePluginIds<TPlugin>()
+            where TPlugin : IPlugin; // BasePlugin
         #endregion
 
         #region 所有启用的插件
@@ -34,6 +49,18 @@ namespace PluginCore.Interfaces
         /// </summary>
         /// <returns></returns>
         IEnumerable<IPlugin> EnablePlugins();
+
+        /// <summary>
+        /// 所有启用的插件
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<(IPlugin PluginInstance, string PluginId)> EnablePluginsFull();
+
+         /// <summary>
+        /// 所有启用的插件 的 PluginId 
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<string> EnablePluginIds();
         #endregion
 
         #region 获取指定 pluginId 的启用插件

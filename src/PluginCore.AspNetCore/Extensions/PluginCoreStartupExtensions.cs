@@ -230,11 +230,32 @@ namespace PluginCore.AspNetCore.Extensions
             //IPluginFinder pluginFinder = _services.BuildServiceProvider().GetService<IPluginFinder>();
             IPluginFinder pluginFinder = _serviceProvider.GetService<IPluginFinder>();
 
+            #region AppStart
+
+            var plugins = pluginFinder.EnablePluginsFull()?.ToList();
+            var dependencySorter = new PluginCore.Utils.DependencySorter<IPlugin>();
+            dependencySorter.AddObjects(plugins.Select(m => m.PluginInstance).ToArray());
+            foreach (var item in plugins)
+            {
+                var dependPlugins = plugins.Where(m => item.PluginInstance.AppStartOrderDependPlugins.Contains(m.PluginId)).Select(m => m.PluginInstance).ToArray();
+                dependencySorter.SetDependencies(obj: item.PluginInstance, dependsOnObjects: dependPlugins);
+            }
+            var sortedPlugins = dependencySorter.Sort();
+            foreach (var item in sortedPlugins)
+            {
+                // 调用
+                Utils.LogUtil.PluginBehavior(item, typeof(IPlugin), nameof(IPlugin.AppStart));
+
+                item?.AppStart();
+            }
+
+            #endregion
+
             #region IStartupPlugin
 
-            var plugins = pluginFinder.EnablePlugins<IStartupPlugin>()?.OrderBy(m => m.ConfigureOrder)?.ToList();
+            var startupPlugins = pluginFinder.EnablePlugins<IStartupPlugin>()?.OrderBy(m => m.ConfigureOrder)?.ToList();
 
-            foreach (var item in plugins)
+            foreach (var item in startupPlugins)
             {
                 // 调用
                 Utils.LogUtil.PluginBehavior(item, typeof(IStartupPlugin), nameof(IStartupPlugin.Configure));

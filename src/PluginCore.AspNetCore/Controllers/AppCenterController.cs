@@ -73,7 +73,8 @@ namespace PluginCore.AspNetCore.Controllers
 
                 // 3. 根据本地已有 PluginId 插件情况 状态赋值
                 PluginConfigModel pluginConfigModel = PluginConfigModelFactory.Create();
-                IList<string> localPluginIds = pluginConfigModel.EnabledPlugins.Concat(pluginConfigModel.DisabledPlugins).Concat(pluginConfigModel.UninstalledPlugins).ToList();
+                // IList<string> localPluginIds = pluginConfigModel.EnabledPlugins.Concat(pluginConfigModel.DisabledPlugins).Concat(pluginConfigModel.UninstalledPlugins).ToList();
+                IList<string> localPluginIds = PluginPathProvider.AllPluginFolderName();
 
 
 

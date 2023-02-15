@@ -91,7 +91,7 @@ namespace PluginCore.lmplements
         /// </summary>
         /// <typeparam name="TPlugin">可以是一个接口，一个抽象类，一个普通实现类, 只要实现了 <see cref="IPlugin"/>即可</typeparam>
         /// <returns></returns>
-        public IEnumerable<TPlugin> EnablePlugins<TPlugin>()
+        public IEnumerable<(TPlugin PluginInstance, string PluginId)> EnablePluginsFull<TPlugin>()
             where TPlugin : IPlugin // BasePlugin
         {
             // TODO: 目前这里还有问题, 不应该写为 BasePlugin, 不利于扩展, 不利于插件开发者自己实现 Install , Uninstall等
@@ -136,10 +136,21 @@ namespace PluginCore.lmplements
                         continue;
                     }
 
-                    yield return typedInstance;
+                    yield return (PluginInstance: typedInstance, PluginId: pluginId);
                 }
             }
 
+        }
+
+        /// <summary>
+        /// 实现了指定接口或类型 的启用插件
+        /// </summary>
+        /// <typeparam name="TPlugin">可以是一个接口，一个抽象类，一个普通实现类, 只要实现了 <see cref="IPlugin"/>即可</typeparam>
+        /// <returns></returns>
+        public IEnumerable<TPlugin> EnablePlugins<TPlugin>()
+            where TPlugin : IPlugin // BasePlugin
+        {
+            return EnablePluginsFull<TPlugin>().Select(m => m.PluginInstance);
         }
         #endregion
 
@@ -150,7 +161,44 @@ namespace PluginCore.lmplements
         /// <returns></returns>
         public IEnumerable<IPlugin> EnablePlugins()
         {
-            return EnablePlugins<IPlugin>();
+            return EnablePluginsFull<IPlugin>().Select(m => m.PluginInstance);
+        }
+
+        /// <summary>
+        /// 所有启用的插件
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<(IPlugin PluginInstance, string PluginId)> EnablePluginsFull()
+        {
+            return EnablePluginsFull<IPlugin>();
+        }
+
+        /// <summary>
+        /// 所有启用的插件 的 PluginId 
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<string> EnablePluginIds<TPlugin>()
+            where TPlugin : IPlugin // BasePlugin
+        {
+            // 1.所有启用的插件 PluginId
+            var pluginConfigModel = PluginConfigModelFactory.Create();
+            IList<string> enablePluginIds = pluginConfigModel.EnabledPlugins;
+            foreach (var pluginId in enablePluginIds)
+            {
+                if (this.PluginContextManager.Any(pluginId))
+                {
+                    yield return pluginId;
+                }
+            }
+        }
+
+         /// <summary>
+        /// 所有启用的插件 的 PluginId 
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<string> EnablePluginIds()
+        {
+            return EnablePluginIds<IPlugin>();
         }
         #endregion
 

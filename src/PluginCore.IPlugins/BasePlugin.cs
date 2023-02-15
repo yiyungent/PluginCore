@@ -48,5 +48,18 @@ namespace PluginCore.IPlugins
         {
             return (true, "更新成功");
         }
+
+        public virtual void AppStart() 
+        {
+            
+        }
+
+        public virtual List<string> AppStartOrderDependPlugins
+        {
+            get
+            {
+                return new List<string>();
+            }
+        }
     }
 }
