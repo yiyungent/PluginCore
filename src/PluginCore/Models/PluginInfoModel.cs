@@ -37,10 +37,17 @@ namespace PluginCore.Models
 
         public IList<string> SupportedVersions { get; set; }
 
+        /// <summary>
+        /// 前置依赖插件
+        /// </summary>
+        /// <value></value>
+        public IList<string> DependPlugins { get; set; }
+
         #region Ctor
         public PluginInfoModel()
         {
             this.SupportedVersions = new List<string>();
+            this.DependPlugins = new List<string>();
         }
         #endregion
     }
