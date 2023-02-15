@@ -1,6 +1,48 @@
 
 
 
+# PluginCore.AspNetCore-v1.3.1
+
+## Updated
+
+- `PluginCore.IPlugins.AspNetCore-v0.1.0`
+
+
+# PluginCore.IPlugins.AspNetCore-v0.1.0
+
+## Updated
+
+- `PluginCore.IPlugins-v0.9.0`
+
+
+# PluginCore.AspNetCore-v1.3.0
+
+## Updated
+
+- `PluginCore-v2.2.0`
+- 简化 插件状态
+  - 移除 `未安装`  状态
+  - 上传后 默认为 `未启用`
+  - `Plugins` 文件夹中仅有两种状态的插件: `已启用`, `未启用`
+
+
+# PluginCore-v2.2.0
+
+## Updated
+
+- `PluginCore.IPlugins-v0.9.0`
+- `IPluginFinder` 新 API
+
+
+# PluginCore.IPlugins-v0.9.0
+
+## Updated
+
+- `IPlugins.AppStart()`
+- `IPlugins.AppStartOrderDependPlugins`
+
+
+
 # PluginCore.AspNetCore-v1.2.0
 
 ## Updated
