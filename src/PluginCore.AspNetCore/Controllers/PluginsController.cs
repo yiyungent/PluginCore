@@ -637,6 +637,7 @@ namespace PluginCore.AspNetCore.Controllers
                 responseModel.PluginId = model.PluginId;
                 responseModel.SupportedVersions = model.SupportedVersions;
                 responseModel.Version = model.Version;
+                responseModel.DependPlugins = model.DependPlugins;
 
                 if (pluginConfigModel.EnabledPlugins.Contains(model.PluginId) && !enablePluginIds.Contains(model.PluginId)) {
                     // 错误情况: 配置 标识 已启用, 但实际没有启用成功

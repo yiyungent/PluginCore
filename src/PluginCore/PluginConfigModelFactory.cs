@@ -75,7 +75,7 @@ namespace PluginCore
             {
                 var sortedPlugins = dependencySorter.Sort(); 
                 if (sortedPlugins != null && sortedPlugins.Length >= 1) {
-                    pluginConfigModel.EnabledPlugins = sortedPlugins;
+                    pluginConfigModel.EnabledPlugins = sortedPlugins.ToList();
                 }
             }
             catch (System.Exception ex)

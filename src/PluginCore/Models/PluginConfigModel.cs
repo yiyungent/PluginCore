@@ -26,7 +26,7 @@ namespace PluginCore.Models
         /// 启用的插件列表: PluginID
         /// <para>属于 插件 已安装</para>
         /// </summary>
-        public IList<string> EnabledPlugins { get; set; }
+        public List<string> EnabledPlugins { get; set; }
 
         #region ctor
         public PluginConfigModel()
