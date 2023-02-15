@@ -3,10 +3,10 @@
 	<PropertyGroup>
 		<TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
 		<PackageId>PluginCore.AspNetCore</PackageId>
-		<Version>1.2.0</Version>
+		<Version>1.3.0</Version>
 		<Company>yiyun</Company>
 		<Authors>yiyun</Authors>
-		<Description>PluginCore.AspNetCore</Description>
+		<Description>ASP.NET Core lightweight plugin framework</Description>
 		<Copyright>Copyright (c) 2021-present yiyun</Copyright>
 		<RepositoryUrl>https://github.com/yiyungent/PluginCore</RepositoryUrl>
 		<PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
@@ -20,7 +20,7 @@
 
 	<!-- 方便开发debug,与发布到nuget -->
 	<ItemGroup Condition="'$(Configuration)' == 'Release'">
-		<PackageReference Include="PluginCore" Version="2.1.0" />
+		<PackageReference Include="PluginCore" Version="2.2.0" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
 		<ProjectReference Include="..\PluginCore\PluginCore.csproj" />
