@@ -56,8 +56,8 @@ namespace PluginCore.Utils
         public void AddObjects(params T[] objects)
         {
             // --- Begin parameters checking code -----------------------------
-            Debug.Assert(objects != null);
-            Debug.Assert(objects.Length > 0);
+            // Debug.Assert(objects != null);
+            // Debug.Assert(objects.Length > 0);
             // --- End parameters checking code -------------------------------
 
             // add to matrix
@@ -76,7 +76,7 @@ namespace PluginCore.Utils
         public void SetDependencies(T obj, params T[] dependsOnObjects)
         {
             // --- Begin parameters checking code -----------------------------
-            Debug.Assert(dependsOnObjects != null);
+            // Debug.Assert(dependsOnObjects != null);
             // --- End parameters checking code -------------------------------
 
             // set dependencies
