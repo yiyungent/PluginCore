@@ -18,6 +18,8 @@ These 2 stages can run independently with the `docfx metadata` command and the `
 
 
 ```bash
+dotnet tool update -g docfx
+
 dotnet build src/PluginCore.IPlugins/PluginCore.IPlugins.csproj --configuration Release
 dotnet build src/PluginCore/PluginCore.csproj --configuration Release
 dotnet build src/PluginCore.IPlugins.AspNetCore/PluginCore.IPlugins.AspNetCore.csproj --configuration Release
