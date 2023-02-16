@@ -61,7 +61,8 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default",
+      "templates/docfx-tmpl/src"
     ],
     "postProcessors": [],
     "noLangKeyword": false,

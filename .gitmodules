@@ -1,0 +1,3 @@
+[submodule "docfx_project/templates/docfx-tmpl"]
+	path = docfx_project/templates/docfx-tmpl
+	url = git@github.com:MathewSachin/docfx-tmpl.git
