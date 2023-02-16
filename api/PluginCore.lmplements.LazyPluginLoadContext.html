@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class LazyPluginLoadContext
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class LazyPluginLoadContext
+ ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PluginCore.lmplements.LazyPluginLoadContext">
+  <h1 id="PluginCore_lmplements_LazyPluginLoadContext" data-uid="PluginCore.lmplements.LazyPluginLoadContext">Class LazyPluginLoadContext
+</h1>
+  <div class="markdown level0 summary"><p>修改自下方
+<a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support">https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support</a>
+此方法依赖于 插件项目生成的 HelloWorldPlugin.deps.json 与 runtimes 文件夹,
+虽然官方文档没写, 但最好还带上 HelloWorldPlugin.runtimeconfig.json
+插件项目 .csproj 其它注意, 看文档</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">object</span></div>
+    <div class="level1"><span class="xref">System.Runtime.Loader.AssemblyLoadContext</span></div>
+    <div class="level2"><a class="xref" href="PluginCore.lmplements.CollectibleAssemblyLoadContext.html">CollectibleAssemblyLoadContext</a></div>
+    <div class="level3"><span class="xref">LazyPluginLoadContext</span></div>
+  </div>
+
+      <div class="level4"><a class="xref" href="PluginCore.lmplements.PluginLoadContext.html">PluginLoadContext</a></div>
+
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_PluginId">CollectibleAssemblyLoadContext.PluginId</a>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.SetProfileOptimizationRoot(string)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.StartProfileOptimization(string)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.GetAssemblyName(string)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName(System.Reflection.AssemblyName)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(string)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath(string, string)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.LoadFromStream(System.IO.Stream)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.LoadFromStream(System.IO.Stream, System.IO.Stream)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(string)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.Unload()</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.EnterContextualReflection()</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.EnterContextualReflection(System.Reflection.Assembly)</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.Assemblies</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.Default</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.IsCollectible</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.Name</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.All</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.ResolvingUnmanagedDll</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.Resolving</span>
+    </div>
+    <div>
+      <span class="xref">System.Runtime.Loader.AssemblyLoadContext.Unloading</span>
+    </div>
+    <div>
+      <span class="xref">object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">object.Equals(object)</span>
+    </div>
+    <div>
+      <span class="xref">object.Equals(object, object)</span>
+    </div>
+    <div>
+      <span class="xref">object.ReferenceEquals(object, object)</span>
+    </div>
+    <div>
+      <span class="xref">object.GetHashCode()</span>
+    </div>
+  </div>
+
+  <h6><strong>Namespace</strong>: <a class="xref" href="PluginCore.html">PluginCore</a>.<a class="xref" href="PluginCore.lmplements.html">lmplements</a></h6>
+  <h6><strong>Assembly</strong>: PluginCore.dll</h6>
+
+  <h5 id="PluginCore_lmplements_LazyPluginLoadContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LazyPluginLoadContext : CollectibleAssemblyLoadContext, ICollectibleAssemblyLoadContext, IPluginContext</code></pre>
+  </div>
+
+
+
+
+
+  <h3 id="constructors">Constructors
+</h3>
+
+
+  <a id="PluginCore_lmplements_LazyPluginLoadContext__ctor_" data-uid="PluginCore.lmplements.LazyPluginLoadContext.#ctor*"></a>
+
+  <h4 id="PluginCore_lmplements_LazyPluginLoadContext__ctor_System_String_System_String_" data-uid="PluginCore.lmplements.LazyPluginLoadContext.#ctor(System.String,System.String)"><a href="#collapsible-PluginCore_lmplements_LazyPluginLoadContext__ctor_System_String_System_String_" class="expander" data-toggle="collapse">LazyPluginLoadContext(string, string)</a></h4>
+
+  <div id="collapsible-PluginCore_lmplements_LazyPluginLoadContext__ctor_System_String_System_String_" class="collapse in">
+  <div class="markdown level1 summary"><p>加了一个可回收</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LazyPluginLoadContext(string pluginId, string pluginMainDllFilePath)</code></pre>
+  </div>
+
+  <h5 class="parameters">Parameters</h5>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">string</span></span>
+        <span class="parametername">pluginId</span>
+        <p></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">string</span></span>
+        <span class="parametername">pluginMainDllFilePath</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="PluginCore.Interfaces.ICollectibleAssemblyLoadContext.html">ICollectibleAssemblyLoadContext</a></div>
+      <div><a class="xref" href="PluginCore.Interfaces.IPluginContext.html">IPluginContext</a></div>
+
+
+
+
+  </div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PluginCore_lmplements_LazyPluginLoadContext_Load_" data-uid="PluginCore.lmplements.LazyPluginLoadContext.Load*"></a>
+
+  <h4 id="PluginCore_lmplements_LazyPluginLoadContext_Load_System_Reflection_AssemblyName_" data-uid="PluginCore.lmplements.LazyPluginLoadContext.Load(System.Reflection.AssemblyName)"><a href="#collapsible-PluginCore_lmplements_LazyPluginLoadContext_Load_System_Reflection_AssemblyName_" class="expander" data-toggle="collapse">Load(AssemblyName)</a></h4>
+
+  <div id="collapsible-PluginCore_lmplements_LazyPluginLoadContext_Load_System_Reflection_AssemblyName_" class="collapse in">
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Assembly Load(AssemblyName assemblyName)</code></pre>
+  </div>
+
+  <h5 class="parameters">Parameters</h5>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">System.Reflection.AssemblyName</span></span>
+        <span class="parametername">assemblyName</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+  <h5 class="returns">Returns</h5>
+  <table>
+    <tr>
+      <td>
+      <span class="xref">System.Reflection.Assembly</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_Load_System_Reflection_AssemblyName_">CollectibleAssemblyLoadContext.Load(AssemblyName)</a></div>
+
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="PluginCore.Interfaces.ICollectibleAssemblyLoadContext.html">ICollectibleAssemblyLoadContext</a></div>
+      <div><a class="xref" href="PluginCore.Interfaces.IPluginContext.html">IPluginContext</a></div>
+
+
+
+
+  </div>
+
+
+  <a id="PluginCore_lmplements_LazyPluginLoadContext_LoadUnmanagedDll_" data-uid="PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll*"></a>
+
+  <h4 id="PluginCore_lmplements_LazyPluginLoadContext_LoadUnmanagedDll_System_String_" data-uid="PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll(System.String)"><a href="#collapsible-PluginCore_lmplements_LazyPluginLoadContext_LoadUnmanagedDll_System_String_" class="expander" data-toggle="collapse">LoadUnmanagedDll(string)</a></h4>
+
+  <div id="collapsible-PluginCore_lmplements_LazyPluginLoadContext_LoadUnmanagedDll_System_String_" class="collapse in">
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IntPtr LoadUnmanagedDll(string unmanagedDllName)</code></pre>
+  </div>
+
+  <h5 class="parameters">Parameters</h5>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">string</span></span>
+        <span class="parametername">unmanagedDllName</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+  <h5 class="returns">Returns</h5>
+  <table>
+    <tr>
+      <td>
+      <span class="xref">System.IntPtr</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll(string)</span></div>
+
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="PluginCore.Interfaces.ICollectibleAssemblyLoadContext.html">ICollectibleAssemblyLoadContext</a></div>
+      <div><a class="xref" href="PluginCore.Interfaces.IPluginContext.html">IPluginContext</a></div>
+
+
+
+
+  </div>
+
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PluginCore.AspNetCore.Extensions.ReflectionHelper.html#PluginCore_AspNetCore_Extensions_ReflectionHelper_GetFieldValue_System_Object_System_String_">ReflectionHelper.GetFieldValue(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PluginCore.AspNetCore.Extensions.ReflectionHelper.html#PluginCore_AspNetCore_Extensions_ReflectionHelper_GetPropertyValue_System_Object_System_String_">ReflectionHelper.GetPropertyValue(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PluginCore.AspNetCore.Extensions.ReflectionHelper.html#PluginCore_AspNetCore_Extensions_ReflectionHelper_SetFieldValue_System_Object_System_String_System_Object_">ReflectionHelper.SetFieldValue(object, string, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="PluginCore.AspNetCore.Extensions.ReflectionHelper.html#PluginCore_AspNetCore_Extensions_ReflectionHelper_SetPropertyValue_System_Object_System_String_System_Object_">ReflectionHelper.SetPropertyValue(object, string, object)</a>
+  </div>
+
+</article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
