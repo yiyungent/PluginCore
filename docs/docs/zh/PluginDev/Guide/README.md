@@ -3,6 +3,8 @@
  * @Description: 
 -->
 
+- [API 文档](https://moeci.com/PluginCore/docs-api/api/index.html) 自动更新
+
 > 插件开发 - 快速上手
 
 > - 2022年4月25日 更新   

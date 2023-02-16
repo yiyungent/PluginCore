@@ -4,7 +4,7 @@ heroImage: /images/logo.png
 heroText: PluginCore
 tagline: ASP.NET Core 轻量级 插件框架
 actionText: 快速上手 →
-actionLink: /Guide/
+actionLink: /zh/Guide/
 # actionLink: /
 features:
 - title: 简洁友好

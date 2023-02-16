@@ -131,6 +131,7 @@ module.exports = {
               // { text: "vue-sim-captcha", link: "/WebSDK/vue-sim-captcha/" },
             ],
           },
+          { text: "API Docs", link: "https://moeci.com/PluginCore/docs-api/api/index.html" },
         ],
 
         sidebarDepth: 2,
@@ -189,6 +190,7 @@ module.exports = {
               // { text: "vue-sim-captcha", link: "/WebSDK/vue-sim-captcha/" },
             ],
           },
+          { text: "API 文档", link: "https://moeci.com/PluginCore/docs-api/api/index.html" },
         ],
 
         sidebarDepth: 2,
