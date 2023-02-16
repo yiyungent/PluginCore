@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace PluginCore.lmplements
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace PluginCore.lmplements
+ ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PluginCore.lmplements">
+  <h1 id="PluginCore_lmplements" data-uid="PluginCore.lmplements">Namespace PluginCore.lmplements
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+</h3>
+    <table>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.CollectibleAssemblyLoadContext.html">CollectibleAssemblyLoadContext</a></p>
+          <p><p>一个可回收的程序集加载上下文
+在整个插件加载上下文的设计上，每个插件都使用一个单独的CollectibleAssemblyLoadContext来加载，所有插件的CollectibleAssemblyLoadContext都放在一个PluginsLoadContext对象中</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.LazyPluginLoadContext.html">LazyPluginLoadContext</a></p>
+          <p><p>修改自下方
+<a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support">https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support</a>
+此方法依赖于 插件项目生成的 HelloWorldPlugin.deps.json 与 runtimes 文件夹,
+虽然官方文档没写, 但最好还带上 HelloWorldPlugin.runtimeconfig.json
+插件项目 .csproj 其它注意, 看文档</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.PluginContextManager.html">PluginContextManager</a></p>
+          <p><p>启用插件时加载进来, 禁用插件时移除释放</p>
+<p>只有已启用的插件才有上下文</p>
+https://www.cnblogs.com/lwqlun/p/11395828.html
+1.当加载插件的时候，我们需要将当前插件的程序集加载上下文放到_pluginContexts字典中。字典的key是插件的名称，字典的value是插件的程序集加载上下文。
+2.当移除一个插件的时候，我们需要使用Unload方法，来释放当前的程序集加载上下文。
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.PluginContextPack.html">PluginContextPack</a></p>
+          <p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.PluginContextPackV1.html">PluginContextPackV1</a></p>
+          <p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.PluginContextStore.html">PluginContextStore</a></p>
+          <p><p>fixed: 由于 <a class="xref" href="PluginCore.Interfaces.IPluginContextManager.html">IPluginContextManager</a> 单例失败, 因此临时解决方案</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.PluginFinder.html">PluginFinder</a></p>
+          <p><p>插件发现者: 找启用的插件(1.plugin.config.json中启用 2. 有插件上下文)
+TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的插件才有上下文, 为了保险，暂时这么做
+注意: 这意味着一个启用的插件需同时满足这两个条件</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.PluginLoadContext.html">PluginLoadContext</a></p>
+          <p><p>LazyPluginLoadContext</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.PluginManager.html">PluginManager</a></p>
+          <p><p>一个插件的所有dll由 一个 <a class="xref" href="PluginCore.Interfaces.IPluginContext.html">IPluginContext</a> 管理
+<a class="xref" href="PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager">PluginContextManager</a> 记录管理了所有 插件的<a class="xref" href="PluginCore.Interfaces.IPluginContext.html">IPluginContext</a>
+<a class="xref" href="PluginCore.lmplements.PluginManager.html">PluginManager</a> 是对 <a class="xref" href="PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager">PluginContextManager</a>的封装, 使其更好管理插件加载释放的行为</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="PluginCore.lmplements.PositivePluginLoadContext.html">PositivePluginLoadContext</a></p>
+          <p><p>修改自下方
+<a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support">https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support</a>
+此方法依赖于 插件项目生成的 HelloWorldPlugin.deps.json 与 runtimes 文件夹,
+虽然官方文档没写, 但最好还带上 HelloWorldPlugin.runtimeconfig.json
+插件项目 .csproj 其它注意, 看文档</p>
+
+        </td>
+      </tr>
+    </table>
+</article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

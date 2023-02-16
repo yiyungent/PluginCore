@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IPluginContext
+ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IPluginContext
+ ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PluginCore.Interfaces.IPluginContext">
+  <h1 id="PluginCore_Interfaces_IPluginContext" data-uid="PluginCore.Interfaces.IPluginContext">Interface IPluginContext
+</h1>
+  <div class="markdown level0 summary"><p>每个插件的所有 Assembly 打包到此中</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+
+
+
+
+  <h6><strong>Namespace</strong>: <a class="xref" href="PluginCore.html">PluginCore</a>.<a class="xref" href="PluginCore.Interfaces.html">Interfaces</a></h6>
+  <h6><strong>Assembly</strong>: PluginCore.dll</h6>
+
+  <h5 id="PluginCore_Interfaces_IPluginContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPluginContext</code></pre>
+  </div>
+
+
+
+
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PluginCore_Interfaces_IPluginContext_Assemblies_" data-uid="PluginCore.Interfaces.IPluginContext.Assemblies*"></a>
+
+  <h4 id="PluginCore_Interfaces_IPluginContext_Assemblies" data-uid="PluginCore.Interfaces.IPluginContext.Assemblies"><a href="#collapsible-PluginCore_Interfaces_IPluginContext_Assemblies" class="expander" data-toggle="collapse">Assemblies</a></h4>
+
+  <div id="collapsible-PluginCore_Interfaces_IPluginContext_Assemblies" class="collapse in">
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Assembly&gt; Assemblies { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h5 class="propertyValue">Property Value</h5>
+  <table>
+    <tr>
+      <td>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">System.Reflection.Assembly</span>&gt;
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+  </div>
+
+
+  <a id="PluginCore_Interfaces_IPluginContext_PluginId_" data-uid="PluginCore.Interfaces.IPluginContext.PluginId*"></a>
+
+  <h4 id="PluginCore_Interfaces_IPluginContext_PluginId" data-uid="PluginCore.Interfaces.IPluginContext.PluginId"><a href="#collapsible-PluginCore_Interfaces_IPluginContext_PluginId" class="expander" data-toggle="collapse">PluginId</a></h4>
+
+  <div id="collapsible-PluginCore_Interfaces_IPluginContext_PluginId" class="collapse in">
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string PluginId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h5 class="propertyValue">Property Value</h5>
+  <table>
+    <tr>
+      <td>
+      <span class="xref">string</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+  </div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PluginCore_Interfaces_IPluginContext_LoadFromAssemblyName_" data-uid="PluginCore.Interfaces.IPluginContext.LoadFromAssemblyName*"></a>
+
+  <h4 id="PluginCore_Interfaces_IPluginContext_LoadFromAssemblyName_System_Reflection_AssemblyName_" data-uid="PluginCore.Interfaces.IPluginContext.LoadFromAssemblyName(System.Reflection.AssemblyName)"><a href="#collapsible-PluginCore_Interfaces_IPluginContext_LoadFromAssemblyName_System_Reflection_AssemblyName_" class="expander" data-toggle="collapse">LoadFromAssemblyName(AssemblyName)</a></h4>
+
+  <div id="collapsible-PluginCore_Interfaces_IPluginContext_LoadFromAssemblyName_System_Reflection_AssemblyName_" class="collapse in">
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Assembly LoadFromAssemblyName(AssemblyName assemblyName)</code></pre>
+  </div>
+
+  <h5 class="parameters">Parameters</h5>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">System.Reflection.AssemblyName</span></span>
+        <span class="parametername">assemblyName</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+  <h5 class="returns">Returns</h5>
+  <table>
+    <tr>
+      <td>
+      <span class="xref">System.Reflection.Assembly</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <a id="PluginCore_Interfaces_IPluginContext_LoadFromStream_" data-uid="PluginCore.Interfaces.IPluginContext.LoadFromStream*"></a>
+
+  <h4 id="PluginCore_Interfaces_IPluginContext_LoadFromStream_System_IO_Stream_" data-uid="PluginCore.Interfaces.IPluginContext.LoadFromStream(System.IO.Stream)"><a href="#collapsible-PluginCore_Interfaces_IPluginContext_LoadFromStream_System_IO_Stream_" class="expander" data-toggle="collapse">LoadFromStream(Stream)</a></h4>
+
+  <div id="collapsible-PluginCore_Interfaces_IPluginContext_LoadFromStream_System_IO_Stream_" class="collapse in">
+  <div class="markdown level1 summary"><p>暂时用不到</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Assembly LoadFromStream(Stream assembly)</code></pre>
+  </div>
+
+  <h5 class="parameters">Parameters</h5>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><span class="xref">System.IO.Stream</span></span>
+        <span class="parametername">assembly</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+  <h5 class="returns">Returns</h5>
+  <table>
+    <tr>
+      <td>
+      <span class="xref">System.Reflection.Assembly</span>
+        <p></p>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <a id="PluginCore_Interfaces_IPluginContext_Unload_" data-uid="PluginCore.Interfaces.IPluginContext.Unload*"></a>
+
+  <h4 id="PluginCore_Interfaces_IPluginContext_Unload" data-uid="PluginCore.Interfaces.IPluginContext.Unload"><a href="#collapsible-PluginCore_Interfaces_IPluginContext_Unload" class="expander" data-toggle="collapse">Unload()</a></h4>
+
+  <div id="collapsible-PluginCore_Interfaces_IPluginContext_Unload" class="collapse in">
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Unload()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PluginCore.AspNetCore.Extensions.ReflectionHelper.html#PluginCore_AspNetCore_Extensions_ReflectionHelper_GetFieldValue_System_Object_System_String_">ReflectionHelper.GetFieldValue(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PluginCore.AspNetCore.Extensions.ReflectionHelper.html#PluginCore_AspNetCore_Extensions_ReflectionHelper_GetPropertyValue_System_Object_System_String_">ReflectionHelper.GetPropertyValue(object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="PluginCore.AspNetCore.Extensions.ReflectionHelper.html#PluginCore_AspNetCore_Extensions_ReflectionHelper_SetFieldValue_System_Object_System_String_System_Object_">ReflectionHelper.SetFieldValue(object, string, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="PluginCore.AspNetCore.Extensions.ReflectionHelper.html#PluginCore_AspNetCore_Extensions_ReflectionHelper_SetPropertyValue_System_Object_System_String_System_Object_">ReflectionHelper.SetPropertyValue(object, string, object)</a>
+  </div>
+
+</article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

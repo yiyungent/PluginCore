@@ -1,0 +1,1223 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/PluginCore/PluginCore/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.html",
+          "hash": "PEvOb0KCub7JhDVOPc6nj9iKz1/UR4MaN68bZLzNFlg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIMiddleware.html",
+          "hash": "MlCduZ3UXKid52hmHW/uCtWUjA0x3V3IcseAXJiiOmk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions.html",
+          "hash": "JVY9c2qPIL97r4yX3PP8I3OkFiRa5nwi1RWdlnNrJ24="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider.PluginCoreAdminUIFileInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider.PluginCoreAdminUIFileInfo.html",
+          "hash": "I0a1BlxFjZGpCkDNo6DanWUEx2SyvCXykiFa1XeMyO0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider.html",
+          "hash": "aBdXpBMeMK/JHcdS5xJXluDp3Cb/XuKebJjGDGAio/E="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.AdminUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.AdminUI.html",
+          "hash": "L7m2gsoY+/4Cpp3nafST8TZQYsSmYHNMFhSVLXxOAKo="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationHandler.html",
+          "hash": "FOXY2cI8bCADO0iPn28LANaCv+DEZ+eNQmAjKqPP+MA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationSchemeOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationSchemeOptions.html",
+          "hash": "rtGgu4D560Y/zTUNaN3ePZvcSNr+gMzdm5Hshsl9nY4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Authentication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Authentication.html",
+          "hash": "2494ci2FLICxpcgikeGOQT97gAHbdTUmHFh6AxSf5RA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Authorization.AccountManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Authorization.AccountManager.html",
+          "hash": "q9RsGsw9pvdyAsXpiQ/ga93EBrbLoBk2Bb3yVTA+V5Y="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizationHandler.html",
+          "hash": "i5WhLg/axXuNLN8BUNbHmSmaWPMpM77HAC9pXdtwwRw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizeAttribute.html",
+          "hash": "xMTvHcc1kw9yrJrvZjGckWw3cESQx2kUnTStj+NAabg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminRequirement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminRequirement.html",
+          "hash": "T8j7Q2PDlfJ04YuKwyr8i20KLNaJu6plWePCoMSjdsM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Authorization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Authorization.html",
+          "hash": "nji3wHpsgVOpPW1WpnohgrLQPyBL6DxUrOtIsjM3ZHQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.BackgroundServices.BackgroundServicesHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.BackgroundServicesHelper.html",
+          "hash": "t3ug9MfHRcM4eIZGx4ggmTf2lMkmD0zYvggJ9JNdqSc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.BackgroundServices.PluginTimeJobBackgroundService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.PluginTimeJobBackgroundService.html",
+          "hash": "DRRslEcZxjSa220Y52deOMuANIF5YIdidSq2yPEWns8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.html",
+          "hash": "v6xaSsNHtoka3FhT33VCukGVF5VT9nbhpZj4bgQlFiE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.BackgroundServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.html",
+          "hash": "GppdUc/bA/EJx82ZAMriGps3IZuP3NxaJ3fJuMJhYK8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.AppCenterController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.AppCenterController.html",
+          "hash": "6Nr3sPtgMRnik9KfcUYSsYH3OjUPhTOkcihXHKA8wEE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssembliesResponseDataModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssembliesResponseDataModel.html",
+          "hash": "3CZw3UKyBiwVpkYbDSiNwKj4NDIfrSDFucUUI0yLGkI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel.AssemblyLoadContextModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel.AssemblyLoadContextModel.html",
+          "hash": "SL4dzxnAsDaRTwoQTYDtgIfBeUlqBeufg7/mD8+RRQ4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel.html",
+          "hash": "bcgQhd7hXFmqgqK891cIdRHie01AvHom0zZriwGeXUE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyModel.html",
+          "hash": "wtnUEKvLVVTlyPpIA5E9wmrWTOvbNGK7TXfWwCDwC2g="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.ServiceModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.ServiceModel.html",
+          "hash": "CcWzIDkPGwgrREiRH4tftXQDbXJehCDV45uDjLcuw+o="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.html",
+          "hash": "QHfGGEO9Xd5ZHTl6Lyn7o4r5AnEcLUzpGrMYYUCU9Ws="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.HomeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.HomeController.html",
+          "hash": "bxMOHYceRvND9rJBgsvr58i1SVJul1N0ET/azTH9paw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.PluginWidgetController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html",
+          "hash": "IyUIdVqi+oAHHc16j2ATJesZGT6Kqckz2tNy+S2MEzU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.PluginsController.UploadFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.PluginsController.UploadFileType.html",
+          "hash": "p9/aMQV6yyVQjG9sQoxvPzCsfN/6OITdUpImpxLWqb8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.PluginsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.PluginsController.html",
+          "hash": "bcu3gYC0DS005I2cVxvPmvFAS7bOxF0nuieK0akApTY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.UserController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.UserController.html",
+          "hash": "Wwnnd9FptYL9pK/SDZZenUmN9fFtH3Bm1wcZTCBhI18="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Controllers.html",
+          "hash": "Q1XGuf8NSoQNSQdiJZY965xLmUQaaVtjpwM6yHEP7dc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Extensions.IServiceProviderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Extensions.IServiceProviderExtensions.html",
+          "hash": "rzCsvpn2Ea5Nco7pPsvtmVy3yhyEPAQ0YhheuMvdpqg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Extensions.PluginCoreStartupExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Extensions.PluginCoreStartupExtensions.html",
+          "hash": "mUID2dZ+ZKJJVMp4RXCafada4tULdZjfBT+rtkNFWKA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Extensions.ReflectionHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Extensions.ReflectionHelper.html",
+          "hash": "yxO9zu0mRhDsAxnubRtlzbs5CZoVu/yPsEbv3qRjMZA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Extensions.html",
+          "hash": "vtmBN+ZZOrSstxQaiFR7v4xT6O7mKD8dtH1uZ+uvO5k="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.html",
+          "hash": "YyFoYxDFePZVHGdebJLI/rlj9lqLuWOwL057G91BUZM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Infrastructure.PluginCoreHostingStartup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Infrastructure.PluginCoreHostingStartup.html",
+          "hash": "5xgXRtTaNShHLbf41Mi99UtupYffDr4FFt8Z0VS5JL8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Infrastructure.html",
+          "hash": "PON0mhQwuy1MCj1iK+AWK5BVyX2P4mFfvXOp3LL0AbU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager.html",
+          "hash": "qteuyCpmLNWN++hJ6vdTO/r9tT/02sFF5q+HjbBRmQw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Interfaces.IPluginControllerManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Interfaces.IPluginControllerManager.html",
+          "hash": "9eV2B2621SlO3wrbnXX6zjv4slnDdTVhm81ZCxdwY9A="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Interfaces.html",
+          "hash": "mPPn8fIGl6QxA9WbIpMAaAsVeEpzOBazMzKC7JztA0Q="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html",
+          "hash": "fHQSf5d9XCHuaG9Z97pgDvzcdpPGYkcSaNdZTv/kpnM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html",
+          "hash": "Xyb94VAUuS6g3gqEbFpv7WyUM0fgaVUEJhqR2u+mLck="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html",
+          "hash": "fkhm4dJ1U9D7S9l+VPqcmYy9llYGolTHOR3S/ZkmLNA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html",
+          "hash": "6sMZDNzt/8xdfeN7yVshT9rJmAm/f3oiIcuIifhj1ro="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Middlewares.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Middlewares.html",
+          "hash": "/jLlxTtkJqF0lW4sqFbKVMMJLGUniii+4OkRmDvaAZU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html",
+          "hash": "arypV/xEumfWWCE6nTW95Fd4PzuBYCwvMipWyvzUwK0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html",
+          "hash": "cbxOLQKhv5BgWvUxl19JzpjghG57FTqS+97pCrGbVxk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.RequestModel.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.RequestModel.User.html",
+          "hash": "YBBse2q3DQvsrD3OR9z+cDcxgpRYgtFbOeMoLI3gty4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html",
+          "hash": "IpKe7RViKhtpeJVDuIR3/9ou+Izn1KAZSQhhKcxKNfk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.ResponseModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.ResponseModel.html",
+          "hash": "GX+sMuakNkz+Oa6nGhw5YdL5EvVpKOqaubBVxh/jyc4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManager.html",
+          "hash": "2nYiZVhvY/MbJXEH3fuYJ356m5H1HgVu7aR2l4o3EQM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManagerV1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManagerV1.html",
+          "hash": "Ya3EalEnSiPYkD3nfU9opVzni5xUfdeNNAyESOAIyUY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.lmplements.PluginActionDescriptorChangeProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginActionDescriptorChangeProvider.html",
+          "hash": "hOWfn4jLLPqB/KXOmcM9iEZXfww805jGzekGFOrJSuU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager-1.html",
+          "hash": "jUCbQqdXkHukIb3qaB7W6FZ8l0GhPG58fL649wDwv5k="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager.html",
+          "hash": "/b9+OAhHfT7GoZj7X2tKGYx5lvuzPW+WPNenxHv79yQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.lmplements.PluginControllerManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginControllerManager.html",
+          "hash": "jDWZ/pwY8LewRrqpVxU+uhXQqZGr6keZMTY9EP9/zMc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.lmplements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.lmplements.html",
+          "hash": "2mwGhpx5UhJ4rTNTQvh5d7VUKPdbdFI4HYN6mjMFtII="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Config.PluginCoreConfig.AdminModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Config.PluginCoreConfig.AdminModel.html",
+          "hash": "kHpM8+CvSWO4DZ3dVXFjY0xQMlLWIrBqn3L3F8FfnTA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Config.PluginCoreConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Config.PluginCoreConfig.html",
+          "hash": "n52aiFDQx6j1lNPQO01Yw+B/2L5OeJtr9/mpr/PLUbw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Config.PluginCoreConfigFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Config.PluginCoreConfigFactory.html",
+          "hash": "9lECxEEjVwdCz6f2tKBYkLYpks8ZjloSycooRfeN8RE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Config.html",
+          "hash": "6+P5YvoGSDEWaTSnInLfsafUhlxxeinTi58XNzMPlfQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Infrastructure.NupkgService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Infrastructure.NupkgService.html",
+          "hash": "7G4cty88quPkiVOuqGffNFMpfx1ZMZ2OHUW1rrpjKH8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Infrastructure.html",
+          "hash": "YBX2sEu5bBxTuElTeA90xqC6knUZr4xKYXRpepinH2E="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Interfaces.ICollectibleAssemblyLoadContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Interfaces.ICollectibleAssemblyLoadContext.html",
+          "hash": "rMOoiHrfR3aO4FEbMMgUu2Fu4DiKqIJC6kc9JiYt6I4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Interfaces.IPluginContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Interfaces.IPluginContext.html",
+          "hash": "rdTkkLZUkq9b7t2QvszRDHEOxo3jujJEnvL0v44SZRE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Interfaces.IPluginContextManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Interfaces.IPluginContextManager.html",
+          "hash": "qxe1O87tQFDxLap5iZtaU5sRi9EqUAsmABJkFj9KouU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Interfaces.IPluginContextPack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Interfaces.IPluginContextPack.html",
+          "hash": "72Of5+VChvo2aE1mx9wFWtOxgMPgt3w9eFRxX9iRgvw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Interfaces.html",
+          "hash": "ziixXRasjwwu8PKlOzafY6B01D64IQ4dGa0JWARMRiY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginConfigModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginConfigModel.html",
+          "hash": "dm13XpAVezN4QETqf6ysQ2JwhWX1PxAx+MLFbtEf7SQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginInfoModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginInfoModel.html",
+          "hash": "GC1U9mRxqJoSZ0QTAm6d/EL0620elB115UrnGa+dqZY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginInfoResponseModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginInfoResponseModel.html",
+          "hash": "CPC+gOD7GGu8tv7eBhDGAB1PnRDMtyF+5vQvreKZGgE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginReadmeModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginReadmeModel.html",
+          "hash": "CNq4SVkpN/MQLgXv6ur5nXEFZ9jaxM1sjX1GYz3iDSg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginReadmeResponseModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginReadmeResponseModel.html",
+          "hash": "x4lJmNb08pfzVT48lHcOwRMaR2RuBLyr0qrzIb1oUDI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginRegistryDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginRegistryDTO.html",
+          "hash": "DmuPBD/M8AyDUKwcITJtnGM99pbCMMO/LU44jOgh1ao="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginRegistryResponseModel.PluginStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginRegistryResponseModel.PluginStatus.html",
+          "hash": "SLB1gjfFfADk/9tRYWWrPN6E/TTD8VWVq1mmK3/ta0s="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginRegistryResponseModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginRegistryResponseModel.html",
+          "hash": "xHNNumT0ATTOR7mOHGczcYRoOP77han4B74oOtCFfos="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginSettingsInputModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginSettingsInputModel.html",
+          "hash": "PCRHb4CUQlFE9rh982669ImRW1shgETl0t+P88fvx+M="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.PluginStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.PluginStatus.html",
+          "hash": "grEDhh0MwIBmPM8381E4YVMmstw9L1BNNO1KCpVjdRM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Models.html",
+          "hash": "iWSHV5T6mKXaaqKmGMryMTXXJPNTD5T2xOM9UPW3tw0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.PluginConfigModelFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.PluginConfigModelFactory.html",
+          "hash": "vQSiWkUiwSJRrYFtfUx5E5oM0MPXGHMYtj3FMnfWdjs="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.PluginInfoModelFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.PluginInfoModelFactory.html",
+          "hash": "8QUCmaMsglCjdK6jjRwVRXZOk1jgap/cd0po0SSZeko="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.PluginReadmeModelFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.PluginReadmeModelFactory.html",
+          "hash": "aZXYKoNvN/hATJdjgmVraN8gUxl/jNaLUuYI3h3gQUQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Utils.CircularReferenceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Utils.CircularReferenceException.html",
+          "hash": "59ScwslHpMc1OXpEped30cxzrKYonkDtbGuZBs1uKY8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Utils.DateTimeUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Utils.DateTimeUtil.html",
+          "hash": "kzlSc66GfTuQ1aw/AipXrC//leNvDUhDVSJTPbqNeRc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Utils.DependencySorter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Utils.DependencySorter-1.html",
+          "hash": "v0ys2jXn+1LQbQaDvs2gnvv5DiFErHHLOck/22yHfho="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Utils.FileUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Utils.FileUtil.html",
+          "hash": "ar4TLyZRoW5BmmYvmqSKRkfr51Ad5POvf93sa6LhQhQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Utils.LogUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Utils.LogUtil.html",
+          "hash": "vDegWp7HtsdMquhkcDEHbA2DFTZh7Utz7y6fgDzdqlY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Utils.Md5Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Utils.Md5Helper.html",
+          "hash": "WynOng/T6hr8rrsswFSu8ebjb7iB6wSjrZaHE9lJGHM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Utils.RuntimeUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Utils.RuntimeUtil.html",
+          "hash": "Nd2qD+xnV3eYkjp4+Eff6/dj2ykxBAR+lUiN3u4OOy4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Utils.ZipHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Utils.ZipHelper.html",
+          "hash": "Xq1coOB+LUlpckwopdCnS4rfceIijIhFJ+n/DDRo9e4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.Utils.html",
+          "hash": "zboOYlZj8ni0dn6hCbaExLyxn3Dst6hsYrQpjABEOwI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.CollectibleAssemblyLoadContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html",
+          "hash": "+9FRTOMfAwoOW+ux5cGXCdFDan5mmBVCTxOoLulV+hI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.LazyPluginLoadContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.LazyPluginLoadContext.html",
+          "hash": "XTLB7J0QOSriw2fAEl3na1U0KWlFoi+IZjH31n2uy64="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PluginContextManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PluginContextManager.html",
+          "hash": "5owcuZO3if4pCR2qgXaFdBztJ/Rc+IuZWkx2snbW2VM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PluginContextPack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PluginContextPack.html",
+          "hash": "xwE3875Km/a9LNi6GFH5uxRWa8N/c676OeaQKUTl1+I="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PluginContextPackV1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PluginContextPackV1.html",
+          "hash": "eUsCMPhlxavaFSHJXWTtKCk1gmsYWXPOjrxfoFEWPdA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PluginContextStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PluginContextStore.html",
+          "hash": "anx6bpIf4rxZn9jzRWbxkuj8ExF3pOUZyGuHqCRSmJw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PluginFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PluginFinder.html",
+          "hash": "Wl6nx2rAXeqQddp0/BpCDCc+yYY8gM1gC7QGofc7Uhg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PluginLoadContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PluginLoadContext.html",
+          "hash": "phow6HQ1zWpJOrTZhw8Tvb6h1XOwT0y02Ydjkb9ymfA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PluginManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PluginManager.html",
+          "hash": "NWlApts/SpOvvZ/9khGtgmCZAUi/cTORFIaS0PEITO8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PositivePluginLoadContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PositivePluginLoadContext.html",
+          "hash": "2Bh0BKWNIy4aSiLVYZqm5vrA7cO6bcsu2qqCQuV625I="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.html",
+          "hash": "2AtyrVV7VySFHZFaGccSN4sfzBldfO0hUS7XQf6S65U="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.html",
+          "hash": "4OkSRDpaOuUA9QtU/7H7pynPK3JUDdXy3lMU+8/jeVY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "fO2/iz7j3hFlvKaGAFDMrz34YlDsXx5227M5kB7ThxA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "43uv/TaZVlcJRbdB7aQobZ1E6k0fYclemqiVL6PQIcI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "K8FjdPqzt3ST0z6Biq4llp3B2mq5TqKwbOTEJMfVjW0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "+FPCLcvmNhVb9VLasYr6Tnep0PZtIA6V/UOJ0u+1RmE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "PRl5vgKM9iRIW/mQgmn0uMnhRgP35uvAqEtc9tPbaCA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "aVe9U1RxWP3P5E5X/x2rL8jCuFlqix3bHKxtkjZ3zxg="
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
