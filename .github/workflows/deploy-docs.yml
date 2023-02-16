@@ -41,9 +41,9 @@ jobs:
 
     - name: gh-pages-folder
       run: |
-        mkdir gh-pages-folder
-        cp -r docs/docs/.vuepress/dist/ gh-pages-folder/
-        cp -r docfx_project/_site/ gh-pages-folder/docs-api/
+        mkdir -p gh-pages-folder/docs-api
+        cp -r docs/docs/.vuepress/dist/** gh-pages-folder/
+        cp -r docfx_project/_site/** gh-pages-folder/docs-api/
       shell: bash
 
     - name: Deploy 🚀
