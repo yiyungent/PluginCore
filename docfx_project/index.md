@@ -18,10 +18,20 @@ These 2 stages can run independently with the `docfx metadata` command and the `
 
 
 ```bash
+dotnet build src/PluginCore.IPlugins/PluginCore.IPlugins.csproj --configuration Release
+dotnet build src/PluginCore/PluginCore.csproj --configuration Release
+dotnet build src/PluginCore.IPlugins.AspNetCore/PluginCore.IPlugins.AspNetCore.csproj --configuration Release
+dotnet build src/PluginCore.AspNetCore/PluginCore.AspNetCore.csproj --configuration Release
+
 cd docfx_project
 
 docfx metadata
 
 docfx build
+
+docfx docfx.json --serve
+
+# To preview your local changes, save changes then run this command in a new terminal to rebuild the website:
+docfx docfx.json
 ```
 
