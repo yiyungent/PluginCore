@@ -151,6 +151,7 @@ Now you can visit http://localhost:5004/PluginCore/Admin
 ## Use
 
 - [Detailed Documentation(/docs)](https://moeci.com/PluginCore "Online Documentation") Document is under construction
+- [API Docs](https://moeci.com/PluginCore/docs-api/api/index.html "API Docs") automatic update
 - [See examples(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples) 
 
 
