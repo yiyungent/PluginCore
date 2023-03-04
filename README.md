@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
   <img src="docs/docs/.vuepress/public/images/logo.png" alt="PluginCore">
 </p>
 <h1 align="center">PluginCore</h1>
@@ -344,6 +344,7 @@ graph BT
 <a href="https://afdian.net/u/6c944aa0a55f11eabd5f52540025c377">
     <img src="https://pic1.afdiancdn.com/user/6c944aa0a55f11eabd5f52540025c377/avatar/e0b9977363fe0b475e0fb6300c43b4be_w480_h480_s13.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="MonoLogueChi" title="MonoLogueChi"/>
 </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore.svg?type=shield"/></a>
 
 <details>
   <summary>点我 打开/关闭 赞助者列表</summary>
@@ -380,3 +381,7 @@ Authored and maintained by yiyun with help from contributors ([list](https://git
 <!-- Matomo Image Tracker-->
 <img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.moeci.com/matomo.php?idsite=2&amp;rec=1&amp;action_name=GitHub.PluginCore.README" style="border:0" alt="" />
 <!-- End Matomo -->
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore?ref=badge_large)
