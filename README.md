@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="docs/docs/.vuepress/public/images/logo.png" alt="PluginCore">
 </p>
 <h1 align="center">PluginCore</h1>
