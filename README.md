@@ -15,7 +15,7 @@ English | [中文](README_zh.md)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-deepgreen)](https://t.me/xx_dev_group)
 <!-- ![hits](https://api-onetree.moeci.com/hits.svg?id=PluginCore) -->
 [![CLA assistant](https://cla-assistant.io/readme/badge/yiyungent/PluginCore)](https://cla-assistant.io/yiyungent/PluginCore)
-
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore?ref=badge_shield)
 
 ## Introduce
 
@@ -344,7 +344,6 @@ graph BT
 <a href="https://afdian.net/u/6c944aa0a55f11eabd5f52540025c377">
     <img src="https://pic1.afdiancdn.com/user/6c944aa0a55f11eabd5f52540025c377/avatar/e0b9977363fe0b475e0fb6300c43b4be_w480_h480_s13.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="MonoLogueChi" title="MonoLogueChi"/>
 </a>
-<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore.svg?type=shield"/></a>
 
 <details>
   <summary>点我 打开/关闭 赞助者列表</summary>
@@ -371,6 +370,9 @@ We accept donations through these channels:
 - <a href="https://afdian.net/@yiyun" target="_blank">爱发电</a> (￥5.00 起)
 - <a href="https://dun.mianbaoduo.com/@yiyun" target="_blank">面包多</a> (￥1.00 起)
 
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore?ref=badge_large)
+
 ## Author
 
 **PluginCore** © [yiyun](https://github.com/yiyungent), Released under the [Apache-2.0](./LICENSE) License.<br>
@@ -383,5 +385,3 @@ Authored and maintained by yiyun with help from contributors ([list](https://git
 <!-- End Matomo -->
 
 
-## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore?ref=badge_large)
