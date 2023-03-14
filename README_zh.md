@@ -38,9 +38,9 @@
 
 ## 在线演示
 
-- http://plugincore.moeci.com/PluginCore/Admin
+- [https://knifehub.onrender.com](https://knifehub.onrender.com)
   - 用户名: admin  密码: ABC12345
-  - 在线演示, 功能大部分受限, 完整体验, 请自行搭建, 可使用下方 Docker 快速体验
+  - 在线演示, 使用 [KnifeHub](https://github.com/yiyungent/KnifeHub), 不定时清空数据
   - 非最新版本
 
 

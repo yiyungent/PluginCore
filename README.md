@@ -37,9 +37,9 @@ ASP.NET Core lightweight plugin framework
 
 ## Online demo
 
-- http://plugincore.moeci.com/PluginCore/Admin
+- [https://knifehub.onrender.com](https://knifehub.onrender.com)
   - Username: admin Password: ABC12345
-  - Online demo, most of the functions are limited, complete experience, please build it yourself, you can use the Docker below to quickly experience
+  - Online demo, use [KnifeHub](https://github.com/yiyungent/KnifeHub), empty data from time to time
   - Not the latest version
 
 
