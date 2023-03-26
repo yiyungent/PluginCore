@@ -12,7 +12,7 @@
  ">
     
       <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
       <link rel="stylesheet" href="../styles/main.css">
       <meta property="docfx:navrel" content="../toc.html">
@@ -148,7 +148,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
     </tr>
     <tr>
       <td>
-        <span class="pull-right"><span class="xref">System.IServiceProvider</span></span>
+        <span class="pull-right"><span class="xref">IServiceProvider</span></span>
         <span class="parametername">serviceProvider</span>
         <p></p>
       </td>
@@ -161,8 +161,6 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
 
 
 
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">PluginCore.Interfaces.IPluginFinder</span></div>
 
 
 
@@ -201,8 +199,6 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
 
 
 
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">PluginCore.Interfaces.IPluginFinder</span></div>
 
 
 
@@ -232,7 +228,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <table>
     <tr>
       <td>
-      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TPlugin&gt;
+      <span class="xref">IEnumerable</span>&lt;TPlugin&gt;
         <p></p>
       </td>
     </tr>
@@ -252,8 +248,6 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
 
 
 
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">PluginCore.Interfaces.IPluginFinder</span></div>
 
 
 
@@ -280,7 +274,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <table>
     <tr>
       <td>
-      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;
+      <span class="xref">IEnumerable</span>&lt;<span class="xref">string</span>&gt;
         <p></p>
       </td>
     </tr>
@@ -319,7 +313,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <table>
     <tr>
       <td>
-      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">string</span>&gt;
+      <span class="xref">IEnumerable</span>&lt;<span class="xref">string</span>&gt;
         <p></p>
       </td>
     </tr>
@@ -367,7 +361,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <table>
     <tr>
       <td>
-      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">PluginCore.IPlugins.IPlugin</span>&gt;
+      <span class="xref">IEnumerable</span>&lt;<span class="xref">IPlugin</span>&gt;
         <p></p>
       </td>
     </tr>
@@ -406,7 +400,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <table>
     <tr>
       <td>
-      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TPlugin&gt;
+      <span class="xref">IEnumerable</span>&lt;TPlugin&gt;
         <p></p>
       </td>
     </tr>
@@ -455,7 +449,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <table>
     <tr>
       <td>
-      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;(<span class="xref">PluginCore.IPlugins.IPlugin</span> <span class="xref">PluginInstance</span>, <span class="xref">string</span> <span class="xref">PluginId</span>)&gt;
+      <span class="xref">IEnumerable</span>&lt;(<span class="xref">IPlugin</span> <span class="xref">PluginInstance</span>, <span class="xref">string</span> <span class="xref">PluginId</span>)&gt;
         <p></p>
       </td>
     </tr>
@@ -494,7 +488,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <table>
     <tr>
       <td>
-      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;(TPlugin <span class="xref">PluginInstance</span>, <span class="xref">string</span> <span class="xref">PluginId</span>)&gt;
+      <span class="xref">IEnumerable</span>&lt;(TPlugin <span class="xref">PluginInstance</span>, <span class="xref">string</span> <span class="xref">PluginId</span>)&gt;
         <p></p>
       </td>
     </tr>
@@ -553,7 +547,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <table>
     <tr>
       <td>
-      <span class="xref">PluginCore.IPlugins.IPlugin</span>
+      <span class="xref">IPlugin</span>
         <p><p>1.插件未启用返回null, 2.找不到此插件上下文返回null 3.找不到插件主dll返回null 4.插件主dll中找不到实现了IPlugin的Type返回null, 5.无法实例化插件返回null</p>
 
       </td>
@@ -593,7 +587,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <table>
     <tr>
       <td>
-        <span class="pull-right"><span class="xref">System.Type</span></span>
+        <span class="pull-right"><span class="xref">Type</span></span>
         <span class="parametername">type</span>
         <p></p>
       </td>
@@ -615,8 +609,6 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
 
 
 
-  <h5 class="implements">Implements</h5>
-      <div><span class="xref">PluginCore.Interfaces.IPluginFinder</span></div>
 
 
 
@@ -665,7 +657,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
       </footer>
     </div>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

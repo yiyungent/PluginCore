@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.html",
-          "hash": "PEvOb0KCub7JhDVOPc6nj9iKz1/UR4MaN68bZLzNFlg="
+          "hash": "cByrB10MUobV9EgvXVTtIPoJCSJZS9Ddsezz7YP5hOY="
         }
       },
       "version": ""
@@ -20,7 +20,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIMiddleware.html",
-          "hash": "MlCduZ3UXKid52hmHW/uCtWUjA0x3V3IcseAXJiiOmk="
+          "hash": "ErayO0B+CBsqxUAdDLzAZPPWzchOnZ21cVv9WrwAaLk="
         }
       },
       "version": ""
@@ -31,7 +31,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions.html",
-          "hash": "JVY9c2qPIL97r4yX3PP8I3OkFiRa5nwi1RWdlnNrJ24="
+          "hash": "XqRmjLQn3uhVITxpI4lLp+y4eUbFfLoSdy+KQO1V83M="
         }
       },
       "version": ""
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider.PluginCoreAdminUIFileInfo.html",
-          "hash": "I0a1BlxFjZGpCkDNo6DanWUEx2SyvCXykiFa1XeMyO0="
+          "hash": "FuJZ+2YKHluM/JLAhRCASvIlTv4k5FyKi0zEu2kT2I0="
         }
       },
       "version": ""
@@ -53,7 +53,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider.html",
-          "hash": "aBdXpBMeMK/JHcdS5xJXluDp3Cb/XuKebJjGDGAio/E="
+          "hash": "rESs8vxkoAYUKivgroEx/3PH8Kz7mzZ6NdaAwrabpD0="
         }
       },
       "version": ""
@@ -64,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.html",
-          "hash": "L7m2gsoY+/4Cpp3nafST8TZQYsSmYHNMFhSVLXxOAKo="
+          "hash": "9rf1rRAZT9vXpy7kI2OjmMmlR7ifv0cO6kcxuTn/Sjc="
         }
       },
       "version": ""
@@ -75,7 +75,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationHandler.html",
-          "hash": "FOXY2cI8bCADO0iPn28LANaCv+DEZ+eNQmAjKqPP+MA="
+          "hash": "HFD8dhqqllhxzKQ4QDYQnRGYPvCQkIDWDE2dr2OuSbM="
         }
       },
       "version": ""
@@ -86,7 +86,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationSchemeOptions.html",
-          "hash": "rtGgu4D560Y/zTUNaN3ePZvcSNr+gMzdm5Hshsl9nY4="
+          "hash": "xgBHD80Ut+lmE6junOBAp0+YksmsdtVQBYQSxElAdic="
         }
       },
       "version": ""
@@ -97,7 +97,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Authentication.html",
-          "hash": "2494ci2FLICxpcgikeGOQT97gAHbdTUmHFh6AxSf5RA="
+          "hash": "4E+Kot5dXZkvOQkIa5p+793uDWDP+TabSHHe4kKFeAg="
         }
       },
       "version": ""
@@ -108,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Authorization.AccountManager.html",
-          "hash": "q9RsGsw9pvdyAsXpiQ/ga93EBrbLoBk2Bb3yVTA+V5Y="
+          "hash": "SarFBpfLE6A6EDrTiPjYYo8l/I/wRvRSCZLEX03Cer8="
         }
       },
       "version": ""
@@ -119,7 +119,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizationHandler.html",
-          "hash": "i5WhLg/axXuNLN8BUNbHmSmaWPMpM77HAC9pXdtwwRw="
+          "hash": "L7KDP5EJOSx1vEK7NgfLVewDj+sLN7DB1/hd8q0Lwo4="
         }
       },
       "version": ""
@@ -130,7 +130,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizeAttribute.html",
-          "hash": "xMTvHcc1kw9yrJrvZjGckWw3cESQx2kUnTStj+NAabg="
+          "hash": "CEtxVmYjNbakeLMxp7YM126zhXwiLpVve0+U1RePxbM="
         }
       },
       "version": ""
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminRequirement.html",
-          "hash": "T8j7Q2PDlfJ04YuKwyr8i20KLNaJu6plWePCoMSjdsM="
+          "hash": "/SyzE8fX/X7XDSxtXMzTx80LmoJPPrCI2s2krJW0QBo="
         }
       },
       "version": ""
@@ -152,7 +152,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Authorization.html",
-          "hash": "nji3wHpsgVOpPW1WpnohgrLQPyBL6DxUrOtIsjM3ZHQ="
+          "hash": "6Ho0uG35hulbdOH9bk7hvMNW6Po6H+Pq8Z4JR3GCGn4="
         }
       },
       "version": ""
@@ -163,7 +163,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.BackgroundServicesHelper.html",
-          "hash": "t3ug9MfHRcM4eIZGx4ggmTf2lMkmD0zYvggJ9JNdqSc="
+          "hash": "9xZ3XRJGhc2VusWZVjn9ryBAY781brULvAYMjab+E6Y="
         }
       },
       "version": ""
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.PluginTimeJobBackgroundService.html",
-          "hash": "DRRslEcZxjSa220Y52deOMuANIF5YIdidSq2yPEWns8="
+          "hash": "ETAZNrB8xqwum/R7XRyn0wog1kVmnQSzr+eNHy0WOW0="
         }
       },
       "version": ""
@@ -185,7 +185,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.html",
-          "hash": "v6xaSsNHtoka3FhT33VCukGVF5VT9nbhpZj4bgQlFiE="
+          "hash": "YyrMH32WHvXjELDBW3xrUXVbK4k0bfs75mYIj+Me9oU="
         }
       },
       "version": ""
@@ -196,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.html",
-          "hash": "GppdUc/bA/EJx82ZAMriGps3IZuP3NxaJ3fJuMJhYK8="
+          "hash": "/vTHxHpXPdbiTVxiUYaH/JMA7g+55OZXX8mmO7svsYo="
         }
       },
       "version": ""
@@ -207,7 +207,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.AppCenterController.html",
-          "hash": "6Nr3sPtgMRnik9KfcUYSsYH3OjUPhTOkcihXHKA8wEE="
+          "hash": "3/5ZtApH9chSORn+0VfjnRLut3aMia7AXCkgEsB41pI="
         }
       },
       "version": ""
@@ -218,7 +218,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssembliesResponseDataModel.html",
-          "hash": "3CZw3UKyBiwVpkYbDSiNwKj4NDIfrSDFucUUI0yLGkI="
+          "hash": "bxb/B9ZbB370C0Zr3V4XSt5EC9lMJ5FZaPGX/wqZutE="
         }
       },
       "version": ""
@@ -229,7 +229,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel.AssemblyLoadContextModel.html",
-          "hash": "SL4dzxnAsDaRTwoQTYDtgIfBeUlqBeufg7/mD8+RRQ4="
+          "hash": "ZX1ZAPfwVSekisjDvywoNUtEf7znLy9OarEe8siw9+4="
         }
       },
       "version": ""
@@ -240,7 +240,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel.html",
-          "hash": "bcgQhd7hXFmqgqK891cIdRHie01AvHom0zZriwGeXUE="
+          "hash": "RGltgkQ0NIZg6JpI0t/BXAObKyVGn65+5S9UKYanwRQ="
         }
       },
       "version": ""
@@ -251,7 +251,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyModel.html",
-          "hash": "wtnUEKvLVVTlyPpIA5E9wmrWTOvbNGK7TXfWwCDwC2g="
+          "hash": "zU8JcBirObEsEp2EwOhJT3I8fTJKmW0+bs7Gp0Sbfm4="
         }
       },
       "version": ""
@@ -262,7 +262,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.ServiceModel.html",
-          "hash": "CcWzIDkPGwgrREiRH4tftXQDbXJehCDV45uDjLcuw+o="
+          "hash": "W6T2hYiOMRstURdSFlM4SoIclREXGKsPkPGXj+b0brs="
         }
       },
       "version": ""
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.html",
-          "hash": "QHfGGEO9Xd5ZHTl6Lyn7o4r5AnEcLUzpGrMYYUCU9Ws="
+          "hash": "mjdDneQQlQ/8V4vQHxDHlYriRcmetq1I+p/yvRgfOhU="
         }
       },
       "version": ""
@@ -284,7 +284,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.HomeController.html",
-          "hash": "bxMOHYceRvND9rJBgsvr58i1SVJul1N0ET/azTH9paw="
+          "hash": "i1HxphC2zy/wWjSbCP6KLKQqVJN42kqlMlf1Msrpbds="
         }
       },
       "version": ""
@@ -295,7 +295,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html",
-          "hash": "IyUIdVqi+oAHHc16j2ATJesZGT6Kqckz2tNy+S2MEzU="
+          "hash": "PFL29Y2/zaEFEwbJEpedcgofSasq9FtA2W+3NN13jnY="
         }
       },
       "version": ""
@@ -306,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.PluginsController.UploadFileType.html",
-          "hash": "p9/aMQV6yyVQjG9sQoxvPzCsfN/6OITdUpImpxLWqb8="
+          "hash": "Jj1E+4hjs1h4nErZC8NZiy+v5r6+4Uk707PDnS4x+6k="
         }
       },
       "version": ""
@@ -317,7 +317,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.PluginsController.html",
-          "hash": "bcu3gYC0DS005I2cVxvPmvFAS7bOxF0nuieK0akApTY="
+          "hash": "M+WKa4vM3WbfZ4KjUSuxqvq09UhGI0bzLEPcNHtkYu0="
         }
       },
       "version": ""
@@ -328,7 +328,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.UserController.html",
-          "hash": "Wwnnd9FptYL9pK/SDZZenUmN9fFtH3Bm1wcZTCBhI18="
+          "hash": "ScX9+BmsacPXjz4FmRsxxemNEKj15UlnDI1G+MhXTe0="
         }
       },
       "version": ""
@@ -339,7 +339,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Controllers.html",
-          "hash": "Q1XGuf8NSoQNSQdiJZY965xLmUQaaVtjpwM6yHEP7dc="
+          "hash": "6C8zND3gRk7drbZA/BhqQ7EqKwl/NQ/uZ/v5rPEQA78="
         }
       },
       "version": ""
@@ -350,7 +350,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Extensions.IServiceProviderExtensions.html",
-          "hash": "rzCsvpn2Ea5Nco7pPsvtmVy3yhyEPAQ0YhheuMvdpqg="
+          "hash": "DCVBGS/IBV7YioG6A2NxrKbdUYeAmRCP4443M/ySqKA="
         }
       },
       "version": ""
@@ -361,7 +361,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Extensions.PluginCoreStartupExtensions.html",
-          "hash": "mUID2dZ+ZKJJVMp4RXCafada4tULdZjfBT+rtkNFWKA="
+          "hash": "S7FM9ryDAYV7QK5b/VxE1fw4VRopFOZcOSoW/Am3O7E="
         }
       },
       "version": ""
@@ -372,7 +372,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Extensions.ReflectionHelper.html",
-          "hash": "yxO9zu0mRhDsAxnubRtlzbs5CZoVu/yPsEbv3qRjMZA="
+          "hash": "UCGpax1xyZJ7USLV1jU+1taLULzbwqWdPv6s2R9Jg2k="
         }
       },
       "version": ""
@@ -383,7 +383,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Extensions.html",
-          "hash": "vtmBN+ZZOrSstxQaiFR7v4xT6O7mKD8dtH1uZ+uvO5k="
+          "hash": "IuuPa86D9jENhtC5U976r4VT8Oge2VIfTQUQYQY0Cl4="
         }
       },
       "version": ""
@@ -394,7 +394,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.html",
-          "hash": "YyFoYxDFePZVHGdebJLI/rlj9lqLuWOwL057G91BUZM="
+          "hash": "SDyqrtzfxHmS3XevRTb16Yvpn/flx8q/YNh5Yos02Dk="
         }
       },
       "version": ""
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Infrastructure.PluginCoreHostingStartup.html",
-          "hash": "5xgXRtTaNShHLbf41Mi99UtupYffDr4FFt8Z0VS5JL8="
+          "hash": "xeQMXY6Kt1iNvKRhfgax7irYzXXp0FpsPUwK5tHeIGk="
         }
       },
       "version": ""
@@ -416,7 +416,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Infrastructure.html",
-          "hash": "PON0mhQwuy1MCj1iK+AWK5BVyX2P4mFfvXOp3LL0AbU="
+          "hash": "vBL7GP1XjKKYXo/auJrcxQyvVSirzIF1gM81OWJTVI0="
         }
       },
       "version": ""
@@ -427,7 +427,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager.html",
-          "hash": "qteuyCpmLNWN++hJ6vdTO/r9tT/02sFF5q+HjbBRmQw="
+          "hash": "rEsMIapPeYOusLc+IoV+4uwmyEnYHB9/V9kWvkzu0WE="
         }
       },
       "version": ""
@@ -438,7 +438,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Interfaces.IPluginControllerManager.html",
-          "hash": "9eV2B2621SlO3wrbnXX6zjv4slnDdTVhm81ZCxdwY9A="
+          "hash": "u8WNVmQdF60HIPH5ktCDhttRhNpBLqPlK+8OqRfpVTI="
         }
       },
       "version": ""
@@ -449,7 +449,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Interfaces.html",
-          "hash": "mPPn8fIGl6QxA9WbIpMAaAsVeEpzOBazMzKC7JztA0Q="
+          "hash": "Rdqg8xU9J8dDVrlX5ri4RvnlcMCHIMRr+hd0brashFo="
         }
       },
       "version": ""
@@ -460,7 +460,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html",
-          "hash": "fHQSf5d9XCHuaG9Z97pgDvzcdpPGYkcSaNdZTv/kpnM="
+          "hash": "3ynfW3IK9E5q9GyivOBo51tgbc1Nyz/Vh8Gg8uji/RY="
         }
       },
       "version": ""
@@ -471,7 +471,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html",
-          "hash": "Xyb94VAUuS6g3gqEbFpv7WyUM0fgaVUEJhqR2u+mLck="
+          "hash": "3qm9QxM3ZgzcgEsW2QinDO5gXZm5FP6zskSO3NQ53DQ="
         }
       },
       "version": ""
@@ -482,7 +482,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html",
-          "hash": "fkhm4dJ1U9D7S9l+VPqcmYy9llYGolTHOR3S/ZkmLNA="
+          "hash": "sO12PAOf6I4BY9Al+zDcxxP19udhs/DodPBRTjmRaw4="
         }
       },
       "version": ""
@@ -493,7 +493,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html",
-          "hash": "6sMZDNzt/8xdfeN7yVshT9rJmAm/f3oiIcuIifhj1ro="
+          "hash": "tFYLvfz8XAi/Y8xjmTsyDDxH+mTXlwO1h/GS/1z8lhM="
         }
       },
       "version": ""
@@ -504,7 +504,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.html",
-          "hash": "/jLlxTtkJqF0lW4sqFbKVMMJLGUniii+4OkRmDvaAZU="
+          "hash": "+PH5HL7AsB1y8t7WTbC4Z1li9z3LQn+2GJOu2bBKhWk="
         }
       },
       "version": ""
@@ -515,7 +515,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html",
-          "hash": "arypV/xEumfWWCE6nTW95Fd4PzuBYCwvMipWyvzUwK0="
+          "hash": "JYfmapeLrTjMG6K2sZDR3Uu7+UbK0bTPLJPf83Pv6fo="
         }
       },
       "version": ""
@@ -526,7 +526,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html",
-          "hash": "cbxOLQKhv5BgWvUxl19JzpjghG57FTqS+97pCrGbVxk="
+          "hash": "M1/1mmvZZzwNTJ/E/WC6vuPnmBEUy0VQFHAgD37Xv2c="
         }
       },
       "version": ""
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.RequestModel.User.html",
-          "hash": "YBBse2q3DQvsrD3OR9z+cDcxgpRYgtFbOeMoLI3gty4="
+          "hash": "h7QNZMc57/8TMJU1CU9xXlwttYQmenAt7+Ypj+s8Dlc="
         }
       },
       "version": ""
@@ -548,7 +548,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html",
-          "hash": "IpKe7RViKhtpeJVDuIR3/9ou+Izn1KAZSQhhKcxKNfk="
+          "hash": "BV985qRi65HzLF6jm6JN9Dv+XLsbzPTTgFx4xxb299c="
         }
       },
       "version": ""
@@ -559,7 +559,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.ResponseModel.html",
-          "hash": "GX+sMuakNkz+Oa6nGhw5YdL5EvVpKOqaubBVxh/jyc4="
+          "hash": "ivKZxD18SAGF+GPTmfYZHVjJeWi2pAmI6Z+WmhutvW0="
         }
       },
       "version": ""
@@ -570,7 +570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManager.html",
-          "hash": "2nYiZVhvY/MbJXEH3fuYJ356m5H1HgVu7aR2l4o3EQM="
+          "hash": "0iXmR68Y81lwQmk2JioB00t+JrFHtD4s5CMfATtFc+g="
         }
       },
       "version": ""
@@ -581,7 +581,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManagerV1.html",
-          "hash": "Ya3EalEnSiPYkD3nfU9opVzni5xUfdeNNAyESOAIyUY="
+          "hash": "uUMxxQyiwqc5hAOHiwZjWWcwdYpT+rSHrOgxCSNZS80="
         }
       },
       "version": ""
@@ -592,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginActionDescriptorChangeProvider.html",
-          "hash": "hOWfn4jLLPqB/KXOmcM9iEZXfww805jGzekGFOrJSuU="
+          "hash": "+pzcKg3FxGNaeKL6+O8tdOdI2b2M42+t3TmFRp9Bejk="
         }
       },
       "version": ""
@@ -603,7 +603,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager-1.html",
-          "hash": "jUCbQqdXkHukIb3qaB7W6FZ8l0GhPG58fL649wDwv5k="
+          "hash": "JZlELlNcgnSOgUmU9f2l2Of0Hwx+Vwo3Bc5kCs8GiPU="
         }
       },
       "version": ""
@@ -614,7 +614,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager.html",
-          "hash": "/b9+OAhHfT7GoZj7X2tKGYx5lvuzPW+WPNenxHv79yQ="
+          "hash": "Xc2LJHLuRtSa1rZkVvznia1jm1a9ab1I0Wnq0mZVNgk="
         }
       },
       "version": ""
@@ -625,7 +625,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginControllerManager.html",
-          "hash": "jDWZ/pwY8LewRrqpVxU+uhXQqZGr6keZMTY9EP9/zMc="
+          "hash": "DaWpzRRNXDM93iBbOHYSz3khXar2Rk/qOmiicSOYdL0="
         }
       },
       "version": ""
@@ -636,7 +636,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.AspNetCore.lmplements.html",
-          "hash": "2mwGhpx5UhJ4rTNTQvh5d7VUKPdbdFI4HYN6mjMFtII="
+          "hash": "shTammJeh0pq4zYq8j74VYxXVElIwjUpdF3qJyZcrs0="
         }
       },
       "version": ""
@@ -647,7 +647,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Config.PluginCoreConfig.AdminModel.html",
-          "hash": "kHpM8+CvSWO4DZ3dVXFjY0xQMlLWIrBqn3L3F8FfnTA="
+          "hash": "sx0y1sttr2jL4nItkZQ3hhwkyc/r8htwz6vh5skIDik="
         }
       },
       "version": ""
@@ -658,7 +658,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Config.PluginCoreConfig.html",
-          "hash": "n52aiFDQx6j1lNPQO01Yw+B/2L5OeJtr9/mpr/PLUbw="
+          "hash": "Hjx4w2BTAYkWT7huu0CDcjOYTMP9q+Y05wbndxH2es4="
         }
       },
       "version": ""
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Config.PluginCoreConfigFactory.html",
-          "hash": "9lECxEEjVwdCz6f2tKBYkLYpks8ZjloSycooRfeN8RE="
+          "hash": "64ldljJhOzWi16PbCMti7v9H/nvGzAkr7WMiBO7r/D8="
         }
       },
       "version": ""
@@ -680,7 +680,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Config.html",
-          "hash": "6+P5YvoGSDEWaTSnInLfsafUhlxxeinTi58XNzMPlfQ="
+          "hash": "EtK4WxhFLdyW4us1Encn/v91S8pfZtU3FSr3SYQMnlA="
         }
       },
       "version": ""
@@ -691,7 +691,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Infrastructure.NupkgService.html",
-          "hash": "7G4cty88quPkiVOuqGffNFMpfx1ZMZ2OHUW1rrpjKH8="
+          "hash": "tLjq6aFNFPkH2FG45OTyIMMpF0kdAl8LUdOnVLcYalc="
         }
       },
       "version": ""
@@ -702,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Infrastructure.html",
-          "hash": "YBX2sEu5bBxTuElTeA90xqC6knUZr4xKYXRpepinH2E="
+          "hash": "1zx3WNq3KzbqxCuPuRm9YQlQVgppXX6N1B6/4WDjJ0c="
         }
       },
       "version": ""
@@ -713,7 +713,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Interfaces.ICollectibleAssemblyLoadContext.html",
-          "hash": "rMOoiHrfR3aO4FEbMMgUu2Fu4DiKqIJC6kc9JiYt6I4="
+          "hash": "ehZn6AV0Zaw9mJKcSpp2hF0OLMBfJDCrMByokC/2PEY="
         }
       },
       "version": ""
@@ -724,7 +724,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Interfaces.IPluginContext.html",
-          "hash": "rdTkkLZUkq9b7t2QvszRDHEOxo3jujJEnvL0v44SZRE="
+          "hash": "CvTb2WWwRN4gRgrGykjPh34JLa0vTUzHiRQnJ18TjBU="
         }
       },
       "version": ""
@@ -735,7 +735,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Interfaces.IPluginContextManager.html",
-          "hash": "qxe1O87tQFDxLap5iZtaU5sRi9EqUAsmABJkFj9KouU="
+          "hash": "K2Vk15o5udTkM5h5WsPmSeI7LNPVFJSooej1Ijwq9Bs="
         }
       },
       "version": ""
@@ -746,7 +746,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Interfaces.IPluginContextPack.html",
-          "hash": "72Of5+VChvo2aE1mx9wFWtOxgMPgt3w9eFRxX9iRgvw="
+          "hash": "SHEN4QqDqQ003Hp0nHP+yxujyczXqdWx5mSzUOsoYHw="
         }
       },
       "version": ""
@@ -757,7 +757,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Interfaces.html",
-          "hash": "ziixXRasjwwu8PKlOzafY6B01D64IQ4dGa0JWARMRiY="
+          "hash": "Cg9JJf07HWaI5keqXSybOnpTCj7NeNo+tDmq505ya8U="
         }
       },
       "version": ""
@@ -768,7 +768,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginConfigModel.html",
-          "hash": "dm13XpAVezN4QETqf6ysQ2JwhWX1PxAx+MLFbtEf7SQ="
+          "hash": "uaaZyAolg8Cqy4UszaYLbF58HaxWSR6CibDZzmKLiVM="
         }
       },
       "version": ""
@@ -779,7 +779,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginInfoModel.html",
-          "hash": "GC1U9mRxqJoSZ0QTAm6d/EL0620elB115UrnGa+dqZY="
+          "hash": "8Xik7MNkWMoULzU+cWKdjZ/fGiPCFH8jMZjg3mwQmIQ="
         }
       },
       "version": ""
@@ -790,7 +790,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginInfoResponseModel.html",
-          "hash": "CPC+gOD7GGu8tv7eBhDGAB1PnRDMtyF+5vQvreKZGgE="
+          "hash": "50b8lj11+Ol1x0+Pp+wi18HgTW5p0OCfyVMKOUlMWeQ="
         }
       },
       "version": ""
@@ -801,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginReadmeModel.html",
-          "hash": "CNq4SVkpN/MQLgXv6ur5nXEFZ9jaxM1sjX1GYz3iDSg="
+          "hash": "cn4gYK/Ho7qMkQ3qt/0mSXBgMMsjMbKMxPpszjWMvOY="
         }
       },
       "version": ""
@@ -812,7 +812,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginReadmeResponseModel.html",
-          "hash": "x4lJmNb08pfzVT48lHcOwRMaR2RuBLyr0qrzIb1oUDI="
+          "hash": "4XOK49uIrFRcSxnZLDVJHGwDBlUFp74ChrASQ/rhE0c="
         }
       },
       "version": ""
@@ -823,7 +823,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginRegistryDTO.html",
-          "hash": "DmuPBD/M8AyDUKwcITJtnGM99pbCMMO/LU44jOgh1ao="
+          "hash": "XyWGM0o4bPhdNIu2eJbwnL0/GdjmifmUuOYaYz40240="
         }
       },
       "version": ""
@@ -834,7 +834,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginRegistryResponseModel.PluginStatus.html",
-          "hash": "SLB1gjfFfADk/9tRYWWrPN6E/TTD8VWVq1mmK3/ta0s="
+          "hash": "dsry6jSGKfzUTHpPC/+ElpDLrsUDShTrb9Yzk7MqjjI="
         }
       },
       "version": ""
@@ -845,7 +845,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginRegistryResponseModel.html",
-          "hash": "xHNNumT0ATTOR7mOHGczcYRoOP77han4B74oOtCFfos="
+          "hash": "syv0PNRPhUGTfyCdosBKzlVKwm0MAWydfS8LujGMTvQ="
         }
       },
       "version": ""
@@ -856,7 +856,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginSettingsInputModel.html",
-          "hash": "PCRHb4CUQlFE9rh982669ImRW1shgETl0t+P88fvx+M="
+          "hash": "Cdn2cTDmFrCvn/YYRj+bVEiaK+Bsk42m3boKIKIMVaw="
         }
       },
       "version": ""
@@ -867,7 +867,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.PluginStatus.html",
-          "hash": "grEDhh0MwIBmPM8381E4YVMmstw9L1BNNO1KCpVjdRM="
+          "hash": "tmMD5bU+M8yDwu15wtpP3EatAlYQAk1YO5MVDpJYXT8="
         }
       },
       "version": ""
@@ -878,7 +878,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Models.html",
-          "hash": "iWSHV5T6mKXaaqKmGMryMTXXJPNTD5T2xOM9UPW3tw0="
+          "hash": "FgXOSQb2S2OnlLtIos0IN5dHk6j98GiNyQnhf1gCAD4="
         }
       },
       "version": ""
@@ -889,7 +889,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.PluginConfigModelFactory.html",
-          "hash": "vQSiWkUiwSJRrYFtfUx5E5oM0MPXGHMYtj3FMnfWdjs="
+          "hash": "eGnmqvB1i1N0yzQUXbkg6GlzHWn4+cdRaZhz2Glu0f0="
         }
       },
       "version": ""
@@ -900,7 +900,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.PluginInfoModelFactory.html",
-          "hash": "8QUCmaMsglCjdK6jjRwVRXZOk1jgap/cd0po0SSZeko="
+          "hash": "9grjoJN0oqT7mQBa2yr1Uq9WKs4PcuuQUCrxpzcJ4wc="
         }
       },
       "version": ""
@@ -911,7 +911,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.PluginReadmeModelFactory.html",
-          "hash": "aZXYKoNvN/hATJdjgmVraN8gUxl/jNaLUuYI3h3gQUQ="
+          "hash": "/WYPy6SWGEWWwjSRuDqlQkpQsoX9FGL4l9gqLm7XmC0="
         }
       },
       "version": ""
@@ -922,7 +922,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Utils.CircularReferenceException.html",
-          "hash": "59ScwslHpMc1OXpEped30cxzrKYonkDtbGuZBs1uKY8="
+          "hash": "4fBqHX1qkkW7scZ6wEFL1FXnrp4JWxSEbpd0o2OMV2g="
         }
       },
       "version": ""
@@ -933,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Utils.DateTimeUtil.html",
-          "hash": "kzlSc66GfTuQ1aw/AipXrC//leNvDUhDVSJTPbqNeRc="
+          "hash": "Oz9Ue//KPgg7s1xenE+j/XH4gYgj1yQr34xWZ6G3Ohw="
         }
       },
       "version": ""
@@ -944,7 +944,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Utils.DependencySorter-1.html",
-          "hash": "v0ys2jXn+1LQbQaDvs2gnvv5DiFErHHLOck/22yHfho="
+          "hash": "8vxBxG+48+9x0YKhGbjsY3eTusg/Kj5qdva8vEE5ofo="
         }
       },
       "version": ""
@@ -955,7 +955,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Utils.FileUtil.html",
-          "hash": "ar4TLyZRoW5BmmYvmqSKRkfr51Ad5POvf93sa6LhQhQ="
+          "hash": "VhDEm0CVpFK7ojFJEeR/2m7rV6cWZPT8Q3e5S8LBYrw="
         }
       },
       "version": ""
@@ -966,7 +966,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Utils.LogUtil.html",
-          "hash": "vDegWp7HtsdMquhkcDEHbA2DFTZh7Utz7y6fgDzdqlY="
+          "hash": "Zf4zGvv1UdFQgesZ/xIDX9d63W1Uf9iJDeAEroR8eKg="
         }
       },
       "version": ""
@@ -977,7 +977,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Utils.Md5Helper.html",
-          "hash": "WynOng/T6hr8rrsswFSu8ebjb7iB6wSjrZaHE9lJGHM="
+          "hash": "O955PyWLpO7OPegFA6JeknTExeCnggbjel5izsBq4z4="
         }
       },
       "version": ""
@@ -988,7 +988,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Utils.RuntimeUtil.html",
-          "hash": "Nd2qD+xnV3eYkjp4+Eff6/dj2ykxBAR+lUiN3u4OOy4="
+          "hash": "hzIwkNZigq8jyKFb1Z0hU/+U6dl+ooFxu55smt2AenE="
         }
       },
       "version": ""
@@ -999,7 +999,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Utils.ZipHelper.html",
-          "hash": "Xq1coOB+LUlpckwopdCnS4rfceIijIhFJ+n/DDRo9e4="
+          "hash": "NuHC9OBE29pr2niSpe0vQdIAi1PARjbLEttrzrg8yKw="
         }
       },
       "version": ""
@@ -1010,7 +1010,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.Utils.html",
-          "hash": "zboOYlZj8ni0dn6hCbaExLyxn3Dst6hsYrQpjABEOwI="
+          "hash": "g9ZVXGYu6H4jMC7HM2qKtCm4ToNzpK9jxDbZqNOxXRw="
         }
       },
       "version": ""
@@ -1021,7 +1021,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html",
-          "hash": "+9FRTOMfAwoOW+ux5cGXCdFDan5mmBVCTxOoLulV+hI="
+          "hash": "uhg7mv/YG635tZjSJR7vGUQkvjZuLtkK3oThZiPr1b4="
         }
       },
       "version": ""
@@ -1032,7 +1032,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.LazyPluginLoadContext.html",
-          "hash": "XTLB7J0QOSriw2fAEl3na1U0KWlFoi+IZjH31n2uy64="
+          "hash": "p5TQl1OcbwjNSihtS0Ql+BNo8RfjKdvyUCSZktr1Iqw="
         }
       },
       "version": ""
@@ -1043,7 +1043,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.PluginContextManager.html",
-          "hash": "5owcuZO3if4pCR2qgXaFdBztJ/Rc+IuZWkx2snbW2VM="
+          "hash": "EGMDNejpcPpC2/Z4i8LyNQRGY7FWWtisuf0/IGuKpZU="
         }
       },
       "version": ""
@@ -1054,7 +1054,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.PluginContextPack.html",
-          "hash": "xwE3875Km/a9LNi6GFH5uxRWa8N/c676OeaQKUTl1+I="
+          "hash": "ki9v0lS7N28SR+Wwi5NvOnIy/bMWG+EoYr4vWT/EV4Q="
         }
       },
       "version": ""
@@ -1065,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.PluginContextPackV1.html",
-          "hash": "eUsCMPhlxavaFSHJXWTtKCk1gmsYWXPOjrxfoFEWPdA="
+          "hash": "99NE3Tf3RnnWHvmQmzuRZMOPDSEuM2VOt0D0lVxbXVw="
         }
       },
       "version": ""
@@ -1076,7 +1076,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.PluginContextStore.html",
-          "hash": "anx6bpIf4rxZn9jzRWbxkuj8ExF3pOUZyGuHqCRSmJw="
+          "hash": "M0WIUgWwMHuH6zSezTQParoi8vT+wpXdnH+kyQ80QEc="
         }
       },
       "version": ""
@@ -1087,7 +1087,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.PluginFinder.html",
-          "hash": "Wl6nx2rAXeqQddp0/BpCDCc+yYY8gM1gC7QGofc7Uhg="
+          "hash": "T+C3mCnKe6nHdleY4In9ikP05lGDi7SARp3v3IK3d6o="
         }
       },
       "version": ""
@@ -1098,7 +1098,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.PluginLoadContext.html",
-          "hash": "phow6HQ1zWpJOrTZhw8Tvb6h1XOwT0y02Ydjkb9ymfA="
+          "hash": "VhBik5DWKYZPqN+N4P5hk0VnjynOGJpEviSa7NmdANg="
         }
       },
       "version": ""
@@ -1109,7 +1109,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.PluginManager.html",
-          "hash": "NWlApts/SpOvvZ/9khGtgmCZAUi/cTORFIaS0PEITO8="
+          "hash": "rZq0wR2eslrFq7lynbfZ70KADhL9wWiMVuZN28zOIJM="
         }
       },
       "version": ""
@@ -1120,7 +1120,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.PositivePluginLoadContext.html",
-          "hash": "2Bh0BKWNIy4aSiLVYZqm5vrA7cO6bcsu2qqCQuV625I="
+          "hash": "yw8Y3QWKPPxUd9A7+ypVR37OE0MEGQfCLkEzK0bWV+U="
         }
       },
       "version": ""
@@ -1131,7 +1131,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.lmplements.html",
-          "hash": "2AtyrVV7VySFHZFaGccSN4sfzBldfO0hUS7XQf6S65U="
+          "hash": "MHfjx1a1chHjtJbtR7z3Q0DL2kiuufExfCqoWit2A08="
         }
       },
       "version": ""
@@ -1142,7 +1142,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PluginCore.html",
-          "hash": "4OkSRDpaOuUA9QtU/7H7pynPK3JUDdXy3lMU+8/jeVY="
+          "hash": "9ef0PDuSh/UPuxS+0hLq6bcN4xRgcbBQaNqTMI0K4PA="
         }
       },
       "version": ""
@@ -1153,7 +1153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "s5NhrdwsTuHW7BAxjzUzBQ2i/rZqnF+ym0ly8Axtlkg="
+          "hash": "YCjcdABF2SPNcV9HEQCTQSOR5ZDz0D6ASGuf74ysD+I="
         }
       },
       "version": ""
@@ -1175,7 +1175,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "fN4qGwrTNweWxfWpV276HbXbHXudU19vzuoyZxJPzGU="
+          "hash": "+qAB7IQiQCWqkz8hpqgSV1jePzL4DWPdXI+rgFS42Ko="
         }
       },
       "version": ""
@@ -1197,7 +1197,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "GP5FJqcLevEA7BiMCzUaOzYEVPnS/4Pa9uQJ6jPKU6U="
+          "hash": "3qkNrnpDtEN9CmhTXxkPATz0qXxQsStUEymJ8XQhGX0="
         }
       },
       "version": ""
