@@ -222,16 +222,24 @@ public class SettingsModel : PluginSettingsModel
 	"Description": "这是一个示例插件2号。",
 	"Author": "yiyun",
 	"Version": "0.1.0",
-	"SupportedVersions": [ "0.0.1" ]
+	"SupportedVersions": [ "0.0.1" ],
+	"DependPlugins": [ ]
 }
 ```
+
+> `DependPlugins`: 可以在此处申明此插件依赖的前置插件,      
+> 例如: 下方表明此插件依赖 PluginId 为 `TelegramPlugin` 的前置插件
+> `"DependPlugins": [ "TelegramPlugin" ]`
+
+> 注意: 申明依赖的前置插件, 并不会使得插件框架在启用插件时自动去启用前置插件, 这依然需要手动操作, 或者由插件开发者在钩子函数 `启用前` 检测依赖项并帮助启用,
+> 此申明依赖项只用于主程序启动时按正确的顺序恢复之前的插件启用状态 (从依赖图中建立正确的插件加载顺序)
 
 > 插件文档 `README.md`（可选）, 文件名必须 README.md
 
 ```markdown
 ## 说明文档（可选）
 
-- [] 这是一个示例插件
+- [ ] 这是一个示例插件
 - [x] 感谢使用
 ```
 
@@ -297,10 +305,7 @@ public class SettingsModel : PluginSettingsModel
 
   <!-- 发布 wwwroot -->
   <ItemGroup>
-    <Content Include="wwwroot\*">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="wwwroot\*\*">
+    <Content Include="wwwroot\**\*">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
