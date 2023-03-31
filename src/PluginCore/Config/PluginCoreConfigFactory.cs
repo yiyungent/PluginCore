@@ -21,9 +21,9 @@ namespace PluginCore.Config
         private const string FileName = "PluginCore.Config.json";
 
         #region 即时读取
-        public static PluginCoreConfig Create()
+        public static PluginCoreConfig? Create()
         {
-            PluginCoreConfig pluginCoreConfig = new PluginCoreConfig();
+            PluginCoreConfig? pluginCoreConfig = new PluginCoreConfig();
             string pluginCoreConfigFilePath = Path.Combine(Directory.GetCurrentDirectory(), "App_Data", FileName);
             string pluginCoreConfigJsonStr = string.Empty;
             if (!File.Exists(pluginCoreConfigFilePath))
@@ -36,8 +36,9 @@ namespace PluginCore.Config
             }
 
             pluginCoreConfigJsonStr = File.ReadAllText(pluginCoreConfigFilePath, Encoding.UTF8);
-            JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions();
-            jsonSerializerOptions.PropertyNameCaseInsensitive = true;
+            JsonSerializerOptions? jsonSerializerOptions = new JsonSerializerOptions() {
+                PropertyNameCaseInsensitive = true
+            };
             pluginCoreConfig = JsonSerializer.Deserialize<PluginCoreConfig>(pluginCoreConfigJsonStr, jsonSerializerOptions);
 
             return pluginCoreConfig;
@@ -57,9 +58,10 @@ namespace PluginCore.Config
                 string pluginCoreConfigFilePath = Path.Combine(Directory.GetCurrentDirectory(), "App_Data", FileName);
                 File.WriteAllText(pluginCoreConfigFilePath, pluginCoreConfigJsonStr, Encoding.UTF8);
             }
-            catch (Exception ex)
-            { }
-
+            catch
+            {
+                // ignored
+            }
         }
         #endregion
 

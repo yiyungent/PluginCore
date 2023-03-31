@@ -39,7 +39,7 @@ namespace PluginCore
                 string settingsStr = File.ReadAllText(pluginSettingsFilePath, Encoding.UTF8);
                 rtnModel = System.Text.Json.JsonSerializer.Deserialize<T>(settingsStr);
             }
-            catch (Exception ex)
+            catch
             {
                 rtnModel = null;
             }
@@ -62,7 +62,7 @@ namespace PluginCore
             {
                 rtnStr = File.ReadAllText(pluginSettingsFilePath, Encoding.UTF8);
             }
-            catch (Exception ex)
+            catch
             {
                 rtnStr = null;
             }
@@ -87,7 +87,7 @@ namespace PluginCore
                 // 写的时候加缩进
                 File.WriteAllText(pluginSettingsFilePath, ConvertJsonString(pluginSettingsJsonStr), Encoding.UTF8);
             }
-            catch (Exception ex)
+            catch
             { }
 
         }
@@ -105,7 +105,7 @@ namespace PluginCore
                 // 写的时候加缩进
                 File.WriteAllText(pluginSettingsFilePath, ConvertJsonString(pluginSettingsJsonStr), Encoding.UTF8);
             }
-            catch (Exception ex)
+            catch
             { }
 
         }

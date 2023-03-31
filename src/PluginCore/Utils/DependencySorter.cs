@@ -8,12 +8,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 
-namespace PluginCore.Utils
-{
-    /// <remarks>
+namespace PluginCore.Utils;
+
+/// <remarks>
     /// https://stackoverflow.com/questions/4106862/how-to-sort-depended-objects-by-dependency/
     /// 
     /// Definition: http://en.wikipedia.org/wiki/Topological_sorting
@@ -24,7 +23,7 @@ namespace PluginCore.Utils
     /// <history>
     /// 2012.03.21 - ThangTran: rewritten based on <see cref="TopologicalSorter"/>.
     /// </history>
-    public class DependencySorter<T>
+    public class DependencySorter<T> where T : notnull
     {
         //**************************************************
         //
@@ -190,4 +189,3 @@ namespace PluginCore.Utils
         {            
         }
     }
-}

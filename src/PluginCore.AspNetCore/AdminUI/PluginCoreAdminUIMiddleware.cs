@@ -6,8 +6,6 @@
 //===================================================
 
 
-
-﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,8 +20,6 @@ using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace PluginCore.AspNetCore.AdminUI
 {

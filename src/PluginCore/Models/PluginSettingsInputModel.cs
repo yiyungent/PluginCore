@@ -5,18 +5,11 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
+namespace PluginCore.Models;
 
-
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PluginCore.Models
+public class PluginSettingsInputModel
 {
-    public class PluginSettingsInputModel
-    {
-        public string PluginId { get; set; }
+    public string PluginId { get; set; }
 
-        public string Data { get; set; }
-    }
+    public string Data { get; set; }
 }

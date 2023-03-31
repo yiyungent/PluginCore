@@ -389,7 +389,7 @@ namespace PluginCore.AspNetCore.Controllers
                 bool isDecomparessSuccess = false;
                 if (uploadFileType == UploadFileType.Zip)
                 {
-                    isDecomparessSuccess = Utils.ZipHelper.DecomparessFile(tempZipFilePath, tempZipFilePath.Replace(".zip", ""));
+                    isDecomparessSuccess = Utils.ZipHelper.DecomparessFile(tempZipFilePath, tempZipFilePath.Replace(".zip", ""),null!);
                 }
                 else if (uploadFileType == UploadFileType.Nupkg)
                 {

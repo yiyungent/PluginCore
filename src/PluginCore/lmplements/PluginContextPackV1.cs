@@ -5,19 +5,16 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
-
-
-﻿using PluginCore.Interfaces;
+using PluginCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
-using System.Text;
 
-namespace PluginCore.lmplements
-{
+namespace PluginCore.lmplements;
+
     public class PluginContextPackV1 : IPluginContextPack
     {
         public IList<string> SkipDlls { get; set; }
@@ -100,4 +97,3 @@ namespace PluginCore.lmplements
             return context;
         }
     }
-}

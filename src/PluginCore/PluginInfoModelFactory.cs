@@ -22,9 +22,9 @@ namespace PluginCore
         private const string InfoJson = "info.json";
 
         #region 即时读取指定 plugin info.json
-        public static PluginInfoModel Create(string pluginId)
+        public static PluginInfoModel? Create(string pluginId)
         {
-            PluginInfoModel pluginInfoModel = new PluginInfoModel();
+            PluginInfoModel? pluginInfoModel = new PluginInfoModel();
             string pluginDir = Path.Combine(PluginPathProvider.PluginsRootPath(), pluginId);
             string pluginInfoFilePath = Path.Combine(pluginDir, InfoJson);
 
@@ -49,16 +49,16 @@ namespace PluginCore
         #endregion
 
         #region 即时读取插件目录下所有 plugin info.json
-        public static IList<PluginInfoModel> CreateAll()
+        public static IList<PluginInfoModel?> CreateAll()
         {
-            IList<PluginInfoModel> pluginInfoModels = new List<PluginInfoModel>();
+            IList<PluginInfoModel?> pluginInfoModels = new List<PluginInfoModel?>();
             IList<string> pluginDirs = PluginPathProvider.AllPluginDir();
             foreach (var dir in pluginDirs)
             {
                 // 从 dir 中解析出 pluginId
                 // 约定: 插件文件夹名=PluginID=插件主.dll
                 string pluginId = PluginPathProvider.GetPluginFolderNameByDir(dir);
-                PluginInfoModel model = Create(pluginId);
+                PluginInfoModel? model = Create(pluginId);
                 pluginInfoModels.Add(model);
             }
             // 去除为 null: 目标插件信息不存在，或者格式错误的

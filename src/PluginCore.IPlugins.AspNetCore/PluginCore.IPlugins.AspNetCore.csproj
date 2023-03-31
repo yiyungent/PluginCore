@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
 		<PackageId>PluginCore.IPlugins.AspNetCore</PackageId>
 		<Version>0.1.0</Version>
 		<Company>yiyun</Company>
@@ -12,6 +11,7 @@
 		<PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
 		<PackageTags>PluginCore PluginCore.IPlugins.AspNetCore</PackageTags>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<TargetFramework>net7.0</TargetFramework>
 	</PropertyGroup>
 
 	<!-- 方便开发debug,与发布到nuget -->

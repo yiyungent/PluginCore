@@ -76,7 +76,7 @@ namespace PluginCore.lmplements
             }
         }
 
-        protected override Assembly Load(AssemblyName assemblyName)
+        protected override Assembly? Load(AssemblyName assemblyName)
         {
             // 1. 先尝试 从本插件文件夹中搜索 (无需, 因为前面已先主动加载, 再次被调用此方法只能是其它情况: 有不存在于此插件文件夹下的依赖项 被需要)
 

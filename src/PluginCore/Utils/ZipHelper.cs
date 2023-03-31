@@ -82,7 +82,7 @@ namespace PluginCore.Utils
         /// <param name="compressionLevel">压缩等级</param>
         /// <param name="password">密码</param>
         /// <returns>压缩后的字节数组</returns>
-        public static byte[] CompressBytes(byte[] sourceBytes, string password = null, int compressionLevel = 6)
+        public static byte[] CompressBytes(byte[] sourceBytes, string password, int compressionLevel = 6)
         {
             byte[] result = new byte[] { };
 
@@ -136,7 +136,7 @@ namespace PluginCore.Utils
         /// <param name="sourceBytes">源字节数组</param>
         /// <param name="password">密码</param>
         /// <returns>解压后的字节数组</returns>
-        public static byte[] DecompressBytes(byte[] sourceBytes, string password = null)
+        public static byte[] DecompressBytes(byte[] sourceBytes, string password)
         {
             byte[] result = new byte[] { };
 
@@ -228,14 +228,14 @@ namespace PluginCore.Utils
         /// <summary>
         /// 压缩单个文件/文件夹
         /// </summary>
-        /// <param name="sourceList">源文件/文件夹路径列表</param>
+        /// <param name="path">源文件/文件夹路径列表</param>
         /// <param name="zipFilePath">压缩文件路径</param>
         /// <param name="comment">注释信息</param>
         /// <param name="password">压缩密码</param>
         /// <param name="compressionLevel">压缩等级，范围从0到9，可选，默认为6</param>
         /// <returns></returns>
         public static bool CompressFile(string path, string zipFilePath,
-            string comment = null, string password = null, int compressionLevel = 6)
+            string comment, string password, int compressionLevel = 6)
         {
             return CompressFile(new string[] { path }, zipFilePath, comment, password, compressionLevel);
         }
@@ -250,7 +250,7 @@ namespace PluginCore.Utils
         /// <param name="compressionLevel">压缩等级，范围从0到9，可选，默认为6</param>
         /// <returns></returns>
         public static bool CompressFile(IEnumerable<string> sourceList, string zipFilePath,
-             string comment = null, string password = null, int compressionLevel = 6)
+             string comment, string password, int compressionLevel = 6)
         {
             bool result = false;
 
@@ -325,7 +325,7 @@ namespace PluginCore.Utils
         /// <param name="destinationDirectory">目标文件夹，如果为空则解压到当前文件夹下</param>
         /// <param name="password">密码</param>
         /// <returns></returns>
-        public static bool DecomparessFile(string sourceFile, string destinationDirectory = null, string password = null)
+        public static bool DecomparessFile(string sourceFile, string destinationDirectory, string password)
         {
             bool result = false;
 
@@ -346,8 +346,7 @@ namespace PluginCore.Utils
                     Directory.CreateDirectory(destinationDirectory);
                 }
 
-                using (ZipInputStream zipStream = new ZipInputStream(File.Open(sourceFile, FileMode.Open,
-                    FileAccess.Read, FileShare.Read)))
+                using (ZipInputStream zipStream = new ZipInputStream(File.Open(sourceFile, FileMode.Open, FileAccess.Read, FileShare.Read)))
                 {
                     zipStream.Password = password;
                     ZipEntry zipEntry = zipStream.GetNextEntry();
@@ -356,8 +355,7 @@ namespace PluginCore.Utils
                     {
                         if (zipEntry.IsDirectory)//如果是文件夹则创建
                         {
-                            Directory.CreateDirectory(Path.Combine(destinationDirectory,
-                                Path.GetDirectoryName(zipEntry.Name)));
+                            Directory.CreateDirectory(Path.Combine(destinationDirectory, Path.GetDirectoryName(zipEntry.Name)));
                         }
                         else
                         {
@@ -393,7 +391,7 @@ namespace PluginCore.Utils
                 }
                 result = true;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("文件解压发生错误", ex);
             }
@@ -402,7 +400,7 @@ namespace PluginCore.Utils
         }
 
 
-        public static bool FastDecomparessFile(string sourceFile, string destinationDirectory = null)
+        public static bool FastDecomparessFile(string sourceFile, string destinationDirectory)
         {
             bool result = false;
 

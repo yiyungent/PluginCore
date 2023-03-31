@@ -107,19 +107,19 @@ namespace PluginCore.lmplements
                     var context = this.PluginContextManager.Get(pluginId);
                     // 3.找插件 主 Assembly
                     // Assembly.FullName: HelloWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-                    Assembly pluginMainAssembly = context.Assemblies.Where(m => m.FullName.StartsWith($"{pluginId}, Version=")).FirstOrDefault();
+                    Assembly pluginMainAssembly = context.Assemblies.FirstOrDefault(m => m.FullName.StartsWith($"{pluginId}, Version="));
                     if (pluginMainAssembly == null)
                     {
                         continue;
                     }
                     // 4.从插件主Assembly中 找实现了 TPlugin 接口的 Type, 若有多个，只要一个
-                    Type pluginType = pluginMainAssembly.ExportedTypes.Where(m =>
+                    Type pluginType = pluginMainAssembly.ExportedTypes.FirstOrDefault(m =>
                         (m.BaseType == typeof(TPlugin) || m.GetInterfaces().Contains(typeof(TPlugin)))
                         &&
                         !m.IsInterface
                         &&
                         !m.IsAbstract
-                    ).FirstOrDefault();
+                    );
                     if (pluginType == null)
                     {
                         continue;

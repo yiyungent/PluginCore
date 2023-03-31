@@ -7,7 +7,7 @@
 
 
 
-namespace AspNetCore6
+namespace AspNetCore7
 {
     public class WeatherForecast
     {

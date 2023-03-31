@@ -25,7 +25,7 @@ namespace PluginCore.Infrastructure
         /// <param name="destinationDirectory"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public static bool DecomparessFile(string sourceFile, string destinationDirectory = null)
+        public static bool DecomparessFile(string sourceFile, string destinationDirectory)
         {
             bool isDecomparessSuccess = false;
 

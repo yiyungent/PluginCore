@@ -38,7 +38,7 @@ namespace PluginCore.lmplements
             _resolver = new AssemblyDependencyResolver(pluginMainDllFilePath);
         }
 
-        protected override Assembly Load(AssemblyName assemblyName)
+        protected override Assembly? Load(AssemblyName assemblyName)
         {
             // 1. 先尝试 从本插件文件夹中搜索
             string assemblyPath = _resolver.ResolveAssemblyToPath(assemblyName);

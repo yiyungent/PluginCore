@@ -22,12 +22,12 @@ namespace PluginCore
         #region 即时读取
         public static PluginConfigModel Create()
         {
-            PluginConfigModel pluginConfigModel = new PluginConfigModel();
             string pluginConfigFilePath = Path.Combine(Directory.GetCurrentDirectory(), "App_Data", "plugin.config.json");
             string pluginConfigJsonStr = File.ReadAllText(pluginConfigFilePath, Encoding.UTF8);
-            JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions();
-            jsonSerializerOptions.PropertyNameCaseInsensitive = true;
-            pluginConfigModel = JsonSerializer.Deserialize<PluginConfigModel>(pluginConfigJsonStr, jsonSerializerOptions);
+            JsonSerializerOptions jsonSerializerOptions = new() {
+                PropertyNameCaseInsensitive = true
+            };
+            PluginConfigModel pluginConfigModel = JsonSerializer.Deserialize<PluginConfigModel>(pluginConfigJsonStr, jsonSerializerOptions);
             pluginConfigModel = EnabledPluginsSort(pluginConfigModel);
 
             return pluginConfigModel;

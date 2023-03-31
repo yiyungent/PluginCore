@@ -35,7 +35,7 @@ namespace PluginCore.lmplements
         {
         }
 
-        protected override Assembly Load(AssemblyName name)
+        protected override Assembly? Load(AssemblyName name)
         {
             return null;
         }
