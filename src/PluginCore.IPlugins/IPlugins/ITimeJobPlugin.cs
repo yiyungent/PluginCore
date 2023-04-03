@@ -6,24 +6,19 @@
 //===================================================
 
 
-
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace PluginCore.IPlugins
+namespace PluginCore.IPlugins.IPlugins;
+
+/// <summary>
+/// 定时任务
+/// </summary>
+public interface ITimeJobPlugin : IPlugin
 {
     /// <summary>
-    /// 定时任务
+    /// 间隔秒数
     /// </summary>
-    public interface ITimeJobPlugin : IPlugin
-    {
-        /// <summary>
-        /// 间隔秒数
-        /// </summary>
-        long SecondsPeriod { get; }
+    long SecondsPeriod { get; }
 
-        Task ExecuteAsync();
-    }
+    Task ExecuteAsync();
 }

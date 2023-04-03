@@ -5,49 +5,45 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
-
-
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.IO;
 using System.Text;
-using System.Text.Json;
+using PluginCore.IPlugins.Infrastructure;
 using PluginCore.Models;
 
-namespace PluginCore
+namespace PluginCore;
+
+/// <summary>
+/// TODO: 目前这样读取出来的包含了 windows 换行符 \r\n
+/// </summary>
+public class PluginReadmeModelFactory
 {
-    /// <summary>
-    /// TODO: 目前这样读取出来的包含了 windows 换行符 \r\n
-    /// </summary>
-    public class PluginReadmeModelFactory
+    // TODO: Linux 文件名下区分大小写, windows不区分, 目前必须为 README.md
+    private const string ReadmeFile = "README.md";
+
+    #region 即时读取
+    public static PluginReadmeModel Create(string pluginId)
     {
-        // TODO: Linux 文件名下区分大小写, windows不区分, 目前必须为 README.md
-        private const string ReadmeFile = "README.md";
+        PluginReadmeModel readmeModel = new PluginReadmeModel();
+        string pluginDir = Path.Combine(PluginPathProvider.PluginsRootPath(), pluginId);
+        string pluginReadmeFilePath = Path.Combine(pluginDir, ReadmeFile);
 
-        #region 即时读取
-        public static PluginReadmeModel Create(string pluginId)
+        if (!File.Exists(pluginReadmeFilePath))
         {
-            PluginReadmeModel readmeModel = new PluginReadmeModel();
-            string pluginDir = Path.Combine(PluginPathProvider.PluginsRootPath(), pluginId);
-            string pluginReadmeFilePath = Path.Combine(pluginDir, ReadmeFile);
-
-            if (!File.Exists(pluginReadmeFilePath))
-            {
-                return null;
-            }
-            try
-            {
-                string readmeStr = File.ReadAllText(pluginReadmeFilePath, Encoding.UTF8);
-                readmeModel.PluginId = pluginId;
-                readmeModel.Content = readmeStr;
-            }
-            catch (Exception ex)
-            {
-                readmeModel = null;
-            }
-
-            return readmeModel;
+            return null;
         }
-        #endregion
+        try
+        {
+            string readmeStr = File.ReadAllText(pluginReadmeFilePath, Encoding.UTF8);
+            readmeModel.PluginId = pluginId;
+            readmeModel.Content = readmeStr;
+        }
+        catch (Exception ex)
+        {
+            readmeModel = null;
+        }
+
+        return readmeModel;
     }
+    #endregion
 }

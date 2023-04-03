@@ -5,19 +5,13 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
+using Microsoft.AspNetCore.Http;
 
+namespace PluginCore.AspNetCore.Interfaces;
 
-﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PluginCore.AspNetCore.Interfaces
+public interface IPluginApplicationBuilderManager
 {
-    public interface IPluginApplicationBuilderManager
-    {
-        void ReBuild();
+    void ReBuild();
 
-        RequestDelegate GetBuildResult();
-    }
+    RequestDelegate GetBuildResult();
 }

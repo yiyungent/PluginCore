@@ -6,20 +6,16 @@
 //===================================================
 
 
-
-﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using PluginCore.AspNetCore.Interfaces;
-using PluginCore.Interfaces;
-using PluginCore.IPlugins;
-using PluginCore.AspNetCore.Middlewares;
 using PluginCore.AspNetCore.Infrastructure;
+using PluginCore.AspNetCore.Interfaces;
+using PluginCore.AspNetCore.Middlewares;
+using PluginCore.Interfaces;
+using PluginCore.IPlugins.AspNetCore.IPlugins;
+using PluginCore.IPlugins.Interfaces;
 
-namespace PluginCore.AspNetCore.lmplements
+namespace PluginCore.AspNetCore.Implements
 {
     public class PluginApplicationBuilderManager : PluginApplicationBuilderManager<PluginApplicationBuilder>
     {

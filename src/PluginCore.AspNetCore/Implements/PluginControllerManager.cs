@@ -6,16 +6,12 @@
 //===================================================
 
 
-
-﻿using Microsoft.AspNetCore.Mvc.ApplicationParts;
-using PluginCore.AspNetCore.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using PluginCore.AspNetCore.Interfaces;
 
-namespace PluginCore.AspNetCore.lmplements
+namespace PluginCore.AspNetCore.Implements
 {
     public class PluginControllerManager : IPluginControllerManager
     {

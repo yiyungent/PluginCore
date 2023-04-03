@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Octokit;
 using PluginCore;
+ using PluginCore.IPlugins.Infrastructure;
 
 namespace GitHubApiPlugin.Controllers
 {

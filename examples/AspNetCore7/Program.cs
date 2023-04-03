@@ -7,7 +7,7 @@
 
 
 
-// ÒýÈë PluginCore Ïà¹ØÃüÃû¿Õ¼ä
+// ï¿½ï¿½ï¿½ï¿½ PluginCore ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½
 using PluginCore.AspNetCore.Extensions;
 
 
@@ -20,7 +20,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// 1. Ìí¼Ó PluginCore
+// 1. ï¿½ï¿½ï¿½ PluginCore
 builder.Services.AddPluginCore();
 
 var app = builder.Build();
@@ -32,9 +32,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
-// 2. Ê¹ÓÃ PluginCore
+// 2. Ê¹ï¿½ï¿½ PluginCore
 app.UsePluginCore();
 
 //app.UseAuthorization();

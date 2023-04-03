@@ -5,18 +5,11 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
+using PluginCore.IPlugins.Models;
 
+namespace TestTimeJobPlugin;
 
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-using PluginCore.Models;
-
-namespace TestTimeJobPlugin
+public class SettingsModel : PluginSettingsModel
 {
-    public class SettingsModel : PluginSettingsModel
-    {
-        public string Hello { get; set; }
-    }
+    public string Hello { get; set; }
 }

@@ -11,7 +11,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
-using PluginCore.Models;
+ using PluginCore.IPlugins.Models;
 
 namespace GitHubApiPlugin
 {

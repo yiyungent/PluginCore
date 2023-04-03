@@ -5,52 +5,39 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
-
-
-﻿using System;
+using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
 using PluginCore;
 using PluginCore.IPlugins;
+using PluginCore.IPlugins.Infrastructure;
+using PluginCore.IPlugins.IPlugins;
 
-namespace TestTimeJobPlugin
+namespace TestTimeJobPlugin;
+
+public class TestTimeJobPlugin : BasePlugin, ITimeJobPlugin
 {
-    public class TestTimeJobPlugin : BasePlugin, ITimeJobPlugin
+    public override (bool IsSuccess, string Message) AfterEnable()
     {
-        public override (bool IsSuccess, string Message) AfterEnable()
-        {
-            Console.WriteLine($"{nameof(TestTimeJobPlugin)}: {nameof(AfterEnable)}");
-            return base.AfterEnable();
-        }
+        Console.WriteLine($"{nameof(TestTimeJobPlugin)}: {nameof(AfterEnable)}");
+        return base.AfterEnable();
+    }
 
-        public override (bool IsSuccess, string Message) BeforeDisable()
-        {
-            Console.WriteLine($"{nameof(TestTimeJobPlugin)}: {nameof(BeforeDisable)}");
-            return base.BeforeDisable();
-        }
+    public override (bool IsSuccess, string Message) BeforeDisable()
+    {
+        Console.WriteLine($"{nameof(TestTimeJobPlugin)}: {nameof(BeforeDisable)}");
+        return base.BeforeDisable();
+    }
 
-        public long SecondsPeriod
-        {
-            get
-            {
-                return 10;
-            }
-        }
+    public long SecondsPeriod { get { return 10; } }
 
-        public static int Count { get; set; }
+    public static int Count { get; set; }
 
-        public async Task ExecuteAsync()
-        {
-            SettingsModel model = PluginSettingsModelFactory.Create<SettingsModel>("TestTimeJobPlugin");
-            Count++;
-            model.Hello = $"{model.Hello} - {Count}";
+    public async Task ExecuteAsync()
+    {
+        SettingsModel model = PluginSettingsModelFactory.Create<SettingsModel>("TestTimeJobPlugin");
+        Count++;
+        model.Hello = $"{model.Hello} - {Count}";
 
-            PluginSettingsModelFactory.Save<SettingsModel>(model, "TestTimeJobPlugin");
-        }
-
-
-
-
+        PluginSettingsModelFactory.Save<SettingsModel>(model, "TestTimeJobPlugin");
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using PluginCore;
 using PluginCore.Interfaces;
+using PluginCore.IPlugins.Infrastructure;
 
 namespace AspNetCore7WithNatasha.Natasha;
 

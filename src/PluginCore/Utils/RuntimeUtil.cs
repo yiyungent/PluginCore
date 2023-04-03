@@ -5,22 +5,17 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
+using System;
 
+namespace PluginCore.Utils;
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PluginCore.Utils
+public class RuntimeUtil
 {
-    public class RuntimeUtil
+    public static Version RuntimeNetVersion
     {
-        public static Version RuntimeNetVersion
+        get
         {
-            get
-            {
-                return Environment.Version;
-            }
+            return Environment.Version;
         }
     }
 }

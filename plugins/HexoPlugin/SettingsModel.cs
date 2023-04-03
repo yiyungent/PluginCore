@@ -6,18 +6,16 @@
 //===================================================
 
 
+using PluginCore.IPlugins.Models;
 
-﻿using PluginCore.Models;
+namespace HexoPlugin;
 
-namespace HexoPlugin
+public class SettingsModel : PluginSettingsModel
 {
-    public class SettingsModel : PluginSettingsModel
-    {
-        public string[] Origins { get; set; }
+    public string[] Origins { get; set; }
 
-        public string Head { get; set; }
+    public string Head { get; set; }
 
-        public string Footer { get; set; }
+    public string Footer { get; set; }
 
-    }
 }

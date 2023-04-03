@@ -5,7 +5,6 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
-
 namespace PluginCore.Models;
 
 public class PluginRegistryResponseModel : PluginInfoModel

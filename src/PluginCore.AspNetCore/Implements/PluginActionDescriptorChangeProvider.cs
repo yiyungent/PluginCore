@@ -6,15 +6,11 @@
 //===================================================
 
 
-
-﻿using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.Extensions.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.Primitives;
 
-namespace PluginCore.AspNetCore.lmplements
+namespace PluginCore.AspNetCore.Implements
 {
     /// <summary>
     /// 目前采用的第一种方案
