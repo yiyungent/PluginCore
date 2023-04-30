@@ -5,7 +5,7 @@
 
 English | [中文](README_zh.md)
 
-> ASP.NET Core lightweight plugin framework
+> `ASP.NET Core` lightweight plugin framework
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/badge/license-Apache2.0-green)](https://github.com/yiyungent/PluginCore/blob/main/LICENSE)
@@ -19,7 +19,7 @@ English | [中文](README_zh.md)
 
 ## Introduce
 
-ASP.NET Core lightweight plugin framework
+`ASP.NET Core` lightweight plugin framework
 
 - **Simple** - Agreement is better than configuration, with minimal configuration to help you focus on your business
 - **Out of the box** - Automatic front-end and back-end integration, two lines of code complete the integration
@@ -29,7 +29,8 @@ ASP.NET Core lightweight plugin framework
 - **Dependency injection** - You can apply for dependency injection in the construction method of the plug-in class that implements IPlugin. Of course, dependency injection can also be used in the controller construction method
 - **Modular** - Process modularization, full dependency injection, can be implemented by replacement to customize the plug-in mechanism
 - **Easy to expand** - You can write your own plug-in SDK, then reference the plug-in SDK, write extension plug-ins-custom plug-in hooks, and apply
-- **Widget** - You can bury the extension point in the front end, and then insert the widget through the plugin
+- **Plugin dependency tree** - Declarative dependencies, automatically establish the correct loading order according to the dependencies between plugins
+- **Widget** - You can bury extension points in the front end, inject widgets through plug-ins, widgets have perfect HTML/CSS/JavaScript support, and elegant event dispatch
 - **No database required** - No database dependency
 - **0 intrusion** - Nearly zero intrusion, does not affect your existing system
 - **Little reliance** - Only rely on a third-party package (`SharpZipLib` for decompression)

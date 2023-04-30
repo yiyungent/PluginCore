@@ -23,6 +23,8 @@ features:
   details: 每个插件都可有自己的 Controller, 自己的 Route, 完全原生 Controller 开发体验。
 - title: 插件前后端分离
   details: 可在插件 wwwroot 文件夹下放置前端文件 (index.html,...), 然后访问 /plugins/pluginId/index.html。
+- title: 插件依赖树
+  details: 申明式依赖, 自动根据插件间依赖建立正确加载顺序
 footer: Apache-2.0 Licensed | Copyright © 2021-present yiyun
 ---
 

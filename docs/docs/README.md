@@ -23,6 +23,8 @@ features:
   details: Each plug-in can have its own Controller, its own Route, and a completely native Controller development experience.
 - title: Front and back ends of the plug-in are separated
   details: You can place the front-end files (index.html,...) under the plugin wwwroot folder, and then visit /plugins/pluginId/index.html.
+- title: Plugin dependency tree
+  details: Declarative dependencies, automatically establish the correct loading order according to the dependencies between plugins.
 footer: Apache-2.0 Licensed | Copyright © 2021-present yiyun
 ---
 

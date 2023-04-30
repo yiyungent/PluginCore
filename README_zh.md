@@ -5,7 +5,7 @@
 
 [English](README.md) | 中文
 
-> 适用于 ASP.NET Core 的轻量级插件框架
+> 适用于 `ASP.NET Core` 的轻量级插件框架
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/badge/license-Apache2.0-green)](https://github.com/yiyungent/PluginCore/blob/main/LICENSE)
@@ -20,17 +20,18 @@
 
 ## 介绍
 
-适用于 ASP.NET Core 的轻量级插件框架
+适用于 `ASP.NET Core` 的轻量级插件框架
 
 - **简单** - 约定优于配置, 以最少的配置帮助你专注于业务
 - **开箱即用** - 前后端自动集成, 两行代码完成集成
-- **动态 WebAPI** - 每个插件都可新增 Controller, 拥有自己的路由
+- **动态 WebAPI** - 每个插件均可新增 Controller, 拥有独立路由
 - **插件前后端分离** - 可在插件 `wwwroot` 文件夹下放置前端文件 (index.html,...), 然后访问 `/plugins/pluginId/index.html`
 - **热插拔** - 上传、安装、启用、禁用、卸载、删除 均无需重启站点; 甚至可通过插件在运行时添加 `HTTP request pipeline middleware`, 也无需重启站点
 - **依赖注入** - 可在 实现 `IPlugin` 的插件类的构造方法上申请依赖注入项, 当然 `Controller` 构造方法上也可依赖注入
-- **模块化** - 过程模块化, 全程依赖注入, 可通过替换实现以便自定义插件机制
-- **易扩展** - 你可以编写你自己的插件sdk, 然后引用插件sdk, 编写扩展插件 - 自定义插件钩子, 并应用
-- **挂件** - 你可在前端埋扩展点, 然后通过插件插入挂件
+- **模块化** - 过程模块化, 全程依赖注入,轻松替换实现自定义插件机制
+- **易扩展** - 轻松编写插件SDK, 编写扩展插件 - 自定义插件钩子, 并应用
+- **插件依赖树** - 申明式依赖, 自动根据插件间依赖建立正确加载顺序
+- **挂件** - 可在前端埋扩展点, 通过插件注入挂件, 挂件拥有完善的 HTML/CSS/JavaScript 支持, 优雅的事件派发
 - **无需数据库** - 无数据库依赖
 - **0侵入** - 近乎0侵入, 不影响你的现有系统
 - **极少依赖** - 只依赖于一个第三方包 ( 用于解压的 `SharpZipLib` )
@@ -40,7 +41,8 @@
 
 - [https://knifehub.onrender.com](https://knifehub.onrender.com)
   - 用户名: admin  密码: ABC12345
-  - 在线演示, 使用 [KnifeHub](https://github.com/yiyungent/KnifeHub), 不定时清空数据
+  - 在线演示, 使用 [KnifeHub](https://github.com/yiyungent/KnifeHub), 不定时重置   
+  - 可前往 [KnifeHub - Releases](https://github.com/yiyungent/KnifeHub/releases?q=Plugin&expanded=true) 下载插件
   - 非最新版本
 
 
