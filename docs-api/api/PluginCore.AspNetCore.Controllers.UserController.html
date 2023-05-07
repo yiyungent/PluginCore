@@ -625,7 +625,7 @@
 
   <h5 id="PluginCore_AspNetCore_Controllers_UserController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Route(&quot;api/plugincore/admin/[controller]/[action]&quot;)]
+    <pre><code class="lang- hljs">[Route(&quot;api/plugincore/admin/[controller]/[action]&quot;)]
 [ApiController]
 public class UserController : ControllerBase</code></pre>
   </div>
@@ -648,7 +648,7 @@ public class UserController : ControllerBase</code></pre>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserController(AccountManager accountManager)</code></pre>
+    <pre><code class="lang- hljs">public UserController(AccountManager accountManager)</code></pre>
   </div>
 
   <h5 class="parameters">Parameters</h5>
@@ -687,7 +687,7 @@ public class UserController : ControllerBase</code></pre>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string RemoteFronted { get; }</code></pre>
+    <pre><code class="lang- hljs">public string RemoteFronted { get; }</code></pre>
   </div>
 
 
@@ -725,7 +725,7 @@ public class UserController : ControllerBase</code></pre>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PluginCoreAdminAuthorize]
+    <pre><code class="lang- hljs">[PluginCoreAdminAuthorize]
 [HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Info()</code></pre>
@@ -764,7 +764,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Info()</code></pre>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Login(LoginRequestModel requestModel)</code></pre>
   </div>
@@ -812,7 +812,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Login(LoginRequestModel
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Logout()</code></pre>
   </div>
@@ -850,7 +850,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Logout()</code></pre>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PluginCoreAdminAuthorize]
+    <pre><code class="lang- hljs">[PluginCoreAdminAuthorize]
 [HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Update(UpdateRequestModel requestModel)</code></pre>

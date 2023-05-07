@@ -625,7 +625,7 @@
 
   <h5 id="PluginCore_AspNetCore_Controllers_PluginsController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Route(&quot;api/plugincore/admin/[controller]/[action]&quot;)]
+    <pre><code class="lang- hljs">[Route(&quot;api/plugincore/admin/[controller]/[action]&quot;)]
 [PluginCoreAdminAuthorize]
 [ApiController]
 public class PluginsController : ControllerBase</code></pre>
@@ -649,7 +649,7 @@ public class PluginsController : ControllerBase</code></pre>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PluginsController(IPluginManager pluginManager, IPluginFinder pluginFinder, IPluginApplicationBuilderManager pluginApplicationBuilderManager)</code></pre>
+    <pre><code class="lang- hljs">public PluginsController(IPluginManager pluginManager, IPluginFinder pluginFinder, IPluginApplicationBuilderManager pluginApplicationBuilderManager)</code></pre>
   </div>
 
   <h5 class="parameters">Parameters</h5>
@@ -702,7 +702,7 @@ public class PluginsController : ControllerBase</code></pre>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Details(string pluginId)</code></pre>
   </div>
@@ -750,7 +750,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Details(string pluginId
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Disable(string pluginId)</code></pre>
   </div>
@@ -798,7 +798,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Disable(string pluginId
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Enable(string pluginId)</code></pre>
   </div>
@@ -847,7 +847,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Enable(string pluginId)
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; List(string status = &quot;all&quot;)</code></pre>
   </div>
@@ -896,7 +896,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; List(string status = &q
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Readme(string pluginId)</code></pre>
   </div>
@@ -944,7 +944,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Readme(string pluginId)
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpPost]
+    <pre><code class="lang- hljs">[HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Settings(PluginSettingsInputModel inputModel)</code></pre>
   </div>
 
@@ -991,7 +991,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Settings(PluginSettings
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Settings(string pluginId)</code></pre>
   </div>
 
@@ -1038,7 +1038,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Settings(string pluginI
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Uninstall(string pluginId)</code></pre>
   </div>
@@ -1087,7 +1087,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Uninstall(string plugin
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Upload(IFormFile file)</code></pre>
   </div>

@@ -625,7 +625,7 @@
 
   <h5 id="PluginCore_AspNetCore_Controllers_DebugController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Route(&quot;api/plugincore/admin/[controller]/[action]&quot;)]
+    <pre><code class="lang- hljs">[Route(&quot;api/plugincore/admin/[controller]/[action]&quot;)]
 [PluginCoreAdminAuthorize]
 [ApiController]
 public class DebugController : ControllerBase</code></pre>
@@ -649,7 +649,7 @@ public class DebugController : ControllerBase</code></pre>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DebugController(IPluginContextManager pluginContextManager)</code></pre>
+    <pre><code class="lang- hljs">public DebugController(IPluginContextManager pluginContextManager)</code></pre>
   </div>
 
   <h5 class="parameters">Parameters</h5>
@@ -688,7 +688,7 @@ public class DebugController : ControllerBase</code></pre>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Assemblies()</code></pre>
   </div>
@@ -726,7 +726,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Assemblies()</code></pr
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; AssemblyLoadContexts()</code></pre>
   </div>
@@ -764,7 +764,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; AssemblyLoadContexts()<
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; PluginContexts()</code></pre>
   </div>
@@ -802,7 +802,7 @@ public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; PluginContexts()</code>
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet]
+    <pre><code class="lang- hljs">[HttpGet]
 [HttpPost]
 public Task&lt;ActionResult&lt;BaseResponseModel&gt;&gt; Services(IServiceProvider serviceProvider)</code></pre>
   </div>

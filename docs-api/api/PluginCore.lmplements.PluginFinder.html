@@ -114,7 +114,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
 
   <h5 id="PluginCore_lmplements_PluginFinder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PluginFinder : IPluginFinder</code></pre>
+    <pre><code class="lang- hljs">public class PluginFinder : IPluginFinder</code></pre>
   </div>
 
 
@@ -135,7 +135,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PluginFinder(IPluginContextManager pluginContextManager, IServiceProvider serviceProvider)</code></pre>
+    <pre><code class="lang- hljs">public PluginFinder(IPluginContextManager pluginContextManager, IServiceProvider serviceProvider)</code></pre>
   </div>
 
   <h5 class="parameters">Parameters</h5>
@@ -181,7 +181,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPluginContextManager PluginContextManager { get; set; }</code></pre>
+    <pre><code class="lang- hljs">public IPluginContextManager PluginContextManager { get; set; }</code></pre>
   </div>
 
 
@@ -221,7 +221,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TPlugin&gt; ActivatedPlugins&lt;TPlugin&gt;() where TPlugin : IPlugin</code></pre>
+    <pre><code class="lang- hljs">public IEnumerable&lt;TPlugin&gt; ActivatedPlugins&lt;TPlugin&gt;() where TPlugin : IPlugin</code></pre>
   </div>
 
 
@@ -267,7 +267,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; EnablePluginIds()</code></pre>
+    <pre><code class="lang- hljs">public IEnumerable&lt;string&gt; EnablePluginIds()</code></pre>
   </div>
 
 
@@ -306,7 +306,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; EnablePluginIds&lt;TPlugin&gt;() where TPlugin : IPlugin</code></pre>
+    <pre><code class="lang- hljs">public IEnumerable&lt;string&gt; EnablePluginIds&lt;TPlugin&gt;() where TPlugin : IPlugin</code></pre>
   </div>
 
 
@@ -354,7 +354,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IPlugin&gt; EnablePlugins()</code></pre>
+    <pre><code class="lang- hljs">public IEnumerable&lt;IPlugin&gt; EnablePlugins()</code></pre>
   </div>
 
 
@@ -393,7 +393,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;(IPlugin PluginInstance, string PluginId)&gt; EnablePluginsFull()</code></pre>
+    <pre><code class="lang- hljs">public IEnumerable&lt;(IPlugin PluginInstance, string PluginId)&gt; EnablePluginsFull()</code></pre>
   </div>
 
 
@@ -432,7 +432,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;(TPlugin PluginInstance, string PluginId)&gt; EnablePluginsFull&lt;TPlugin&gt;() where TPlugin : IPlugin</code></pre>
+    <pre><code class="lang- hljs">public IEnumerable&lt;(TPlugin PluginInstance, string PluginId)&gt; EnablePluginsFull&lt;TPlugin&gt;() where TPlugin : IPlugin</code></pre>
   </div>
 
 
@@ -481,7 +481,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TPlugin&gt; EnablePlugins&lt;TPlugin&gt;() where TPlugin : IPlugin</code></pre>
+    <pre><code class="lang- hljs">public IEnumerable&lt;TPlugin&gt; EnablePlugins&lt;TPlugin&gt;() where TPlugin : IPlugin</code></pre>
   </div>
 
 
@@ -530,7 +530,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPlugin Plugin(string pluginId)</code></pre>
+    <pre><code class="lang- hljs">public IPlugin Plugin(string pluginId)</code></pre>
   </div>
 
   <h5 class="parameters">Parameters</h5>
@@ -581,7 +581,7 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
   <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual object ResolveUnregistered(Type type)</code></pre>
+    <pre><code class="lang- hljs">protected virtual object ResolveUnregistered(Type type)</code></pre>
   </div>
 
   <h5 class="parameters">Parameters</h5>
