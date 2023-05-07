@@ -24,16 +24,19 @@ English | [中文](README_zh.md)
 - **Simple** - Agreement is better than configuration, with minimal configuration to help you focus on your business
 - **Out of the box** - Automatic front-end and back-end integration, two lines of code complete the integration
 - **Dynamic WebAPI** - Each plug-in can add a Controller and have its own routing
+- **Plugin isolation and sharing** - Perfect plugin isolation and type sharing
 - **Front and back ends of the plug-in are separated** - You can place the front-end files (index.html,...) under the plugin `wwwroot` folder, and then visit `/plugins/pluginId/index.html`
 - **Hot swap** - Upload, install, enable, disable, uninstall, and delete without restarting the site; you can even add the `HTTP request pipeline middleware` at runtime through the plug-in, and there is no need to restart the site
 - **Dependency injection** - You can apply for dependency injection in the construction method of the plug-in class that implements IPlugin. Of course, dependency injection can also be used in the controller construction method
 - **Modular** - Process modularization, full dependency injection, can be implemented by replacement to customize the plug-in mechanism
 - **Easy to expand** - You can write your own plug-in SDK, then reference the plug-in SDK, write extension plug-ins-custom plug-in hooks, and apply
 - **Plugin dependency tree** - Declarative dependencies, automatically establish the correct loading order according to the dependencies between plugins
+- **Life cycle** - Controllable plug-in life cycle, perfect event distribution
 - **Widget** - You can bury extension points in the front end, inject widgets through plug-ins, widgets have perfect HTML/CSS/JavaScript support, and elegant event dispatch
 - **No database required** - No database dependency
 - **0 intrusion** - Nearly zero intrusion, does not affect your existing system
 - **Little reliance** - Only rely on a third-party package (`SharpZipLib` for decompression)
+- **Globalization** - Thanks to the internationalization implementation of `i18n`, it provides multi-language switching support
 
 
 ## Online demo

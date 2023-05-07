@@ -21,10 +21,16 @@ features:
   details: 上传、安装、启用、禁用、卸载、删除 均无需重启站点。
 - title: 动态 WebAPI
   details: 每个插件都可有自己的 Controller, 自己的 Route, 完全原生 Controller 开发体验。
+- title: 插件隔离与共享
+  details: 完善的插件隔离与类型共享
 - title: 插件前后端分离
   details: 可在插件 wwwroot 文件夹下放置前端文件 (index.html,...), 然后访问 /plugins/pluginId/index.html。
 - title: 插件依赖树
   details: 申明式依赖, 自动根据插件间依赖建立正确加载顺序
+- title: 生命周期
+  details: 可控的插件生命周期, 完善的事件派发
+- title: 国际化
+  details: 得益于 i18n 的国际化实现, 提供多语言切换支持
 footer: Apache-2.0 Licensed | Copyright © 2021-present yiyun
 ---
 
