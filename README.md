@@ -342,6 +342,9 @@ graph BT
 
 <!-- AFDIAN-ACTION:START -->
 
+<a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
+    <img src="https://pic1.afdiancdn.com/user/c4a50eea706211ebb48352540025c377/avatar/d436b61a2145de9d2d70aa766a17c75f_w1080_h1080_s116.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="WiMi" title="WiMi"/>
+</a>
 <a href="https://afdian.net/u/459023b8e07b11eb92af52540025c377">
     <img src="https://pic1.afdiancdn.com/user/459023b8e07b11eb92af52540025c377/avatar/9238a84b58fdc0aa6093340709d63fd4_w1500_h925_s935.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="Dr" title="Dr"/>
 </a>
@@ -352,6 +355,10 @@ graph BT
 <details>
   <summary>点我 打开/关闭 赞助者列表</summary>
 
+<a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
+WiMi
+</a>
+<span>( 1 次赞助, 共 ￥30 ) 留言: 感谢分享</span><br>
 <a href="https://afdian.net/u/459023b8e07b11eb92af52540025c377">
 Dr
 </a>
