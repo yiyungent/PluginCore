@@ -5,7 +5,7 @@
 
 [English](README.md) | 中文
 
-> 适用于 `ASP.NET Core` 的轻量级插件框架
+> 🔌 适用于 `ASP.NET Core` 的轻量级插件框架
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/badge/license-Apache2.0-green)](https://github.com/yiyungent/PluginCore/blob/main/LICENSE)

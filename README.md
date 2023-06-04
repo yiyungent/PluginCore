@@ -5,7 +5,7 @@
 
 English | [中文](README_zh.md)
 
-> `ASP.NET Core` lightweight plugin framework
+> 🔌 `ASP.NET Core` lightweight plugin framework
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/badge/license-Apache2.0-green)](https://github.com/yiyungent/PluginCore/blob/main/LICENSE)
