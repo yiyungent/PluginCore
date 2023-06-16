@@ -1,3 +1,12 @@
+//===================================================
+//  License: Apache-2.0
+//  Contributors: yiyungent@gmail.com
+//  Project: https://moeci.com/PluginCore
+//  GitHub: https://github.com/yiyungent/PluginCore
+//===================================================
+
+
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -28,6 +37,17 @@ namespace PluginCore.Utils
             DateTime now = DateTime.Now;
             Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm:ss"));
             Console.WriteLine(message);
+        }
+
+        public static void Exception(Exception ex)
+        {
+            Error(ex.ToString());
+            Exception exception = ex;
+            while (exception.InnerException != null)
+            {
+                exception = ex.InnerException;
+                Error(exception.Message);
+            }
         }
 
 

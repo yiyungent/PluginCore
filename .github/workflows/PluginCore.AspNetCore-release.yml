@@ -1,0 +1,70 @@
+name: PluginCore.AspNetCore Release
+
+on: 
+  push:
+    tags:
+      - 'PluginCore.AspNetCore-v*'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v2
+      with:
+        # 为了让 git 有日志 (git log) 可寻，还得在检出的时候顺带把所有提交历史一并拉下来，指定 fetch-depth 就能做到
+        fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.100
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 12
+        
+    - name: Build
+      run: |
+        cd ./src/PluginCore.AspNetCore
+        npm install
+        dotnet build --configuration Release
+        ls
+        ls ./bin/Release/
+      
+    - name: Zip the Build
+      run: |
+        cd ./src/PluginCore.AspNetCore/bin/Release
+        zip -r PluginCore.AspNetCore-netcoreapp3.1.zip ./netcoreapp3.1/ 
+        zip -r PluginCore.AspNetCore-net5.0.zip ./net5.0/
+        zip -r PluginCore.AspNetCore-net6.0.zip ./net6.0/
+        cd ../../../../
+        mv ./src/PluginCore.AspNetCore/bin/Release/*.zip ./
+      
+    - name: Create temp-release-note.md
+      run: |
+        cp utils/generate-release-note.ps1 generate-release-note.ps1
+        $env:GitProjectTagName="PluginCore.AspNetCore"
+        $env:GitProjectPath="src/PluginCore.AspNetCore/*"
+        ./generate-release-note.ps1
+      shell: pwsh
+
+    - name: Create Release and Upload Release Asset
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        #tag_name: ${{ github.ref }}
+        #name: ${{ github.ref }}
+        # body: TODO New Release.
+        body_path: temp-release-note.md
+        draft: false
+        prerelease: false
+        files: |
+          PluginCore.AspNetCore-netcoreapp3.1.zip
+          PluginCore.AspNetCore-net5.0.zip
+          PluginCore.AspNetCore-net6.0.zip
+          LICENSE 
+          README.md

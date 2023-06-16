@@ -1,6 +1,275 @@
 
 
 
+# PluginCore.AspNetCore-v1.3.1
+
+## Updated
+
+- `PluginCore.IPlugins.AspNetCore-v0.1.0`
+
+
+# PluginCore.IPlugins.AspNetCore-v0.1.0
+
+## Updated
+
+- `PluginCore.IPlugins-v0.9.0`
+
+
+# PluginCore.AspNetCore-v1.3.0
+
+## Updated
+
+- `PluginCore-v2.2.0`
+- 简化 插件状态
+  - 移除 `未安装`  状态
+  - 上传后 默认为 `未启用`
+  - `Plugins` 文件夹中仅有两种状态的插件: `已启用`, `未启用`
+
+
+# PluginCore-v2.2.0
+
+## Updated
+
+- `PluginCore.IPlugins-v0.9.0`
+- `IPluginFinder` 新 API
+
+
+# PluginCore.IPlugins-v0.9.0
+
+## Updated
+
+- `IPlugins.AppStart()`
+- `IPlugins.AppStartOrderDependPlugins`
+
+
+
+# PluginCore.AspNetCore-v1.2.0
+
+## Updated
+
+- `DebugController`: `PluginContexts:PluginId`
+- `<PackageReference Include="PluginCore" Version="2.1.0" />`
+
+# PluginCore-v2.1.0
+
+## Fixed
+
+- 修复解压时没有子目录导致解压失败的问题
+
+## Updated
+
+- `IPluginContext.PluginId`
+- `LazyPluginLoadContext`, `PositivePluginLoadContext`
+
+# PluginCore.AspNetCore-v1.1.0
+
+## Updated
+
+- `api/PluginCore/Admin/Debug`    
+  - `PluginContexts`     
+  - `AssemblyLoadContexts`    
+  - `Assemblies`     
+  - `Services`   
+
+# PluginCore.AspNetCore-v1.0.4
+
+## Updated
+
+- 使用 `PluginCore-v2.0.2`
+
+
+
+# PluginCore-v2.0.2
+
+## Fixed
+
+- B 插件依赖 A 插件时, B 插件无法启用
+  - 1.null异常: B 插件的 LoadContext 没有搜索到 A 插件的 assemblyName 
+  - 2.经过测试启用, 不同版本 dll 依然可以在不同插件中共存 (由于1插件一个LoadContext, 区分采用 `AssemblyName.FullName`)
+
+
+
+# PluginCore.AspNetCore-v1.0.3
+
+## Fixed
+
+- 内存溢出
+  - 后台定时任务频率太高 (1s), GC 没有及时回收, 内存++ -> 每次任务完成 `GC.Collect()` 
+
+
+# PluginCore.AspNetCore-v1.0.2
+
+
+## Updated
+
+- 后端: 移除: 插件上传大小限制       
+- 前端: 使用 `plugincore-admin-frontend-v0.3.2`
+  - 移除: 插件上传大小限制
+
+
+
+# PluginCore.AspNetCore-v1.0.1
+
+## Updated
+
+- 更新到 `PluginCore-v2.0.1`
+
+
+# PluginCore-v2.0.1
+
+## Fixed
+
+- 修复 插件dll 被锁定 导致的删除失败
+
+
+
+# PluginCore.AspNetCore-v1.0.0
+
+## Refactor
+
+- 默认 使用 最新 微软推荐的 插件加载方案 `PluginLoadContext`
+- 大量接口变更, 类名变更
+
+
+
+# PluginCore-v2.0.0
+
+## Refactor
+
+- 默认 使用 最新 微软推荐的 插件加载方案 `PluginLoadContext`
+- 大量接口变更, 类名变更
+
+
+# PluginCore.AspNetCore-v0.0.5
+
+## Fixed
+
+- 修复由于 `GitHub Action` 缺少 `npm install` 引起的 没有将前端文件打包进入 dll
+
+
+
+# PluginCore.AspNetCore-v0.0.4
+
+## Fixed
+
+- 修复由于 `GitHub Action` 引起 没有安装 `Node.js` 导致没有成功 `npm install` 最终导致没有将前端文件成功打包进入 dll
+
+
+
+# PluginCore.AspNetCore-v0.0.3
+
+## Fixed
+
+- `services.TryAddTransient<IPluginFinder, PluginFinder>();`
+
+
+# PluginCore.AspNetCore-v0.0.2
+
+- 仅 `ASP.NET Core` 相关
+
+> PS: 注意: 之前的 `PluginCore.AspNetCore-0.0.1` 无用, 只是为了占用住 在 NuGet 的 PackageId
+
+# PluginCore.IPlugins.AspNetCore-v0.0.1
+
+
+- 仅 `ASP.NET Core` 相关
+
+# PluginCore-v1.0.0
+
+## Refactor
+
+- 重大更新: 重构
+  - 在 `ASP.NET Core` 中的内容移动到 `PluginCore.AspNetCore`
+  - 接口更新
+
+## Added
+
+- 开放更多接口, 可自由替换内部实现
+  - `services.TryAddTransient<IPluginControllerManager, PluginControllerManager>();`
+  - `services.TryAddTransient<IPluginApplicationBuilderManager, PluginApplicationBuilderManager>();`
+  - `services.TryAddTransient<IPluginManager, AspNetCorePluginManager>();`
+  - `services.AddTransient<IPluginFinder, PluginFinder>();`
+    - **注意:** 此项忘记 用 `TryAdd` 了, 在 `AddPluginCore()` 前 添加会导致无法替换内部, 下个版本修复
+
+# PluginCore.IPlugins-v0.8.0
+
+## Refactor
+
+- 重大更新: 重构
+  - 在 `ASP.NET Core` 中的内容移动到 `PluginCore.IPlugins.AspNetCore`
+
+
+
+---
+
+
+
+# PluginCore-v0.9.3
+
+## Fixed
+
+- 更新 PluginCore Admin 前端: `plugincore-admin-frontend-v0.3.1`
+  - Fixed: 用户名验证错误
+
+
+# PluginCore-v0.9.2
+
+## Fixed
+
+- `tokenCookieName = "PluginCore.Admin.Token"` 与 `PluginCore Admin` 前端一致, 而不是后端检索 `tokenCookieName = "token"`
+  - 插件可在 `Controller,Action` 上使用 `[Authorize("PluginCoreAdmin")]`, 来达到与 `PluginCore Admin` 相同的权限策略
+
+
+
+# PluginCore-v0.9.1
+
+## Fixed
+
+- `ITimeJobPlugin` 多线程定时任务 执行问题
+  - 当上一个任务未完成, 下个任务就开始时导致, 修复: 加锁, 下个任务线程阻塞等待
+
+# PluginCore-v0.9.0
+
+## Added
+
+- 挂件 (Plugin Widget) 相关
+
+
+# PluginCore.IPlugins-v0.7.0
+
+## Added
+
+- `PluginCore.IPlugins.IWidgetPlugin.Widget` 前端挂件接口
+
+
+
+# PluginCore-v0.8.6
+
+## Fixed
+
+- 若 `PluginCore` + `Swashbuckle.AspNetCore` 配合使用, 导致 `SwaggerGeneratorException: Ambiguous HTTP method for action`
+
+
+# PluginCore-v0.8.5
+
+## Updated
+
+- Reference: plugincore-admin-frontend v0.3.0
+
+# PluginCore-v0.8.4
+
+## Updated
+
+- PackageReference: PluginCore.IPlugins: 0.6.1
+
+# PluginCore.IPlugins-v0.6.1
+
+## Updated
+
+- remove: `Newtonsoft.Json`
+  - 设置的json格式化 使用 `System.Text.json`
+
+
 # PluginCore-v0.8.3
 
 ## Fixed
@@ -188,4 +457,6 @@
 - 加载本地 前端
 
 
-
+<!-- Matomo Image Tracker-->
+<img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.moeci.com/matomo.php?idsite=2&amp;rec=1&amp;action_name=GitHub.PluginCore.Releases.md" style="border:0" alt="" />
+<!-- End Matomo -->

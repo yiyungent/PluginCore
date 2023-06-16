@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>PluginCore.Template</id>
-    <version>0.1.0</version>
+    <version>0.2.1</version>
     <description>Example Plugin template: PluginCore</description>
     <authors>yiyun</authors>
     <packageTypes>

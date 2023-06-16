@@ -1,84 +1,47 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>0.8.3</Version>
-    <Company>yiyun</Company>
-    <Authors>yiyun</Authors>
-    <Description>一个轻量的插件框架</Description>
-    <Copyright>Copyright (c) 2021-present yiyun</Copyright>
-    <RepositoryUrl>https://github.com/yiyungent/PluginCore</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
-    <PackageTags>PluginCore</PackageTags>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+		<PackageId>PluginCore</PackageId>
+		<Version>2.2.0</Version>
+		<Company>yiyun</Company>
+		<Authors>yiyun</Authors>
+		<Description>Lightweight plugin framework</Description>
+		<Copyright>Copyright (c) 2021-present yiyun</Copyright>
+		<RepositoryUrl>https://github.com/yiyungent/PluginCore</RepositoryUrl>
+		<PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
+		<PackageTags>PluginCore</PackageTags>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
 
 	<PropertyGroup>
 		<LangVersion>9.0</LangVersion>
-		<!--<Nullable>enable</Nullable>-->
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="SharpZipLib" Version="1.2.0" />
+	</ItemGroup>
 
-  <!-- 生成注释xml -->
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp3.1|AnyCPU'">
-    <DocumentationFile>bin\Release\netcoreapp3.1\PluginCore.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net5.0|AnyCPU'">
-    <DocumentationFile>bin\Release\net5.0\PluginCore.xml</DocumentationFile>
-  </PropertyGroup>
+	<!-- 生成注释xml -->
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp3.1|AnyCPU'">
+		<DocumentationFile>bin\Release\netcoreapp3.1\PluginCore.xml</DocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net5.0|AnyCPU'">
+		<DocumentationFile>bin\Release\net5.0\PluginCore.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <!-- 0.4.0 : 支持嵌入式 前端 (打包进dll) -->
-  <ItemGroup>
-    <EmbeddedResource Include="node_modules/plugincore-admin-frontend/dist/**/**/*" />
-  </ItemGroup>
+	<!-- 方便开发debug,与发布到nuget -->
+	<ItemGroup Condition="'$(Configuration)' == 'Release'">
+		<PackageReference Include="PluginCore.IPlugins" Version="0.9.0" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+		<ProjectReference Include="..\PluginCore.IPlugins\PluginCore.IPlugins.csproj" />
+	</ItemGroup>
 
-  <!-- 将 PluginCoreAdmin\*\* 与 readme.txt 复制到build后文件夹，且加入 nupkg -->
-  <!-- 从 0.2.0 开始, 支持远程前端，本地前端不再必要 -->
-  <!--<ItemGroup>
-    <Content Include="PluginCoreAdmin\*">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </Content>
-    <Content Include="PluginCoreAdmin\*\*">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </Content>
-    <Content Include="PluginCoreAdmin\*\*\*">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </Content>
-    <Content Include="readme.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>-->
-
-  <!-- 方便开发debug,与发布到nuget -->
-  <ItemGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageReference Include="PluginCore.IPlugins" Version="0.6.0" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-    <ProjectReference Include="..\PluginCore.IPlugins\PluginCore.IPlugins.csproj" />
-  </ItemGroup>
-
-  
-  <ItemGroup>
-    <PackageReference Include="SharpZipLib" Version="1.2.0" />
-  </ItemGroup>
-
-  <!-- Use Visual Studio npm package if it is installed. -->
-  <PropertyGroup Condition="Exists('$(VsInstallRoot)\Web\External\npm.cmd')">
-    <Path>$(Path)$(VsInstallRoot)\Web\External\;</Path>
-  </PropertyGroup>
-
-  <Target Name="NpmInstall" BeforeTargets="Build">
-    <Exec Command="npm install" EnvironmentVariables="PATH=$(Path.Replace(';', '%3B'))" ContinueOnError="true">
-      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
-    </Exec>
-    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js/npm is required to build this project. To continue, please install Node.js from https://nodejs.org/ or Visual Studio Installer, and then restart your command prompt or IDE." />
-  </Target>
-  
+	<ItemGroup>
+		<Folder Include="BackgroundServices\" />
+		<Folder Include="Extensions\" />
+	</ItemGroup>
 
 </Project>

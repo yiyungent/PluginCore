@@ -1,0 +1,20 @@
+name: Sync to Bitbucket
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync to Bitbucket
+        uses: wearerequired/git-mirror-action@master
+        env:
+          # 在 Settings->Secrets 配置 BITBUCKET_SSH_PRIVATE_KEY
+          SSH_PRIVATE_KEY: ${{ secrets.BITBUCKET_SSH_PRIVATE_KEY }}
+        with:
+          # 源仓库地址
+          source-repo: git@github.com:yiyungent/PluginCore.git
+          # 目标仓库地址
+          destination-repo: git@bitbucket.org:yiyungent/PluginCore.git

@@ -17,7 +17,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.102
+        dotnet-version: 6.0.100
         
     - name: Build
       run: |
@@ -25,6 +25,7 @@ jobs:
         dotnet build --configuration Release
         ls
         ls ./bin/Release/
+        ls ./bin/Release/netstandard2.0/
       
     - name: Zip the Build
       run: |
@@ -45,3 +46,5 @@ jobs:
         prerelease: false
         files: |
           GitHubApiPlugin-netstandard2.0.zip
+          #LICENSE 
+          #README.md

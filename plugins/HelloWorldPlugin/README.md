@@ -15,3 +15,10 @@
 
 - [/Plugins/HelloWorldPlugin](/Plugins/HelloWorldPlugin)
 
+## 挂件
+
+- [/api/plugincore/PluginWidget/Widget?widgetKey="PluginCore.Admin.Footer"&extraPars="a","b","c"](/api/plugincore/PluginWidget/Widget?widgetKey="PluginCore.Admin.Footer"&extraPars="a","b","c")
+  - [/api/plugincore/PluginWidget/Widget?widgetKey=%22PluginCore.Admin.Footer%22&extraPars=%22a%22,%22b%22,%22c%22](/api/plugincore/PluginWidget/Widget?widgetKey=%22PluginCore.Admin.Footer%22&extraPars=%22a%22,%22b%22,%22c%22)
+
+
+

@@ -9,23 +9,56 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout 🛎️
-      uses: actions/checkout@master
+      uses: actions/checkout@v3
+      with:
+        submodules: true
       
     - name: Use Node.js 12
       uses: actions/setup-node@v2-beta
       with:
         node-version: '12'
 
-    - name: Install and Build 🔧 
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.100
+
+    - name: docs - Install and Build 🔧 
       run: |
         cd docs
         npm install
         npm run docs:build
+
+    - name: docs api - Install and Build 🔧 
+      run: |
+        dotnet tool update -g docfx
+        dotnet build src/PluginCore.IPlugins/PluginCore.IPlugins.csproj --configuration Release
+        dotnet build src/PluginCore/PluginCore.csproj --configuration Release
+        dotnet build src/PluginCore.IPlugins.AspNetCore/PluginCore.IPlugins.AspNetCore.csproj --configuration Release
+        dotnet build src/PluginCore.AspNetCore/PluginCore.AspNetCore.csproj --configuration Release
+        cd docfx_project
+        docfx docfx.json
+
+    - name: gh-pages-folder
+      run: |
+        mkdir -p gh-pages-folder/docs-api
+        cp -r docs/docs/.vuepress/dist/** gh-pages-folder/
+        cp -r docfx_project/_site/** gh-pages-folder/docs-api/
+      shell: bash
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: docs/docs/.vuepress/dist
+        FOLDER: gh-pages-folder
 
+    - name: Upyun Refresh
+      uses: yiyungent/upyun-action@main
+      with:
+        # 在 Settings->Secrets 配置 UPYUN_USERNAME, UPYUN_PASSWORD
+        upyun_username: ${{ secrets.UPYUN_USERNAME }}
+        upyun_password: ${{ secrets.UPYUN_PASSWORD }}
+        # 要刷新的url, 支持匹配符 *, 多个url中间用 \n 隔开
+        refresh_cache_urls: "https://moeci.com/PluginCore/*\nhttps://moeci.com/PluginCore"
+        upyun_debug: true

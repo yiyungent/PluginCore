@@ -1,3 +1,12 @@
+//===================================================
+//  License: Apache-2.0
+//  Contributors: yiyungent@gmail.com
+//  Project: https://moeci.com/PluginCore
+//  GitHub: https://github.com/yiyungent/PluginCore
+//===================================================
+
+
+
 ﻿using ICSharpCode.SharpZipLib.Zip;
 using System;
 using System.Collections.Generic;
@@ -356,6 +365,10 @@ namespace PluginCore.Utils
                             if (!string.IsNullOrEmpty(fileName) && fileName.Trim().Length > 0)
                             {
                                 FileInfo fileItem = new FileInfo(Path.Combine(destinationDirectory, zipEntry.Name));
+                                if (fileItem.Directory is null)
+                                    continue;
+                                if (!Directory.Exists(fileItem.Directory.FullName))
+                                    Directory.CreateDirectory(fileItem.Directory.FullName);
                                 using (FileStream writeStream = fileItem.Create())
                                 {
                                     byte[] buffer = new byte[BufferSize];

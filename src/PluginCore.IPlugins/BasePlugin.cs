@@ -1,3 +1,12 @@
+//===================================================
+//  License: Apache-2.0
+//  Contributors: yiyungent@gmail.com
+//  Project: https://moeci.com/PluginCore
+//  GitHub: https://github.com/yiyungent/PluginCore
+//===================================================
+
+
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
@@ -38,6 +47,19 @@ namespace PluginCore.IPlugins
         public virtual (bool IsSuccess, string Message) Update(string currentVersion, string targetVersion)
         {
             return (true, "更新成功");
+        }
+
+        public virtual void AppStart() 
+        {
+            
+        }
+
+        public virtual List<string> AppStartOrderDependPlugins
+        {
+            get
+            {
+                return new List<string>();
+            }
         }
     }
 }
