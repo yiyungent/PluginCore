@@ -334,6 +334,14 @@ graph BT
 - 设计参考自 <a href="https://github.com/nopSolutions/nopCommerce" target="_blank">nopCommerce</a>，感谢作者 nopSolutions 的贡献
 
 
+### 特别鸣谢
+
+> [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 是一个强大的 Visual Studio 扩展，适用于 .NET 平台语言。
+
+特别感谢 [JetBrains](https://www.jetbrains.com/?from=PluginCore) 为开源项目提供免费的 [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 等的授权  
+[<img src="docs/docs/.vuepress/public/images/jetbrains-variant-3.png" width="200"/>](https://www.jetbrains.com/?from=PluginCore)
+
+
 ## 赞助者
 
 本列表由 [afdian-action](https://github.com/yiyungent/afdian-action) 自动更新
@@ -371,6 +379,7 @@ MonoLogueChi
 </details>
 <!-- 注意: 尽量将标签前靠,否则经测试可能被 GitHub 解析为代码块 -->
 <!-- AFDIAN-ACTION:END -->
+
 
 ## Donate
 
