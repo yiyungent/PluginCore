@@ -5,7 +5,7 @@
 
 English | [中文](README_zh.md)
 
-> ASP.NET Core lightweight plugin framework
+> 🔌 `ASP.NET Core` lightweight plugin framework
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/badge/license-Apache2.0-green)](https://github.com/yiyungent/PluginCore/blob/main/LICENSE)
@@ -19,20 +19,24 @@ English | [中文](README_zh.md)
 
 ## Introduce
 
-ASP.NET Core lightweight plugin framework
+`ASP.NET Core` lightweight plugin framework
 
 - **Simple** - Agreement is better than configuration, with minimal configuration to help you focus on your business
 - **Out of the box** - Automatic front-end and back-end integration, two lines of code complete the integration
 - **Dynamic WebAPI** - Each plug-in can add a Controller and have its own routing
+- **Plugin isolation and sharing** - Perfect plugin isolation and type sharing
 - **Front and back ends of the plug-in are separated** - You can place the front-end files (index.html,...) under the plugin `wwwroot` folder, and then visit `/plugins/pluginId/index.html`
 - **Hot swap** - Upload, install, enable, disable, uninstall, and delete without restarting the site; you can even add the `HTTP request pipeline middleware` at runtime through the plug-in, and there is no need to restart the site
 - **Dependency injection** - You can apply for dependency injection in the construction method of the plug-in class that implements IPlugin. Of course, dependency injection can also be used in the controller construction method
 - **Modular** - Process modularization, full dependency injection, can be implemented by replacement to customize the plug-in mechanism
 - **Easy to expand** - You can write your own plug-in SDK, then reference the plug-in SDK, write extension plug-ins-custom plug-in hooks, and apply
-- **Widget** - You can bury the extension point in the front end, and then insert the widget through the plugin
+- **Plugin dependency tree** - Declarative dependencies, automatically establish the correct loading order according to the dependencies between plugins
+- **Life cycle** - Controllable plug-in life cycle, perfect event distribution
+- **Widget** - You can bury extension points in the front end, inject widgets through plug-ins, widgets have perfect HTML/CSS/JavaScript support, and elegant event dispatch
 - **No database required** - No database dependency
 - **0 intrusion** - Nearly zero intrusion, does not affect your existing system
 - **Little reliance** - Only rely on a third-party package (`SharpZipLib` for decompression)
+- **Globalization** - Thanks to the internationalization implementation of `i18n`, it provides multi-language switching support
 
 
 ## Online demo
@@ -330,6 +334,14 @@ graph BT
 - 设计参考自 <a href="https://github.com/nopSolutions/nopCommerce" target="_blank">nopCommerce</a>，感谢作者 nopSolutions 的贡献
 
 
+### 特别鸣谢
+
+> [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 是一个强大的 Visual Studio 扩展，适用于 .NET 平台语言。
+
+特别感谢 [JetBrains](https://www.jetbrains.com/?from=PluginCore) 为开源项目提供免费的 [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 等的授权  
+[<img src="docs/docs/.vuepress/public/images/jetbrains-variant-3.png" width="200"/>](https://www.jetbrains.com/?from=PluginCore)
+
+
 ## 赞助者
 
 本列表由 [afdian-action](https://github.com/yiyungent/afdian-action) 自动更新
@@ -338,6 +350,9 @@ graph BT
 
 <!-- AFDIAN-ACTION:START -->
 
+<a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
+    <img src="https://pic1.afdiancdn.com/user/c4a50eea706211ebb48352540025c377/avatar/d436b61a2145de9d2d70aa766a17c75f_w1080_h1080_s116.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="WiMi" title="WiMi"/>
+</a>
 <a href="https://afdian.net/u/459023b8e07b11eb92af52540025c377">
     <img src="https://pic1.afdiancdn.com/user/459023b8e07b11eb92af52540025c377/avatar/9238a84b58fdc0aa6093340709d63fd4_w1500_h925_s935.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="Dr" title="Dr"/>
 </a>
@@ -348,6 +363,10 @@ graph BT
 <details>
   <summary>点我 打开/关闭 赞助者列表</summary>
 
+<a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
+WiMi
+</a>
+<span>( 1 次赞助, 共 ￥30 ) 留言: 感谢分享</span><br>
 <a href="https://afdian.net/u/459023b8e07b11eb92af52540025c377">
 Dr
 </a>
@@ -360,6 +379,7 @@ MonoLogueChi
 </details>
 <!-- 注意: 尽量将标签前靠,否则经测试可能被 GitHub 解析为代码块 -->
 <!-- AFDIAN-ACTION:END -->
+
 
 ## Donate
 
