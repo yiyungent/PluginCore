@@ -6,17 +6,11 @@
 //===================================================
 
 
+namespace PluginCore.IPlugins.Interfaces;
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PluginCore.Interfaces
+public interface IPluginManager
 {
-    public interface IPluginManager
-    {
-        void LoadPlugin(string pluginId);
+    void LoadPlugin(string pluginId);
 
-        void UnloadPlugin(string pluginId);
-    }
+    void UnloadPlugin(string pluginId);
 }

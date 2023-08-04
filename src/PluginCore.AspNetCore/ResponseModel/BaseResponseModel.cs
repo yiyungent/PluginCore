@@ -7,14 +7,13 @@
 
 
 
-﻿namespace PluginCore.AspNetCore.ResponseModel
+namespace PluginCore.AspNetCore.ResponseModel;
+
+public class BaseResponseModel
 {
-    public class BaseResponseModel
-    {
-        public int Code { get; set; }
+    public int Code { get; set; }
 
-        public string Message { get; set; }
+    public string Message { get; set; }
 
-        public object Data { get; set; }
-    }
+    public object Data { get; set; }
 }

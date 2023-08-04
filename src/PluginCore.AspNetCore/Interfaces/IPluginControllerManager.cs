@@ -5,19 +5,13 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
-
-
-﻿using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 
-namespace PluginCore.AspNetCore.Interfaces
+namespace PluginCore.AspNetCore.Interfaces;
+
+public interface IPluginControllerManager
 {
-    public interface IPluginControllerManager
-    {
-        void AddControllers(Assembly assembly);
+    void AddControllers(Assembly assembly);
 
-        void RemoveControllers(string pluginId);
-    }
+    void RemoveControllers(string pluginId);
 }

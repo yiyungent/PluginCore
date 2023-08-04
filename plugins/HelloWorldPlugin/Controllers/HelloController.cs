@@ -6,29 +6,27 @@
 //===================================================
 
 
-
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using HelloWorldPlugin;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
+using PluginCore;
+using PluginCore.IPlugins.Infrastructure;
 
-namespace PluginCore.IPlugins.Controllers
+namespace HelloWorldPlugin.Controllers;
+
+/// <summary>
+/// Hello World Plugin
+/// </summary>
+[Route("api/plugins/[controller]")]
+[ApiController]
+public class HelloController : ControllerBase
 {
-    [Route("api/plugins/[controller]")]
-    [ApiController]
-    public class HelloController : ControllerBase
+
+    [HttpGet]
+    public ActionResult Get()
     {
+        SettingsModel settingsModel = PluginSettingsModelFactory.Create<SettingsModel>("HelloWorldPlugin");
+        string str = $"Hello PluginCore ! {settingsModel.Hello}";
 
-        public ActionResult Get()
-        {
-            SettingsModel settingsModel = PluginSettingsModelFactory.Create<SettingsModel>("HelloWorldPlugin");
-            string str = $"Hello PluginCore ! {settingsModel.Hello}";
-
-            return Ok(str);
-        }
-
+        return Ok(str);
     }
+
 }

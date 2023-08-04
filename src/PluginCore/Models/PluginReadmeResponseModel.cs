@@ -5,15 +5,8 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
+namespace PluginCore.Models;
 
-
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PluginCore.Models
+public class PluginReadmeResponseModel : PluginReadmeModel
 {
-    public class PluginReadmeResponseModel : PluginReadmeModel
-    {
-    }
 }

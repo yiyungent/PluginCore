@@ -5,20 +5,15 @@
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
+using System;
 
+namespace DemoModePlugin.ResponseModel;
 
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DemoModePlugin.ResponseModel
+public class CommonResponseModel
 {
-    public class CommonResponseModel
-    {
-        public int code { get; set; }
+    public int code { get; set; }
 
-        public string message { get; set; }
+    public string message { get; set; }
 
-        public Object data { get; set; }
-    }
+    public Object data { get; set; }
 }
