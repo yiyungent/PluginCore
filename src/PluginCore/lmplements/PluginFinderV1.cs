@@ -29,16 +29,16 @@ namespace PluginCore.lmplements
     /// 注意: 这意味着一个启用的插件需同时满足这两个条件
     /// </summary>
     /// <remarks>
-    /// 依赖解析: IServiceScopeFactory
+    /// 依赖解析: IServiceProvider
     /// </remarks>
-    public class PluginFinder : IPluginFinder
+    public class PluginFinderV1 : IPluginFinder
     {
         #region Fields
 
         /// <summary>
         /// 用来解析插件构造函数需要的服务
         /// </summary>
-        private readonly IServiceScopeFactory _serviceScopeFactory;
+        private readonly IServiceProvider _serviceProvider;
 
         /// <summary>
         /// TODO: 未使用
@@ -52,13 +52,13 @@ namespace PluginCore.lmplements
         public IPluginContextManager PluginContextManager { get; set; }
 
         #region Ctor
-        public PluginFinder(IPluginContextManager pluginContextManager, IServiceScopeFactory serviceScopeFactory)
+        public PluginFinderV1(IPluginContextManager pluginContextManager, IServiceProvider serviceProvider)
         {
             this.PluginContextManager = pluginContextManager;
-            _serviceScopeFactory = serviceScopeFactory;
+            _serviceProvider = serviceProvider;
         }
 
-        static PluginFinder()
+        static PluginFinderV1()
         {
             // TODO: 初始化: 默认为信任模式: 插件允许所有行为
             _pluginAllowedBehavior = new ConcurrentDictionary<Type, List<Type>>();
@@ -287,14 +287,10 @@ namespace PluginCore.lmplements
                     var parameters = constructor.GetParameters().Select(parameter =>
                     {
                         //var service = Resolve(parameter.ParameterType);
-                        // var service = _serviceProvider.GetService(parameter.ParameterType);
-                        using (var scope = _serviceScopeFactory.CreateScope())
-                        {
-                            var service = scope.ServiceProvider.GetService(parameter.ParameterType);
-                            if (service == null)
-                                throw new Exception("Unknown dependency");
-                            return service;
-                        }
+                        var service = _serviceProvider.GetService(parameter.ParameterType);
+                        if (service == null)
+                            throw new Exception("Unknown dependency");
+                        return service;
                     });
 
                     //all is ok, so create instance
