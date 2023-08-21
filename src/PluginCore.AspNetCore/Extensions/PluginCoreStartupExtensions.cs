@@ -7,7 +7,7 @@
 
 
 
-﻿using PluginCore.Models;
+using PluginCore.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
@@ -84,6 +84,8 @@ namespace PluginCore.AspNetCore.Extensions
             services.TryAddTransient<AspNetCorePluginManager>();
             services.TryAddTransient<IPluginManager, AspNetCorePluginManager>();
 
+            services.TryAddTransient<PluginFinderV1>();
+            services.TryAddTransient<PluginFinderV2>();
             services.TryAddTransient<PluginFinder>();
             services.TryAddTransient<IPluginFinder, PluginFinder>();
 
