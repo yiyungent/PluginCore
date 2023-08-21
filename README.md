@@ -5,7 +5,7 @@
 
 English | [中文](README_zh.md)
 
-> `ASP.NET Core` lightweight plugin framework
+> 🔌 `ASP.NET Core` lightweight plugin framework
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/badge/license-Apache2.0-green)](https://github.com/yiyungent/PluginCore/blob/main/LICENSE)
@@ -334,6 +334,14 @@ graph BT
 - 设计参考自 <a href="https://github.com/nopSolutions/nopCommerce" target="_blank">nopCommerce</a>，感谢作者 nopSolutions 的贡献
 
 
+### 特别鸣谢
+
+> [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 是一个强大的 Visual Studio 扩展，适用于 .NET 平台语言。
+
+特别感谢 [JetBrains](https://www.jetbrains.com/?from=PluginCore) 为开源项目提供免费的 [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 等的授权  
+[<img src="docs/docs/.vuepress/public/images/jetbrains-variant-3.png" width="200"/>](https://www.jetbrains.com/?from=PluginCore)
+
+
 ## 赞助者
 
 本列表由 [afdian-action](https://github.com/yiyungent/afdian-action) 自动更新
@@ -342,6 +350,9 @@ graph BT
 
 <!-- AFDIAN-ACTION:START -->
 
+<a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
+    <img src="https://pic1.afdiancdn.com/user/c4a50eea706211ebb48352540025c377/avatar/d436b61a2145de9d2d70aa766a17c75f_w1080_h1080_s116.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="WiMi" title="WiMi"/>
+</a>
 <a href="https://afdian.net/u/459023b8e07b11eb92af52540025c377">
     <img src="https://pic1.afdiancdn.com/user/459023b8e07b11eb92af52540025c377/avatar/9238a84b58fdc0aa6093340709d63fd4_w1500_h925_s935.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="Dr" title="Dr"/>
 </a>
@@ -352,6 +363,10 @@ graph BT
 <details>
   <summary>点我 打开/关闭 赞助者列表</summary>
 
+<a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
+WiMi
+</a>
+<span>( 1 次赞助, 共 ￥30 ) 留言: 感谢分享</span><br>
 <a href="https://afdian.net/u/459023b8e07b11eb92af52540025c377">
 Dr
 </a>
@@ -364,6 +379,7 @@ MonoLogueChi
 </details>
 <!-- 注意: 尽量将标签前靠,否则经测试可能被 GitHub 解析为代码块 -->
 <!-- AFDIAN-ACTION:END -->
+
 
 ## Donate
 
