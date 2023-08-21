@@ -6,8 +6,8 @@ $projectTagName = $env:GitProjectTagName
 $projectPath = $env:GitProjectPath
 
 # 一定要确保在仓库根目录执行
-
-$targetTags = git tag | where { $_ -like "${projectTagName}-v*" }
+# --sort=committerdate 按对应提交时间 顺序排序: old->new
+$targetTags = git tag --sort=committerdate | where { $_ -like "${projectTagName}-v*" }
 
 if ($targetTags.Count -lt 2) {
     # <2
