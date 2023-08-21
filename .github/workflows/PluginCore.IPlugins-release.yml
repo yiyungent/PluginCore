@@ -1,60 +1,77 @@
 name: PluginCore.IPlugins Release
 
-on: 
+on:
   push:
     tags:
-      - 'PluginCore.IPlugins-v*'
+      - "PluginCore.IPlugins-v*"
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout source
-      uses: actions/checkout@v2
-      with:
-        # 为了让 git 有日志 (git log) 可寻，还得在检出的时候顺带把所有提交历史一并拉下来，指定 fetch-depth 就能做到
-        fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-      
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.102
-        
-    - name: Build
-      run: |
-        cd ./src/PluginCore.IPlugins
-        dotnet build --configuration Release
-        ls
-        ls ./bin/Release/
-      
-    - name: Zip the Build
-      run: |
-        cd ./src/PluginCore.IPlugins/bin/Release
-        zip -r PluginCore.IPlugins-netstandard2.0.zip ./netstandard2.0/ 
-        cd ../../../../
-        mv ./src/PluginCore.IPlugins/bin/Release/*.zip ./
-      
-    - name: Create temp-release-note.md
-      run: |
-        cp utils/generate-release-note.ps1 generate-release-note.ps1
-        $env:GitProjectTagName="PluginCore.IPlugins"
-        $env:GitProjectPath="src/PluginCore.IPlugins/*"
-        ./generate-release-note.ps1
-      shell: pwsh
+      - name: Checkout source
+        uses: actions/checkout@v2
+        with:
+          # 为了让 git 有日志 (git log) 可寻，还得在检出的时候顺带把所有提交历史一并拉下来，指定 fetch-depth 就能做到
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-    - name: Create Release and Upload Release Asset
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        #tag_name: ${{ github.ref }}
-        #name: ${{ github.ref }}
-        # body: TODO New Release.
-        body_path: temp-release-note.md
-        draft: false
-        prerelease: false
-        files: |
-          PluginCore.IPlugins-netstandard2.0.zip
-          LICENSE 
-          README.md
+      - name: Set outputs
+        id: vars
+        run: |
+          tagPrefix=refs/tags/PluginCore.IPlugins-
+          # 获取字符串长度
+          tagPrefixLen=${#tagPrefix}
+          # 去掉前面的 refs/tags/PluginCore.IPlugins-
+          RELEASE_VERSION=${GITHUB_REF:$tagPrefixLen}
+          # 提取出 v1.0.0
+          echo "RELEASE_VERSION=${RELEASE_VERSION}" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.100
+
+      - name: Build and Pack
+        run: |
+          cd ./src/PluginCore.IPlugins
+          dotnet build --configuration Release
+          dotnet pack --configuration Release
+          dotnet pack --configuration Release -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg
+          ls
+          ls ./bin/Release/
+
+      - name: Zip the Build
+        run: |
+          cd ./src/PluginCore.IPlugins/bin/Release
+          zip -r PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip ./netcoreapp3.1/ 
+          zip -r PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip ./net5.0/
+          zip -r PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip ./net6.0/
+
+      - name: Create temp-release-note.md
+        run: |
+          cp utils/generate-release-note.ps1 generate-release-note.ps1
+          $env:GitProjectTagName="PluginCore.IPlugins"
+          $env:GitProjectPath="src/PluginCore.IPlugins/*"
+          ./generate-release-note.ps1
+        shell: pwsh
+
+      - name: Create Release and Upload Release Asset
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          #tag_name: ${{ github.ref }}
+          #name: ${{ github.ref }}
+          # body: TODO New Release.
+          body_path: temp-release-note.md
+          draft: false
+          prerelease: false
+          files: |
+            ./src/PluginCore.IPlugins/bin/Release/*.nupkg
+            ./src/PluginCore.IPlugins/bin/Release/*.snupkg
+            ./src/PluginCore.IPlugins/bin/Release/netcoreapp3.1/PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip
+            ./src/PluginCore.IPlugins/bin/Release/net5.0/PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip
+            ./src/PluginCore.IPlugins/bin/Release/net6.0/PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip
+            LICENSE 
+            README.md

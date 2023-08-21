@@ -1,64 +1,77 @@
 name: PluginCore Release
 
-on: 
+on:
   push:
     tags:
-      - 'PluginCore-v*'
+      - "PluginCore-v*"
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout source
-      uses: actions/checkout@v2
-      with:
-        # 为了让 git 有日志 (git log) 可寻，还得在检出的时候顺带把所有提交历史一并拉下来，指定 fetch-depth 就能做到
-        fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-      
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 6.0.100
+      - name: Checkout source
+        uses: actions/checkout@v2
+        with:
+          # 为了让 git 有日志 (git log) 可寻，还得在检出的时候顺带把所有提交历史一并拉下来，指定 fetch-depth 就能做到
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-    - name: Build
-      run: |
-        cd ./src/PluginCore
-        dotnet build --configuration Release
-        ls
-        ls ./bin/Release/
-      
-    - name: Zip the Build
-      run: |
-        cd ./src/PluginCore/bin/Release
-        zip -r PluginCore-netcoreapp3.1.zip ./netcoreapp3.1/ 
-        zip -r PluginCore-net5.0.zip ./net5.0/
-        zip -r PluginCore-net6.0.zip ./net6.0/
-        cd ../../../../
-        mv ./src/PluginCore/bin/Release/*.zip ./
-      
-    - name: Create temp-release-note.md
-      run: |
-        cp utils/generate-release-note.ps1 generate-release-note.ps1
-        $env:GitProjectTagName="PluginCore"
-        $env:GitProjectPath="src/PluginCore/*"
-        ./generate-release-note.ps1
-      shell: pwsh
+      - name: Set outputs
+        id: vars
+        run: |
+          tagPrefix=refs/tags/PluginCore-
+          # 获取字符串长度
+          tagPrefixLen=${#tagPrefix}
+          # 去掉前面的 refs/tags/PluginCore-
+          RELEASE_VERSION=${GITHUB_REF:$tagPrefixLen}
+          # 提取出 v1.0.0
+          echo "RELEASE_VERSION=${RELEASE_VERSION}" >> $GITHUB_OUTPUT
+        shell: bash
 
-    - name: Create Release and Upload Release Asset
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        #tag_name: ${{ github.ref }}
-        #name: ${{ github.ref }}
-        # body: TODO New Release.
-        body_path: temp-release-note.md
-        draft: false
-        prerelease: false
-        files: |
-          PluginCore-netcoreapp3.1.zip
-          PluginCore-net5.0.zip
-          PluginCore-net6.0.zip
-          LICENSE 
-          README.md
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.100
+
+      - name: Build and Pack
+        run: |
+          cd ./src/PluginCore
+          dotnet build --configuration Release
+          dotnet pack --configuration Release
+          dotnet pack --configuration Release -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg
+          ls
+          ls ./bin/Release/
+
+      - name: Zip the Build
+        run: |
+          cd ./src/PluginCore/bin/Release
+          zip -r PluginCore-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip ./netcoreapp3.1/ 
+          zip -r PluginCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip ./net5.0/
+          zip -r PluginCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip ./net6.0/
+
+      - name: Create temp-release-note.md
+        run: |
+          cp utils/generate-release-note.ps1 generate-release-note.ps1
+          $env:GitProjectTagName="PluginCore"
+          $env:GitProjectPath="src/PluginCore/*"
+          ./generate-release-note.ps1
+        shell: pwsh
+
+      - name: Create Release and Upload Release Asset
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          #tag_name: ${{ github.ref }}
+          #name: ${{ github.ref }}
+          # body: TODO New Release.
+          body_path: temp-release-note.md
+          draft: false
+          prerelease: false
+          files: |
+            ./src/PluginCore/bin/Release/*.nupkg
+            ./src/PluginCore/bin/Release/*.snupkg
+            ./src/PluginCore/bin/Release/netcoreapp3.1/PluginCore-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip
+            ./src/PluginCore/bin/Release/net5.0/PluginCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip
+            ./src/PluginCore/bin/Release/net6.0/PluginCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip
+            LICENSE 
+            README.md
