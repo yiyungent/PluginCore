@@ -1,5 +1,27 @@
 
 
+# PluginCore.AspNetCore-v1.3.2
+
+## Updated
+
+- `services.TryAddTransient<PluginFinderV1>();`
+- `services.TryAddTransient<PluginFinderV2>();`
+- `services.TryAddTransient<PluginFinder>();`
+- `services.TryAddTransient<IPluginFinder, PluginFinder>();`
+
+
+# PluginCore-v2.2.1
+
+## Updated
+
+- `PluginFinderV1`
+  - 依赖解析: `IServiceProvider`
+  - __不要在后台线程上捕获注入控制器的服务__
+- `PluginFinderV2`
+  - 依赖解析: `IServiceScopeFactory`
+  - __后台线程使用此服务__
+- `PluginFinder`
+  - `PluginFinder : PluginFinderV2`
 
 # PluginCore.AspNetCore-v1.3.1
 
