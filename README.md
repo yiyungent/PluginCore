@@ -350,6 +350,9 @@ graph BT
 
 <!-- AFDIAN-ACTION:START -->
 
+<a href="https://afdian.net/u/98e9914c457911ee95eb52540025c377">
+    <img src="https://pic1.afdiancdn.com/user/98e9914c457911ee95eb52540025c377/avatar/0c7e8ddbbf27c6614fabbb00d4e907a0_w684_h683_s27.jpeg?imageView2/1/w/120/h/120" width="40" height="40" alt="浮沉" title="浮沉"/>
+</a>
 <a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
     <img src="https://pic1.afdiancdn.com/user/c4a50eea706211ebb48352540025c377/avatar/d436b61a2145de9d2d70aa766a17c75f_w1080_h1080_s116.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="WiMi" title="WiMi"/>
 </a>
@@ -363,6 +366,10 @@ graph BT
 <details>
   <summary>点我 打开/关闭 赞助者列表</summary>
 
+<a href="https://afdian.net/u/98e9914c457911ee95eb52540025c377">
+浮沉
+</a>
+<span>( 1 次赞助, 共 ￥100 ) 留言: </span><br>
 <a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
 WiMi
 </a>
