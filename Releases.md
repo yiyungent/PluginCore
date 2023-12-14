@@ -1,5 +1,15 @@
 
 
+
+
+# PluginCore-v2.2.2
+
+## Fixed
+
+- `PositivePluginLoadContext`
+  - pluginMainDllFilePath 被锁定, 释放前无法再次通过 `AssemblyName.GetAssemblyName(pluginMainDllFilePath)` 打开
+
+
 # PluginCore.AspNetCore-v1.3.2
 
 ## Updated
