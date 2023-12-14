@@ -7,7 +7,7 @@
 
 
 
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using PluginCore;
 
 namespace ExamplePlugin.Controllers

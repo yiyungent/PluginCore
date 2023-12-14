@@ -7,7 +7,7 @@
 
 
 
-﻿using System;
+using System;
 using PluginCore.IPlugins;
 
 namespace ExamplePlugin

@@ -7,7 +7,7 @@
 
 
 
-﻿using PluginCore.Models;
+using PluginCore.Models;
 
 namespace ExamplePlugin
 {
