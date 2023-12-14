@@ -1,19 +1,35 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
+		<TargetFrameworks>net6.0</TargetFrameworks>
 		<EnableDynamicLoading>true</EnableDynamicLoading>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0">
-			<ExcludeAssets>runtime</ExcludeAssets>
-		</PackageReference>
-	</ItemGroup>
+	<PropertyGroup>
+		<DisableImplicitNamespaceImports>true</DisableImplicitNamespaceImports>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<PackageId>PluginCore.ExamplePlugin</PackageId>
+		<Version>0.1.0</Version>
+		<FileVersion>0.1.0.0</FileVersion>
+		<AssemblyVersion>0.1.0.0</AssemblyVersion>
+		<Company>yiyun</Company>
+		<Authors>yiyun</Authors>
+		<Description>PluginCore 插件: ExamplePlugin</Description>
+		<Copyright>Copyright (c) 2023-present yiyun</Copyright>
+		<RepositoryUrl>https://github.com/yiyungent/PluginCore</RepositoryUrl>
+		<PackageLicenseUrl>https://github.com/yiyungent/PluginCore/blob/main/LICENSE</PackageLicenseUrl>
+		<PackageTags>PluginCore PluginCore.IPlugins</PackageTags>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
 
 	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App">
+			<ExcludeAssets>runtime</ExcludeAssets>
+		</FrameworkReference>
 		<!-- 注意: 模板内的版本可能不是最新, 你可能需要更新 -->
-		<PackageReference Include="PluginCore.IPlugins.AspNetCore" Version="0.0.1">
+		<PackageReference Include="PluginCore.IPlugins.AspNetCore" Version="0.1.0">
 			<ExcludeAssets>runtime</ExcludeAssets>
 		</PackageReference>
 	</ItemGroup>
