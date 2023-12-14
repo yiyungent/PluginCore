@@ -2,6 +2,20 @@
 
 
 
+
+
+
+
+
+
+
+# PluginCore.AspNetCore-v1.3.3
+
+## Updated
+
+- `<PackageReference Include="PluginCore" Version="2.2.2" />`: 2.2.1 -> 2.2.2
+
+
 # PluginCore-v2.2.2
 
 ## Fixed
