@@ -279,13 +279,13 @@ public class SettingsModel : PluginSettingsModel
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0">
+    <FrameworkReference Include="Microsoft.AspNetCore.App">
 			<ExcludeAssets>runtime</ExcludeAssets>
-		</PackageReference>
+		</FrameworkReference>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="PluginCore.IPlugins.AspNetCore" Version="0.0.1">
+    <PackageReference Include="PluginCore.IPlugins.AspNetCore" Version="0.1.0">
 			<ExcludeAssets>runtime</ExcludeAssets>
 		</PackageReference>
   </ItemGroup>
