@@ -11,8 +11,8 @@
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
 		<PackageId>PluginCore.ExamplePlugin</PackageId>
-		<Version>0.1.1</Version>
-		<FileVersion>0.1.1.0</FileVersion>
+		<Version>0.2.2</Version>
+		<FileVersion>0.2.2.0</FileVersion>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<Company>yiyun</Company>
 		<Authors>yiyun</Authors>
