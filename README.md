@@ -390,7 +390,7 @@ MonoLogueChi
 
 ## Donate
 
-PluginCore is an Apache-2.0 licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.
+PluginCore is an GNU LGPLv3 licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.
 
 We accept donations through these channels:
 
@@ -402,7 +402,7 @@ We accept donations through these channels:
 
 ## Author
 
-**PluginCore** © [yiyun](https://github.com/yiyungent), Released under the [Apache-2.0](./LICENSE) License.<br>
+**PluginCore** © [yiyun](https://github.com/yiyungent), Released under the [GNU LGPLv3](./LICENSE) License.<br>
 Authored and maintained by yiyun with help from contributors ([list](https://github.com/yiyungent/PluginCore/contributors)).
 
 > GitHub [@yiyungent](https://github.com/yiyungent) Gitee [@yiyungent](https://gitee.com/yiyungent)
