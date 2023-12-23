@@ -1,9 +1,9 @@
 
 # 设置要替换的目标字符串和替换字符串
-$targetString = "//  License: Apache-2.0"
-# $targetString = "//  Project: https://moeci.com/PluginCore"
-$replacementString = "//  License: GNU LGPLv3"
-# $replacementString = "//  Project: https://yiyungent.github.io/PluginCore"
+# $targetString = "//  License: Apache-2.0"
+$targetString = "//  Project: https://moeci.com/PluginCore"
+# $replacementString = "//  License: GNU LGPLv3"
+$replacementString = "//  Project: https://yiyungent.github.io/PluginCore"
 
 # 指定目录路径
 $directoryPath = "../src/"
