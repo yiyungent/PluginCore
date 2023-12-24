@@ -1,5 +1,4 @@
 {
-  "homepages": [],
   "source_base_path": "/home/runner/work/PluginCore/PluginCore/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -995,6 +994,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PluginFinderV1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PluginFinderV1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.lmplements.PluginFinderV2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.lmplements.PluginFinderV2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PluginCore.lmplements.PluginLoadContext.yml",
       "output": {
         ".html": {
@@ -1057,6 +1076,9 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
         ".html": {
           "relative_path": "api/toc.html"
         }
@@ -1077,6 +1099,9 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
+        ".json": {
+          "relative_path": "articles/toc.json"
+        },
         ".html": {
           "relative_path": "articles/toc.html"
         }
@@ -1097,6 +1122,9 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
         ".html": {
           "relative_path": "toc.html"
         }
@@ -1104,7 +1132,6 @@
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"

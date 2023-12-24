@@ -19,18 +19,18 @@ references:
   commentId: T:PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions
   fullName: PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions
   nameWithType: PluginCoreAdminUIBuilderExtensions
-- uid: PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(Microsoft.AspNetCore.Builder.IApplicationBuilder,PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions)
-  name: UsePluginCoreAdminUI(IApplicationBuilder, PluginCoreAdminUIOptions)
-  href: api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.html#PluginCore_AspNetCore_AdminUI_PluginCoreAdminUIBuilderExtensions_UsePluginCoreAdminUI_Microsoft_AspNetCore_Builder_IApplicationBuilder_PluginCore_AspNetCore_AdminUI_PluginCoreAdminUIOptions_
-  commentId: M:PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(Microsoft.AspNetCore.Builder.IApplicationBuilder,PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions)
-  fullName: PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(Microsoft.AspNetCore.Builder.IApplicationBuilder, PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions)
-  nameWithType: PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(IApplicationBuilder, PluginCoreAdminUIOptions)
 - uid: PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   name: UsePluginCoreAdminUI(IApplicationBuilder)
   href: api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.html#PluginCore_AspNetCore_AdminUI_PluginCoreAdminUIBuilderExtensions_UsePluginCoreAdminUI_Microsoft_AspNetCore_Builder_IApplicationBuilder_
   commentId: M:PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   fullName: PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   nameWithType: PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(IApplicationBuilder)
+- uid: PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(Microsoft.AspNetCore.Builder.IApplicationBuilder,PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions)
+  name: UsePluginCoreAdminUI(IApplicationBuilder, PluginCoreAdminUIOptions)
+  href: api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.html#PluginCore_AspNetCore_AdminUI_PluginCoreAdminUIBuilderExtensions_UsePluginCoreAdminUI_Microsoft_AspNetCore_Builder_IApplicationBuilder_PluginCore_AspNetCore_AdminUI_PluginCoreAdminUIOptions_
+  commentId: M:PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(Microsoft.AspNetCore.Builder.IApplicationBuilder,PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions)
+  fullName: PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(Microsoft.AspNetCore.Builder.IApplicationBuilder, PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions)
+  nameWithType: PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI(IApplicationBuilder, PluginCoreAdminUIOptions)
 - uid: PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.UsePluginCoreAdminUI*
   name: UsePluginCoreAdminUI
   href: api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.html#PluginCore_AspNetCore_AdminUI_PluginCoreAdminUIBuilderExtensions_UsePluginCoreAdminUI_
@@ -667,18 +667,6 @@ references:
   commentId: T:PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService
   fullName: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService
   nameWithType: TimeBackgroundService
-- uid: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timer
-  name: _timer
-  href: api/PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.html#PluginCore_AspNetCore_BackgroundServices_TimeBackgroundService__timer
-  commentId: F:PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timer
-  fullName: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timer
-  nameWithType: TimeBackgroundService._timer
-- uid: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timerPeriod
-  name: _timerPeriod
-  href: api/PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.html#PluginCore_AspNetCore_BackgroundServices_TimeBackgroundService__timerPeriod
-  commentId: F:PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timerPeriod
-  fullName: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timerPeriod
-  nameWithType: TimeBackgroundService._timerPeriod
 - uid: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.#ctor
   name: TimeBackgroundService()
   href: api/PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.html#PluginCore_AspNetCore_BackgroundServices_TimeBackgroundService__ctor
@@ -748,6 +736,18 @@ references:
   commentId: Overload:PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.StopAsync
   fullName: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.StopAsync
   nameWithType: TimeBackgroundService.StopAsync
+- uid: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timer
+  name: _timer
+  href: api/PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.html#PluginCore_AspNetCore_BackgroundServices_TimeBackgroundService__timer
+  commentId: F:PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timer
+  fullName: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timer
+  nameWithType: TimeBackgroundService._timer
+- uid: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timerPeriod
+  name: _timerPeriod
+  href: api/PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.html#PluginCore_AspNetCore_BackgroundServices_TimeBackgroundService__timerPeriod
+  commentId: F:PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timerPeriod
+  fullName: PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService._timerPeriod
+  nameWithType: TimeBackgroundService._timerPeriod
 - uid: PluginCore.AspNetCore.Controllers
   name: PluginCore.AspNetCore.Controllers
   href: api/PluginCore.AspNetCore.Controllers.html
@@ -1180,6 +1180,45 @@ references:
   fullName.vb: PluginCore.AspNetCore.Controllers.HomeController.New
   nameWithType: HomeController.HomeController
   nameWithType.vb: HomeController.New
+- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController
+  name: PluginWidgetController
+  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html
+  commentId: T:PluginCore.AspNetCore.Controllers.PluginWidgetController
+  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController
+  nameWithType: PluginWidgetController
+- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController.#ctor(PluginCore.Interfaces.IPluginFinder)
+  name: PluginWidgetController(IPluginFinder)
+  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html#PluginCore_AspNetCore_Controllers_PluginWidgetController__ctor_PluginCore_Interfaces_IPluginFinder_
+  commentId: M:PluginCore.AspNetCore.Controllers.PluginWidgetController.#ctor(PluginCore.Interfaces.IPluginFinder)
+  name.vb: New(IPluginFinder)
+  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController.PluginWidgetController(PluginCore.Interfaces.IPluginFinder)
+  fullName.vb: PluginCore.AspNetCore.Controllers.PluginWidgetController.New(PluginCore.Interfaces.IPluginFinder)
+  nameWithType: PluginWidgetController.PluginWidgetController(IPluginFinder)
+  nameWithType.vb: PluginWidgetController.New(IPluginFinder)
+- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController.#ctor*
+  name: PluginWidgetController
+  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html#PluginCore_AspNetCore_Controllers_PluginWidgetController__ctor_
+  commentId: Overload:PluginCore.AspNetCore.Controllers.PluginWidgetController.#ctor
+  name.vb: New
+  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController.PluginWidgetController
+  fullName.vb: PluginCore.AspNetCore.Controllers.PluginWidgetController.New
+  nameWithType: PluginWidgetController.PluginWidgetController
+  nameWithType.vb: PluginWidgetController.New
+- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget(System.String,System.String)
+  name: Widget(string, string)
+  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html#PluginCore_AspNetCore_Controllers_PluginWidgetController_Widget_System_String_System_String_
+  commentId: M:PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget(System.String,System.String)
+  name.vb: Widget(String, String)
+  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget(string, string)
+  fullName.vb: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget(String, String)
+  nameWithType: PluginWidgetController.Widget(string, string)
+  nameWithType.vb: PluginWidgetController.Widget(String, String)
+- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget*
+  name: Widget
+  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html#PluginCore_AspNetCore_Controllers_PluginWidgetController_Widget_
+  commentId: Overload:PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget
+  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget
+  nameWithType: PluginWidgetController.Widget
 - uid: PluginCore.AspNetCore.Controllers.PluginsController
   name: PluginsController
   href: api/PluginCore.AspNetCore.Controllers.PluginsController.html
@@ -1351,45 +1390,6 @@ references:
   commentId: F:PluginCore.AspNetCore.Controllers.PluginsController.UploadFileType.Zip
   fullName: PluginCore.AspNetCore.Controllers.PluginsController.UploadFileType.Zip
   nameWithType: PluginsController.UploadFileType.Zip
-- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController
-  name: PluginWidgetController
-  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html
-  commentId: T:PluginCore.AspNetCore.Controllers.PluginWidgetController
-  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController
-  nameWithType: PluginWidgetController
-- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController.#ctor(PluginCore.Interfaces.IPluginFinder)
-  name: PluginWidgetController(IPluginFinder)
-  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html#PluginCore_AspNetCore_Controllers_PluginWidgetController__ctor_PluginCore_Interfaces_IPluginFinder_
-  commentId: M:PluginCore.AspNetCore.Controllers.PluginWidgetController.#ctor(PluginCore.Interfaces.IPluginFinder)
-  name.vb: New(IPluginFinder)
-  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController.PluginWidgetController(PluginCore.Interfaces.IPluginFinder)
-  fullName.vb: PluginCore.AspNetCore.Controllers.PluginWidgetController.New(PluginCore.Interfaces.IPluginFinder)
-  nameWithType: PluginWidgetController.PluginWidgetController(IPluginFinder)
-  nameWithType.vb: PluginWidgetController.New(IPluginFinder)
-- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController.#ctor*
-  name: PluginWidgetController
-  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html#PluginCore_AspNetCore_Controllers_PluginWidgetController__ctor_
-  commentId: Overload:PluginCore.AspNetCore.Controllers.PluginWidgetController.#ctor
-  name.vb: New
-  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController.PluginWidgetController
-  fullName.vb: PluginCore.AspNetCore.Controllers.PluginWidgetController.New
-  nameWithType: PluginWidgetController.PluginWidgetController
-  nameWithType.vb: PluginWidgetController.New
-- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget(System.String,System.String)
-  name: Widget(string, string)
-  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html#PluginCore_AspNetCore_Controllers_PluginWidgetController_Widget_System_String_System_String_
-  commentId: M:PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget(System.String,System.String)
-  name.vb: Widget(String, String)
-  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget(string, string)
-  fullName.vb: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget(String, String)
-  nameWithType: PluginWidgetController.Widget(string, string)
-  nameWithType.vb: PluginWidgetController.Widget(String, String)
-- uid: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget*
-  name: Widget
-  href: api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html#PluginCore_AspNetCore_Controllers_PluginWidgetController_Widget_
-  commentId: Overload:PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget
-  fullName: PluginCore.AspNetCore.Controllers.PluginWidgetController.Widget
-  nameWithType: PluginWidgetController.Widget
 - uid: PluginCore.AspNetCore.Controllers.UserController
   name: UserController
   href: api/PluginCore.AspNetCore.Controllers.UserController.html
@@ -1615,15 +1615,6 @@ references:
   fullName.vb: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.New()
   nameWithType: PluginApplicationBuilder.PluginApplicationBuilder()
   nameWithType.vb: PluginApplicationBuilder.New()
-- uid: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.#ctor(System.IServiceProvider,System.Action,System.Object)
-  name: PluginApplicationBuilder(IServiceProvider, Action, object)
-  href: api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.html#PluginCore_AspNetCore_Infrastructure_PluginApplicationBuilder__ctor_System_IServiceProvider_System_Action_System_Object_
-  commentId: M:PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.#ctor(System.IServiceProvider,System.Action,System.Object)
-  name.vb: New(IServiceProvider, Action, Object)
-  fullName: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.PluginApplicationBuilder(System.IServiceProvider, System.Action, object)
-  fullName.vb: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.New(System.IServiceProvider, System.Action, Object)
-  nameWithType: PluginApplicationBuilder.PluginApplicationBuilder(IServiceProvider, Action, object)
-  nameWithType.vb: PluginApplicationBuilder.New(IServiceProvider, Action, Object)
 - uid: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.#ctor(System.IServiceProvider,System.Action)
   name: PluginApplicationBuilder(IServiceProvider, Action)
   href: api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.html#PluginCore_AspNetCore_Infrastructure_PluginApplicationBuilder__ctor_System_IServiceProvider_System_Action_
@@ -1633,6 +1624,15 @@ references:
   fullName.vb: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.New(System.IServiceProvider, System.Action)
   nameWithType: PluginApplicationBuilder.PluginApplicationBuilder(IServiceProvider, Action)
   nameWithType.vb: PluginApplicationBuilder.New(IServiceProvider, Action)
+- uid: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.#ctor(System.IServiceProvider,System.Action,System.Object)
+  name: PluginApplicationBuilder(IServiceProvider, Action, object)
+  href: api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.html#PluginCore_AspNetCore_Infrastructure_PluginApplicationBuilder__ctor_System_IServiceProvider_System_Action_System_Object_
+  commentId: M:PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.#ctor(System.IServiceProvider,System.Action,System.Object)
+  name.vb: New(IServiceProvider, Action, Object)
+  fullName: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.PluginApplicationBuilder(System.IServiceProvider, System.Action, object)
+  fullName.vb: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.New(System.IServiceProvider, System.Action, Object)
+  nameWithType: PluginApplicationBuilder.PluginApplicationBuilder(IServiceProvider, Action, object)
+  nameWithType.vb: PluginApplicationBuilder.New(IServiceProvider, Action, Object)
 - uid: PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.#ctor*
   name: PluginApplicationBuilder
   href: api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.html#PluginCore_AspNetCore_Infrastructure_PluginApplicationBuilder__ctor_
@@ -1834,6 +1834,336 @@ references:
   commentId: Overload:PluginCore.AspNetCore.Interfaces.IPluginControllerManager.RemoveControllers
   fullName: PluginCore.AspNetCore.Interfaces.IPluginControllerManager.RemoveControllers
   nameWithType: IPluginControllerManager.RemoveControllers
+- uid: PluginCore.AspNetCore.Middlewares
+  name: PluginCore.AspNetCore.Middlewares
+  href: api/PluginCore.AspNetCore.Middlewares.html
+  commentId: N:PluginCore.AspNetCore.Middlewares
+  fullName: PluginCore.AspNetCore.Middlewares
+  nameWithType: PluginCore.AspNetCore.Middlewares
+- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware
+  name: PluginContentFilterMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html
+  commentId: T:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware
+  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware
+  nameWithType: PluginContentFilterMiddleware
+- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
+  name: PluginContentFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginContentFilterMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_Microsoft_Extensions_Logging_ILoggerFactory_PluginCore_Interfaces_IPluginFinder_
+  commentId: M:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
+  name.vb: New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.PluginContentFilterMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
+  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
+  nameWithType: PluginContentFilterMiddleware.PluginContentFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+  nameWithType.vb: PluginContentFilterMiddleware.New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.#ctor*
+  name: PluginContentFilterMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginContentFilterMiddleware__ctor_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.#ctor
+  name.vb: New
+  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.PluginContentFilterMiddleware
+  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.New
+  nameWithType: PluginContentFilterMiddleware.PluginContentFilterMiddleware
+  nameWithType.vb: PluginContentFilterMiddleware.New
+- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  name: InvokeAsync(HttpContext)
+  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginContentFilterMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_
+  commentId: M:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType: PluginContentFilterMiddleware.InvokeAsync(HttpContext)
+- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync*
+  name: InvokeAsync
+  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginContentFilterMiddleware_InvokeAsync_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync
+  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync
+  nameWithType: PluginContentFilterMiddleware.InvokeAsync
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware
+  name: PluginHttpEndFilterMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html
+  commentId: T:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware
+  nameWithType: PluginHttpEndFilterMiddleware
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
+  name: PluginHttpEndFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpEndFilterMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_Microsoft_Extensions_Logging_ILoggerFactory_PluginCore_Interfaces_IPluginFinder_
+  commentId: M:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
+  name.vb: New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.PluginHttpEndFilterMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
+  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
+  nameWithType: PluginHttpEndFilterMiddleware.PluginHttpEndFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+  nameWithType.vb: PluginHttpEndFilterMiddleware.New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.#ctor*
+  name: PluginHttpEndFilterMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpEndFilterMiddleware__ctor_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.#ctor
+  name.vb: New
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.PluginHttpEndFilterMiddleware
+  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.New
+  nameWithType: PluginHttpEndFilterMiddleware.PluginHttpEndFilterMiddleware
+  nameWithType.vb: PluginHttpEndFilterMiddleware.New
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  name: InvokeAsync(HttpContext)
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpEndFilterMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_
+  commentId: M:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType: PluginHttpEndFilterMiddleware.InvokeAsync(HttpContext)
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync*
+  name: InvokeAsync
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpEndFilterMiddleware_InvokeAsync_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync
+  nameWithType: PluginHttpEndFilterMiddleware.InvokeAsync
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware
+  name: PluginHttpStartFilterMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html
+  commentId: T:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware
+  nameWithType: PluginHttpStartFilterMiddleware
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
+  name: PluginHttpStartFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpStartFilterMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_Microsoft_Extensions_Logging_ILoggerFactory_PluginCore_Interfaces_IPluginFinder_
+  commentId: M:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
+  name.vb: New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.PluginHttpStartFilterMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
+  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
+  nameWithType: PluginHttpStartFilterMiddleware.PluginHttpStartFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+  nameWithType.vb: PluginHttpStartFilterMiddleware.New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.#ctor*
+  name: PluginHttpStartFilterMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpStartFilterMiddleware__ctor_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.#ctor
+  name.vb: New
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.PluginHttpStartFilterMiddleware
+  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.New
+  nameWithType: PluginHttpStartFilterMiddleware.PluginHttpStartFilterMiddleware
+  nameWithType.vb: PluginHttpStartFilterMiddleware.New
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  name: InvokeAsync(HttpContext)
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpStartFilterMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_
+  commentId: M:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType: PluginHttpStartFilterMiddleware.InvokeAsync(HttpContext)
+- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync*
+  name: InvokeAsync
+  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpStartFilterMiddleware_InvokeAsync_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync
+  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync
+  nameWithType: PluginHttpStartFilterMiddleware.InvokeAsync
+- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware
+  name: PluginStartupXMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html
+  commentId: T:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware
+  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware
+  nameWithType: PluginStartupXMiddleware
+- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
+  name: PluginStartupXMiddleware(RequestDelegate)
+  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_
+  commentId: M:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
+  name.vb: New(RequestDelegate)
+  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.PluginStartupXMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)
+  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate)
+  nameWithType: PluginStartupXMiddleware.PluginStartupXMiddleware(RequestDelegate)
+  nameWithType.vb: PluginStartupXMiddleware.New(RequestDelegate)
+- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.#ctor*
+  name: PluginStartupXMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware__ctor_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.#ctor
+  name.vb: New
+  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.PluginStartupXMiddleware
+  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.New
+  nameWithType: PluginStartupXMiddleware.PluginStartupXMiddleware
+  nameWithType.vb: PluginStartupXMiddleware.New
+- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager)
+  name: InvokeAsync(HttpContext, IPluginApplicationBuilderManager)
+  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_PluginCore_AspNetCore_Interfaces_IPluginApplicationBuilderManager_
+  commentId: M:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager)
+  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext, PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager)
+  nameWithType: PluginStartupXMiddleware.InvokeAsync(HttpContext, IPluginApplicationBuilderManager)
+- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync*
+  name: InvokeAsync
+  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware_InvokeAsync_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync
+  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync
+  nameWithType: PluginStartupXMiddleware.InvokeAsync
+- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
+  name: ReachedEndAction
+  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware_ReachedEndAction
+  commentId: P:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
+  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
+  nameWithType: PluginStartupXMiddleware.ReachedEndAction
+- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction*
+  name: ReachedEndAction
+  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware_ReachedEndAction_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
+  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
+  nameWithType: PluginStartupXMiddleware.ReachedEndAction
+- uid: PluginCore.AspNetCore.RequestModel.User
+  name: PluginCore.AspNetCore.RequestModel.User
+  href: api/PluginCore.AspNetCore.RequestModel.User.html
+  commentId: N:PluginCore.AspNetCore.RequestModel.User
+  fullName: PluginCore.AspNetCore.RequestModel.User
+  nameWithType: PluginCore.AspNetCore.RequestModel.User
+- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel
+  name: LoginRequestModel
+  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html
+  commentId: T:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel
+  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel
+  nameWithType: LoginRequestModel
+- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.#ctor
+  name: LoginRequestModel()
+  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel__ctor
+  commentId: M:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.#ctor
+  name.vb: New()
+  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.LoginRequestModel()
+  fullName.vb: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.New()
+  nameWithType: LoginRequestModel.LoginRequestModel()
+  nameWithType.vb: LoginRequestModel.New()
+- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.#ctor*
+  name: LoginRequestModel
+  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel__ctor_
+  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.#ctor
+  name.vb: New
+  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.LoginRequestModel
+  fullName.vb: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.New
+  nameWithType: LoginRequestModel.LoginRequestModel
+  nameWithType.vb: LoginRequestModel.New
+- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
+  name: Password
+  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel_Password
+  commentId: P:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
+  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
+  nameWithType: LoginRequestModel.Password
+- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password*
+  name: Password
+  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel_Password_
+  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
+  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
+  nameWithType: LoginRequestModel.Password
+- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
+  name: UserName
+  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel_UserName
+  commentId: P:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
+  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
+  nameWithType: LoginRequestModel.UserName
+- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName*
+  name: UserName
+  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel_UserName_
+  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
+  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
+  nameWithType: LoginRequestModel.UserName
+- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel
+  name: UpdateRequestModel
+  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html
+  commentId: T:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel
+  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel
+  nameWithType: UpdateRequestModel
+- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.#ctor
+  name: UpdateRequestModel()
+  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel__ctor
+  commentId: M:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.#ctor
+  name.vb: New()
+  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UpdateRequestModel()
+  fullName.vb: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.New()
+  nameWithType: UpdateRequestModel.UpdateRequestModel()
+  nameWithType.vb: UpdateRequestModel.New()
+- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.#ctor*
+  name: UpdateRequestModel
+  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel__ctor_
+  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.#ctor
+  name.vb: New
+  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UpdateRequestModel
+  fullName.vb: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.New
+  nameWithType: UpdateRequestModel.UpdateRequestModel
+  nameWithType.vb: UpdateRequestModel.New
+- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
+  name: Password
+  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel_Password
+  commentId: P:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
+  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
+  nameWithType: UpdateRequestModel.Password
+- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password*
+  name: Password
+  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel_Password_
+  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
+  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
+  nameWithType: UpdateRequestModel.Password
+- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
+  name: UserName
+  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel_UserName
+  commentId: P:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
+  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
+  nameWithType: UpdateRequestModel.UserName
+- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName*
+  name: UserName
+  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel_UserName_
+  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
+  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
+  nameWithType: UpdateRequestModel.UserName
+- uid: PluginCore.AspNetCore.ResponseModel
+  name: PluginCore.AspNetCore.ResponseModel
+  href: api/PluginCore.AspNetCore.ResponseModel.html
+  commentId: N:PluginCore.AspNetCore.ResponseModel
+  fullName: PluginCore.AspNetCore.ResponseModel
+  nameWithType: PluginCore.AspNetCore.ResponseModel
+- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel
+  name: BaseResponseModel
+  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html
+  commentId: T:PluginCore.AspNetCore.ResponseModel.BaseResponseModel
+  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel
+  nameWithType: BaseResponseModel
+- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.#ctor
+  name: BaseResponseModel()
+  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel__ctor
+  commentId: M:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.#ctor
+  name.vb: New()
+  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.BaseResponseModel()
+  fullName.vb: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.New()
+  nameWithType: BaseResponseModel.BaseResponseModel()
+  nameWithType.vb: BaseResponseModel.New()
+- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.#ctor*
+  name: BaseResponseModel
+  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel__ctor_
+  commentId: Overload:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.#ctor
+  name.vb: New
+  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.BaseResponseModel
+  fullName.vb: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.New
+  nameWithType: BaseResponseModel.BaseResponseModel
+  nameWithType.vb: BaseResponseModel.New
+- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
+  name: Code
+  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Code
+  commentId: P:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
+  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
+  nameWithType: BaseResponseModel.Code
+- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code*
+  name: Code
+  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Code_
+  commentId: Overload:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
+  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
+  nameWithType: BaseResponseModel.Code
+- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
+  name: Data
+  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Data
+  commentId: P:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
+  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
+  nameWithType: BaseResponseModel.Data
+- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data*
+  name: Data
+  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Data_
+  commentId: Overload:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
+  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
+  nameWithType: BaseResponseModel.Data
+- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
+  name: Message
+  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Message
+  commentId: P:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
+  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
+  nameWithType: BaseResponseModel.Message
+- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message*
+  name: Message
+  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Message_
+  commentId: Overload:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
+  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
+  nameWithType: BaseResponseModel.Message
 - uid: PluginCore.AspNetCore.lmplements
   name: PluginCore.AspNetCore.lmplements
   href: api/PluginCore.AspNetCore.lmplements.html
@@ -2218,336 +2548,6 @@ references:
   commentId: Overload:PluginCore.AspNetCore.lmplements.PluginControllerManager.RemoveControllers
   fullName: PluginCore.AspNetCore.lmplements.PluginControllerManager.RemoveControllers
   nameWithType: PluginControllerManager.RemoveControllers
-- uid: PluginCore.AspNetCore.Middlewares
-  name: PluginCore.AspNetCore.Middlewares
-  href: api/PluginCore.AspNetCore.Middlewares.html
-  commentId: N:PluginCore.AspNetCore.Middlewares
-  fullName: PluginCore.AspNetCore.Middlewares
-  nameWithType: PluginCore.AspNetCore.Middlewares
-- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware
-  name: PluginContentFilterMiddleware
-  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html
-  commentId: T:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware
-  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware
-  nameWithType: PluginContentFilterMiddleware
-- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
-  name: PluginContentFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginContentFilterMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_Microsoft_Extensions_Logging_ILoggerFactory_PluginCore_Interfaces_IPluginFinder_
-  commentId: M:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
-  name.vb: New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.PluginContentFilterMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
-  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
-  nameWithType: PluginContentFilterMiddleware.PluginContentFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-  nameWithType.vb: PluginContentFilterMiddleware.New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.#ctor*
-  name: PluginContentFilterMiddleware
-  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginContentFilterMiddleware__ctor_
-  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.#ctor
-  name.vb: New
-  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.PluginContentFilterMiddleware
-  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.New
-  nameWithType: PluginContentFilterMiddleware.PluginContentFilterMiddleware
-  nameWithType.vb: PluginContentFilterMiddleware.New
-- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  name: InvokeAsync(HttpContext)
-  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginContentFilterMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  nameWithType: PluginContentFilterMiddleware.InvokeAsync(HttpContext)
-- uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync*
-  name: InvokeAsync
-  href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginContentFilterMiddleware_InvokeAsync_
-  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync
-  fullName: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.InvokeAsync
-  nameWithType: PluginContentFilterMiddleware.InvokeAsync
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware
-  name: PluginHttpEndFilterMiddleware
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html
-  commentId: T:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware
-  nameWithType: PluginHttpEndFilterMiddleware
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
-  name: PluginHttpEndFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpEndFilterMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_Microsoft_Extensions_Logging_ILoggerFactory_PluginCore_Interfaces_IPluginFinder_
-  commentId: M:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
-  name.vb: New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.PluginHttpEndFilterMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
-  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
-  nameWithType: PluginHttpEndFilterMiddleware.PluginHttpEndFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-  nameWithType.vb: PluginHttpEndFilterMiddleware.New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.#ctor*
-  name: PluginHttpEndFilterMiddleware
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpEndFilterMiddleware__ctor_
-  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.#ctor
-  name.vb: New
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.PluginHttpEndFilterMiddleware
-  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.New
-  nameWithType: PluginHttpEndFilterMiddleware.PluginHttpEndFilterMiddleware
-  nameWithType.vb: PluginHttpEndFilterMiddleware.New
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  name: InvokeAsync(HttpContext)
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpEndFilterMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  nameWithType: PluginHttpEndFilterMiddleware.InvokeAsync(HttpContext)
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync*
-  name: InvokeAsync
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpEndFilterMiddleware_InvokeAsync_
-  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.InvokeAsync
-  nameWithType: PluginHttpEndFilterMiddleware.InvokeAsync
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware
-  name: PluginHttpStartFilterMiddleware
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html
-  commentId: T:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware
-  nameWithType: PluginHttpStartFilterMiddleware
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
-  name: PluginHttpStartFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpStartFilterMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_AspNetCore_Hosting_IWebHostEnvironment_Microsoft_Extensions_Logging_ILoggerFactory_PluginCore_Interfaces_IPluginFinder_
-  commentId: M:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,PluginCore.Interfaces.IPluginFinder)
-  name.vb: New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.PluginHttpStartFilterMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
-  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IWebHostEnvironment, Microsoft.Extensions.Logging.ILoggerFactory, PluginCore.Interfaces.IPluginFinder)
-  nameWithType: PluginHttpStartFilterMiddleware.PluginHttpStartFilterMiddleware(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-  nameWithType.vb: PluginHttpStartFilterMiddleware.New(RequestDelegate, IWebHostEnvironment, ILoggerFactory, IPluginFinder)
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.#ctor*
-  name: PluginHttpStartFilterMiddleware
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpStartFilterMiddleware__ctor_
-  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.#ctor
-  name.vb: New
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.PluginHttpStartFilterMiddleware
-  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.New
-  nameWithType: PluginHttpStartFilterMiddleware.PluginHttpStartFilterMiddleware
-  nameWithType.vb: PluginHttpStartFilterMiddleware.New
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  name: InvokeAsync(HttpContext)
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpStartFilterMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
-  nameWithType: PluginHttpStartFilterMiddleware.InvokeAsync(HttpContext)
-- uid: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync*
-  name: InvokeAsync
-  href: api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginHttpStartFilterMiddleware_InvokeAsync_
-  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync
-  fullName: PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.InvokeAsync
-  nameWithType: PluginHttpStartFilterMiddleware.InvokeAsync
-- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware
-  name: PluginStartupXMiddleware
-  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html
-  commentId: T:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware
-  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware
-  nameWithType: PluginStartupXMiddleware
-- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
-  name: PluginStartupXMiddleware(RequestDelegate)
-  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_
-  commentId: M:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
-  name.vb: New(RequestDelegate)
-  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.PluginStartupXMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)
-  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate)
-  nameWithType: PluginStartupXMiddleware.PluginStartupXMiddleware(RequestDelegate)
-  nameWithType.vb: PluginStartupXMiddleware.New(RequestDelegate)
-- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.#ctor*
-  name: PluginStartupXMiddleware
-  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware__ctor_
-  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.#ctor
-  name.vb: New
-  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.PluginStartupXMiddleware
-  fullName.vb: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.New
-  nameWithType: PluginStartupXMiddleware.PluginStartupXMiddleware
-  nameWithType.vb: PluginStartupXMiddleware.New
-- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager)
-  name: InvokeAsync(HttpContext, IPluginApplicationBuilderManager)
-  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_PluginCore_AspNetCore_Interfaces_IPluginApplicationBuilderManager_
-  commentId: M:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager)
-  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext, PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager)
-  nameWithType: PluginStartupXMiddleware.InvokeAsync(HttpContext, IPluginApplicationBuilderManager)
-- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync*
-  name: InvokeAsync
-  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware_InvokeAsync_
-  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync
-  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.InvokeAsync
-  nameWithType: PluginStartupXMiddleware.InvokeAsync
-- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
-  name: ReachedEndAction
-  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware_ReachedEndAction
-  commentId: P:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
-  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
-  nameWithType: PluginStartupXMiddleware.ReachedEndAction
-- uid: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction*
-  name: ReachedEndAction
-  href: api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html#PluginCore_AspNetCore_Middlewares_PluginStartupXMiddleware_ReachedEndAction_
-  commentId: Overload:PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
-  fullName: PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.ReachedEndAction
-  nameWithType: PluginStartupXMiddleware.ReachedEndAction
-- uid: PluginCore.AspNetCore.RequestModel.User
-  name: PluginCore.AspNetCore.RequestModel.User
-  href: api/PluginCore.AspNetCore.RequestModel.User.html
-  commentId: N:PluginCore.AspNetCore.RequestModel.User
-  fullName: PluginCore.AspNetCore.RequestModel.User
-  nameWithType: PluginCore.AspNetCore.RequestModel.User
-- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel
-  name: LoginRequestModel
-  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html
-  commentId: T:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel
-  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel
-  nameWithType: LoginRequestModel
-- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.#ctor
-  name: LoginRequestModel()
-  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel__ctor
-  commentId: M:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.#ctor
-  name.vb: New()
-  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.LoginRequestModel()
-  fullName.vb: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.New()
-  nameWithType: LoginRequestModel.LoginRequestModel()
-  nameWithType.vb: LoginRequestModel.New()
-- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.#ctor*
-  name: LoginRequestModel
-  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel__ctor_
-  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.#ctor
-  name.vb: New
-  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.LoginRequestModel
-  fullName.vb: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.New
-  nameWithType: LoginRequestModel.LoginRequestModel
-  nameWithType.vb: LoginRequestModel.New
-- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
-  name: Password
-  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel_Password
-  commentId: P:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
-  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
-  nameWithType: LoginRequestModel.Password
-- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password*
-  name: Password
-  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel_Password_
-  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
-  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.Password
-  nameWithType: LoginRequestModel.Password
-- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
-  name: UserName
-  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel_UserName
-  commentId: P:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
-  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
-  nameWithType: LoginRequestModel.UserName
-- uid: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName*
-  name: UserName
-  href: api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html#PluginCore_AspNetCore_RequestModel_User_LoginRequestModel_UserName_
-  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
-  fullName: PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.UserName
-  nameWithType: LoginRequestModel.UserName
-- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel
-  name: UpdateRequestModel
-  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html
-  commentId: T:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel
-  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel
-  nameWithType: UpdateRequestModel
-- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.#ctor
-  name: UpdateRequestModel()
-  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel__ctor
-  commentId: M:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.#ctor
-  name.vb: New()
-  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UpdateRequestModel()
-  fullName.vb: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.New()
-  nameWithType: UpdateRequestModel.UpdateRequestModel()
-  nameWithType.vb: UpdateRequestModel.New()
-- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.#ctor*
-  name: UpdateRequestModel
-  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel__ctor_
-  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.#ctor
-  name.vb: New
-  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UpdateRequestModel
-  fullName.vb: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.New
-  nameWithType: UpdateRequestModel.UpdateRequestModel
-  nameWithType.vb: UpdateRequestModel.New
-- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
-  name: Password
-  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel_Password
-  commentId: P:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
-  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
-  nameWithType: UpdateRequestModel.Password
-- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password*
-  name: Password
-  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel_Password_
-  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
-  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.Password
-  nameWithType: UpdateRequestModel.Password
-- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
-  name: UserName
-  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel_UserName
-  commentId: P:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
-  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
-  nameWithType: UpdateRequestModel.UserName
-- uid: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName*
-  name: UserName
-  href: api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html#PluginCore_AspNetCore_RequestModel_User_UpdateRequestModel_UserName_
-  commentId: Overload:PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
-  fullName: PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.UserName
-  nameWithType: UpdateRequestModel.UserName
-- uid: PluginCore.AspNetCore.ResponseModel
-  name: PluginCore.AspNetCore.ResponseModel
-  href: api/PluginCore.AspNetCore.ResponseModel.html
-  commentId: N:PluginCore.AspNetCore.ResponseModel
-  fullName: PluginCore.AspNetCore.ResponseModel
-  nameWithType: PluginCore.AspNetCore.ResponseModel
-- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel
-  name: BaseResponseModel
-  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html
-  commentId: T:PluginCore.AspNetCore.ResponseModel.BaseResponseModel
-  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel
-  nameWithType: BaseResponseModel
-- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.#ctor
-  name: BaseResponseModel()
-  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel__ctor
-  commentId: M:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.#ctor
-  name.vb: New()
-  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.BaseResponseModel()
-  fullName.vb: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.New()
-  nameWithType: BaseResponseModel.BaseResponseModel()
-  nameWithType.vb: BaseResponseModel.New()
-- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.#ctor*
-  name: BaseResponseModel
-  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel__ctor_
-  commentId: Overload:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.#ctor
-  name.vb: New
-  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.BaseResponseModel
-  fullName.vb: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.New
-  nameWithType: BaseResponseModel.BaseResponseModel
-  nameWithType.vb: BaseResponseModel.New
-- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
-  name: Code
-  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Code
-  commentId: P:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
-  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
-  nameWithType: BaseResponseModel.Code
-- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code*
-  name: Code
-  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Code_
-  commentId: Overload:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
-  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Code
-  nameWithType: BaseResponseModel.Code
-- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
-  name: Data
-  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Data
-  commentId: P:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
-  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
-  nameWithType: BaseResponseModel.Data
-- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data*
-  name: Data
-  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Data_
-  commentId: Overload:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
-  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Data
-  nameWithType: BaseResponseModel.Data
-- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
-  name: Message
-  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Message
-  commentId: P:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
-  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
-  nameWithType: BaseResponseModel.Message
-- uid: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message*
-  name: Message
-  href: api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html#PluginCore_AspNetCore_ResponseModel_BaseResponseModel_Message_
-  commentId: Overload:PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
-  fullName: PluginCore.AspNetCore.ResponseModel.BaseResponseModel.Message
-  nameWithType: BaseResponseModel.Message
 - uid: PluginCore.Config
   name: PluginCore.Config
   href: api/PluginCore.Config.html
@@ -2944,627 +2944,6 @@ references:
   commentId: Overload:PluginCore.Interfaces.IPluginContextPack.Pack
   fullName: PluginCore.Interfaces.IPluginContextPack.Pack
   nameWithType: IPluginContextPack.Pack
-- uid: PluginCore.lmplements
-  name: PluginCore.lmplements
-  href: api/PluginCore.lmplements.html
-  commentId: N:PluginCore.lmplements
-  fullName: PluginCore.lmplements
-  nameWithType: PluginCore.lmplements
-- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext
-  name: CollectibleAssemblyLoadContext
-  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html
-  commentId: T:PluginCore.lmplements.CollectibleAssemblyLoadContext
-  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext
-  nameWithType: CollectibleAssemblyLoadContext
-- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.#ctor(System.String)
-  name: CollectibleAssemblyLoadContext(string?)
-  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext__ctor_System_String_
-  commentId: M:PluginCore.lmplements.CollectibleAssemblyLoadContext.#ctor(System.String)
-  name.vb: New(String)
-  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.CollectibleAssemblyLoadContext(string?)
-  fullName.vb: PluginCore.lmplements.CollectibleAssemblyLoadContext.New(String)
-  nameWithType: CollectibleAssemblyLoadContext.CollectibleAssemblyLoadContext(string?)
-  nameWithType.vb: CollectibleAssemblyLoadContext.New(String)
-- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.#ctor*
-  name: CollectibleAssemblyLoadContext
-  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext__ctor_
-  commentId: Overload:PluginCore.lmplements.CollectibleAssemblyLoadContext.#ctor
-  name.vb: New
-  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.CollectibleAssemblyLoadContext
-  fullName.vb: PluginCore.lmplements.CollectibleAssemblyLoadContext.New
-  nameWithType: CollectibleAssemblyLoadContext.CollectibleAssemblyLoadContext
-  nameWithType.vb: CollectibleAssemblyLoadContext.New
-- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.Load(System.Reflection.AssemblyName)
-  name: Load(AssemblyName)
-  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_Load_System_Reflection_AssemblyName_
-  commentId: M:PluginCore.lmplements.CollectibleAssemblyLoadContext.Load(System.Reflection.AssemblyName)
-  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.Load(System.Reflection.AssemblyName)
-  nameWithType: CollectibleAssemblyLoadContext.Load(AssemblyName)
-- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.Load*
-  name: Load
-  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_Load_
-  commentId: Overload:PluginCore.lmplements.CollectibleAssemblyLoadContext.Load
-  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.Load
-  nameWithType: CollectibleAssemblyLoadContext.Load
-- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
-  name: PluginId
-  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_PluginId
-  commentId: P:PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
-  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
-  nameWithType: CollectibleAssemblyLoadContext.PluginId
-- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId*
-  name: PluginId
-  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_PluginId_
-  commentId: Overload:PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
-  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
-  nameWithType: CollectibleAssemblyLoadContext.PluginId
-- uid: PluginCore.lmplements.LazyPluginLoadContext
-  name: LazyPluginLoadContext
-  href: api/PluginCore.lmplements.LazyPluginLoadContext.html
-  commentId: T:PluginCore.lmplements.LazyPluginLoadContext
-  fullName: PluginCore.lmplements.LazyPluginLoadContext
-  nameWithType: LazyPluginLoadContext
-- uid: PluginCore.lmplements.LazyPluginLoadContext.#ctor(System.String,System.String)
-  name: LazyPluginLoadContext(string, string)
-  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext__ctor_System_String_System_String_
-  commentId: M:PluginCore.lmplements.LazyPluginLoadContext.#ctor(System.String,System.String)
-  name.vb: New(String, String)
-  fullName: PluginCore.lmplements.LazyPluginLoadContext.LazyPluginLoadContext(string, string)
-  fullName.vb: PluginCore.lmplements.LazyPluginLoadContext.New(String, String)
-  nameWithType: LazyPluginLoadContext.LazyPluginLoadContext(string, string)
-  nameWithType.vb: LazyPluginLoadContext.New(String, String)
-- uid: PluginCore.lmplements.LazyPluginLoadContext.#ctor*
-  name: LazyPluginLoadContext
-  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext__ctor_
-  commentId: Overload:PluginCore.lmplements.LazyPluginLoadContext.#ctor
-  name.vb: New
-  fullName: PluginCore.lmplements.LazyPluginLoadContext.LazyPluginLoadContext
-  fullName.vb: PluginCore.lmplements.LazyPluginLoadContext.New
-  nameWithType: LazyPluginLoadContext.LazyPluginLoadContext
-  nameWithType.vb: LazyPluginLoadContext.New
-- uid: PluginCore.lmplements.LazyPluginLoadContext.Load(System.Reflection.AssemblyName)
-  name: Load(AssemblyName)
-  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext_Load_System_Reflection_AssemblyName_
-  commentId: M:PluginCore.lmplements.LazyPluginLoadContext.Load(System.Reflection.AssemblyName)
-  fullName: PluginCore.lmplements.LazyPluginLoadContext.Load(System.Reflection.AssemblyName)
-  nameWithType: LazyPluginLoadContext.Load(AssemblyName)
-- uid: PluginCore.lmplements.LazyPluginLoadContext.Load*
-  name: Load
-  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext_Load_
-  commentId: Overload:PluginCore.lmplements.LazyPluginLoadContext.Load
-  fullName: PluginCore.lmplements.LazyPluginLoadContext.Load
-  nameWithType: LazyPluginLoadContext.Load
-- uid: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll(System.String)
-  name: LoadUnmanagedDll(string)
-  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext_LoadUnmanagedDll_System_String_
-  commentId: M:PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll(System.String)
-  name.vb: LoadUnmanagedDll(String)
-  fullName: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll(string)
-  fullName.vb: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll(String)
-  nameWithType: LazyPluginLoadContext.LoadUnmanagedDll(string)
-  nameWithType.vb: LazyPluginLoadContext.LoadUnmanagedDll(String)
-- uid: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll*
-  name: LoadUnmanagedDll
-  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext_LoadUnmanagedDll_
-  commentId: Overload:PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll
-  fullName: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll
-  nameWithType: LazyPluginLoadContext.LoadUnmanagedDll
-- uid: PluginCore.lmplements.PluginContextManager
-  name: PluginContextManager
-  href: api/PluginCore.lmplements.PluginContextManager.html
-  commentId: T:PluginCore.lmplements.PluginContextManager
-  fullName: PluginCore.lmplements.PluginContextManager
-  nameWithType: PluginContextManager
-- uid: PluginCore.lmplements.PluginContextManager.#ctor
-  name: PluginContextManager()
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager__ctor
-  commentId: M:PluginCore.lmplements.PluginContextManager.#ctor
-  name.vb: New()
-  fullName: PluginCore.lmplements.PluginContextManager.PluginContextManager()
-  fullName.vb: PluginCore.lmplements.PluginContextManager.New()
-  nameWithType: PluginContextManager.PluginContextManager()
-  nameWithType.vb: PluginContextManager.New()
-- uid: PluginCore.lmplements.PluginContextManager.#ctor*
-  name: PluginContextManager
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager__ctor_
-  commentId: Overload:PluginCore.lmplements.PluginContextManager.#ctor
-  name.vb: New
-  fullName: PluginCore.lmplements.PluginContextManager.PluginContextManager
-  fullName.vb: PluginCore.lmplements.PluginContextManager.New
-  nameWithType: PluginContextManager.PluginContextManager
-  nameWithType.vb: PluginContextManager.New
-- uid: PluginCore.lmplements.PluginContextManager.Add(System.String,PluginCore.Interfaces.IPluginContext)
-  name: Add(string, IPluginContext)
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Add_System_String_PluginCore_Interfaces_IPluginContext_
-  commentId: M:PluginCore.lmplements.PluginContextManager.Add(System.String,PluginCore.Interfaces.IPluginContext)
-  name.vb: Add(String, IPluginContext)
-  fullName: PluginCore.lmplements.PluginContextManager.Add(string, PluginCore.Interfaces.IPluginContext)
-  fullName.vb: PluginCore.lmplements.PluginContextManager.Add(String, PluginCore.Interfaces.IPluginContext)
-  nameWithType: PluginContextManager.Add(string, IPluginContext)
-  nameWithType.vb: PluginContextManager.Add(String, IPluginContext)
-- uid: PluginCore.lmplements.PluginContextManager.Add*
-  name: Add
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Add_
-  commentId: Overload:PluginCore.lmplements.PluginContextManager.Add
-  fullName: PluginCore.lmplements.PluginContextManager.Add
-  nameWithType: PluginContextManager.Add
-- uid: PluginCore.lmplements.PluginContextManager.All
-  name: All()
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_All
-  commentId: M:PluginCore.lmplements.PluginContextManager.All
-  fullName: PluginCore.lmplements.PluginContextManager.All()
-  nameWithType: PluginContextManager.All()
-- uid: PluginCore.lmplements.PluginContextManager.All*
-  name: All
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_All_
-  commentId: Overload:PluginCore.lmplements.PluginContextManager.All
-  fullName: PluginCore.lmplements.PluginContextManager.All
-  nameWithType: PluginContextManager.All
-- uid: PluginCore.lmplements.PluginContextManager.Any(System.String)
-  name: Any(string)
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Any_System_String_
-  commentId: M:PluginCore.lmplements.PluginContextManager.Any(System.String)
-  name.vb: Any(String)
-  fullName: PluginCore.lmplements.PluginContextManager.Any(string)
-  fullName.vb: PluginCore.lmplements.PluginContextManager.Any(String)
-  nameWithType: PluginContextManager.Any(string)
-  nameWithType.vb: PluginContextManager.Any(String)
-- uid: PluginCore.lmplements.PluginContextManager.Any*
-  name: Any
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Any_
-  commentId: Overload:PluginCore.lmplements.PluginContextManager.Any
-  fullName: PluginCore.lmplements.PluginContextManager.Any
-  nameWithType: PluginContextManager.Any
-- uid: PluginCore.lmplements.PluginContextManager.Get(System.String)
-  name: Get(string)
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Get_System_String_
-  commentId: M:PluginCore.lmplements.PluginContextManager.Get(System.String)
-  name.vb: Get(String)
-  fullName: PluginCore.lmplements.PluginContextManager.Get(string)
-  fullName.vb: PluginCore.lmplements.PluginContextManager.Get(String)
-  nameWithType: PluginContextManager.Get(string)
-  nameWithType.vb: PluginContextManager.Get(String)
-- uid: PluginCore.lmplements.PluginContextManager.Get*
-  name: Get
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Get_
-  commentId: Overload:PluginCore.lmplements.PluginContextManager.Get
-  fullName: PluginCore.lmplements.PluginContextManager.Get
-  nameWithType: PluginContextManager.Get
-- uid: PluginCore.lmplements.PluginContextManager.Remove(System.String)
-  name: Remove(string)
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Remove_System_String_
-  commentId: M:PluginCore.lmplements.PluginContextManager.Remove(System.String)
-  name.vb: Remove(String)
-  fullName: PluginCore.lmplements.PluginContextManager.Remove(string)
-  fullName.vb: PluginCore.lmplements.PluginContextManager.Remove(String)
-  nameWithType: PluginContextManager.Remove(string)
-  nameWithType.vb: PluginContextManager.Remove(String)
-- uid: PluginCore.lmplements.PluginContextManager.Remove*
-  name: Remove
-  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Remove_
-  commentId: Overload:PluginCore.lmplements.PluginContextManager.Remove
-  fullName: PluginCore.lmplements.PluginContextManager.Remove
-  nameWithType: PluginContextManager.Remove
-- uid: PluginCore.lmplements.PluginContextPack
-  name: PluginContextPack
-  href: api/PluginCore.lmplements.PluginContextPack.html
-  commentId: T:PluginCore.lmplements.PluginContextPack
-  fullName: PluginCore.lmplements.PluginContextPack
-  nameWithType: PluginContextPack
-- uid: PluginCore.lmplements.PluginContextPack.#ctor
-  name: PluginContextPack()
-  href: api/PluginCore.lmplements.PluginContextPack.html#PluginCore_lmplements_PluginContextPack__ctor
-  commentId: M:PluginCore.lmplements.PluginContextPack.#ctor
-  name.vb: New()
-  fullName: PluginCore.lmplements.PluginContextPack.PluginContextPack()
-  fullName.vb: PluginCore.lmplements.PluginContextPack.New()
-  nameWithType: PluginContextPack.PluginContextPack()
-  nameWithType.vb: PluginContextPack.New()
-- uid: PluginCore.lmplements.PluginContextPack.#ctor*
-  name: PluginContextPack
-  href: api/PluginCore.lmplements.PluginContextPack.html#PluginCore_lmplements_PluginContextPack__ctor_
-  commentId: Overload:PluginCore.lmplements.PluginContextPack.#ctor
-  name.vb: New
-  fullName: PluginCore.lmplements.PluginContextPack.PluginContextPack
-  fullName.vb: PluginCore.lmplements.PluginContextPack.New
-  nameWithType: PluginContextPack.PluginContextPack
-  nameWithType.vb: PluginContextPack.New
-- uid: PluginCore.lmplements.PluginContextPack.Pack(System.String)
-  name: Pack(string)
-  href: api/PluginCore.lmplements.PluginContextPack.html#PluginCore_lmplements_PluginContextPack_Pack_System_String_
-  commentId: M:PluginCore.lmplements.PluginContextPack.Pack(System.String)
-  name.vb: Pack(String)
-  fullName: PluginCore.lmplements.PluginContextPack.Pack(string)
-  fullName.vb: PluginCore.lmplements.PluginContextPack.Pack(String)
-  nameWithType: PluginContextPack.Pack(string)
-  nameWithType.vb: PluginContextPack.Pack(String)
-- uid: PluginCore.lmplements.PluginContextPack.Pack*
-  name: Pack
-  href: api/PluginCore.lmplements.PluginContextPack.html#PluginCore_lmplements_PluginContextPack_Pack_
-  commentId: Overload:PluginCore.lmplements.PluginContextPack.Pack
-  fullName: PluginCore.lmplements.PluginContextPack.Pack
-  nameWithType: PluginContextPack.Pack
-- uid: PluginCore.lmplements.PluginContextPackV1
-  name: PluginContextPackV1
-  href: api/PluginCore.lmplements.PluginContextPackV1.html
-  commentId: T:PluginCore.lmplements.PluginContextPackV1
-  fullName: PluginCore.lmplements.PluginContextPackV1
-  nameWithType: PluginContextPackV1
-- uid: PluginCore.lmplements.PluginContextPackV1.#ctor
-  name: PluginContextPackV1()
-  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1__ctor
-  commentId: M:PluginCore.lmplements.PluginContextPackV1.#ctor
-  name.vb: New()
-  fullName: PluginCore.lmplements.PluginContextPackV1.PluginContextPackV1()
-  fullName.vb: PluginCore.lmplements.PluginContextPackV1.New()
-  nameWithType: PluginContextPackV1.PluginContextPackV1()
-  nameWithType.vb: PluginContextPackV1.New()
-- uid: PluginCore.lmplements.PluginContextPackV1.#ctor*
-  name: PluginContextPackV1
-  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1__ctor_
-  commentId: Overload:PluginCore.lmplements.PluginContextPackV1.#ctor
-  name.vb: New
-  fullName: PluginCore.lmplements.PluginContextPackV1.PluginContextPackV1
-  fullName.vb: PluginCore.lmplements.PluginContextPackV1.New
-  nameWithType: PluginContextPackV1.PluginContextPackV1
-  nameWithType.vb: PluginContextPackV1.New
-- uid: PluginCore.lmplements.PluginContextPackV1.Pack(System.String)
-  name: Pack(string)
-  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1_Pack_System_String_
-  commentId: M:PluginCore.lmplements.PluginContextPackV1.Pack(System.String)
-  name.vb: Pack(String)
-  fullName: PluginCore.lmplements.PluginContextPackV1.Pack(string)
-  fullName.vb: PluginCore.lmplements.PluginContextPackV1.Pack(String)
-  nameWithType: PluginContextPackV1.Pack(string)
-  nameWithType.vb: PluginContextPackV1.Pack(String)
-- uid: PluginCore.lmplements.PluginContextPackV1.Pack*
-  name: Pack
-  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1_Pack_
-  commentId: Overload:PluginCore.lmplements.PluginContextPackV1.Pack
-  fullName: PluginCore.lmplements.PluginContextPackV1.Pack
-  nameWithType: PluginContextPackV1.Pack
-- uid: PluginCore.lmplements.PluginContextPackV1.SkipDlls
-  name: SkipDlls
-  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1_SkipDlls
-  commentId: P:PluginCore.lmplements.PluginContextPackV1.SkipDlls
-  fullName: PluginCore.lmplements.PluginContextPackV1.SkipDlls
-  nameWithType: PluginContextPackV1.SkipDlls
-- uid: PluginCore.lmplements.PluginContextPackV1.SkipDlls*
-  name: SkipDlls
-  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1_SkipDlls_
-  commentId: Overload:PluginCore.lmplements.PluginContextPackV1.SkipDlls
-  fullName: PluginCore.lmplements.PluginContextPackV1.SkipDlls
-  nameWithType: PluginContextPackV1.SkipDlls
-- uid: PluginCore.lmplements.PluginContextStore
-  name: PluginContextStore
-  href: api/PluginCore.lmplements.PluginContextStore.html
-  commentId: T:PluginCore.lmplements.PluginContextStore
-  fullName: PluginCore.lmplements.PluginContextStore
-  nameWithType: PluginContextStore
-- uid: PluginCore.lmplements.PluginContextStore.PluginContexts
-  name: PluginContexts
-  href: api/PluginCore.lmplements.PluginContextStore.html#PluginCore_lmplements_PluginContextStore_PluginContexts
-  commentId: F:PluginCore.lmplements.PluginContextStore.PluginContexts
-  fullName: PluginCore.lmplements.PluginContextStore.PluginContexts
-  nameWithType: PluginContextStore.PluginContexts
-- uid: PluginCore.lmplements.PluginFinder
-  name: PluginFinder
-  href: api/PluginCore.lmplements.PluginFinder.html
-  commentId: T:PluginCore.lmplements.PluginFinder
-  fullName: PluginCore.lmplements.PluginFinder
-  nameWithType: PluginFinder
-- uid: PluginCore.lmplements.PluginFinder.#ctor(PluginCore.Interfaces.IPluginContextManager,System.IServiceProvider)
-  name: PluginFinder(IPluginContextManager, IServiceProvider)
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder__ctor_PluginCore_Interfaces_IPluginContextManager_System_IServiceProvider_
-  commentId: M:PluginCore.lmplements.PluginFinder.#ctor(PluginCore.Interfaces.IPluginContextManager,System.IServiceProvider)
-  name.vb: New(IPluginContextManager, IServiceProvider)
-  fullName: PluginCore.lmplements.PluginFinder.PluginFinder(PluginCore.Interfaces.IPluginContextManager, System.IServiceProvider)
-  fullName.vb: PluginCore.lmplements.PluginFinder.New(PluginCore.Interfaces.IPluginContextManager, System.IServiceProvider)
-  nameWithType: PluginFinder.PluginFinder(IPluginContextManager, IServiceProvider)
-  nameWithType.vb: PluginFinder.New(IPluginContextManager, IServiceProvider)
-- uid: PluginCore.lmplements.PluginFinder.#ctor*
-  name: PluginFinder
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder__ctor_
-  commentId: Overload:PluginCore.lmplements.PluginFinder.#ctor
-  name.vb: New
-  fullName: PluginCore.lmplements.PluginFinder.PluginFinder
-  fullName.vb: PluginCore.lmplements.PluginFinder.New
-  nameWithType: PluginFinder.PluginFinder
-  nameWithType.vb: PluginFinder.New
-- uid: PluginCore.lmplements.PluginFinder.ActivatedPlugins*
-  name: ActivatedPlugins
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_ActivatedPlugins_
-  commentId: Overload:PluginCore.lmplements.PluginFinder.ActivatedPlugins
-  fullName: PluginCore.lmplements.PluginFinder.ActivatedPlugins
-  nameWithType: PluginFinder.ActivatedPlugins
-- uid: PluginCore.lmplements.PluginFinder.ActivatedPlugins``1
-  name: ActivatedPlugins<TPlugin>()
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_ActivatedPlugins__1
-  commentId: M:PluginCore.lmplements.PluginFinder.ActivatedPlugins``1
-  name.vb: ActivatedPlugins(Of TPlugin)()
-  fullName: PluginCore.lmplements.PluginFinder.ActivatedPlugins<TPlugin>()
-  fullName.vb: PluginCore.lmplements.PluginFinder.ActivatedPlugins(Of TPlugin)()
-  nameWithType: PluginFinder.ActivatedPlugins<TPlugin>()
-  nameWithType.vb: PluginFinder.ActivatedPlugins(Of TPlugin)()
-- uid: PluginCore.lmplements.PluginFinder.EnablePluginIds
-  name: EnablePluginIds()
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_EnablePluginIds
-  commentId: M:PluginCore.lmplements.PluginFinder.EnablePluginIds
-  fullName: PluginCore.lmplements.PluginFinder.EnablePluginIds()
-  nameWithType: PluginFinder.EnablePluginIds()
-- uid: PluginCore.lmplements.PluginFinder.EnablePluginIds*
-  name: EnablePluginIds
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_EnablePluginIds_
-  commentId: Overload:PluginCore.lmplements.PluginFinder.EnablePluginIds
-  fullName: PluginCore.lmplements.PluginFinder.EnablePluginIds
-  nameWithType: PluginFinder.EnablePluginIds
-- uid: PluginCore.lmplements.PluginFinder.EnablePluginIds``1
-  name: EnablePluginIds<TPlugin>()
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_EnablePluginIds__1
-  commentId: M:PluginCore.lmplements.PluginFinder.EnablePluginIds``1
-  name.vb: EnablePluginIds(Of TPlugin)()
-  fullName: PluginCore.lmplements.PluginFinder.EnablePluginIds<TPlugin>()
-  fullName.vb: PluginCore.lmplements.PluginFinder.EnablePluginIds(Of TPlugin)()
-  nameWithType: PluginFinder.EnablePluginIds<TPlugin>()
-  nameWithType.vb: PluginFinder.EnablePluginIds(Of TPlugin)()
-- uid: PluginCore.lmplements.PluginFinder.EnablePlugins
-  name: EnablePlugins()
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_EnablePlugins
-  commentId: M:PluginCore.lmplements.PluginFinder.EnablePlugins
-  fullName: PluginCore.lmplements.PluginFinder.EnablePlugins()
-  nameWithType: PluginFinder.EnablePlugins()
-- uid: PluginCore.lmplements.PluginFinder.EnablePlugins*
-  name: EnablePlugins
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_EnablePlugins_
-  commentId: Overload:PluginCore.lmplements.PluginFinder.EnablePlugins
-  fullName: PluginCore.lmplements.PluginFinder.EnablePlugins
-  nameWithType: PluginFinder.EnablePlugins
-- uid: PluginCore.lmplements.PluginFinder.EnablePlugins``1
-  name: EnablePlugins<TPlugin>()
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_EnablePlugins__1
-  commentId: M:PluginCore.lmplements.PluginFinder.EnablePlugins``1
-  name.vb: EnablePlugins(Of TPlugin)()
-  fullName: PluginCore.lmplements.PluginFinder.EnablePlugins<TPlugin>()
-  fullName.vb: PluginCore.lmplements.PluginFinder.EnablePlugins(Of TPlugin)()
-  nameWithType: PluginFinder.EnablePlugins<TPlugin>()
-  nameWithType.vb: PluginFinder.EnablePlugins(Of TPlugin)()
-- uid: PluginCore.lmplements.PluginFinder.EnablePluginsFull
-  name: EnablePluginsFull()
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_EnablePluginsFull
-  commentId: M:PluginCore.lmplements.PluginFinder.EnablePluginsFull
-  fullName: PluginCore.lmplements.PluginFinder.EnablePluginsFull()
-  nameWithType: PluginFinder.EnablePluginsFull()
-- uid: PluginCore.lmplements.PluginFinder.EnablePluginsFull*
-  name: EnablePluginsFull
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_EnablePluginsFull_
-  commentId: Overload:PluginCore.lmplements.PluginFinder.EnablePluginsFull
-  fullName: PluginCore.lmplements.PluginFinder.EnablePluginsFull
-  nameWithType: PluginFinder.EnablePluginsFull
-- uid: PluginCore.lmplements.PluginFinder.EnablePluginsFull``1
-  name: EnablePluginsFull<TPlugin>()
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_EnablePluginsFull__1
-  commentId: M:PluginCore.lmplements.PluginFinder.EnablePluginsFull``1
-  name.vb: EnablePluginsFull(Of TPlugin)()
-  fullName: PluginCore.lmplements.PluginFinder.EnablePluginsFull<TPlugin>()
-  fullName.vb: PluginCore.lmplements.PluginFinder.EnablePluginsFull(Of TPlugin)()
-  nameWithType: PluginFinder.EnablePluginsFull<TPlugin>()
-  nameWithType.vb: PluginFinder.EnablePluginsFull(Of TPlugin)()
-- uid: PluginCore.lmplements.PluginFinder.Plugin(System.String)
-  name: Plugin(string)
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_Plugin_System_String_
-  commentId: M:PluginCore.lmplements.PluginFinder.Plugin(System.String)
-  name.vb: Plugin(String)
-  fullName: PluginCore.lmplements.PluginFinder.Plugin(string)
-  fullName.vb: PluginCore.lmplements.PluginFinder.Plugin(String)
-  nameWithType: PluginFinder.Plugin(string)
-  nameWithType.vb: PluginFinder.Plugin(String)
-- uid: PluginCore.lmplements.PluginFinder.Plugin*
-  name: Plugin
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_Plugin_
-  commentId: Overload:PluginCore.lmplements.PluginFinder.Plugin
-  fullName: PluginCore.lmplements.PluginFinder.Plugin
-  nameWithType: PluginFinder.Plugin
-- uid: PluginCore.lmplements.PluginFinder.PluginContextManager
-  name: PluginContextManager
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_PluginContextManager
-  commentId: P:PluginCore.lmplements.PluginFinder.PluginContextManager
-  fullName: PluginCore.lmplements.PluginFinder.PluginContextManager
-  nameWithType: PluginFinder.PluginContextManager
-- uid: PluginCore.lmplements.PluginFinder.PluginContextManager*
-  name: PluginContextManager
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_PluginContextManager_
-  commentId: Overload:PluginCore.lmplements.PluginFinder.PluginContextManager
-  fullName: PluginCore.lmplements.PluginFinder.PluginContextManager
-  nameWithType: PluginFinder.PluginContextManager
-- uid: PluginCore.lmplements.PluginFinder.ResolveUnregistered(System.Type)
-  name: ResolveUnregistered(Type)
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_ResolveUnregistered_System_Type_
-  commentId: M:PluginCore.lmplements.PluginFinder.ResolveUnregistered(System.Type)
-  fullName: PluginCore.lmplements.PluginFinder.ResolveUnregistered(System.Type)
-  nameWithType: PluginFinder.ResolveUnregistered(Type)
-- uid: PluginCore.lmplements.PluginFinder.ResolveUnregistered*
-  name: ResolveUnregistered
-  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder_ResolveUnregistered_
-  commentId: Overload:PluginCore.lmplements.PluginFinder.ResolveUnregistered
-  fullName: PluginCore.lmplements.PluginFinder.ResolveUnregistered
-  nameWithType: PluginFinder.ResolveUnregistered
-- uid: PluginCore.lmplements.PluginLoadContext
-  name: PluginLoadContext
-  href: api/PluginCore.lmplements.PluginLoadContext.html
-  commentId: T:PluginCore.lmplements.PluginLoadContext
-  fullName: PluginCore.lmplements.PluginLoadContext
-  nameWithType: PluginLoadContext
-- uid: PluginCore.lmplements.PluginLoadContext.#ctor(System.String,System.String)
-  name: PluginLoadContext(string, string)
-  href: api/PluginCore.lmplements.PluginLoadContext.html#PluginCore_lmplements_PluginLoadContext__ctor_System_String_System_String_
-  commentId: M:PluginCore.lmplements.PluginLoadContext.#ctor(System.String,System.String)
-  name.vb: New(String, String)
-  fullName: PluginCore.lmplements.PluginLoadContext.PluginLoadContext(string, string)
-  fullName.vb: PluginCore.lmplements.PluginLoadContext.New(String, String)
-  nameWithType: PluginLoadContext.PluginLoadContext(string, string)
-  nameWithType.vb: PluginLoadContext.New(String, String)
-- uid: PluginCore.lmplements.PluginLoadContext.#ctor*
-  name: PluginLoadContext
-  href: api/PluginCore.lmplements.PluginLoadContext.html#PluginCore_lmplements_PluginLoadContext__ctor_
-  commentId: Overload:PluginCore.lmplements.PluginLoadContext.#ctor
-  name.vb: New
-  fullName: PluginCore.lmplements.PluginLoadContext.PluginLoadContext
-  fullName.vb: PluginCore.lmplements.PluginLoadContext.New
-  nameWithType: PluginLoadContext.PluginLoadContext
-  nameWithType.vb: PluginLoadContext.New
-- uid: PluginCore.lmplements.PluginManager
-  name: PluginManager
-  href: api/PluginCore.lmplements.PluginManager.html
-  commentId: T:PluginCore.lmplements.PluginManager
-  fullName: PluginCore.lmplements.PluginManager
-  nameWithType: PluginManager
-- uid: PluginCore.lmplements.PluginManager.#ctor(PluginCore.Interfaces.IPluginContextManager,PluginCore.Interfaces.IPluginContextPack)
-  name: PluginManager(IPluginContextManager, IPluginContextPack)
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager__ctor_PluginCore_Interfaces_IPluginContextManager_PluginCore_Interfaces_IPluginContextPack_
-  commentId: M:PluginCore.lmplements.PluginManager.#ctor(PluginCore.Interfaces.IPluginContextManager,PluginCore.Interfaces.IPluginContextPack)
-  name.vb: New(IPluginContextManager, IPluginContextPack)
-  fullName: PluginCore.lmplements.PluginManager.PluginManager(PluginCore.Interfaces.IPluginContextManager, PluginCore.Interfaces.IPluginContextPack)
-  fullName.vb: PluginCore.lmplements.PluginManager.New(PluginCore.Interfaces.IPluginContextManager, PluginCore.Interfaces.IPluginContextPack)
-  nameWithType: PluginManager.PluginManager(IPluginContextManager, IPluginContextPack)
-  nameWithType.vb: PluginManager.New(IPluginContextManager, IPluginContextPack)
-- uid: PluginCore.lmplements.PluginManager.#ctor*
-  name: PluginManager
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager__ctor_
-  commentId: Overload:PluginCore.lmplements.PluginManager.#ctor
-  name.vb: New
-  fullName: PluginCore.lmplements.PluginManager.PluginManager
-  fullName.vb: PluginCore.lmplements.PluginManager.New
-  nameWithType: PluginManager.PluginManager
-  nameWithType.vb: PluginManager.New
-- uid: PluginCore.lmplements.PluginManager.LoadPlugin(System.String)
-  name: LoadPlugin(string)
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_LoadPlugin_System_String_
-  commentId: M:PluginCore.lmplements.PluginManager.LoadPlugin(System.String)
-  name.vb: LoadPlugin(String)
-  fullName: PluginCore.lmplements.PluginManager.LoadPlugin(string)
-  fullName.vb: PluginCore.lmplements.PluginManager.LoadPlugin(String)
-  nameWithType: PluginManager.LoadPlugin(string)
-  nameWithType.vb: PluginManager.LoadPlugin(String)
-- uid: PluginCore.lmplements.PluginManager.LoadPlugin*
-  name: LoadPlugin
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_LoadPlugin_
-  commentId: Overload:PluginCore.lmplements.PluginManager.LoadPlugin
-  fullName: PluginCore.lmplements.PluginManager.LoadPlugin
-  nameWithType: PluginManager.LoadPlugin
-- uid: PluginCore.lmplements.PluginManager.PluginContextManager
-  name: PluginContextManager
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager
-  commentId: P:PluginCore.lmplements.PluginManager.PluginContextManager
-  fullName: PluginCore.lmplements.PluginManager.PluginContextManager
-  nameWithType: PluginManager.PluginContextManager
-- uid: PluginCore.lmplements.PluginManager.PluginContextManager*
-  name: PluginContextManager
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager_
-  commentId: Overload:PluginCore.lmplements.PluginManager.PluginContextManager
-  fullName: PluginCore.lmplements.PluginManager.PluginContextManager
-  nameWithType: PluginManager.PluginContextManager
-- uid: PluginCore.lmplements.PluginManager.PluginContextPack
-  name: PluginContextPack
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextPack
-  commentId: P:PluginCore.lmplements.PluginManager.PluginContextPack
-  fullName: PluginCore.lmplements.PluginManager.PluginContextPack
-  nameWithType: PluginManager.PluginContextPack
-- uid: PluginCore.lmplements.PluginManager.PluginContextPack*
-  name: PluginContextPack
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextPack_
-  commentId: Overload:PluginCore.lmplements.PluginManager.PluginContextPack
-  fullName: PluginCore.lmplements.PluginManager.PluginContextPack
-  nameWithType: PluginManager.PluginContextPack
-- uid: PluginCore.lmplements.PluginManager.UnloadPlugin(System.String)
-  name: UnloadPlugin(string)
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_UnloadPlugin_System_String_
-  commentId: M:PluginCore.lmplements.PluginManager.UnloadPlugin(System.String)
-  name.vb: UnloadPlugin(String)
-  fullName: PluginCore.lmplements.PluginManager.UnloadPlugin(string)
-  fullName.vb: PluginCore.lmplements.PluginManager.UnloadPlugin(String)
-  nameWithType: PluginManager.UnloadPlugin(string)
-  nameWithType.vb: PluginManager.UnloadPlugin(String)
-- uid: PluginCore.lmplements.PluginManager.UnloadPlugin*
-  name: UnloadPlugin
-  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_UnloadPlugin_
-  commentId: Overload:PluginCore.lmplements.PluginManager.UnloadPlugin
-  fullName: PluginCore.lmplements.PluginManager.UnloadPlugin
-  nameWithType: PluginManager.UnloadPlugin
-- uid: PluginCore.lmplements.PositivePluginLoadContext
-  name: PositivePluginLoadContext
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html
-  commentId: T:PluginCore.lmplements.PositivePluginLoadContext
-  fullName: PluginCore.lmplements.PositivePluginLoadContext
-  nameWithType: PositivePluginLoadContext
-- uid: PluginCore.lmplements.PositivePluginLoadContext.#ctor(System.String,System.String)
-  name: PositivePluginLoadContext(string, string)
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext__ctor_System_String_System_String_
-  commentId: M:PluginCore.lmplements.PositivePluginLoadContext.#ctor(System.String,System.String)
-  name.vb: New(String, String)
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.PositivePluginLoadContext(string, string)
-  fullName.vb: PluginCore.lmplements.PositivePluginLoadContext.New(String, String)
-  nameWithType: PositivePluginLoadContext.PositivePluginLoadContext(string, string)
-  nameWithType.vb: PositivePluginLoadContext.New(String, String)
-- uid: PluginCore.lmplements.PositivePluginLoadContext.#ctor*
-  name: PositivePluginLoadContext
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext__ctor_
-  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.#ctor
-  name.vb: New
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.PositivePluginLoadContext
-  fullName.vb: PluginCore.lmplements.PositivePluginLoadContext.New
-  nameWithType: PositivePluginLoadContext.PositivePluginLoadContext
-  nameWithType.vb: PositivePluginLoadContext.New
-- uid: PluginCore.lmplements.PositivePluginLoadContext.Load(System.Reflection.AssemblyName)
-  name: Load(AssemblyName)
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_Load_System_Reflection_AssemblyName_
-  commentId: M:PluginCore.lmplements.PositivePluginLoadContext.Load(System.Reflection.AssemblyName)
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.Load(System.Reflection.AssemblyName)
-  nameWithType: PositivePluginLoadContext.Load(AssemblyName)
-- uid: PluginCore.lmplements.PositivePluginLoadContext.Load*
-  name: Load
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_Load_
-  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.Load
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.Load
-  nameWithType: PositivePluginLoadContext.Load
-- uid: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll(System.String)
-  name: LoadUnmanagedDll(string)
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_LoadUnmanagedDll_System_String_
-  commentId: M:PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll(System.String)
-  name.vb: LoadUnmanagedDll(String)
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll(string)
-  fullName.vb: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll(String)
-  nameWithType: PositivePluginLoadContext.LoadUnmanagedDll(string)
-  nameWithType.vb: PositivePluginLoadContext.LoadUnmanagedDll(String)
-- uid: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll*
-  name: LoadUnmanagedDll
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_LoadUnmanagedDll_
-  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll
-  nameWithType: PositivePluginLoadContext.LoadUnmanagedDll
-- uid: PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
-  name: MainAssemblyName
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_MainAssemblyName
-  commentId: P:PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
-  nameWithType: PositivePluginLoadContext.MainAssemblyName
-- uid: PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName*
-  name: MainAssemblyName
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_MainAssemblyName_
-  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
-  nameWithType: PositivePluginLoadContext.MainAssemblyName
-- uid: PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
-  name: ReferencedAssemblyNames
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_ReferencedAssemblyNames
-  commentId: P:PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
-  nameWithType: PositivePluginLoadContext.ReferencedAssemblyNames
-- uid: PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames*
-  name: ReferencedAssemblyNames
-  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_ReferencedAssemblyNames_
-  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
-  fullName: PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
-  nameWithType: PositivePluginLoadContext.ReferencedAssemblyNames
 - uid: PluginCore.Models
   name: PluginCore.Models
   href: api/PluginCore.Models.html
@@ -4746,3 +4125,789 @@ references:
   commentId: Overload:PluginCore.Utils.ZipHelper.FastDecomparessFile
   fullName: PluginCore.Utils.ZipHelper.FastDecomparessFile
   nameWithType: ZipHelper.FastDecomparessFile
+- uid: PluginCore.lmplements
+  name: PluginCore.lmplements
+  href: api/PluginCore.lmplements.html
+  commentId: N:PluginCore.lmplements
+  fullName: PluginCore.lmplements
+  nameWithType: PluginCore.lmplements
+- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext
+  name: CollectibleAssemblyLoadContext
+  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html
+  commentId: T:PluginCore.lmplements.CollectibleAssemblyLoadContext
+  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext
+  nameWithType: CollectibleAssemblyLoadContext
+- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.#ctor(System.String)
+  name: CollectibleAssemblyLoadContext(string?)
+  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext__ctor_System_String_
+  commentId: M:PluginCore.lmplements.CollectibleAssemblyLoadContext.#ctor(System.String)
+  name.vb: New(String)
+  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.CollectibleAssemblyLoadContext(string?)
+  fullName.vb: PluginCore.lmplements.CollectibleAssemblyLoadContext.New(String)
+  nameWithType: CollectibleAssemblyLoadContext.CollectibleAssemblyLoadContext(string?)
+  nameWithType.vb: CollectibleAssemblyLoadContext.New(String)
+- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.#ctor*
+  name: CollectibleAssemblyLoadContext
+  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext__ctor_
+  commentId: Overload:PluginCore.lmplements.CollectibleAssemblyLoadContext.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.CollectibleAssemblyLoadContext
+  fullName.vb: PluginCore.lmplements.CollectibleAssemblyLoadContext.New
+  nameWithType: CollectibleAssemblyLoadContext.CollectibleAssemblyLoadContext
+  nameWithType.vb: CollectibleAssemblyLoadContext.New
+- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.Load(System.Reflection.AssemblyName)
+  name: Load(AssemblyName)
+  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_Load_System_Reflection_AssemblyName_
+  commentId: M:PluginCore.lmplements.CollectibleAssemblyLoadContext.Load(System.Reflection.AssemblyName)
+  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.Load(System.Reflection.AssemblyName)
+  nameWithType: CollectibleAssemblyLoadContext.Load(AssemblyName)
+- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.Load*
+  name: Load
+  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_Load_
+  commentId: Overload:PluginCore.lmplements.CollectibleAssemblyLoadContext.Load
+  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.Load
+  nameWithType: CollectibleAssemblyLoadContext.Load
+- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
+  name: PluginId
+  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_PluginId
+  commentId: P:PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
+  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
+  nameWithType: CollectibleAssemblyLoadContext.PluginId
+- uid: PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId*
+  name: PluginId
+  href: api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html#PluginCore_lmplements_CollectibleAssemblyLoadContext_PluginId_
+  commentId: Overload:PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
+  fullName: PluginCore.lmplements.CollectibleAssemblyLoadContext.PluginId
+  nameWithType: CollectibleAssemblyLoadContext.PluginId
+- uid: PluginCore.lmplements.LazyPluginLoadContext
+  name: LazyPluginLoadContext
+  href: api/PluginCore.lmplements.LazyPluginLoadContext.html
+  commentId: T:PluginCore.lmplements.LazyPluginLoadContext
+  fullName: PluginCore.lmplements.LazyPluginLoadContext
+  nameWithType: LazyPluginLoadContext
+- uid: PluginCore.lmplements.LazyPluginLoadContext.#ctor(System.String,System.String)
+  name: LazyPluginLoadContext(string, string)
+  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext__ctor_System_String_System_String_
+  commentId: M:PluginCore.lmplements.LazyPluginLoadContext.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: PluginCore.lmplements.LazyPluginLoadContext.LazyPluginLoadContext(string, string)
+  fullName.vb: PluginCore.lmplements.LazyPluginLoadContext.New(String, String)
+  nameWithType: LazyPluginLoadContext.LazyPluginLoadContext(string, string)
+  nameWithType.vb: LazyPluginLoadContext.New(String, String)
+- uid: PluginCore.lmplements.LazyPluginLoadContext.#ctor*
+  name: LazyPluginLoadContext
+  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext__ctor_
+  commentId: Overload:PluginCore.lmplements.LazyPluginLoadContext.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.LazyPluginLoadContext.LazyPluginLoadContext
+  fullName.vb: PluginCore.lmplements.LazyPluginLoadContext.New
+  nameWithType: LazyPluginLoadContext.LazyPluginLoadContext
+  nameWithType.vb: LazyPluginLoadContext.New
+- uid: PluginCore.lmplements.LazyPluginLoadContext.Load(System.Reflection.AssemblyName)
+  name: Load(AssemblyName)
+  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext_Load_System_Reflection_AssemblyName_
+  commentId: M:PluginCore.lmplements.LazyPluginLoadContext.Load(System.Reflection.AssemblyName)
+  fullName: PluginCore.lmplements.LazyPluginLoadContext.Load(System.Reflection.AssemblyName)
+  nameWithType: LazyPluginLoadContext.Load(AssemblyName)
+- uid: PluginCore.lmplements.LazyPluginLoadContext.Load*
+  name: Load
+  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext_Load_
+  commentId: Overload:PluginCore.lmplements.LazyPluginLoadContext.Load
+  fullName: PluginCore.lmplements.LazyPluginLoadContext.Load
+  nameWithType: LazyPluginLoadContext.Load
+- uid: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll(System.String)
+  name: LoadUnmanagedDll(string)
+  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext_LoadUnmanagedDll_System_String_
+  commentId: M:PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll(System.String)
+  name.vb: LoadUnmanagedDll(String)
+  fullName: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll(string)
+  fullName.vb: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll(String)
+  nameWithType: LazyPluginLoadContext.LoadUnmanagedDll(string)
+  nameWithType.vb: LazyPluginLoadContext.LoadUnmanagedDll(String)
+- uid: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll*
+  name: LoadUnmanagedDll
+  href: api/PluginCore.lmplements.LazyPluginLoadContext.html#PluginCore_lmplements_LazyPluginLoadContext_LoadUnmanagedDll_
+  commentId: Overload:PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll
+  fullName: PluginCore.lmplements.LazyPluginLoadContext.LoadUnmanagedDll
+  nameWithType: LazyPluginLoadContext.LoadUnmanagedDll
+- uid: PluginCore.lmplements.PluginContextManager
+  name: PluginContextManager
+  href: api/PluginCore.lmplements.PluginContextManager.html
+  commentId: T:PluginCore.lmplements.PluginContextManager
+  fullName: PluginCore.lmplements.PluginContextManager
+  nameWithType: PluginContextManager
+- uid: PluginCore.lmplements.PluginContextManager.#ctor
+  name: PluginContextManager()
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager__ctor
+  commentId: M:PluginCore.lmplements.PluginContextManager.#ctor
+  name.vb: New()
+  fullName: PluginCore.lmplements.PluginContextManager.PluginContextManager()
+  fullName.vb: PluginCore.lmplements.PluginContextManager.New()
+  nameWithType: PluginContextManager.PluginContextManager()
+  nameWithType.vb: PluginContextManager.New()
+- uid: PluginCore.lmplements.PluginContextManager.#ctor*
+  name: PluginContextManager
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager__ctor_
+  commentId: Overload:PluginCore.lmplements.PluginContextManager.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.PluginContextManager.PluginContextManager
+  fullName.vb: PluginCore.lmplements.PluginContextManager.New
+  nameWithType: PluginContextManager.PluginContextManager
+  nameWithType.vb: PluginContextManager.New
+- uid: PluginCore.lmplements.PluginContextManager.Add(System.String,PluginCore.Interfaces.IPluginContext)
+  name: Add(string, IPluginContext)
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Add_System_String_PluginCore_Interfaces_IPluginContext_
+  commentId: M:PluginCore.lmplements.PluginContextManager.Add(System.String,PluginCore.Interfaces.IPluginContext)
+  name.vb: Add(String, IPluginContext)
+  fullName: PluginCore.lmplements.PluginContextManager.Add(string, PluginCore.Interfaces.IPluginContext)
+  fullName.vb: PluginCore.lmplements.PluginContextManager.Add(String, PluginCore.Interfaces.IPluginContext)
+  nameWithType: PluginContextManager.Add(string, IPluginContext)
+  nameWithType.vb: PluginContextManager.Add(String, IPluginContext)
+- uid: PluginCore.lmplements.PluginContextManager.Add*
+  name: Add
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Add_
+  commentId: Overload:PluginCore.lmplements.PluginContextManager.Add
+  fullName: PluginCore.lmplements.PluginContextManager.Add
+  nameWithType: PluginContextManager.Add
+- uid: PluginCore.lmplements.PluginContextManager.All
+  name: All()
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_All
+  commentId: M:PluginCore.lmplements.PluginContextManager.All
+  fullName: PluginCore.lmplements.PluginContextManager.All()
+  nameWithType: PluginContextManager.All()
+- uid: PluginCore.lmplements.PluginContextManager.All*
+  name: All
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_All_
+  commentId: Overload:PluginCore.lmplements.PluginContextManager.All
+  fullName: PluginCore.lmplements.PluginContextManager.All
+  nameWithType: PluginContextManager.All
+- uid: PluginCore.lmplements.PluginContextManager.Any(System.String)
+  name: Any(string)
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Any_System_String_
+  commentId: M:PluginCore.lmplements.PluginContextManager.Any(System.String)
+  name.vb: Any(String)
+  fullName: PluginCore.lmplements.PluginContextManager.Any(string)
+  fullName.vb: PluginCore.lmplements.PluginContextManager.Any(String)
+  nameWithType: PluginContextManager.Any(string)
+  nameWithType.vb: PluginContextManager.Any(String)
+- uid: PluginCore.lmplements.PluginContextManager.Any*
+  name: Any
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Any_
+  commentId: Overload:PluginCore.lmplements.PluginContextManager.Any
+  fullName: PluginCore.lmplements.PluginContextManager.Any
+  nameWithType: PluginContextManager.Any
+- uid: PluginCore.lmplements.PluginContextManager.Get(System.String)
+  name: Get(string)
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Get_System_String_
+  commentId: M:PluginCore.lmplements.PluginContextManager.Get(System.String)
+  name.vb: Get(String)
+  fullName: PluginCore.lmplements.PluginContextManager.Get(string)
+  fullName.vb: PluginCore.lmplements.PluginContextManager.Get(String)
+  nameWithType: PluginContextManager.Get(string)
+  nameWithType.vb: PluginContextManager.Get(String)
+- uid: PluginCore.lmplements.PluginContextManager.Get*
+  name: Get
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Get_
+  commentId: Overload:PluginCore.lmplements.PluginContextManager.Get
+  fullName: PluginCore.lmplements.PluginContextManager.Get
+  nameWithType: PluginContextManager.Get
+- uid: PluginCore.lmplements.PluginContextManager.Remove(System.String)
+  name: Remove(string)
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Remove_System_String_
+  commentId: M:PluginCore.lmplements.PluginContextManager.Remove(System.String)
+  name.vb: Remove(String)
+  fullName: PluginCore.lmplements.PluginContextManager.Remove(string)
+  fullName.vb: PluginCore.lmplements.PluginContextManager.Remove(String)
+  nameWithType: PluginContextManager.Remove(string)
+  nameWithType.vb: PluginContextManager.Remove(String)
+- uid: PluginCore.lmplements.PluginContextManager.Remove*
+  name: Remove
+  href: api/PluginCore.lmplements.PluginContextManager.html#PluginCore_lmplements_PluginContextManager_Remove_
+  commentId: Overload:PluginCore.lmplements.PluginContextManager.Remove
+  fullName: PluginCore.lmplements.PluginContextManager.Remove
+  nameWithType: PluginContextManager.Remove
+- uid: PluginCore.lmplements.PluginContextPack
+  name: PluginContextPack
+  href: api/PluginCore.lmplements.PluginContextPack.html
+  commentId: T:PluginCore.lmplements.PluginContextPack
+  fullName: PluginCore.lmplements.PluginContextPack
+  nameWithType: PluginContextPack
+- uid: PluginCore.lmplements.PluginContextPack.#ctor
+  name: PluginContextPack()
+  href: api/PluginCore.lmplements.PluginContextPack.html#PluginCore_lmplements_PluginContextPack__ctor
+  commentId: M:PluginCore.lmplements.PluginContextPack.#ctor
+  name.vb: New()
+  fullName: PluginCore.lmplements.PluginContextPack.PluginContextPack()
+  fullName.vb: PluginCore.lmplements.PluginContextPack.New()
+  nameWithType: PluginContextPack.PluginContextPack()
+  nameWithType.vb: PluginContextPack.New()
+- uid: PluginCore.lmplements.PluginContextPack.#ctor*
+  name: PluginContextPack
+  href: api/PluginCore.lmplements.PluginContextPack.html#PluginCore_lmplements_PluginContextPack__ctor_
+  commentId: Overload:PluginCore.lmplements.PluginContextPack.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.PluginContextPack.PluginContextPack
+  fullName.vb: PluginCore.lmplements.PluginContextPack.New
+  nameWithType: PluginContextPack.PluginContextPack
+  nameWithType.vb: PluginContextPack.New
+- uid: PluginCore.lmplements.PluginContextPack.Pack(System.String)
+  name: Pack(string)
+  href: api/PluginCore.lmplements.PluginContextPack.html#PluginCore_lmplements_PluginContextPack_Pack_System_String_
+  commentId: M:PluginCore.lmplements.PluginContextPack.Pack(System.String)
+  name.vb: Pack(String)
+  fullName: PluginCore.lmplements.PluginContextPack.Pack(string)
+  fullName.vb: PluginCore.lmplements.PluginContextPack.Pack(String)
+  nameWithType: PluginContextPack.Pack(string)
+  nameWithType.vb: PluginContextPack.Pack(String)
+- uid: PluginCore.lmplements.PluginContextPack.Pack*
+  name: Pack
+  href: api/PluginCore.lmplements.PluginContextPack.html#PluginCore_lmplements_PluginContextPack_Pack_
+  commentId: Overload:PluginCore.lmplements.PluginContextPack.Pack
+  fullName: PluginCore.lmplements.PluginContextPack.Pack
+  nameWithType: PluginContextPack.Pack
+- uid: PluginCore.lmplements.PluginContextPackV1
+  name: PluginContextPackV1
+  href: api/PluginCore.lmplements.PluginContextPackV1.html
+  commentId: T:PluginCore.lmplements.PluginContextPackV1
+  fullName: PluginCore.lmplements.PluginContextPackV1
+  nameWithType: PluginContextPackV1
+- uid: PluginCore.lmplements.PluginContextPackV1.#ctor
+  name: PluginContextPackV1()
+  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1__ctor
+  commentId: M:PluginCore.lmplements.PluginContextPackV1.#ctor
+  name.vb: New()
+  fullName: PluginCore.lmplements.PluginContextPackV1.PluginContextPackV1()
+  fullName.vb: PluginCore.lmplements.PluginContextPackV1.New()
+  nameWithType: PluginContextPackV1.PluginContextPackV1()
+  nameWithType.vb: PluginContextPackV1.New()
+- uid: PluginCore.lmplements.PluginContextPackV1.#ctor*
+  name: PluginContextPackV1
+  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1__ctor_
+  commentId: Overload:PluginCore.lmplements.PluginContextPackV1.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.PluginContextPackV1.PluginContextPackV1
+  fullName.vb: PluginCore.lmplements.PluginContextPackV1.New
+  nameWithType: PluginContextPackV1.PluginContextPackV1
+  nameWithType.vb: PluginContextPackV1.New
+- uid: PluginCore.lmplements.PluginContextPackV1.Pack(System.String)
+  name: Pack(string)
+  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1_Pack_System_String_
+  commentId: M:PluginCore.lmplements.PluginContextPackV1.Pack(System.String)
+  name.vb: Pack(String)
+  fullName: PluginCore.lmplements.PluginContextPackV1.Pack(string)
+  fullName.vb: PluginCore.lmplements.PluginContextPackV1.Pack(String)
+  nameWithType: PluginContextPackV1.Pack(string)
+  nameWithType.vb: PluginContextPackV1.Pack(String)
+- uid: PluginCore.lmplements.PluginContextPackV1.Pack*
+  name: Pack
+  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1_Pack_
+  commentId: Overload:PluginCore.lmplements.PluginContextPackV1.Pack
+  fullName: PluginCore.lmplements.PluginContextPackV1.Pack
+  nameWithType: PluginContextPackV1.Pack
+- uid: PluginCore.lmplements.PluginContextPackV1.SkipDlls
+  name: SkipDlls
+  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1_SkipDlls
+  commentId: P:PluginCore.lmplements.PluginContextPackV1.SkipDlls
+  fullName: PluginCore.lmplements.PluginContextPackV1.SkipDlls
+  nameWithType: PluginContextPackV1.SkipDlls
+- uid: PluginCore.lmplements.PluginContextPackV1.SkipDlls*
+  name: SkipDlls
+  href: api/PluginCore.lmplements.PluginContextPackV1.html#PluginCore_lmplements_PluginContextPackV1_SkipDlls_
+  commentId: Overload:PluginCore.lmplements.PluginContextPackV1.SkipDlls
+  fullName: PluginCore.lmplements.PluginContextPackV1.SkipDlls
+  nameWithType: PluginContextPackV1.SkipDlls
+- uid: PluginCore.lmplements.PluginContextStore
+  name: PluginContextStore
+  href: api/PluginCore.lmplements.PluginContextStore.html
+  commentId: T:PluginCore.lmplements.PluginContextStore
+  fullName: PluginCore.lmplements.PluginContextStore
+  nameWithType: PluginContextStore
+- uid: PluginCore.lmplements.PluginContextStore.PluginContexts
+  name: PluginContexts
+  href: api/PluginCore.lmplements.PluginContextStore.html#PluginCore_lmplements_PluginContextStore_PluginContexts
+  commentId: F:PluginCore.lmplements.PluginContextStore.PluginContexts
+  fullName: PluginCore.lmplements.PluginContextStore.PluginContexts
+  nameWithType: PluginContextStore.PluginContexts
+- uid: PluginCore.lmplements.PluginFinder
+  name: PluginFinder
+  href: api/PluginCore.lmplements.PluginFinder.html
+  commentId: T:PluginCore.lmplements.PluginFinder
+  fullName: PluginCore.lmplements.PluginFinder
+  nameWithType: PluginFinder
+- uid: PluginCore.lmplements.PluginFinder.#ctor(PluginCore.Interfaces.IPluginContextManager,Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  name: PluginFinder(IPluginContextManager, IServiceScopeFactory)
+  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder__ctor_PluginCore_Interfaces_IPluginContextManager_Microsoft_Extensions_DependencyInjection_IServiceScopeFactory_
+  commentId: M:PluginCore.lmplements.PluginFinder.#ctor(PluginCore.Interfaces.IPluginContextManager,Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  name.vb: New(IPluginContextManager, IServiceScopeFactory)
+  fullName: PluginCore.lmplements.PluginFinder.PluginFinder(PluginCore.Interfaces.IPluginContextManager, Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  fullName.vb: PluginCore.lmplements.PluginFinder.New(PluginCore.Interfaces.IPluginContextManager, Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  nameWithType: PluginFinder.PluginFinder(IPluginContextManager, IServiceScopeFactory)
+  nameWithType.vb: PluginFinder.New(IPluginContextManager, IServiceScopeFactory)
+- uid: PluginCore.lmplements.PluginFinder.#ctor*
+  name: PluginFinder
+  href: api/PluginCore.lmplements.PluginFinder.html#PluginCore_lmplements_PluginFinder__ctor_
+  commentId: Overload:PluginCore.lmplements.PluginFinder.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.PluginFinder.PluginFinder
+  fullName.vb: PluginCore.lmplements.PluginFinder.New
+  nameWithType: PluginFinder.PluginFinder
+  nameWithType.vb: PluginFinder.New
+- uid: PluginCore.lmplements.PluginFinderV1
+  name: PluginFinderV1
+  href: api/PluginCore.lmplements.PluginFinderV1.html
+  commentId: T:PluginCore.lmplements.PluginFinderV1
+  fullName: PluginCore.lmplements.PluginFinderV1
+  nameWithType: PluginFinderV1
+- uid: PluginCore.lmplements.PluginFinderV1.#ctor(PluginCore.Interfaces.IPluginContextManager,System.IServiceProvider)
+  name: PluginFinderV1(IPluginContextManager, IServiceProvider)
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1__ctor_PluginCore_Interfaces_IPluginContextManager_System_IServiceProvider_
+  commentId: M:PluginCore.lmplements.PluginFinderV1.#ctor(PluginCore.Interfaces.IPluginContextManager,System.IServiceProvider)
+  name.vb: New(IPluginContextManager, IServiceProvider)
+  fullName: PluginCore.lmplements.PluginFinderV1.PluginFinderV1(PluginCore.Interfaces.IPluginContextManager, System.IServiceProvider)
+  fullName.vb: PluginCore.lmplements.PluginFinderV1.New(PluginCore.Interfaces.IPluginContextManager, System.IServiceProvider)
+  nameWithType: PluginFinderV1.PluginFinderV1(IPluginContextManager, IServiceProvider)
+  nameWithType.vb: PluginFinderV1.New(IPluginContextManager, IServiceProvider)
+- uid: PluginCore.lmplements.PluginFinderV1.#ctor*
+  name: PluginFinderV1
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1__ctor_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV1.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.PluginFinderV1.PluginFinderV1
+  fullName.vb: PluginCore.lmplements.PluginFinderV1.New
+  nameWithType: PluginFinderV1.PluginFinderV1
+  nameWithType.vb: PluginFinderV1.New
+- uid: PluginCore.lmplements.PluginFinderV1.ActivatedPlugins*
+  name: ActivatedPlugins
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_ActivatedPlugins_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV1.ActivatedPlugins
+  fullName: PluginCore.lmplements.PluginFinderV1.ActivatedPlugins
+  nameWithType: PluginFinderV1.ActivatedPlugins
+- uid: PluginCore.lmplements.PluginFinderV1.ActivatedPlugins``1
+  name: ActivatedPlugins<TPlugin>()
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_ActivatedPlugins__1
+  commentId: M:PluginCore.lmplements.PluginFinderV1.ActivatedPlugins``1
+  name.vb: ActivatedPlugins(Of TPlugin)()
+  fullName: PluginCore.lmplements.PluginFinderV1.ActivatedPlugins<TPlugin>()
+  fullName.vb: PluginCore.lmplements.PluginFinderV1.ActivatedPlugins(Of TPlugin)()
+  nameWithType: PluginFinderV1.ActivatedPlugins<TPlugin>()
+  nameWithType.vb: PluginFinderV1.ActivatedPlugins(Of TPlugin)()
+- uid: PluginCore.lmplements.PluginFinderV1.EnablePluginIds
+  name: EnablePluginIds()
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_EnablePluginIds
+  commentId: M:PluginCore.lmplements.PluginFinderV1.EnablePluginIds
+  fullName: PluginCore.lmplements.PluginFinderV1.EnablePluginIds()
+  nameWithType: PluginFinderV1.EnablePluginIds()
+- uid: PluginCore.lmplements.PluginFinderV1.EnablePluginIds*
+  name: EnablePluginIds
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_EnablePluginIds_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV1.EnablePluginIds
+  fullName: PluginCore.lmplements.PluginFinderV1.EnablePluginIds
+  nameWithType: PluginFinderV1.EnablePluginIds
+- uid: PluginCore.lmplements.PluginFinderV1.EnablePluginIds``1
+  name: EnablePluginIds<TPlugin>()
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_EnablePluginIds__1
+  commentId: M:PluginCore.lmplements.PluginFinderV1.EnablePluginIds``1
+  name.vb: EnablePluginIds(Of TPlugin)()
+  fullName: PluginCore.lmplements.PluginFinderV1.EnablePluginIds<TPlugin>()
+  fullName.vb: PluginCore.lmplements.PluginFinderV1.EnablePluginIds(Of TPlugin)()
+  nameWithType: PluginFinderV1.EnablePluginIds<TPlugin>()
+  nameWithType.vb: PluginFinderV1.EnablePluginIds(Of TPlugin)()
+- uid: PluginCore.lmplements.PluginFinderV1.EnablePlugins
+  name: EnablePlugins()
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_EnablePlugins
+  commentId: M:PluginCore.lmplements.PluginFinderV1.EnablePlugins
+  fullName: PluginCore.lmplements.PluginFinderV1.EnablePlugins()
+  nameWithType: PluginFinderV1.EnablePlugins()
+- uid: PluginCore.lmplements.PluginFinderV1.EnablePlugins*
+  name: EnablePlugins
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_EnablePlugins_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV1.EnablePlugins
+  fullName: PluginCore.lmplements.PluginFinderV1.EnablePlugins
+  nameWithType: PluginFinderV1.EnablePlugins
+- uid: PluginCore.lmplements.PluginFinderV1.EnablePluginsFull
+  name: EnablePluginsFull()
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_EnablePluginsFull
+  commentId: M:PluginCore.lmplements.PluginFinderV1.EnablePluginsFull
+  fullName: PluginCore.lmplements.PluginFinderV1.EnablePluginsFull()
+  nameWithType: PluginFinderV1.EnablePluginsFull()
+- uid: PluginCore.lmplements.PluginFinderV1.EnablePluginsFull*
+  name: EnablePluginsFull
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_EnablePluginsFull_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV1.EnablePluginsFull
+  fullName: PluginCore.lmplements.PluginFinderV1.EnablePluginsFull
+  nameWithType: PluginFinderV1.EnablePluginsFull
+- uid: PluginCore.lmplements.PluginFinderV1.EnablePluginsFull``1
+  name: EnablePluginsFull<TPlugin>()
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_EnablePluginsFull__1
+  commentId: M:PluginCore.lmplements.PluginFinderV1.EnablePluginsFull``1
+  name.vb: EnablePluginsFull(Of TPlugin)()
+  fullName: PluginCore.lmplements.PluginFinderV1.EnablePluginsFull<TPlugin>()
+  fullName.vb: PluginCore.lmplements.PluginFinderV1.EnablePluginsFull(Of TPlugin)()
+  nameWithType: PluginFinderV1.EnablePluginsFull<TPlugin>()
+  nameWithType.vb: PluginFinderV1.EnablePluginsFull(Of TPlugin)()
+- uid: PluginCore.lmplements.PluginFinderV1.EnablePlugins``1
+  name: EnablePlugins<TPlugin>()
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_EnablePlugins__1
+  commentId: M:PluginCore.lmplements.PluginFinderV1.EnablePlugins``1
+  name.vb: EnablePlugins(Of TPlugin)()
+  fullName: PluginCore.lmplements.PluginFinderV1.EnablePlugins<TPlugin>()
+  fullName.vb: PluginCore.lmplements.PluginFinderV1.EnablePlugins(Of TPlugin)()
+  nameWithType: PluginFinderV1.EnablePlugins<TPlugin>()
+  nameWithType.vb: PluginFinderV1.EnablePlugins(Of TPlugin)()
+- uid: PluginCore.lmplements.PluginFinderV1.Plugin(System.String)
+  name: Plugin(string)
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_Plugin_System_String_
+  commentId: M:PluginCore.lmplements.PluginFinderV1.Plugin(System.String)
+  name.vb: Plugin(String)
+  fullName: PluginCore.lmplements.PluginFinderV1.Plugin(string)
+  fullName.vb: PluginCore.lmplements.PluginFinderV1.Plugin(String)
+  nameWithType: PluginFinderV1.Plugin(string)
+  nameWithType.vb: PluginFinderV1.Plugin(String)
+- uid: PluginCore.lmplements.PluginFinderV1.Plugin*
+  name: Plugin
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_Plugin_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV1.Plugin
+  fullName: PluginCore.lmplements.PluginFinderV1.Plugin
+  nameWithType: PluginFinderV1.Plugin
+- uid: PluginCore.lmplements.PluginFinderV1.PluginContextManager
+  name: PluginContextManager
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_PluginContextManager
+  commentId: P:PluginCore.lmplements.PluginFinderV1.PluginContextManager
+  fullName: PluginCore.lmplements.PluginFinderV1.PluginContextManager
+  nameWithType: PluginFinderV1.PluginContextManager
+- uid: PluginCore.lmplements.PluginFinderV1.PluginContextManager*
+  name: PluginContextManager
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_PluginContextManager_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV1.PluginContextManager
+  fullName: PluginCore.lmplements.PluginFinderV1.PluginContextManager
+  nameWithType: PluginFinderV1.PluginContextManager
+- uid: PluginCore.lmplements.PluginFinderV1.ResolveUnregistered(System.Type)
+  name: ResolveUnregistered(Type)
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_ResolveUnregistered_System_Type_
+  commentId: M:PluginCore.lmplements.PluginFinderV1.ResolveUnregistered(System.Type)
+  fullName: PluginCore.lmplements.PluginFinderV1.ResolveUnregistered(System.Type)
+  nameWithType: PluginFinderV1.ResolveUnregistered(Type)
+- uid: PluginCore.lmplements.PluginFinderV1.ResolveUnregistered*
+  name: ResolveUnregistered
+  href: api/PluginCore.lmplements.PluginFinderV1.html#PluginCore_lmplements_PluginFinderV1_ResolveUnregistered_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV1.ResolveUnregistered
+  fullName: PluginCore.lmplements.PluginFinderV1.ResolveUnregistered
+  nameWithType: PluginFinderV1.ResolveUnregistered
+- uid: PluginCore.lmplements.PluginFinderV2
+  name: PluginFinderV2
+  href: api/PluginCore.lmplements.PluginFinderV2.html
+  commentId: T:PluginCore.lmplements.PluginFinderV2
+  fullName: PluginCore.lmplements.PluginFinderV2
+  nameWithType: PluginFinderV2
+- uid: PluginCore.lmplements.PluginFinderV2.#ctor(PluginCore.Interfaces.IPluginContextManager,Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  name: PluginFinderV2(IPluginContextManager, IServiceScopeFactory)
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2__ctor_PluginCore_Interfaces_IPluginContextManager_Microsoft_Extensions_DependencyInjection_IServiceScopeFactory_
+  commentId: M:PluginCore.lmplements.PluginFinderV2.#ctor(PluginCore.Interfaces.IPluginContextManager,Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  name.vb: New(IPluginContextManager, IServiceScopeFactory)
+  fullName: PluginCore.lmplements.PluginFinderV2.PluginFinderV2(PluginCore.Interfaces.IPluginContextManager, Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  fullName.vb: PluginCore.lmplements.PluginFinderV2.New(PluginCore.Interfaces.IPluginContextManager, Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  nameWithType: PluginFinderV2.PluginFinderV2(IPluginContextManager, IServiceScopeFactory)
+  nameWithType.vb: PluginFinderV2.New(IPluginContextManager, IServiceScopeFactory)
+- uid: PluginCore.lmplements.PluginFinderV2.#ctor*
+  name: PluginFinderV2
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2__ctor_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV2.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.PluginFinderV2.PluginFinderV2
+  fullName.vb: PluginCore.lmplements.PluginFinderV2.New
+  nameWithType: PluginFinderV2.PluginFinderV2
+  nameWithType.vb: PluginFinderV2.New
+- uid: PluginCore.lmplements.PluginFinderV2.ActivatedPlugins*
+  name: ActivatedPlugins
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_ActivatedPlugins_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV2.ActivatedPlugins
+  fullName: PluginCore.lmplements.PluginFinderV2.ActivatedPlugins
+  nameWithType: PluginFinderV2.ActivatedPlugins
+- uid: PluginCore.lmplements.PluginFinderV2.ActivatedPlugins``1
+  name: ActivatedPlugins<TPlugin>()
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_ActivatedPlugins__1
+  commentId: M:PluginCore.lmplements.PluginFinderV2.ActivatedPlugins``1
+  name.vb: ActivatedPlugins(Of TPlugin)()
+  fullName: PluginCore.lmplements.PluginFinderV2.ActivatedPlugins<TPlugin>()
+  fullName.vb: PluginCore.lmplements.PluginFinderV2.ActivatedPlugins(Of TPlugin)()
+  nameWithType: PluginFinderV2.ActivatedPlugins<TPlugin>()
+  nameWithType.vb: PluginFinderV2.ActivatedPlugins(Of TPlugin)()
+- uid: PluginCore.lmplements.PluginFinderV2.EnablePluginIds
+  name: EnablePluginIds()
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_EnablePluginIds
+  commentId: M:PluginCore.lmplements.PluginFinderV2.EnablePluginIds
+  fullName: PluginCore.lmplements.PluginFinderV2.EnablePluginIds()
+  nameWithType: PluginFinderV2.EnablePluginIds()
+- uid: PluginCore.lmplements.PluginFinderV2.EnablePluginIds*
+  name: EnablePluginIds
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_EnablePluginIds_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV2.EnablePluginIds
+  fullName: PluginCore.lmplements.PluginFinderV2.EnablePluginIds
+  nameWithType: PluginFinderV2.EnablePluginIds
+- uid: PluginCore.lmplements.PluginFinderV2.EnablePluginIds``1
+  name: EnablePluginIds<TPlugin>()
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_EnablePluginIds__1
+  commentId: M:PluginCore.lmplements.PluginFinderV2.EnablePluginIds``1
+  name.vb: EnablePluginIds(Of TPlugin)()
+  fullName: PluginCore.lmplements.PluginFinderV2.EnablePluginIds<TPlugin>()
+  fullName.vb: PluginCore.lmplements.PluginFinderV2.EnablePluginIds(Of TPlugin)()
+  nameWithType: PluginFinderV2.EnablePluginIds<TPlugin>()
+  nameWithType.vb: PluginFinderV2.EnablePluginIds(Of TPlugin)()
+- uid: PluginCore.lmplements.PluginFinderV2.EnablePlugins
+  name: EnablePlugins()
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_EnablePlugins
+  commentId: M:PluginCore.lmplements.PluginFinderV2.EnablePlugins
+  fullName: PluginCore.lmplements.PluginFinderV2.EnablePlugins()
+  nameWithType: PluginFinderV2.EnablePlugins()
+- uid: PluginCore.lmplements.PluginFinderV2.EnablePlugins*
+  name: EnablePlugins
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_EnablePlugins_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV2.EnablePlugins
+  fullName: PluginCore.lmplements.PluginFinderV2.EnablePlugins
+  nameWithType: PluginFinderV2.EnablePlugins
+- uid: PluginCore.lmplements.PluginFinderV2.EnablePluginsFull
+  name: EnablePluginsFull()
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_EnablePluginsFull
+  commentId: M:PluginCore.lmplements.PluginFinderV2.EnablePluginsFull
+  fullName: PluginCore.lmplements.PluginFinderV2.EnablePluginsFull()
+  nameWithType: PluginFinderV2.EnablePluginsFull()
+- uid: PluginCore.lmplements.PluginFinderV2.EnablePluginsFull*
+  name: EnablePluginsFull
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_EnablePluginsFull_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV2.EnablePluginsFull
+  fullName: PluginCore.lmplements.PluginFinderV2.EnablePluginsFull
+  nameWithType: PluginFinderV2.EnablePluginsFull
+- uid: PluginCore.lmplements.PluginFinderV2.EnablePluginsFull``1
+  name: EnablePluginsFull<TPlugin>()
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_EnablePluginsFull__1
+  commentId: M:PluginCore.lmplements.PluginFinderV2.EnablePluginsFull``1
+  name.vb: EnablePluginsFull(Of TPlugin)()
+  fullName: PluginCore.lmplements.PluginFinderV2.EnablePluginsFull<TPlugin>()
+  fullName.vb: PluginCore.lmplements.PluginFinderV2.EnablePluginsFull(Of TPlugin)()
+  nameWithType: PluginFinderV2.EnablePluginsFull<TPlugin>()
+  nameWithType.vb: PluginFinderV2.EnablePluginsFull(Of TPlugin)()
+- uid: PluginCore.lmplements.PluginFinderV2.EnablePlugins``1
+  name: EnablePlugins<TPlugin>()
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_EnablePlugins__1
+  commentId: M:PluginCore.lmplements.PluginFinderV2.EnablePlugins``1
+  name.vb: EnablePlugins(Of TPlugin)()
+  fullName: PluginCore.lmplements.PluginFinderV2.EnablePlugins<TPlugin>()
+  fullName.vb: PluginCore.lmplements.PluginFinderV2.EnablePlugins(Of TPlugin)()
+  nameWithType: PluginFinderV2.EnablePlugins<TPlugin>()
+  nameWithType.vb: PluginFinderV2.EnablePlugins(Of TPlugin)()
+- uid: PluginCore.lmplements.PluginFinderV2.Plugin(System.String)
+  name: Plugin(string)
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_Plugin_System_String_
+  commentId: M:PluginCore.lmplements.PluginFinderV2.Plugin(System.String)
+  name.vb: Plugin(String)
+  fullName: PluginCore.lmplements.PluginFinderV2.Plugin(string)
+  fullName.vb: PluginCore.lmplements.PluginFinderV2.Plugin(String)
+  nameWithType: PluginFinderV2.Plugin(string)
+  nameWithType.vb: PluginFinderV2.Plugin(String)
+- uid: PluginCore.lmplements.PluginFinderV2.Plugin*
+  name: Plugin
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_Plugin_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV2.Plugin
+  fullName: PluginCore.lmplements.PluginFinderV2.Plugin
+  nameWithType: PluginFinderV2.Plugin
+- uid: PluginCore.lmplements.PluginFinderV2.PluginContextManager
+  name: PluginContextManager
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_PluginContextManager
+  commentId: P:PluginCore.lmplements.PluginFinderV2.PluginContextManager
+  fullName: PluginCore.lmplements.PluginFinderV2.PluginContextManager
+  nameWithType: PluginFinderV2.PluginContextManager
+- uid: PluginCore.lmplements.PluginFinderV2.PluginContextManager*
+  name: PluginContextManager
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_PluginContextManager_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV2.PluginContextManager
+  fullName: PluginCore.lmplements.PluginFinderV2.PluginContextManager
+  nameWithType: PluginFinderV2.PluginContextManager
+- uid: PluginCore.lmplements.PluginFinderV2.ResolveUnregistered(System.Type)
+  name: ResolveUnregistered(Type)
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_ResolveUnregistered_System_Type_
+  commentId: M:PluginCore.lmplements.PluginFinderV2.ResolveUnregistered(System.Type)
+  fullName: PluginCore.lmplements.PluginFinderV2.ResolveUnregistered(System.Type)
+  nameWithType: PluginFinderV2.ResolveUnregistered(Type)
+- uid: PluginCore.lmplements.PluginFinderV2.ResolveUnregistered*
+  name: ResolveUnregistered
+  href: api/PluginCore.lmplements.PluginFinderV2.html#PluginCore_lmplements_PluginFinderV2_ResolveUnregistered_
+  commentId: Overload:PluginCore.lmplements.PluginFinderV2.ResolveUnregistered
+  fullName: PluginCore.lmplements.PluginFinderV2.ResolveUnregistered
+  nameWithType: PluginFinderV2.ResolveUnregistered
+- uid: PluginCore.lmplements.PluginLoadContext
+  name: PluginLoadContext
+  href: api/PluginCore.lmplements.PluginLoadContext.html
+  commentId: T:PluginCore.lmplements.PluginLoadContext
+  fullName: PluginCore.lmplements.PluginLoadContext
+  nameWithType: PluginLoadContext
+- uid: PluginCore.lmplements.PluginLoadContext.#ctor(System.String,System.String)
+  name: PluginLoadContext(string, string)
+  href: api/PluginCore.lmplements.PluginLoadContext.html#PluginCore_lmplements_PluginLoadContext__ctor_System_String_System_String_
+  commentId: M:PluginCore.lmplements.PluginLoadContext.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: PluginCore.lmplements.PluginLoadContext.PluginLoadContext(string, string)
+  fullName.vb: PluginCore.lmplements.PluginLoadContext.New(String, String)
+  nameWithType: PluginLoadContext.PluginLoadContext(string, string)
+  nameWithType.vb: PluginLoadContext.New(String, String)
+- uid: PluginCore.lmplements.PluginLoadContext.#ctor*
+  name: PluginLoadContext
+  href: api/PluginCore.lmplements.PluginLoadContext.html#PluginCore_lmplements_PluginLoadContext__ctor_
+  commentId: Overload:PluginCore.lmplements.PluginLoadContext.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.PluginLoadContext.PluginLoadContext
+  fullName.vb: PluginCore.lmplements.PluginLoadContext.New
+  nameWithType: PluginLoadContext.PluginLoadContext
+  nameWithType.vb: PluginLoadContext.New
+- uid: PluginCore.lmplements.PluginManager
+  name: PluginManager
+  href: api/PluginCore.lmplements.PluginManager.html
+  commentId: T:PluginCore.lmplements.PluginManager
+  fullName: PluginCore.lmplements.PluginManager
+  nameWithType: PluginManager
+- uid: PluginCore.lmplements.PluginManager.#ctor(PluginCore.Interfaces.IPluginContextManager,PluginCore.Interfaces.IPluginContextPack)
+  name: PluginManager(IPluginContextManager, IPluginContextPack)
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager__ctor_PluginCore_Interfaces_IPluginContextManager_PluginCore_Interfaces_IPluginContextPack_
+  commentId: M:PluginCore.lmplements.PluginManager.#ctor(PluginCore.Interfaces.IPluginContextManager,PluginCore.Interfaces.IPluginContextPack)
+  name.vb: New(IPluginContextManager, IPluginContextPack)
+  fullName: PluginCore.lmplements.PluginManager.PluginManager(PluginCore.Interfaces.IPluginContextManager, PluginCore.Interfaces.IPluginContextPack)
+  fullName.vb: PluginCore.lmplements.PluginManager.New(PluginCore.Interfaces.IPluginContextManager, PluginCore.Interfaces.IPluginContextPack)
+  nameWithType: PluginManager.PluginManager(IPluginContextManager, IPluginContextPack)
+  nameWithType.vb: PluginManager.New(IPluginContextManager, IPluginContextPack)
+- uid: PluginCore.lmplements.PluginManager.#ctor*
+  name: PluginManager
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager__ctor_
+  commentId: Overload:PluginCore.lmplements.PluginManager.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.PluginManager.PluginManager
+  fullName.vb: PluginCore.lmplements.PluginManager.New
+  nameWithType: PluginManager.PluginManager
+  nameWithType.vb: PluginManager.New
+- uid: PluginCore.lmplements.PluginManager.LoadPlugin(System.String)
+  name: LoadPlugin(string)
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_LoadPlugin_System_String_
+  commentId: M:PluginCore.lmplements.PluginManager.LoadPlugin(System.String)
+  name.vb: LoadPlugin(String)
+  fullName: PluginCore.lmplements.PluginManager.LoadPlugin(string)
+  fullName.vb: PluginCore.lmplements.PluginManager.LoadPlugin(String)
+  nameWithType: PluginManager.LoadPlugin(string)
+  nameWithType.vb: PluginManager.LoadPlugin(String)
+- uid: PluginCore.lmplements.PluginManager.LoadPlugin*
+  name: LoadPlugin
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_LoadPlugin_
+  commentId: Overload:PluginCore.lmplements.PluginManager.LoadPlugin
+  fullName: PluginCore.lmplements.PluginManager.LoadPlugin
+  nameWithType: PluginManager.LoadPlugin
+- uid: PluginCore.lmplements.PluginManager.PluginContextManager
+  name: PluginContextManager
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager
+  commentId: P:PluginCore.lmplements.PluginManager.PluginContextManager
+  fullName: PluginCore.lmplements.PluginManager.PluginContextManager
+  nameWithType: PluginManager.PluginContextManager
+- uid: PluginCore.lmplements.PluginManager.PluginContextManager*
+  name: PluginContextManager
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager_
+  commentId: Overload:PluginCore.lmplements.PluginManager.PluginContextManager
+  fullName: PluginCore.lmplements.PluginManager.PluginContextManager
+  nameWithType: PluginManager.PluginContextManager
+- uid: PluginCore.lmplements.PluginManager.PluginContextPack
+  name: PluginContextPack
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextPack
+  commentId: P:PluginCore.lmplements.PluginManager.PluginContextPack
+  fullName: PluginCore.lmplements.PluginManager.PluginContextPack
+  nameWithType: PluginManager.PluginContextPack
+- uid: PluginCore.lmplements.PluginManager.PluginContextPack*
+  name: PluginContextPack
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextPack_
+  commentId: Overload:PluginCore.lmplements.PluginManager.PluginContextPack
+  fullName: PluginCore.lmplements.PluginManager.PluginContextPack
+  nameWithType: PluginManager.PluginContextPack
+- uid: PluginCore.lmplements.PluginManager.UnloadPlugin(System.String)
+  name: UnloadPlugin(string)
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_UnloadPlugin_System_String_
+  commentId: M:PluginCore.lmplements.PluginManager.UnloadPlugin(System.String)
+  name.vb: UnloadPlugin(String)
+  fullName: PluginCore.lmplements.PluginManager.UnloadPlugin(string)
+  fullName.vb: PluginCore.lmplements.PluginManager.UnloadPlugin(String)
+  nameWithType: PluginManager.UnloadPlugin(string)
+  nameWithType.vb: PluginManager.UnloadPlugin(String)
+- uid: PluginCore.lmplements.PluginManager.UnloadPlugin*
+  name: UnloadPlugin
+  href: api/PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_UnloadPlugin_
+  commentId: Overload:PluginCore.lmplements.PluginManager.UnloadPlugin
+  fullName: PluginCore.lmplements.PluginManager.UnloadPlugin
+  nameWithType: PluginManager.UnloadPlugin
+- uid: PluginCore.lmplements.PositivePluginLoadContext
+  name: PositivePluginLoadContext
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html
+  commentId: T:PluginCore.lmplements.PositivePluginLoadContext
+  fullName: PluginCore.lmplements.PositivePluginLoadContext
+  nameWithType: PositivePluginLoadContext
+- uid: PluginCore.lmplements.PositivePluginLoadContext.#ctor(System.String,System.String)
+  name: PositivePluginLoadContext(string, string)
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext__ctor_System_String_System_String_
+  commentId: M:PluginCore.lmplements.PositivePluginLoadContext.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.PositivePluginLoadContext(string, string)
+  fullName.vb: PluginCore.lmplements.PositivePluginLoadContext.New(String, String)
+  nameWithType: PositivePluginLoadContext.PositivePluginLoadContext(string, string)
+  nameWithType.vb: PositivePluginLoadContext.New(String, String)
+- uid: PluginCore.lmplements.PositivePluginLoadContext.#ctor*
+  name: PositivePluginLoadContext
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext__ctor_
+  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.#ctor
+  name.vb: New
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.PositivePluginLoadContext
+  fullName.vb: PluginCore.lmplements.PositivePluginLoadContext.New
+  nameWithType: PositivePluginLoadContext.PositivePluginLoadContext
+  nameWithType.vb: PositivePluginLoadContext.New
+- uid: PluginCore.lmplements.PositivePluginLoadContext.Load(System.Reflection.AssemblyName)
+  name: Load(AssemblyName)
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_Load_System_Reflection_AssemblyName_
+  commentId: M:PluginCore.lmplements.PositivePluginLoadContext.Load(System.Reflection.AssemblyName)
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.Load(System.Reflection.AssemblyName)
+  nameWithType: PositivePluginLoadContext.Load(AssemblyName)
+- uid: PluginCore.lmplements.PositivePluginLoadContext.Load*
+  name: Load
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_Load_
+  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.Load
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.Load
+  nameWithType: PositivePluginLoadContext.Load
+- uid: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll(System.String)
+  name: LoadUnmanagedDll(string)
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_LoadUnmanagedDll_System_String_
+  commentId: M:PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll(System.String)
+  name.vb: LoadUnmanagedDll(String)
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll(string)
+  fullName.vb: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll(String)
+  nameWithType: PositivePluginLoadContext.LoadUnmanagedDll(string)
+  nameWithType.vb: PositivePluginLoadContext.LoadUnmanagedDll(String)
+- uid: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll*
+  name: LoadUnmanagedDll
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_LoadUnmanagedDll_
+  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.LoadUnmanagedDll
+  nameWithType: PositivePluginLoadContext.LoadUnmanagedDll
+- uid: PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
+  name: MainAssemblyName
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_MainAssemblyName
+  commentId: P:PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
+  nameWithType: PositivePluginLoadContext.MainAssemblyName
+- uid: PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName*
+  name: MainAssemblyName
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_MainAssemblyName_
+  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.MainAssemblyName
+  nameWithType: PositivePluginLoadContext.MainAssemblyName
+- uid: PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
+  name: ReferencedAssemblyNames
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_ReferencedAssemblyNames
+  commentId: P:PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
+  nameWithType: PositivePluginLoadContext.ReferencedAssemblyNames
+- uid: PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames*
+  name: ReferencedAssemblyNames
+  href: api/PluginCore.lmplements.PositivePluginLoadContext.html#PluginCore_lmplements_PositivePluginLoadContext_ReferencedAssemblyNames_
+  commentId: Overload:PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
+  fullName: PluginCore.lmplements.PositivePluginLoadContext.ReferencedAssemblyNames
+  nameWithType: PositivePluginLoadContext.ReferencedAssemblyNames
