@@ -11,8 +11,9 @@ module.exports = {
     'vuepress-plugin-mermaidjs',
     // "mermaidjs"
     [
-      // https://github.com/lukemnet/vuepress-plugin-matomo
-      "@lukemnet/vuepress-plugin-matomo",
+      // 作者已删除相关 npm 包: https://github.com/lukemnet/vuepress-plugin-matomo
+      // https://github.com/qdot/vuepress-plugin-matomo
+      "vuepress-plugin-matomo",
       {
         'siteId': 4,
         'trackerUrl': "https://matomo.moeci.com/"
