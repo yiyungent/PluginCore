@@ -7,7 +7,7 @@
 
 
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
@@ -19,7 +19,8 @@ namespace PluginCore.AspNetCore.Authorization
     /// </summary>
     public class PluginCoreAdminAuthorizeAttribute : AuthorizeAttribute
     {
-        public PluginCoreAdminAuthorizeAttribute() : base("PluginCore.Admin")
+        // public PluginCoreAdminAuthorizeAttribute() : base("PluginCore.Admin")
+        public PluginCoreAdminAuthorizeAttribute() : base(IPlugins.Constants.AspNetCoreAuthorizationPolicyName)
         {
 
         }

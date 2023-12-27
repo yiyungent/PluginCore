@@ -49,7 +49,8 @@ namespace PluginCore.AspNetCore.Authentication
             else
             {
                 var id = new ClaimsIdentity(
-                    new Claim[] { new Claim("PluginCore.Token", token) },  // not safe , just as an example , should custom claims on your own
+                    // new Claim[] { new Claim("PluginCore.Token", token) },  // not safe , just as an example , should custom claims on your own
+                    new Claim[] { new Claim(IPlugins.Constants.AspNetCoreAuthenticationClaimType, token) },  // not safe , just as an example , should custom claims on your own
                     Scheme.Name
                 );
                 ClaimsPrincipal principal = new ClaimsPrincipal(id);
