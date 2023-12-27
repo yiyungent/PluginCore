@@ -160,7 +160,8 @@ namespace PluginCore.AspNetCore.Extensions
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("PluginCore.Admin", policy =>
+                // options.AddPolicy("PluginCore.Admin", policy =>
+                options.AddPolicy(Constants.AspNetCoreAuthorizationPolicyName, policy =>
                 {
                     // 无法满足 下方任何一项：HTTP 403 错误
                     // 3.需要 检查是否拥有当前请求资源的权限
