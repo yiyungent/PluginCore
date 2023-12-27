@@ -145,9 +145,13 @@ namespace PluginCore.AspNetCore.Extensions
             // System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
             #region 添加认证 Authentication
             // 没通过 Authentication: 401 Unauthorized
-            services.AddAuthentication("PluginCore.Authentication")
+            // services.AddAuthentication("PluginCore.Authentication")
+            //     .AddScheme<Authentication.PluginCoreAuthenticationSchemeOptions,
+            //         Authentication.PluginCoreAuthenticationHandler>("PluginCore.Authentication", "PluginCore.Authentication",
+            //         options => { });
+            services.AddAuthentication(Constants.AspNetCoreAuthenticationScheme)
                 .AddScheme<Authentication.PluginCoreAuthenticationSchemeOptions,
-                    Authentication.PluginCoreAuthenticationHandler>("PluginCore.Authentication", "PluginCore.Authentication",
+                    Authentication.PluginCoreAuthenticationHandler>(Constants.AspNetCoreAuthenticationScheme, Constants.AspNetCoreAuthenticationScheme,
                     options => { });
             #endregion
 
