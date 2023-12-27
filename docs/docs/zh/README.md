@@ -31,7 +31,7 @@ features:
   details: 可控的插件生命周期, 完善的事件派发
 - title: 国际化
   details: 得益于 i18n 的国际化实现, 提供多语言切换支持
-footer: Apache-2.0 Licensed | Copyright © 2021-present yiyun
+footer: GNU LGPLv3 Licensed | Copyright © 2021-present yiyun
 ---
 
 

@@ -1,7 +1,7 @@
 //===================================================
-//  License: Apache-2.0
+//  License: GNU LGPLv3
 //  Contributors: yiyungent@gmail.com
-//  Project: https://moeci.com/PluginCore
+//  Project: https://yiyungent.github.io/PluginCore
 //  GitHub: https://github.com/yiyungent/PluginCore
 //===================================================
 
@@ -21,3 +21,5 @@
         public object data { get; set; }
     }
 }
+
+
