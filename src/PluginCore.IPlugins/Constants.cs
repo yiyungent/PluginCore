@@ -17,5 +17,10 @@ namespace PluginCore.IPlugins
         /// en
         /// </summary>
         public const string AspNetCoreLanguageCookieName = "language";
+
+        /// <summary>
+        /// httpContext.Items[Constants.AspNetCoreLanguageKey]
+        /// </summary>
+        public const string AspNetCoreLanguageKey = "PluginCore.Admin.Language";
     }
 }
