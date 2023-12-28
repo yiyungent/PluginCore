@@ -11,5 +11,11 @@ namespace PluginCore.IPlugins
         public const string AspNetCoreAuthorizationPolicyName = "PluginCore.Admin";
 
         public const string AspNetCoreAuthorizationTokenCookieName = "PluginCore.Admin.Token";
+
+        /// <summary>
+        /// zh
+        /// en
+        /// </summary>
+        public const string AspNetCoreLanguageCookieName = "language";
     }
 }
