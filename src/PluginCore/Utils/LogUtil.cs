@@ -42,6 +42,22 @@ namespace PluginCore.Utils
             }
         }
 
+        public static void Info(string message)
+        {
+            if (_serviceScopeFactory == null)
+            {
+                return;
+            }
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                if (service != null)
+                {
+                    service.LogInformation(message);
+                }
+            }
+        }
+
         public static void Error<T>(string message)
         {
             if (_serviceScopeFactory == null)
@@ -58,6 +74,22 @@ namespace PluginCore.Utils
             }
         }
 
+        public static void Error(string message)
+        {
+            if (_serviceScopeFactory == null)
+            {
+                return;
+            }
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                if (service != null)
+                {
+                    service.LogError(message);
+                }
+            }
+        }
+
         public static void Exception<T>(Exception ex)
         {
             if (_serviceScopeFactory == null)
@@ -67,6 +99,22 @@ namespace PluginCore.Utils
             using (var scope = _serviceScopeFactory.CreateScope())
             {
                 ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
+                if (service != null)
+                {
+                    service.LogError(ex, ex.Message);
+                }
+            }
+        }
+
+        public static void Exception(Exception ex)
+        {
+            if (_serviceScopeFactory == null)
+            {
+                return;
+            }
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                ILogger? service = scope.ServiceProvider.GetService<ILogger>();
                 if (service != null)
                 {
                     service.LogError(ex, ex.Message);
