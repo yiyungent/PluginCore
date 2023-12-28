@@ -85,7 +85,7 @@ namespace PluginCore.Infrastructure
                 // 只需要这些, 其他删除
                 Directory.Delete(libDirPath, true);
 
-                Utils.LogUtil.Info($"加载 nupkg 中 dll: {sourceFile} ; {libNetDirPath}");
+                Utils.LogUtil.Info<NupkgService>($"加载 nupkg 中 dll: {sourceFile} ; {libNetDirPath}");
 
                 // 2. 普通文件: 例如 wwwroot
                 // 2.1 ./content
@@ -101,7 +101,7 @@ namespace PluginCore.Infrastructure
                         Utils.FileUtil.CopyFolder(contentDirPath, destinationDirectory);
                         isFinishedContent = true;
 
-                        Utils.LogUtil.Info($"加载 nupkg 中 非dll: ./content : {sourceFile} ; {contentDirPath}");
+                        Utils.LogUtil.Info<NupkgService>($"加载 nupkg 中 非dll: ./content : {sourceFile} ; {contentDirPath}");
                     }
                 }
                 else
@@ -121,7 +121,7 @@ namespace PluginCore.Infrastructure
                             {
                                 Utils.FileUtil.CopyFolder(netFolderDir.FullName, destinationDirectory);
 
-                                Utils.LogUtil.Info($"加载 nupkg 中 非dll: ./contentFiles/any/netFolderName : {sourceFile} ; {netFolderDir.FullName}");
+                                Utils.LogUtil.Info<NupkgService>($"加载 nupkg 中 非dll: ./contentFiles/any/netFolderName : {sourceFile} ; {netFolderDir.FullName}");
                             }
                         }
                     }
@@ -134,8 +134,8 @@ namespace PluginCore.Infrastructure
             }
             catch (Exception ex)
             {
-                Utils.LogUtil.Error(ex.ToString());
-                Utils.LogUtil.Error(ex.InnerException?.ToString() ?? "");
+                Utils.LogUtil.Exception<NupkgService>(ex);
+                Utils.LogUtil.Error<NupkgService>(ex.InnerException?.ToString() ?? "");
 
                 throw ex;
             }

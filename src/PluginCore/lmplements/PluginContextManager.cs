@@ -53,7 +53,7 @@ namespace PluginCore.lmplements
             if (_newCount > 1)
             {
 #if DEBUG
-                Utils.LogUtil.Error($"警告: {nameof(PluginContextManager)} 被 new {_newCount} 次");
+                Utils.LogUtil.Error<PluginContextManager>($"警告: {nameof(PluginContextManager)} 被 new {_newCount} 次");
 #endif
             }
             #endregion
