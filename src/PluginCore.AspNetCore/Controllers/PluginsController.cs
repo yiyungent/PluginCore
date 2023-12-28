@@ -303,7 +303,7 @@ namespace PluginCore.AspNetCore.Controllers
                 }
                 catch (Exception ex)
                 {
-                    Utils.LogUtil.Error(ex.ToString());
+                    Utils.LogUtil.Exception<PluginsController>(ex);
                     responseData.Code = -1;
                     responseData.Message = "禁用失败: 此插件不存在, 或未启用";
                     return await Task.FromResult(responseData);
