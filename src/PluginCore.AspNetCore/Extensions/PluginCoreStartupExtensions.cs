@@ -194,6 +194,13 @@ namespace PluginCore.AspNetCore.Extensions
 
             #endregion
 
+            #region Logger
+
+            IServiceScopeFactory serviceScopeFactory = _serviceProvider.GetService<IServiceScopeFactory>();
+            Utils.LogUtil.Initialize(serviceScopeFactory);
+
+            #endregion
+
             // AddBackgroundServices
             services.AddBackgroundServices();
 
