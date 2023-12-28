@@ -53,7 +53,7 @@ namespace PluginCore.AspNetCore.lmplements
             foreach (var item in plugins)
             {
                 // 调用
-                Utils.LogUtil.Info($"{item.GetType().ToString()} {nameof(IStartupXPlugin)}.{nameof(IStartupXPlugin.Configure)}");
+                Utils.LogUtil.Info<PluginApplicationBuilderManager>($"{item.GetType().ToString()} {nameof(IStartupXPlugin)}.{nameof(IStartupXPlugin.Configure)}");
 
                 item.Configure(applicationBuilder);
             }
