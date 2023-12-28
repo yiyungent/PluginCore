@@ -56,7 +56,7 @@ namespace PluginCore.AspNetCore.Authentication
                 ClaimsPrincipal principal = new ClaimsPrincipal(id);
                 var ticket = new AuthenticationTicket(principal, new AuthenticationProperties(), Scheme.Name);
 
-                Utils.LogUtil.Info($"通过 Authentication: token: {token}");
+                Utils.LogUtil.Info<PluginCoreAuthenticationHandler>($"通过 Authentication: token: {token}");
 
                 return AuthenticateResult.Success(ticket);
             }

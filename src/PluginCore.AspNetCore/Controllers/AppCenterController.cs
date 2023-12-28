@@ -177,7 +177,7 @@ namespace PluginCore.AspNetCore.Controllers
         /// <param name="e"></param>
         private void Plugin_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
         {
-            Console.WriteLine("插件下载完成");
+            Utils.LogUtil.Info<AppCenterController>("插件下载完成");
             // 1.从 _pluginDownloadTasks 中移除
             //_pluginDownloadTasks.Remove();
             // 2. 解压插件
@@ -186,17 +186,17 @@ namespace PluginCore.AspNetCore.Controllers
 
         private void Plugin_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            Console.WriteLine($"插件下载进度改变: {e.ProgressPercentage}% {e.BytesReceived}/{e.TotalBytesToReceive}");
+            Utils.LogUtil.Info<AppCenterController>($"插件下载进度改变: {e.ProgressPercentage}% {e.BytesReceived}/{e.TotalBytesToReceive}");
         }
 
         private void WebClient_Disposed(object sender, EventArgs e)
         {
             if (sender is WebClient webClient)
             {
-                Console.WriteLine(webClient.BaseAddress);
+                Utils.LogUtil.Info<AppCenterController>(webClient.BaseAddress);
             }
 
-            Console.WriteLine(nameof(WebClient_Disposed) + ": " + sender.ToString());
+            Utils.LogUtil.Info<AppCenterController>(nameof(WebClient_Disposed) + ": " + sender.ToString());
         }
 
         #endregion
