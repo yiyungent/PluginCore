@@ -42,7 +42,7 @@ namespace PluginCore.Utils
             }
         }
 
-        public static void Info(string message)
+        public static void Info(string categoryName, string message)
         {
             if (_serviceScopeFactory == null)
             {
@@ -50,7 +50,9 @@ namespace PluginCore.Utils
             }
             using (var scope = _serviceScopeFactory.CreateScope())
             {
-                ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                // null
+                // ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
                 if (service != null)
                 {
                     service.LogInformation(message);
@@ -74,7 +76,7 @@ namespace PluginCore.Utils
             }
         }
 
-        public static void Error(string message)
+        public static void Error(string categoryName, string message)
         {
             if (_serviceScopeFactory == null)
             {
@@ -82,7 +84,9 @@ namespace PluginCore.Utils
             }
             using (var scope = _serviceScopeFactory.CreateScope())
             {
-                ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                // null
+                // ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
                 if (service != null)
                 {
                     service.LogError(message);
@@ -106,7 +110,7 @@ namespace PluginCore.Utils
             }
         }
 
-        public static void Exception(Exception ex)
+        public static void Exception(string categoryName, Exception ex)
         {
             if (_serviceScopeFactory == null)
             {
@@ -114,7 +118,9 @@ namespace PluginCore.Utils
             }
             using (var scope = _serviceScopeFactory.CreateScope())
             {
-                ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                // null
+                // ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
                 if (service != null)
                 {
                     service.LogError(ex, ex.Message);
