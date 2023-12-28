@@ -286,9 +286,10 @@ namespace PluginCore.AspNetCore.Extensions
             #region 启动 Log
             Config.PluginCoreConfig pluginCoreConfig = Config.PluginCoreConfigFactory.Create();
 
-            Utils.LogUtil.Info("启动成功:");
-            Utils.LogUtil.Info($"前端模式: {pluginCoreConfig.FrontendMode}");
-            Utils.LogUtil.Info($"注意: 更新前端模式 需要 重启站点");
+            Utils.LogUtil.Info($"{nameof(PluginCore.AspNetCore)}");
+            Utils.LogUtil.Info("Started successfully:");
+            Utils.LogUtil.Info($"Front-end mode: {pluginCoreConfig.FrontendMode}");
+            Utils.LogUtil.Info($"Notice: Updating the front-end mode requires restarting the site");
             #endregion
 
             return app;
