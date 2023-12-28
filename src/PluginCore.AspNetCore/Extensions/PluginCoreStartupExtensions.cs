@@ -213,6 +213,8 @@ namespace PluginCore.AspNetCore.Extensions
             // 一定在 PluginCore 添加的中间件中 第一个
             app.UseMiddleware<PluginHttpStartFilterMiddleware>();
 
+            app.UseLanguageMiddleware();
+
             app.UsePluginCoreAdminUI();
 
             // 由于没办法在运行时, 动态 UseStaticFiles(), 因此不再为每一个插件都 UseStaticFiles(),
