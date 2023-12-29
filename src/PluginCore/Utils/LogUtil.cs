@@ -60,6 +60,74 @@ namespace PluginCore.Utils
             }
         }
 
+        public static void Warn<T>(string message)
+        {
+            if (_serviceScopeFactory == null)
+            {
+                return;
+            }
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
+                if (service != null)
+                {
+                    service.LogWarning(message);
+                }
+            }
+        }
+
+        public static void Warn(string categoryName, string message)
+        {
+            if (_serviceScopeFactory == null)
+            {
+                return;
+            }
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                // null
+                // ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
+                if (service != null)
+                {
+                    service.LogWarning(message);
+                }
+            }
+        }
+
+        public static void Warn<T>(Exception ex, string message)
+        {
+            if (_serviceScopeFactory == null)
+            {
+                return;
+            }
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
+                if (service != null)
+                {
+                    service.LogWarning(ex, message);
+                }
+            }
+        }
+
+        public static void Warn(string categoryName, Exception ex, string message)
+        {
+            if (_serviceScopeFactory == null)
+            {
+                return;
+            }
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                // null
+                // ILogger? service = scope.ServiceProvider.GetService<ILogger>();
+                ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
+                if (service != null)
+                {
+                    service.LogWarning(ex, message);
+                }
+            }
+        }
+
         public static void Error<T>(string message)
         {
             if (_serviceScopeFactory == null)
@@ -94,7 +162,7 @@ namespace PluginCore.Utils
             }
         }
 
-        public static void Exception<T>(Exception ex)
+        public static void Error<T>(Exception ex, string message)
         {
             if (_serviceScopeFactory == null)
             {
@@ -105,12 +173,12 @@ namespace PluginCore.Utils
                 ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
                 if (service != null)
                 {
-                    service.LogError(ex, ex.Message);
+                    service.LogError(ex, message);
                 }
             }
         }
 
-        public static void Exception(string categoryName, Exception ex)
+        public static void Error(string categoryName, Exception ex, string message)
         {
             if (_serviceScopeFactory == null)
             {
@@ -123,7 +191,7 @@ namespace PluginCore.Utils
                 ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
                 if (service != null)
                 {
-                    service.LogError(ex, ex.Message);
+                    service.LogError(ex, message);
                 }
             }
         }
