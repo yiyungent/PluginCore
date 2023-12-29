@@ -134,7 +134,7 @@ namespace PluginCore.Infrastructure
             }
             catch (Exception ex)
             {
-                Utils.LogUtil.Exception<NupkgService>(ex);
+                Utils.LogUtil.Error<NupkgService>(ex, ex.Message);
                 Utils.LogUtil.Error<NupkgService>(ex.InnerException?.ToString() ?? "");
 
                 throw ex;
