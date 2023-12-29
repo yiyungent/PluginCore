@@ -7,7 +7,7 @@
 
 
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,10 +46,10 @@ namespace PluginCore.AspNetCore.Middlewares
             catch (Exception ex)
             {
                 // InvalidOperationException: The request reached the end of the pipeline without executing the endpoint: 'AspNetCore3_1.Controllers.WeatherForecastController.Get (AspNetCore3_1)'. Please register the EndpointMiddleware using 'IApplicationBuilder.UseEndpoints(...)' if using routing.
-                Utils.LogUtil.Exception<PluginStartupXMiddleware>(ex);
+                Utils.LogUtil.Error<PluginStartupXMiddleware>(ex, ex.Message);
                 if (ex.InnerException != null)
                 {
-                    Utils.LogUtil.Exception<PluginStartupXMiddleware>(ex.InnerException);
+                    Utils.LogUtil.Error<PluginStartupXMiddleware>(ex.InnerException, ex.InnerException.Message);
                 }
             }
 

@@ -243,7 +243,7 @@ namespace PluginCore.AspNetCore.Controllers
             {
                 responseData.Code = -2;
                 responseData.Message = "启用失败: " + ex.Message;
-                Utils.LogUtil.Exception<PluginsController>(ex);
+                Utils.LogUtil.Error<PluginsController>(ex, ex.Message);
             }
 
             return await Task.FromResult(responseData);
@@ -303,7 +303,7 @@ namespace PluginCore.AspNetCore.Controllers
                 }
                 catch (Exception ex)
                 {
-                    Utils.LogUtil.Exception<PluginsController>(ex);
+                    Utils.LogUtil.Error<PluginsController>(ex, ex.Message);
                     responseData.Code = -1;
                     responseData.Message = "禁用失败: 此插件不存在, 或未启用";
                     return await Task.FromResult(responseData);
@@ -325,7 +325,7 @@ namespace PluginCore.AspNetCore.Controllers
             {
                 responseData.Code = -2;
                 responseData.Message = "禁用失败: " + ex.Message;
-                Utils.LogUtil.Exception<PluginsController>(ex);
+                Utils.LogUtil.Error<PluginsController>(ex, ex.Message);
             }
 
             return await Task.FromResult(responseData);
@@ -455,7 +455,7 @@ namespace PluginCore.AspNetCore.Controllers
                     responseData.Message += " - " + ex.InnerException.Message;
                     ex = ex.InnerException;
                 }
-                Utils.LogUtil.Exception<PluginsController>(ex);
+                Utils.LogUtil.Error<PluginsController>(ex, ex.Message);
             }
 
             return await Task.FromResult(responseData);

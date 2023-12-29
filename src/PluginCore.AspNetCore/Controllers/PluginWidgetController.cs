@@ -80,7 +80,7 @@ namespace PluginCore.AspNetCore.Controllers
             }
             catch (Exception ex)
             {
-                Utils.LogUtil.Exception<PluginWidgetController>(ex);
+                Utils.LogUtil.Error<PluginWidgetController>(ex, ex.Message);
                 sb.AppendLine($"<!-- Exception: {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}, Details: Console -->");
             }
             sb.AppendLine($"<!-- end:PluginCore.IPlugins.IWidgetPlugin.Widget({widgetKey},{extraPars}) -->");
