@@ -45,7 +45,8 @@ namespace PluginCore.AspNetCore.Authorization
 
                 string token = this._accountManager.CurrentToken();
 
-                Utils.LogUtil.Info<PluginCoreAdminAuthorizationHandler>($"通过 Authorization: token: {token}");
+                // Utils.LogUtil.Info<PluginCoreAdminAuthorizationHandler>($"通过 Authorization: token: {token}");
+                Utils.LogUtil.Info<PluginCoreAdminAuthorizationHandler>($"Authorization Granted");
 
                 context.Succeed(requirement);
             }
