@@ -3,7 +3,7 @@
 
 
 
-PluginCoreAdmin 为 PluginCore 管理中心的 Web前端，需要一起发布
+"PluginCoreAdmin is the web frontend for the PluginCore management center and should be released together."
 
 https://github.com/yiyungent/PluginCore
 
