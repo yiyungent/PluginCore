@@ -1,7 +1,14 @@
 
 
+# PluginCore.AspNetCore-v1.3.4
 
+## Updated
 
+- `LogUtil` 与 依赖注入 `ILogger` 结合
+- 日志输出: 中文 -> 英文
+- 插件: `启用,禁用`: `Message`: 使用 `BasePlugin` 源
+- License: `Apache-2.0` -> `GNU LGPLv3`
+- PackageReference: `PluginCore`: 2.2.2 -> 2.2.3 , `PluginCore.IPlugins.AspNetCore`: 0.1.0 -> 0.1.1
 
 
 # PluginCore-v2.2.3
