@@ -42,6 +42,8 @@ jobs:
         
     - name: Push generated package to GitHub registry and NuGet
       run: |
-        dotnet nuget push ./src/PluginCore.AspNetCore/bin/Release/*.nupkg --source github --skip-duplicate
+        # TODO: 未知原因, 与其它完全一致, 但这个就需要在这指定 --api-key ${{ secrets.GITHUB_TOKEN }}
+        # 否则: warn : No API Key was provided and no API Key could be found for 'https://nuget.pkg.github.com/yiyungent'. To save an API Key for a source use the 'setApiKey' command.
+        dotnet nuget push ./src/PluginCore.AspNetCore/bin/Release/*.nupkg --source github --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}
         dotnet nuget push ./src/PluginCore.AspNetCore/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{ secrets.NugetKey }}
       shell: bash
