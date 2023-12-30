@@ -41,6 +41,7 @@ jobs:
           dotnet pack --configuration Release -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg
           ls
           ls ./bin/Release/
+        shell: bash
 
       - name: Zip the Build
         run: |
@@ -49,6 +50,7 @@ jobs:
           zip -r PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip ./net5.0/
           zip -r PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip ./net6.0/
           ls
+        shell: bash
 
       - name: Create temp-release-note.md
         run: |
