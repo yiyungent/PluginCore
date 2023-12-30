@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<PackageId>PluginCore.IPlugins</PackageId>
-		<Version>0.9.0</Version>
+		<Version>0.9.1</Version>
 		<Company>yiyun</Company>
 		<Authors>yiyun</Authors>
 		<Description>PluginCore 插件开发包</Description>
