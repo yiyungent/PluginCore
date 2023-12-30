@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
 		<PackageId>PluginCore.AspNetCore</PackageId>
-		<Version>1.3.3</Version>
+		<Version>1.3.4</Version>
 		<Company>yiyun</Company>
 		<Authors>yiyun</Authors>
 		<Description>ASP.NET Core lightweight plugin framework</Description>
@@ -20,14 +20,14 @@
 
 	<!-- 方便开发debug,与发布到nuget -->
 	<ItemGroup Condition="'$(Configuration)' == 'Release'">
-		<PackageReference Include="PluginCore" Version="2.2.2" />
+		<PackageReference Include="PluginCore" Version="2.2.3" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
 		<ProjectReference Include="..\PluginCore\PluginCore.csproj" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(Configuration)' == 'Release'">
-		<PackageReference Include="PluginCore.IPlugins.AspNetCore" Version="0.1.0" />
+		<PackageReference Include="PluginCore.IPlugins.AspNetCore" Version="0.1.1" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
 		<ProjectReference Include="..\PluginCore.IPlugins.AspNetCore\PluginCore.IPlugins.AspNetCore.csproj" />
