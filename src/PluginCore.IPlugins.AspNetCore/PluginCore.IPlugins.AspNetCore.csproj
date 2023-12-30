@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<PackageId>PluginCore.IPlugins.AspNetCore</PackageId>
-		<Version>0.1.0</Version>
+		<Version>0.1.1</Version>
 		<Company>yiyun</Company>
 		<Authors>yiyun</Authors>
 		<Description>PluginCore.AspNetCore Plugin Sdk</Description>
@@ -16,7 +16,7 @@
 
 	<!-- 方便开发debug,与发布到nuget -->
 	<ItemGroup Condition="'$(Configuration)' == 'Release'">
-		<PackageReference Include="PluginCore.IPlugins" Version="0.9.0" />
+		<PackageReference Include="PluginCore.IPlugins" Version="0.9.1" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
 		<ProjectReference Include="..\PluginCore.IPlugins\PluginCore.IPlugins.csproj" />
