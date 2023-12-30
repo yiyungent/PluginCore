@@ -7,8 +7,7 @@ on:
 
 jobs:
   build:
-
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
@@ -16,7 +15,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.102
+        dotnet-version: 6.0.100
 
     - name: Build and Pack
       run: |
@@ -27,16 +26,11 @@ jobs:
         ls
         ls ./bin/Release/
         
-    - name: Install Nuget
-      uses: nuget/setup-nuget@v1
-      with:
-        nuget-version: '5.x'
-
     - name: Add private GitHub registry to NuGet
       run: |
-        nuget sources add -name github -Source https://nuget.pkg.github.com/yiyungent/index.json -Username yiyungent -Password ${{ secrets.GITHUB_TOKEN }}
+        dotnet nuget add source https://nuget.pkg.github.com/yiyungent/index.json --name github --username yiyungent --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
         
     - name: Push generated package to GitHub registry and NuGet
       run: |
-        nuget push .\src\PluginCore.IPlugins\bin\Release\*.nupkg -Source github -SkipDuplicate
-        nuget push .\src\PluginCore.IPlugins\bin\Release\*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NugetKey }}
+        dotnet nuget push ./src/PluginCore.IPlugins/bin/Release/*.nupkg --source github --skip-duplicate
+        dotnet nuget push ./src/PluginCore.IPlugins/bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{ secrets.NugetKey }}

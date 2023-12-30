@@ -48,6 +48,7 @@ jobs:
           zip -r PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip ./netcoreapp3.1/ 
           zip -r PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip ./net5.0/
           zip -r PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip ./net6.0/
+          ls
 
       - name: Create temp-release-note.md
         run: |
@@ -70,8 +71,8 @@ jobs:
           files: |
             ./src/PluginCore.IPlugins/bin/Release/*.nupkg
             ./src/PluginCore.IPlugins/bin/Release/*.snupkg
-            ./src/PluginCore.IPlugins/bin/Release/netcoreapp3.1/PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip
-            ./src/PluginCore.IPlugins/bin/Release/net5.0/PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip
-            ./src/PluginCore.IPlugins/bin/Release/net6.0/PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip
+            ./src/PluginCore.IPlugins/bin/Release/PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip
+            ./src/PluginCore.IPlugins/bin/Release/PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip
+            ./src/PluginCore.IPlugins/bin/Release/PluginCore.IPlugins-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip
             LICENSE 
             README.md
