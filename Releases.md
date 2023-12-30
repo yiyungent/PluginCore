@@ -4,8 +4,31 @@
 
 
 
+# PluginCore-v2.2.3
+
+## Updated
+
+- `LogUtil` 与 依赖注入 `ILogger` 结合
+- License: `Apache-2.0` -> `GNU LGPLv3`
+- PackageReference: `PluginCore.IPlugins`: 0.9.0 -> 0.9.1
 
 
+
+# PluginCore.IPlugins.AspNetCore-v0.1.1
+
+## Updated
+
+- License: `Apache-2.0` -> `GNU LGPLv3`
+- PackageReference: `PluginCore.IPlugins`: 0.9.0 -> 0.9.1
+
+
+
+# PluginCore.IPlugins-v0.9.1
+
+## Updated
+
+- License: `Apache-2.0` -> `GNU LGPLv3`
+- added: `Constants.cs`: `PluginCore.IPlugins.Constants`
 
 
 
