@@ -33,21 +33,33 @@ jobs:
         with:
           dotnet-version: 6.0.100
 
+      # 注意: 一定要有此步, 打包前端文件进入 dll, 需要在 dotnet build 前手动 npm install, csproj 中 NpmInstall 的仅对 vs 有效
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12
+      
       - name: Build and Pack
         run: |
           cd ./src/PluginCore.AspNetCore
+          # 注意: 一定要有此步
+          npm install
           dotnet build --configuration Release
           dotnet pack --configuration Release
           dotnet pack --configuration Release -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg
           ls
           ls ./bin/Release/
+        shell: bash
 
       - name: Zip the Build
         run: |
           cd ./src/PluginCore.AspNetCore/bin/Release
-          zip -r PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip ./netcoreapp3.1/ 
+          ls
+          zip -r PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip ./netcoreapp3.1/
           zip -r PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip ./net5.0/
           zip -r PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip ./net6.0/
+          ls
+        shell: bash
 
       - name: Create temp-release-note.md
         run: |
@@ -70,8 +82,8 @@ jobs:
           files: |
             ./src/PluginCore.AspNetCore/bin/Release/*.nupkg
             ./src/PluginCore.AspNetCore/bin/Release/*.snupkg
-            ./src/PluginCore.AspNetCore/bin/Release/netcoreapp3.1/PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip
-            ./src/PluginCore.AspNetCore/bin/Release/net5.0/PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip
-            ./src/PluginCore.AspNetCore/bin/Release/net6.0/PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip
+            ./src/PluginCore.AspNetCore/bin/Release/PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-netcoreapp3.1.zip
+            ./src/PluginCore.AspNetCore/bin/Release/PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net5.0.zip
+            ./src/PluginCore.AspNetCore/bin/Release/PluginCore.AspNetCore-${{ steps.vars.outputs.RELEASE_VERSION }}-net6.0.zip
             LICENSE 
             README.md
