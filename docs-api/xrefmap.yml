@@ -1840,6 +1840,60 @@ references:
   commentId: N:PluginCore.AspNetCore.Middlewares
   fullName: PluginCore.AspNetCore.Middlewares
   nameWithType: PluginCore.AspNetCore.Middlewares
+- uid: PluginCore.AspNetCore.Middlewares.LanguageMiddleware
+  name: LanguageMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.LanguageMiddleware.html
+  commentId: T:PluginCore.AspNetCore.Middlewares.LanguageMiddleware
+  fullName: PluginCore.AspNetCore.Middlewares.LanguageMiddleware
+  nameWithType: LanguageMiddleware
+- uid: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
+  name: LanguageMiddleware(RequestDelegate)
+  href: api/PluginCore.AspNetCore.Middlewares.LanguageMiddleware.html#PluginCore_AspNetCore_Middlewares_LanguageMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_
+  commentId: M:PluginCore.AspNetCore.Middlewares.LanguageMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
+  name.vb: New(RequestDelegate)
+  fullName: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.LanguageMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)
+  fullName.vb: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate)
+  nameWithType: LanguageMiddleware.LanguageMiddleware(RequestDelegate)
+  nameWithType.vb: LanguageMiddleware.New(RequestDelegate)
+- uid: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.#ctor*
+  name: LanguageMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.LanguageMiddleware.html#PluginCore_AspNetCore_Middlewares_LanguageMiddleware__ctor_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.LanguageMiddleware.#ctor
+  name.vb: New
+  fullName: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.LanguageMiddleware
+  fullName.vb: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.New
+  nameWithType: LanguageMiddleware.LanguageMiddleware
+  nameWithType.vb: LanguageMiddleware.New
+- uid: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  name: Invoke(HttpContext)
+  href: api/PluginCore.AspNetCore.Middlewares.LanguageMiddleware.html#PluginCore_AspNetCore_Middlewares_LanguageMiddleware_Invoke_Microsoft_AspNetCore_Http_HttpContext_
+  commentId: M:PluginCore.AspNetCore.Middlewares.LanguageMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  fullName: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType: LanguageMiddleware.Invoke(HttpContext)
+- uid: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.Invoke*
+  name: Invoke
+  href: api/PluginCore.AspNetCore.Middlewares.LanguageMiddleware.html#PluginCore_AspNetCore_Middlewares_LanguageMiddleware_Invoke_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.LanguageMiddleware.Invoke
+  fullName: PluginCore.AspNetCore.Middlewares.LanguageMiddleware.Invoke
+  nameWithType: LanguageMiddleware.Invoke
+- uid: PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions
+  name: LanguageMiddlewareExtensions
+  href: api/PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.html
+  commentId: T:PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions
+  fullName: PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions
+  nameWithType: LanguageMiddlewareExtensions
+- uid: PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.UseLanguageMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseLanguageMiddleware(IApplicationBuilder)
+  href: api/PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.html#PluginCore_AspNetCore_Middlewares_LanguageMiddlewareExtensions_UseLanguageMiddleware_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.UseLanguageMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.UseLanguageMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: LanguageMiddlewareExtensions.UseLanguageMiddleware(IApplicationBuilder)
+- uid: PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.UseLanguageMiddleware*
+  name: UseLanguageMiddleware
+  href: api/PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.html#PluginCore_AspNetCore_Middlewares_LanguageMiddlewareExtensions_UseLanguageMiddleware_
+  commentId: Overload:PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.UseLanguageMiddleware
+  fullName: PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.UseLanguageMiddleware
+  nameWithType: LanguageMiddlewareExtensions.UseLanguageMiddleware
 - uid: PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware
   name: PluginContentFilterMiddleware
   href: api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html
@@ -3867,48 +3921,84 @@ references:
   fullName.vb: PluginCore.Utils.LogUtil.New
   nameWithType: LogUtil.LogUtil
   nameWithType.vb: LogUtil.New
-- uid: PluginCore.Utils.LogUtil.Error(System.String)
-  name: Error(string)
-  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Error_System_String_
-  commentId: M:PluginCore.Utils.LogUtil.Error(System.String)
-  name.vb: Error(String)
-  fullName: PluginCore.Utils.LogUtil.Error(string)
-  fullName.vb: PluginCore.Utils.LogUtil.Error(String)
-  nameWithType: LogUtil.Error(string)
-  nameWithType.vb: LogUtil.Error(String)
+- uid: PluginCore.Utils.LogUtil.Error(System.String,System.Exception,System.String)
+  name: Error(string, Exception, string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Error_System_String_System_Exception_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Error(System.String,System.Exception,System.String)
+  name.vb: Error(String, Exception, String)
+  fullName: PluginCore.Utils.LogUtil.Error(string, System.Exception, string)
+  fullName.vb: PluginCore.Utils.LogUtil.Error(String, System.Exception, String)
+  nameWithType: LogUtil.Error(string, Exception, string)
+  nameWithType.vb: LogUtil.Error(String, Exception, String)
+- uid: PluginCore.Utils.LogUtil.Error(System.String,System.String)
+  name: Error(string, string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Error_System_String_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Error(System.String,System.String)
+  name.vb: Error(String, String)
+  fullName: PluginCore.Utils.LogUtil.Error(string, string)
+  fullName.vb: PluginCore.Utils.LogUtil.Error(String, String)
+  nameWithType: LogUtil.Error(string, string)
+  nameWithType.vb: LogUtil.Error(String, String)
 - uid: PluginCore.Utils.LogUtil.Error*
   name: Error
   href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Error_
   commentId: Overload:PluginCore.Utils.LogUtil.Error
   fullName: PluginCore.Utils.LogUtil.Error
   nameWithType: LogUtil.Error
-- uid: PluginCore.Utils.LogUtil.Exception(System.Exception)
-  name: Exception(Exception)
-  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Exception_System_Exception_
-  commentId: M:PluginCore.Utils.LogUtil.Exception(System.Exception)
-  fullName: PluginCore.Utils.LogUtil.Exception(System.Exception)
-  nameWithType: LogUtil.Exception(Exception)
-- uid: PluginCore.Utils.LogUtil.Exception*
-  name: Exception
-  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Exception_
-  commentId: Overload:PluginCore.Utils.LogUtil.Exception
-  fullName: PluginCore.Utils.LogUtil.Exception
-  nameWithType: LogUtil.Exception
-- uid: PluginCore.Utils.LogUtil.Info(System.String)
-  name: Info(string)
-  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Info_System_String_
-  commentId: M:PluginCore.Utils.LogUtil.Info(System.String)
-  name.vb: Info(String)
-  fullName: PluginCore.Utils.LogUtil.Info(string)
-  fullName.vb: PluginCore.Utils.LogUtil.Info(String)
-  nameWithType: LogUtil.Info(string)
-  nameWithType.vb: LogUtil.Info(String)
+- uid: PluginCore.Utils.LogUtil.Error``1(System.Exception,System.String)
+  name: Error<T>(Exception, string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Error__1_System_Exception_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Error``1(System.Exception,System.String)
+  name.vb: Error(Of T)(Exception, String)
+  fullName: PluginCore.Utils.LogUtil.Error<T>(System.Exception, string)
+  fullName.vb: PluginCore.Utils.LogUtil.Error(Of T)(System.Exception, String)
+  nameWithType: LogUtil.Error<T>(Exception, string)
+  nameWithType.vb: LogUtil.Error(Of T)(Exception, String)
+- uid: PluginCore.Utils.LogUtil.Error``1(System.String)
+  name: Error<T>(string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Error__1_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Error``1(System.String)
+  name.vb: Error(Of T)(String)
+  fullName: PluginCore.Utils.LogUtil.Error<T>(string)
+  fullName.vb: PluginCore.Utils.LogUtil.Error(Of T)(String)
+  nameWithType: LogUtil.Error<T>(string)
+  nameWithType.vb: LogUtil.Error(Of T)(String)
+- uid: PluginCore.Utils.LogUtil.Info(System.String,System.String)
+  name: Info(string, string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Info_System_String_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Info(System.String,System.String)
+  name.vb: Info(String, String)
+  fullName: PluginCore.Utils.LogUtil.Info(string, string)
+  fullName.vb: PluginCore.Utils.LogUtil.Info(String, String)
+  nameWithType: LogUtil.Info(string, string)
+  nameWithType.vb: LogUtil.Info(String, String)
 - uid: PluginCore.Utils.LogUtil.Info*
   name: Info
   href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Info_
   commentId: Overload:PluginCore.Utils.LogUtil.Info
   fullName: PluginCore.Utils.LogUtil.Info
   nameWithType: LogUtil.Info
+- uid: PluginCore.Utils.LogUtil.Info``1(System.String)
+  name: Info<T>(string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Info__1_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Info``1(System.String)
+  name.vb: Info(Of T)(String)
+  fullName: PluginCore.Utils.LogUtil.Info<T>(string)
+  fullName.vb: PluginCore.Utils.LogUtil.Info(Of T)(String)
+  nameWithType: LogUtil.Info<T>(string)
+  nameWithType.vb: LogUtil.Info(Of T)(String)
+- uid: PluginCore.Utils.LogUtil.Initialize(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  name: Initialize(IServiceScopeFactory)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Initialize_Microsoft_Extensions_DependencyInjection_IServiceScopeFactory_
+  commentId: M:PluginCore.Utils.LogUtil.Initialize(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  fullName: PluginCore.Utils.LogUtil.Initialize(Microsoft.Extensions.DependencyInjection.IServiceScopeFactory)
+  nameWithType: LogUtil.Initialize(IServiceScopeFactory)
+- uid: PluginCore.Utils.LogUtil.Initialize*
+  name: Initialize
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Initialize_
+  commentId: Overload:PluginCore.Utils.LogUtil.Initialize
+  fullName: PluginCore.Utils.LogUtil.Initialize
+  nameWithType: LogUtil.Initialize
 - uid: PluginCore.Utils.LogUtil.PluginBehavior*
   name: PluginBehavior
   href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_PluginBehavior_
@@ -3924,12 +4014,48 @@ references:
   fullName.vb: PluginCore.Utils.LogUtil.PluginBehavior(Of T)(T, System.Type, String)
   nameWithType: LogUtil.PluginBehavior<T>(T, Type, string)
   nameWithType.vb: LogUtil.PluginBehavior(Of T)(T, Type, String)
-- uid: PluginCore.Utils.LogUtil.Sign
-  name: Sign
-  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Sign
-  commentId: F:PluginCore.Utils.LogUtil.Sign
-  fullName: PluginCore.Utils.LogUtil.Sign
-  nameWithType: LogUtil.Sign
+- uid: PluginCore.Utils.LogUtil.Warn(System.String,System.Exception,System.String)
+  name: Warn(string, Exception, string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Warn_System_String_System_Exception_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Warn(System.String,System.Exception,System.String)
+  name.vb: Warn(String, Exception, String)
+  fullName: PluginCore.Utils.LogUtil.Warn(string, System.Exception, string)
+  fullName.vb: PluginCore.Utils.LogUtil.Warn(String, System.Exception, String)
+  nameWithType: LogUtil.Warn(string, Exception, string)
+  nameWithType.vb: LogUtil.Warn(String, Exception, String)
+- uid: PluginCore.Utils.LogUtil.Warn(System.String,System.String)
+  name: Warn(string, string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Warn_System_String_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Warn(System.String,System.String)
+  name.vb: Warn(String, String)
+  fullName: PluginCore.Utils.LogUtil.Warn(string, string)
+  fullName.vb: PluginCore.Utils.LogUtil.Warn(String, String)
+  nameWithType: LogUtil.Warn(string, string)
+  nameWithType.vb: LogUtil.Warn(String, String)
+- uid: PluginCore.Utils.LogUtil.Warn*
+  name: Warn
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Warn_
+  commentId: Overload:PluginCore.Utils.LogUtil.Warn
+  fullName: PluginCore.Utils.LogUtil.Warn
+  nameWithType: LogUtil.Warn
+- uid: PluginCore.Utils.LogUtil.Warn``1(System.Exception,System.String)
+  name: Warn<T>(Exception, string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Warn__1_System_Exception_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Warn``1(System.Exception,System.String)
+  name.vb: Warn(Of T)(Exception, String)
+  fullName: PluginCore.Utils.LogUtil.Warn<T>(System.Exception, string)
+  fullName.vb: PluginCore.Utils.LogUtil.Warn(Of T)(System.Exception, String)
+  nameWithType: LogUtil.Warn<T>(Exception, string)
+  nameWithType.vb: LogUtil.Warn(Of T)(Exception, String)
+- uid: PluginCore.Utils.LogUtil.Warn``1(System.String)
+  name: Warn<T>(string)
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_Warn__1_System_String_
+  commentId: M:PluginCore.Utils.LogUtil.Warn``1(System.String)
+  name.vb: Warn(Of T)(String)
+  fullName: PluginCore.Utils.LogUtil.Warn<T>(string)
+  fullName.vb: PluginCore.Utils.LogUtil.Warn(Of T)(String)
+  nameWithType: LogUtil.Warn<T>(string)
+  nameWithType.vb: LogUtil.Warn(Of T)(String)
 - uid: PluginCore.Utils.Md5Helper
   name: Md5Helper
   href: api/PluginCore.Utils.Md5Helper.html

@@ -414,6 +414,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Middlewares.LanguageMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Middlewares.LanguageMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.yml",
       "output": {
         ".html": {
