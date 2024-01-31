@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/yiyungent/PluginCore#readme",
   "dependencies": {
+    "axios": "^1.6.7",
     "vuepress": "^1.5.2",
     "vuepress-plugin-matomo": "^1.0.2"
   },

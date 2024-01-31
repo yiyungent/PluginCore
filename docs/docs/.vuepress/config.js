@@ -66,6 +66,7 @@ module.exports = {
           { text: "插件SDK", link: "/PluginDev/PluginSDK/" },
         ],
       },
+      { text: "插件商店", link: "/PluginStore/" },
       {
         text: "社区",
         items: [{ text: "插件", link: "/Community/Plugins/" }],
@@ -121,6 +122,7 @@ module.exports = {
               { text: "Plugin SDK", link: "/PluginDev/PluginSDK/" },
             ],
           },
+          { text: "Plugin Store", link: "/PluginStore/" },
           {
             text: "Community",
             items: [{ text: "Plugins", link: "/Community/Plugins/" }],
@@ -180,6 +182,7 @@ module.exports = {
               { text: "插件SDK", link: "/zh/PluginDev/PluginSDK/" },
             ],
           },
+          { text: "插件商店", link: "/zh/PluginStore/" },
           {
             text: "社区",
             items: [{ text: "插件", link: "/zh/Community/Plugins/" }],
