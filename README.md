@@ -5,6 +5,8 @@
 
 English | [中文](README_zh.md)
 
+<!-- 🔌 ASP.NET Core lightweight plugin framework | ASP.NET Core 轻量级 插件框架 - 一分钟集成 | Vue.js frontend | JavaScript SDK -->
+
 > 🔌 `ASP.NET Core` lightweight plugin framework
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
