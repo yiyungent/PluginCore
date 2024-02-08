@@ -3,6 +3,7 @@
 </p>
 <h1 align="center">plugincore-js-sdk</h1>
 
+> 🔌 PluginCore JavaScript SDK | 页面注入/修改 | Plugin Widget  
 > :cake: PluginCore JavaScript SDK
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/plugincore-js-sdk.svg?style=flat)]()

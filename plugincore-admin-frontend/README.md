@@ -2,6 +2,7 @@
 
 English | [简体中文](./README-zh.md)
 
+> 🔌 PluginCore 的 Admin 前端 ( Vue.js )   
 > PluginCore Admin For Frontend
 
 
