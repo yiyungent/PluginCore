@@ -1,0 +1,223 @@
+/* 媒体查询参考: https://www.cnblogs.com/bulaliu/p/8481584.html */
+
+@import "~@/fonts/iconfont.css";
+
+.simCaptcha-hidden {
+  display: none;
+}
+.simCaptcha-show {
+  display: block;
+}
+
+@keyframes simCaptcha_shake {
+  25% {
+    margin-left: -6px;
+  }
+
+  75% {
+    margin-left: 6px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes simCaptcha_shake {
+  25% {
+    margin-left: -6px;
+  }
+
+  75% {
+    margin-left: 6px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+.simCaptcha-shake {
+  -moz-animation: simCaptcha_shake 0.2s linear infinite both;
+  -webkit-animation: simCaptcha_shake 0.2s linear infinite both;
+  animation: simCaptcha_shake 0.2s linear infinite both;
+}
+
+#simCaptcha-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+  z-index: 2000000000;
+}
+
+#simCaptcha-layer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 0px 4px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 3px;
+  background-size: 20%;
+  background-position: 50% 32%;
+  background-color: #fff;
+  visibility: visible;
+  z-index: 2000000002;
+  overflow: hidden;
+}
+/* PC端 */
+@media screen and (min-width: 900px) {
+  #simCaptcha-layer {
+    width: 270px;
+  }
+}
+/* 移动端 */
+@media screen and (max-width: 900px) {
+  #simCaptcha-layer {
+    width: 270px;
+  }
+}
+
+#simCaptcha-vCodeTip {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#simCaptcha-img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+#simCaptcha-img {
+  margin: 0 auto;
+  user-select: none;
+  /* 防止图片被拖拽 */
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+}
+/* PC端 */
+@media screen and (min-width: 900px) {
+  #simCaptcha-img {
+    width: 260px;
+    height: 260px;
+  }
+}
+/* 移动端 */
+@media screen and (max-width: 900px) {
+  #simCaptcha-img {
+    width: 260px;
+    height: 260px;
+  }
+}
+#simCaptcha-loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.12);
+  font-size: 14px;
+  color: #b2b2b2;
+  /*flex 布局*/
+  display: flex;
+  /*实现垂直居中*/
+  align-items: center;
+  /*实现水平居中*/
+  justify-content: center;
+  /* 注意:一定要比图片层级小, 否者会盖住图片 */
+  z-index: -1;
+}
+.simCaptcha-mark {
+  position: absolute;
+  z-index: 9999;
+  width: 25px;
+  height: 25px;
+  background-color: #539ffe;
+  color: #fff;
+  text-align: center;
+  /* line-height: 25px; */
+  line-height: 22px;
+  border-radius: 50%;
+  /* border: 2px solid #fff; */
+  border: 3px solid #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px black;
+  /* 防止被选中 */
+  user-select: none;
+}
+#simCaptcha-errorTip {
+  position: absolute;
+  bottom: -30px; /* 默认隐藏 */
+  left: 0;
+  width: 100%;
+  text-align: left;
+  text-indent: 9px;
+  font-size: 16px;
+  background-color: transparent;
+  -moz-transition: bottom 0.4s ease-out;
+  -o-transition: bottom 0.4s ease-out;
+  -webkit-transition: bottom 0.4s ease-out;
+  transition: bottom 0.4s ease-out;
+  z-index: 999;
+  line-height: 30px;
+  color: white;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#simCaptcha-errorTip.simCaptcha-errorTip-fail {
+  background-color: #de715b;
+}
+#simCaptcha-errorTip.simCaptcha-errorTip-success {
+  background-color: #5ebf70;
+}
+#simCaptcha-errorTip.simCaptcha-errorTip-up {
+  bottom: 0;
+}
+
+.simCaptcha-bottom {
+  padding: 4px 0;
+  height: 40px;
+}
+
+#simCaptcha-btn-close {
+  height: 32px;
+  line-height: 32px;
+  font-size: 26px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: gray;
+  font-family: "sim-captcha-iconfont";
+}
+#simCaptcha-btn-refresh {
+  height: 32px;
+  line-height: 32px;
+  font-size: 22px;
+  transform: translateY(-2px);
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: gray;
+  font-family: "sim-captcha-iconfont";
+}
+#simCaptcha-btn-confirm {
+  float: right;
+  width: 94px;
+  height: 32px;
+  border: none;
+  background-color: #539ffe;
+  outline: none;
+  color: #fff;
+}

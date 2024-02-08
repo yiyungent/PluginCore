@@ -1,0 +1,23 @@
+{
+  "id": "1943208",
+  "name": "sim-captcha",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1222460",
+      "name": "eglass-close",
+      "font_class": "close",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "11891846",
+      "name": "refresh",
+      "font_class": "refresh",
+      "unicode": "e675",
+      "unicode_decimal": 58997
+    }
+  ]
+}
