@@ -1,0 +1,50 @@
+name: npm Push
+
+on: 
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Source
+      uses: actions/checkout@v2
+    
+    # https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages#publishing-packages-to-npm-and-github-packages
+
+    # Setup .npmrc file to publish to npm
+    - name: Setup Node.js and Setup .npmrc file to publish to npm
+      uses: actions/setup-node@v2
+      with:
+        node-version: 12
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Build
+      run: |
+        npm install
+        npm run build:prod
+        npm run build:cdn
+    
+    - name: Publish to npm
+      run: |
+        npm publish --access public
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    # Setup .npmrc file to publish to GitHub Packages
+    - name: Setup Node.js and Setup .npmrc file to publish to GitHub Packages
+      uses: actions/setup-node@v2
+      with:
+        node-version: 12
+        registry-url: 'https://npm.pkg.github.com'
+
+    - name: Publish to GitHub Package
+      run: |
+        npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    
+    
