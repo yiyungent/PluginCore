@@ -71,6 +71,310 @@
             "homepageUrl": "",
             "nugetPackageId": "PluginCore.Plugins.HangfirePlugin",
             "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "AutoLogin4QQChannelPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "自动重新登录插件",
+            "description": "出现异常离线后,自动重新登录",
+            "tags": [
+                "自动重新登录",
+                "QQ频道"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/AutoLogin4QQChannelPlugin-v{{version}}/AutoLogin4QQChannelPlugin-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/AutoLogin4QQChannelPlugin-v{{version}}/README.md",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.AutoLogin4QQChannelPlugin",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "BackupPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "插件备份",
+            "description": "插件数据导出,导入",
+            "tags": [
+                "插件备份"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/BackupPlugin-v{{version}}/BackupPlugin-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/BackupPlugin-v{{version}}/README.md",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.BackupPlugin",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "CocoaPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "QQ插件",
+            "description": "QQ基础插件 for mirai-api-http",
+            "tags": [
+                "QQ插件"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/CocoaPlugin-v{{version}}/CocoaPlugin-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/CocoaPlugin-v{{version}}/README.md",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.CocoaPlugin",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "DuplicatiPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "Duplicati插件",
+            "description": "Duplicati插件",
+            "tags": [
+                "Duplicati插件"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/DuplicatiPlugin-v{{version}}/DuplicatiPlugin-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/DuplicatiPlugin-v{{version}}/README.md",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.DuplicatiPlugin",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "EleChoPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "QQ插件",
+            "description": "QQ基础插件 for go-cqhttp",
+            "tags": [
+                "QQ插件"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/EleChoPlugin-v{{version}}/EleChoPlugin-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/EleChoPlugin-v{{version}}/README.md",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.EleChoPlugin",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "ITodaysPlus",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "iTodayss+",
+            "description": "提升 爱今天/时间朋友 体验",
+            "tags": [
+                "爱今天",
+                "时间朋友"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/ITodaysPlus-v{{version}}/ITodaysPlus-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/ITodaysPlus-v{{version}}/README.md",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.ITodaysPlus",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "MoLi4QQChannelPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "茉莉频道机器人",
+            "description": "对接 茉莉 API",
+            "tags": [
+                "茉莉频道机器人"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/MoLi4QQChannelPlugin-v{{version}}/MoLi4QQChannelPlugin-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/MoLi4QQChannelPlugin-v{{version}}/README.md",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.MoLi4QQChannelPlugin",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "QQChannelPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "QQ频道插件",
+            "description": "QQ频道基础插件",
+            "tags": [
+                "QQ频道插件"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/QQChannelPlugin-v{{version}}/QQChannelPlugin-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/QQChannelPlugin-v{{version}}/README.md",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.QQChannelPlugin",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "TelegramPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "Telegram插件",
+            "description": "Telegram基础插件",
+            "tags": [
+                "Telegram插件"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/TelegramPlugin-v{{version}}/TelegramPlugin-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/TelegramPlugin-v{{version}}/README.md",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.TelegramPlugin",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "TgBotStatPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "TgBotStatPlugin",
+            "description": "TgBotStatPlugin",
+            "tags": [
+                "TgBotStatPlugin"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/TgBotStatPlugin-v{{version}}/TgBotStatPlugin-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/TgBotStatPlugin-v{{version}}/README.md",
+            "infoUrl": "",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.TgBotStatPlugin",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "TgClientPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "TgBotStatPlugin",
+            "description": "TgBotStatPlugin",
+            "tags": [
+                "TgBotStatPlugin"
+            ],
+            "author": "yiyun",
+            "dependPlugins": [],
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/{{pluginId}}-v{{version}}/{{pluginId}}-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/{{pluginId}}-v{{version}}/README.md",
+            "infoUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/{{pluginId}}-v{{version}}/info.json",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.{{pluginId}}",
+            "license": "Copyright © 2023-present yiyun"
+        },
+        {
+            "pluginId": "WebMonitorPlugin",
+            "versions": [
+                "0.1.7",
+                "0.1.6",
+                "0.1.5"
+            ],
+            "frameworks": [
+                "net6.0",
+                "net7.0"
+            ],
+            "displayName": "网页监控",
+            "description": "网页监控,看文档",
+            "tags": [
+                "网页监控"
+            ],
+            "author": "yiyun",
+            "downloadUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/{{pluginId}}-v{{version}}/{{pluginId}}-v{{version}}-{{framework}}.zip",
+            "github": "yiyungent/KnifeHub",
+            "readmeUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/{{pluginId}}-v{{version}}/README.md",
+            "infoUrl": "https://ghproxy.net/https://github.com/yiyungent/KnifeHub/releases/download/{{pluginId}}-v{{version}}/info.json",
+            "homepageUrl": "",
+            "nugetPackageId": "PluginCore.Plugins.{{pluginId}}",
+            "license": "Copyright © 2023-present yiyun"
         }
     ]
 }
