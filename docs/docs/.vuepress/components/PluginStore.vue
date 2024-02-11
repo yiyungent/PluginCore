@@ -51,5 +51,7 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin-bottom: 2rem;
   margin-top: 1rem;
+  width: 200%;
+  margin-left: -50%;
 }
 </style>
