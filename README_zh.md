@@ -155,8 +155,8 @@ docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspn
 
 ## 使用
 
-- [详细文档(/docs)](https://moeci.com/PluginCore "在线文档") 文档构建中
-- [API 文档](https://moeci.com/PluginCore/docs-api/api/index.html "API 文档") 自动更新
+- [详细文档(/docs)](http://yiyungent.github.io/PluginCore "在线文档") 文档构建中
+- [API 文档](http://yiyungent.github.io/PluginCore/docs-api/api/index.html "API 文档") 自动更新
 - [见示例(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
 
 
