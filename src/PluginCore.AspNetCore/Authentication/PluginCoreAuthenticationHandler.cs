@@ -7,7 +7,7 @@
 
 
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
@@ -50,11 +50,14 @@ namespace PluginCore.AspNetCore.Authentication
             {
                 var id = new ClaimsIdentity(
                     // new Claim[] { new Claim("PluginCore.Token", token) },  // not safe , just as an example , should custom claims on your own
-                    new Claim[] { new Claim(IPlugins.Constants.AspNetCoreAuthenticationClaimType, token) },  // not safe , just as an example , should custom claims on your own
-                    Scheme.Name
+                    claims: new Claim[] { new Claim(type: IPlugins.Constants.AspNetCoreAuthenticationClaimType, value: token) },  // not safe , just as an example , should custom claims on your own
+                    authenticationType: Scheme.Name
                 );
-                ClaimsPrincipal principal = new ClaimsPrincipal(id);
-                var ticket = new AuthenticationTicket(principal, new AuthenticationProperties(), Scheme.Name);
+                ClaimsPrincipal principal = new ClaimsPrincipal(identity: id);
+                var ticket = new AuthenticationTicket(
+                    principal: principal,
+                    properties: new AuthenticationProperties(),
+                    authenticationScheme: Scheme.Name);
 
                 // Utils.LogUtil.Info<PluginCoreAuthenticationHandler>($"通过 Authentication: token: {token}");
                 Utils.LogUtil.Info<PluginCoreAuthenticationHandler>($"Authentication Passed");

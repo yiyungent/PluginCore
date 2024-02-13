@@ -20,9 +20,10 @@ namespace PluginCore.AspNetCore.Authorization
     public class PluginCoreAdminAuthorizeAttribute : AuthorizeAttribute
     {
         // public PluginCoreAdminAuthorizeAttribute() : base("PluginCore.Admin")
-        public PluginCoreAdminAuthorizeAttribute() : base(IPlugins.Constants.AspNetCoreAuthorizationPolicyName)
+        public PluginCoreAdminAuthorizeAttribute() : base(policy: IPlugins.Constants.AspNetCoreAuthorizationPolicyName)
         {
-
+            // 同时明确指定 认证方案 与 授权策略
+            AuthenticationSchemes = PluginCore.IPlugins.Constants.AspNetCoreAuthenticationScheme;
         }
     }
 }

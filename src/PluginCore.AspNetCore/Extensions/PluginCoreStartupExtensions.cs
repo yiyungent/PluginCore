@@ -149,9 +149,14 @@ namespace PluginCore.AspNetCore.Extensions
             //     .AddScheme<Authentication.PluginCoreAuthenticationSchemeOptions,
             //         Authentication.PluginCoreAuthenticationHandler>("PluginCore.Authentication", "PluginCore.Authentication",
             //         options => { });
-            services.AddAuthentication(Constants.AspNetCoreAuthenticationScheme)
-                .AddScheme<Authentication.PluginCoreAuthenticationSchemeOptions,
-                    Authentication.PluginCoreAuthenticationHandler>(Constants.AspNetCoreAuthenticationScheme, Constants.AspNetCoreAuthenticationScheme,
+            // 注意: 不要设置 默认 认证名: Constants.AspNetCoreAuthenticationScheme
+            // services.AddAuthentication(Constants.AspNetCoreAuthenticationScheme)
+            // 默认认证名: 默认
+            services.AddAuthentication()
+            // 添加一个新的认证方案
+                .AddScheme<Authentication.PluginCoreAuthenticationSchemeOptions, Authentication.PluginCoreAuthenticationHandler>(
+                authenticationScheme: Constants.AspNetCoreAuthenticationScheme,
+                displayName: Constants.AspNetCoreAuthenticationScheme,
                     options => { });
             #endregion
 
@@ -161,11 +166,13 @@ namespace PluginCore.AspNetCore.Extensions
             services.AddAuthorization(options =>
             {
                 // options.AddPolicy("PluginCore.Admin", policy =>
-                options.AddPolicy(Constants.AspNetCoreAuthorizationPolicyName, policy =>
+                options.AddPolicy(name: Constants.AspNetCoreAuthorizationPolicyName, policy =>
                 {
                     // 无法满足 下方任何一项：HTTP 403 错误
                     // 3.需要 检查是否拥有当前请求资源的权限
                     policy.Requirements.Add(new PluginCoreAdminRequirement());
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim(claimType: Constants.AspNetCoreAuthenticationClaimType);
                 });
             });
             #endregion
