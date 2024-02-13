@@ -24,6 +24,12 @@
   },
   "homepage": "https://github.com/yiyungent/PluginCore#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^2.0.10",
+    "axios": "^1.6.7",
     "vuepress": "^1.5.2",
     "vuepress-plugin-matomo": "^1.0.2"
   },

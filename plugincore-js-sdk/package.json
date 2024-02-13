@@ -1,0 +1,47 @@
+{
+  "name": "@yiyungent/plugincore",
+  "version": "0.5.0",
+  "description": "PluginCore JavaScript SDK.",
+  "main": "dist/PluginCore.min.js",
+  "scripts": {
+    "dev": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiyungent/plugincore-js-sdk.git"
+  },
+  "keywords": [
+    "plugincore"
+  ],
+  "author": "yiyun <yiyungent@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yiyungent/plugincore-js-sdk/issues"
+  },
+  "homepage": "https://github.com/yiyungent/plugincore-js-sdk#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.17.2",
+    "axios": "^0.25.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "css-minimizer-webpack-plugin": "^3.0.1",
+    "file-loader": "^1.1.4",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

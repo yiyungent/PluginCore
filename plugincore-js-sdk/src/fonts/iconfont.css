@@ -1,0 +1,25 @@
+@font-face {font-family: "sim-captcha-iconfont";
+  src: url('~/iconfont.eot?t=1594711708911'); /* IE9 */
+  src: url('~/iconfont.eot?t=1594711708911#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPAAAsAAAAAB7AAAAN0AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDFIJ+ATYCJAMMCwgABCAFhG0HORvHBiMRVns02X8+bowJD2Ze/SiDMUfNkOmIFrZ4P04qtkANWqAiJjv6JEwos/FWgsjnPy8WO6LbZg4x6X4ewdN+tHm7e6rtLonG6yKeTCERmmiC1MgkQiIki2Ihf5iTcXlw1uTRNmcSF8qlRbRRZ10TzO/Aj9dJqZtvnH9XB6LJbQtFTHvr0ncaWYW40qG60r/664+5HjLhFkkGZzoYVQuT9cDZAFF1sKstuIhQzXZA+wCTEH97AO1akGeyqsrUrL22r6HI/zlmuqTGYX6bzSmzaW+A49YBxUWn8B3IAfkNY1dexPkEGvWbEPOL6/tWYWwWiMf3t+c2pVNqikO9UFuybxHvDdWntykd7/zfj7+C1JPUZMaFtm8WrvyP2/J79eLc9R/PAnYQGRMoxEmp7ZhhbELWqMhan12rCGmsYFXh81RF7Ur/8RJRyyhsBiMwnvgxs1kEP0xcwvk7qIWJpzo+Ymz3txWpvxQYKBhJj3f4samQXJ5BZfVOdrt67+sq1evuV7cfFBi813j99Ftdj6+AqfuXL66nKJ+81spgsbIC7p/c7Mreer6lPtLj5ojZ3ouR1YTwY/kGK1JN2vUeyGGqVRREbwL9kuX21JaTt1SlPmOPDcvNXnt9Pu+GbWdNFBzbtdC3ZtvYE3Dlz5hF/izH2sI0UImcEZJzcaM4DhFxROLlEwCw7r8B6/a25G8z0VR22prkqNio7r3ubcb/b/MZUahUigPWhrVnMIWjg1OxNPpUV/1UsAcgLdYzDHa+uGkK4wZUNRsPFb/93/5G+xYHYbleAV9C+55KQTtHR/1d2YO/xG/ZU1Shoc9F5tk83Z4tJrIkNKpy/6YUOn3vr+hpXUio1xNDUqcPsnoDyIKdgBpNJqFWvSloNG7p4CZdnlCUBox5CSC0+wBJq0+QtfuMLNhvUKPXf6jVngyNrs+xOObcMvLZSuJd4wseX8if3JBl1LOgeI+pqe4yKfSpZ5QqD4LveNnkDhuUY+ygbBpoTUCSa9iCi2FVMbSSC3xqJ9O6jVyXyt7IeXLdmVmR0J2GXsDDF8g9sQa5g7VZ7uf3UMqo3Mmargr7GZKUfH7gc3gtkDtZ06rrWh6iWKmAphFAJFYDW2BBlRljoC1fq4CeNEfWI9KKuKgftZU58yvq5zsEHOMYxsSU4WXFCscSyfKqrNMB') format('woff2'),
+  url('~/iconfont.woff?t=1594711708911') format('woff'),
+  url('~/iconfont.ttf?t=1594711708911') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('~/iconfont.svg?t=1594711708911#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+/* .iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e60a";
+}
+
+.icon-refresh:before {
+  content: "\e675";
+} */
+
