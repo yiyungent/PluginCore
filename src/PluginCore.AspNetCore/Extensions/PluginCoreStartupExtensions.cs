@@ -54,6 +54,69 @@ namespace PluginCore.AspNetCore.Extensions
         /// <param name="services"></param>
         public static void AddPluginCore(this IServiceCollection services)
         {
+            services.AddPluginCoreServices();
+
+            services.AddPluginCorePlugins();
+
+            #region PluginCore Admin 权限
+            // 1. 先 Authentication (我是谁) 2. 再 Authorization (我能做什么)
+
+            // Authentication
+            services.AddPluginCoreAuthentication();
+
+            // Authorization
+            services.AddPluginCoreAuthorization();
+            #endregion
+
+            services.AddPluginCoreStartupPlugin();
+
+            services.AddPluginCoreLog();
+
+            // AddBackgroundServices
+            services.AddBackgroundServices();
+
+            // 一定要在最后
+            _services = services;
+        }
+
+        public static IApplicationBuilder UsePluginCore(this IApplicationBuilder app)
+        {
+            // 一定在 PluginCore 添加的中间件中 第一个
+            app.UseMiddleware<PluginHttpStartFilterMiddleware>();
+
+            app.UsePluginCoreLanguageMiddleware();
+
+            app.UsePluginCoreAdminUI();
+
+            app.UsePluginCoreStaticFiles();
+
+            // 发现 UseAuthentication 认证中间件重复添加, 也只会执行一次 认证
+            // 但 UseAuthorization 重复添加2次, 则会执行 2次 授权
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            #region Plugin Middleware
+            // Plugin Middleware
+            //app.UseMiddleware<PluginContentFilterMiddleware>();
+
+
+            // 一定在 PluginCore 添加的中间件中 最后一个
+            app.UseMiddleware<PluginHttpEndFilterMiddleware>();
+            #endregion
+
+            app.UsePluginCoreAppStart();
+
+            app.UsePluginCoreStartupPlugin();
+
+            // Log
+            app.UsePluginCoreLog();
+
+            return app;
+        }
+
+
+        public static void AddPluginCoreServices(this IServiceCollection services)
+        {
             #region 注册服务
 
             #region 仅适用于 ASP.NET Core
@@ -97,11 +160,12 @@ namespace PluginCore.AspNetCore.Extensions
 
             #endregion
 
-
-
             // ************************* 注意: IServiceCollection 是服务列表, 但由 IServiceProvider 来负责解析, AClass 单例 仅在 AServiceProvider 范围内
             _serviceProvider = services.BuildServiceProvider();
+        }
 
+        public static void AddPluginCorePlugins(this IServiceCollection services)
+        {
             #region ASP.NET Core
             //IPluginManager pluginManager = services.BuildServiceProvider().GetService<IPluginManager>();
             IPluginManager pluginManager = _serviceProvider.GetService<IPluginManager>();
@@ -126,7 +190,6 @@ namespace PluginCore.AspNetCore.Extensions
             #endregion
 
 
-
             // 将本 Assembly 内的 Controller 添加
             var ass = Assembly.GetExecutingAssembly();
             //IPluginControllerManager pluginControllerManager = services.BuildServiceProvider().GetService<IPluginControllerManager>();
@@ -137,10 +200,10 @@ namespace PluginCore.AspNetCore.Extensions
             // IWebHostEnvironment
             _webHostEnvironment = services.BuildServiceProvider().GetService<IWebHostEnvironment>();
             #endregion
+        }
 
-            #region PluginCore Admin 权限
-            // 1. 先 Authentication (我是谁) 2. 再 Authorization (我能做什么)
-
+        public static void AddPluginCoreAuthentication(this IServiceCollection services)
+        {
             // fixed: https://github.com/yiyungent/PluginCore/issues/4
             // System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
             #region 添加认证 Authentication
@@ -159,9 +222,13 @@ namespace PluginCore.AspNetCore.Extensions
                 displayName: Constants.AspNetCoreAuthenticationScheme,
                     options => { });
             #endregion
+        }
 
+        public static void AddPluginCoreAuthorization(this IServiceCollection services)
+        {
             #region 添加授权策略-所有标记 [PluginCoreAdminAuthorize] 都需要权限检查
-            services.AddSingleton<IAuthorizationHandler, PluginCoreAdminAuthorizationHandler>();
+            // Only Once, Not recommend
+            //services.AddSingleton<IAuthorizationHandler, PluginCoreAdminAuthorizationHandler>();
 
             services.AddAuthorization(options =>
             {
@@ -170,21 +237,34 @@ namespace PluginCore.AspNetCore.Extensions
                 {
                     // 无法满足 下方任何一项：HTTP 403 错误
                     // 3.需要 检查是否拥有当前请求资源的权限
-                    policy.Requirements.Add(new PluginCoreAdminRequirement());
+                    //policy.Requirements.Add(new PluginCoreAdminRequirement());
+                    policy.AuthenticationSchemes = new string[] {
+                        Constants.AspNetCoreAuthenticationScheme
+                    };
                     policy.RequireAuthenticatedUser();
                     policy.RequireClaim(claimType: Constants.AspNetCoreAuthenticationClaimType);
+                    // 必须重启才能使得更改密码生效
+                    string token = AccountManager.CreateToken();
+                    policy.RequireClaim(claimType: Constants.AspNetCoreAuthenticationClaimType, allowedValues: new string[] {
+                        token
+                    });
+                    //policy.RequireAssertion(context =>
+                    //{
+                    //    return true;
+                    //});
                 });
             });
             #endregion
-
 
             // AccountManager
             services.AddTransient<AccountManager>();
             // HttpContext.Current
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //services.AddHttpContextAccessor(); 
-            #endregion
+        }
 
+        public static void AddPluginCoreStartupPlugin(this IServiceCollection services)
+        {
             //IPluginFinder pluginFinder = services.BuildServiceProvider().GetService<IPluginFinder>();
             IPluginFinder pluginFinder = _serviceProvider.GetService<IPluginFinder>();
 
@@ -200,30 +280,20 @@ namespace PluginCore.AspNetCore.Extensions
             }
 
             #endregion
+        }
 
+        public static void AddPluginCoreLog(this IServiceCollection services)
+        {
             #region Logger
 
             IServiceScopeFactory serviceScopeFactory = _serviceProvider.GetService<IServiceScopeFactory>();
             Utils.LogUtil.Initialize(serviceScopeFactory);
 
             #endregion
-
-            // AddBackgroundServices
-            services.AddBackgroundServices();
-
-            // 一定要在最后
-            _services = services;
         }
 
-        public static IApplicationBuilder UsePluginCore(this IApplicationBuilder app)
+        public static IApplicationBuilder UsePluginCoreStaticFiles(this IApplicationBuilder app)
         {
-            // 一定在 PluginCore 添加的中间件中 第一个
-            app.UseMiddleware<PluginHttpStartFilterMiddleware>();
-
-            app.UseLanguageMiddleware();
-
-            app.UsePluginCoreAdminUI();
-
             // 由于没办法在运行时, 动态 UseStaticFiles(), 因此不再为每一个插件都 UseStaticFiles(),
             // 而是统一在一个文件夹下, 插件启用时, 将插件的wwwroot复制到 Plugins_wwwroot/{PluginId}, 禁用时, 再删除
             string pluginwwwrootDir = PluginPathProvider.PluginsWwwRootDir();
@@ -234,22 +304,11 @@ namespace PluginCore.AspNetCore.Extensions
                 RequestPath = "/Plugins"
             });
 
+            return app;
+        }
 
-            // 发现 UseAuthentication 认证中间件重复添加, 也只会执行一次 认证
-            // 但 UseAuthorization 重复添加2次, 则会执行 2次 授权
-            app.UseAuthentication();
-            app.UseAuthorization();
-
-            #region Plugin Middleware
-            // Plugin Middleware
-            //app.UseMiddleware<PluginContentFilterMiddleware>();
-
-
-            // 一定在 PluginCore 添加的中间件中 最后一个
-            app.UseMiddleware<PluginHttpEndFilterMiddleware>();
-            #endregion
-
-
+        public static IApplicationBuilder UsePluginCoreAppStart(this IApplicationBuilder app)
+        {
             //IPluginFinder pluginFinder = _services.BuildServiceProvider().GetService<IPluginFinder>();
             IPluginFinder pluginFinder = _serviceProvider.GetService<IPluginFinder>();
 
@@ -274,6 +333,14 @@ namespace PluginCore.AspNetCore.Extensions
 
             #endregion
 
+            return app;
+        }
+
+        public static IApplicationBuilder UsePluginCoreStartupPlugin(this IApplicationBuilder app)
+        {
+            //IPluginFinder pluginFinder = _services.BuildServiceProvider().GetService<IPluginFinder>();
+            IPluginFinder pluginFinder = _serviceProvider.GetService<IPluginFinder>();
+
             #region IStartupPlugin
 
             var startupPlugins = pluginFinder.EnablePlugins<IStartupPlugin>()?.OrderBy(m => m.ConfigureOrder)?.ToList();
@@ -291,7 +358,11 @@ namespace PluginCore.AspNetCore.Extensions
 
             app.UseMiddleware<PluginStartupXMiddleware>();
 
+            return app;
+        }
 
+        public static IApplicationBuilder UsePluginCoreLog(this IApplicationBuilder app)
+        {
             #region 启动 Log
             Config.PluginCoreConfig pluginCoreConfig = Config.PluginCoreConfigFactory.Create();
 
@@ -303,8 +374,6 @@ namespace PluginCore.AspNetCore.Extensions
 
             return app;
         }
-
-
     }
 }
 

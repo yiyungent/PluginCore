@@ -1,4 +1,4 @@
-﻿//===================================================
+//===================================================
 //  License: GNU LGPLv3
 //  Contributors: yiyungent@gmail.com
 //  Project: https://yiyungent.github.io/PluginCore
@@ -39,7 +39,7 @@ namespace PluginCore.AspNetCore.Middlewares
 
     public static class LanguageMiddlewareExtensions
     {
-        public static IApplicationBuilder UseLanguageMiddleware(this IApplicationBuilder builder)
+        public static IApplicationBuilder UsePluginCoreLanguageMiddleware(this IApplicationBuilder builder)
         {
             return builder.UseMiddleware<LanguageMiddleware>();
         }

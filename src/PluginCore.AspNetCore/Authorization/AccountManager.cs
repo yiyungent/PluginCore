@@ -7,7 +7,7 @@
 
 
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Http;
@@ -37,7 +37,7 @@ namespace PluginCore.AspNetCore.Authorization
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public Config.PluginCoreConfig.AdminModel Admin
+        public static Config.PluginCoreConfig.AdminModel Admin
         {
             get
             {
@@ -98,12 +98,12 @@ namespace PluginCore.AspNetCore.Authorization
             return token;
         }
 
-        public string CreateToken()
+        public static string CreateToken()
         {
             return CreateToken(Admin.UserName, Admin.Password);
         }
 
-        public string CreateToken(string userName, string password)
+        public static string CreateToken(string userName, string password)
         {
             string token = $"UserName={userName}&Password={password}";
             token = Md5Helper.MD5Encrypt32(token);
