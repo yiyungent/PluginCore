@@ -218,8 +218,8 @@ namespace PluginCore.AspNetCore.Extensions
             services.AddAuthentication()
             // 添加一个新的认证方案
                 .AddScheme<Authentication.PluginCoreAuthenticationSchemeOptions, Authentication.PluginCoreAuthenticationHandler>(
-                authenticationScheme: Constants.AspNetCoreAuthenticationScheme,
-                displayName: Constants.AspNetCoreAuthenticationScheme,
+                    authenticationScheme: Constants.AspNetCoreAuthenticationScheme,
+                    displayName: Constants.AspNetCoreAuthenticationScheme,
                     options => { });
             #endregion
         }
