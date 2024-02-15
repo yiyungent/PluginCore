@@ -1,4 +1,12 @@
 
+# PluginCore.AspNetCore-v1.4.0
+
+## Updated
+
+- `PluginCore Admin` 认证与授权
+  - **Breaking Change**: PluginCore.Admin 不再为默认认证方案, 认证方案名: `PluginCore.Admin.Authentication`
+  - `AccountManager` 部分方法静态化, 新增传参 HttpContext 方式调用
+
 
 # PluginCore.AspNetCore-v1.3.4
 
