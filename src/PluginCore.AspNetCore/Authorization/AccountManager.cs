@@ -51,10 +51,10 @@ namespace PluginCore.AspNetCore.Authorization
             }
         }
 
-        public string CurrentToken()
+        public static string CurrentToken(HttpContext httpContext)
         {
             string token = null;
-            HttpRequest request = HttpContext.Request;
+            HttpRequest request = httpContext.Request;
             try
             {
                 // header -> cookie
@@ -94,8 +94,12 @@ namespace PluginCore.AspNetCore.Authorization
                 throw ex;
             }
 
-
             return token;
+        }
+
+        public string CurrentToken()
+        {
+            return CurrentToken(this.HttpContext);
         }
 
         public static string CreateToken()
@@ -111,7 +115,7 @@ namespace PluginCore.AspNetCore.Authorization
             return token;
         }
 
-        public bool IsAdminToken(string token)
+        public static bool IsAdminToken(string token)
         {
             bool isAdmin = false;
             isAdmin = CreateToken().Equals(token);
@@ -119,13 +123,17 @@ namespace PluginCore.AspNetCore.Authorization
             return isAdmin;
         }
 
-
         public bool IsAdmin()
+        {
+            return IsAdmin(this.HttpContext);
+        }
+
+        public static bool IsAdmin(HttpContext httpContext)
         {
             bool isAdmin = false;
             try
             {
-                string currentToken = CurrentToken();
+                string currentToken = CurrentToken(httpContext);
                 isAdmin = IsAdminToken(currentToken);
             }
             catch (Exception ex)
@@ -135,7 +143,6 @@ namespace PluginCore.AspNetCore.Authorization
 
             return isAdmin;
         }
-
     }
 }
 

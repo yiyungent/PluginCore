@@ -40,7 +40,7 @@ namespace PluginCore.AspNetCore.Authentication
                 return AuthenticateResult.NoResult();
             }
 
-            bool isAdmin = this._accountManager.IsAdminToken(token);
+            bool isAdmin = AccountManager.IsAdminToken(token);
 
             if (!isAdmin)
             {

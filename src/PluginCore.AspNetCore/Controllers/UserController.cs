@@ -46,7 +46,7 @@ namespace PluginCore.AspNetCore.Controllers
             try
             {
                 string token = AccountManager.CreateToken(requestModel.UserName, requestModel.Password);
-                bool isAdmin = this._accountManager.IsAdminToken(token);
+                bool isAdmin = AccountManager.IsAdminToken(token);
                 if (!isAdmin)
                 {
                     responseModel.Code = -1;
