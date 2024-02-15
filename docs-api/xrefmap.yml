@@ -469,6 +469,12 @@ references:
   commentId: M:PluginCore.AspNetCore.Authorization.AccountManager.CurrentToken
   fullName: PluginCore.AspNetCore.Authorization.AccountManager.CurrentToken()
   nameWithType: AccountManager.CurrentToken()
+- uid: PluginCore.AspNetCore.Authorization.AccountManager.CurrentToken(Microsoft.AspNetCore.Http.HttpContext)
+  name: CurrentToken(HttpContext)
+  href: api/PluginCore.AspNetCore.Authorization.AccountManager.html#PluginCore_AspNetCore_Authorization_AccountManager_CurrentToken_Microsoft_AspNetCore_Http_HttpContext_
+  commentId: M:PluginCore.AspNetCore.Authorization.AccountManager.CurrentToken(Microsoft.AspNetCore.Http.HttpContext)
+  fullName: PluginCore.AspNetCore.Authorization.AccountManager.CurrentToken(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType: AccountManager.CurrentToken(HttpContext)
 - uid: PluginCore.AspNetCore.Authorization.AccountManager.CurrentToken*
   name: CurrentToken
   href: api/PluginCore.AspNetCore.Authorization.AccountManager.html#PluginCore_AspNetCore_Authorization_AccountManager_CurrentToken_
@@ -493,6 +499,12 @@ references:
   commentId: M:PluginCore.AspNetCore.Authorization.AccountManager.IsAdmin
   fullName: PluginCore.AspNetCore.Authorization.AccountManager.IsAdmin()
   nameWithType: AccountManager.IsAdmin()
+- uid: PluginCore.AspNetCore.Authorization.AccountManager.IsAdmin(Microsoft.AspNetCore.Http.HttpContext)
+  name: IsAdmin(HttpContext)
+  href: api/PluginCore.AspNetCore.Authorization.AccountManager.html#PluginCore_AspNetCore_Authorization_AccountManager_IsAdmin_Microsoft_AspNetCore_Http_HttpContext_
+  commentId: M:PluginCore.AspNetCore.Authorization.AccountManager.IsAdmin(Microsoft.AspNetCore.Http.HttpContext)
+  fullName: PluginCore.AspNetCore.Authorization.AccountManager.IsAdmin(Microsoft.AspNetCore.Http.HttpContext)
+  nameWithType: AccountManager.IsAdmin(HttpContext)
 - uid: PluginCore.AspNetCore.Authorization.AccountManager.IsAdmin*
   name: IsAdmin
   href: api/PluginCore.AspNetCore.Authorization.AccountManager.html#PluginCore_AspNetCore_Authorization_AccountManager_IsAdmin_
