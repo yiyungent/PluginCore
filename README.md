@@ -352,6 +352,9 @@ graph BT
 
 <!-- AFDIAN-ACTION:START -->
 
+<a href="https://afdian.net/u/1ec1819cde6c11ec95b252540025c377">
+    <img src="https://pic1.afdiancdn.com/user/1ec1819cde6c11ec95b252540025c377/avatar/0bd8c71ba926c7649a8a2646d4946fb2_w639_h640_s85.jpeg?imageView2/1/w/120/h/120" width="40" height="40" alt="RemMai" title="RemMai"/>
+</a>
 <a href="https://afdian.net/u/98e9914c457911ee95eb52540025c377">
     <img src="https://pic1.afdiancdn.com/user/98e9914c457911ee95eb52540025c377/avatar/0c7e8ddbbf27c6614fabbb00d4e907a0_w684_h683_s27.jpeg?imageView2/1/w/120/h/120" width="40" height="40" alt="浮沉" title="浮沉"/>
 </a>
@@ -368,6 +371,11 @@ graph BT
 <details>
   <summary>点我 打开/关闭 赞助者列表</summary>
 
+<a href="https://afdian.net/u/1ec1819cde6c11ec95b252540025c377">
+RemMai
+</a>
+<span>( 1 次赞助, 共 ￥15 ) 留言: 感谢提供插件灵感。
+...</span><br>
 <a href="https://afdian.net/u/98e9914c457911ee95eb52540025c377">
 浮沉
 </a>
