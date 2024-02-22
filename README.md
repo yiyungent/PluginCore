@@ -5,9 +5,7 @@
 
 English | [中文](README_zh.md)
 
-<!-- 🔌 ASP.NET Core lightweight plugin framework | ASP.NET Core 轻量级 插件框架 - 一分钟集成 | Vue.js frontend | JavaScript SDK -->
-
-> 🔌 `ASP.NET Core` lightweight plugin framework
+> 🔌 `ASP.NET Core` lightweight plugin framework | ASP.NET Core 轻量级 插件框架 - 一分钟集成 | Vue.js frontend | JavaScript SDK
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/github/license/yiyungent/PluginCore.svg?style=flat)](https://github.com/yiyungent/PluginCore/blob/main/LICENSE)
@@ -21,7 +19,7 @@ English | [中文](README_zh.md)
 
 ## Introduce
 
-`ASP.NET Core` lightweight plugin framework
+🔌 `ASP.NET Core` lightweight plugin framework | ASP.NET Core 轻量级 插件框架 - 一分钟集成 | Vue.js frontend | JavaScript SDK
 
 - **Simple** - Agreement is better than configuration, with minimal configuration to help you focus on your business
 - **Out of the box** - Automatic front-end and back-end integration, two lines of code complete the integration

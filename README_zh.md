@@ -5,7 +5,7 @@
 
 [English](README.md) | 中文
 
-> 🔌 适用于 `ASP.NET Core` 的轻量级插件框架
+> 🔌 适用于 `ASP.NET Core` 的轻量级插件框架 | Vue.js frontend | JavaScript SDK
 
 [![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
 [![LICENSE](https://img.shields.io/github/license/yiyungent/PluginCore.svg?style=flat)](https://github.com/yiyungent/PluginCore/blob/main/LICENSE)
@@ -20,7 +20,7 @@
 
 ## 介绍
 
-适用于 `ASP.NET Core` 的轻量级插件框架
+🔌 适用于 `ASP.NET Core` 的轻量级插件框架 | Vue.js frontend | JavaScript SDK
 
 - **简单** - 约定优于配置, 以最少的配置帮助你专注于业务
 - **开箱即用** - 前后端自动集成, 两行代码完成集成
