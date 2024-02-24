@@ -155,8 +155,8 @@ docker run -d -p 5004:80 -e ASPNETCORE_URLS="http://*:80" --name plugincore-aspn
 
 ## 使用
 
-- [详细文档(/docs)](http://yiyungent.github.io/PluginCore "在线文档") 文档构建中
-- [API 文档](http://yiyungent.github.io/PluginCore/docs-api/api/index.html "API 文档") 自动更新
+- [详细文档(/docs)](https://yiyungent.github.io/PluginCore "在线文档") 文档构建中
+- [API 文档](https://yiyungent.github.io/PluginCore/docs-api/api/index.html "API 文档") 自动更新
 - [见示例(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples)
 
 
@@ -314,8 +314,8 @@ graph BT
 
 ### 本项目组件
 
-- [yiyungent/plugincore-admin-frontend](https://github.com/yiyungent/plugincore-admin-frontend) - PluginCore Admin 前端实现
-- [yiyungent/plugincore-js-sdk](https://github.com/yiyungent/plugincore-js-sdk) - 前端挂件 依赖
+- [yiyungent/PluginCore/plugincore-admin-frontend](https://github.com/yiyungent/PluginCore/tree/main/plugincore-admin-frontend) - PluginCore Admin 前端实现
+- [yiyungent/PluginCore/plugincore-js-sdk](https://github.com/yiyungent/PluginCore/tree/main/plugincore-js-sdk) - 前端挂件 依赖
 
 ### 本项目前生/相关
 

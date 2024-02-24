@@ -154,8 +154,8 @@ Now you can visit http://localhost:5004/PluginCore/Admin
 
 ## Use
 
-- [Detailed Documentation(/docs)](http://yiyungent.github.io/PluginCore "Online Documentation") Document is under construction
-- [API Docs](http://yiyungent.github.io/PluginCore/docs-api/api/index.html "API Docs") automatic update
+- [Detailed Documentation(/docs)](https://yiyungent.github.io/PluginCore "Online Documentation") Document is under construction
+- [API Docs](https://yiyungent.github.io/PluginCore/docs-api/api/index.html "API Docs") automatic update
 - [See examples(/examples)](https://github.com/yiyungent/PluginCore/tree/main/examples) 
 
 
@@ -313,8 +313,8 @@ graph BT
 
 ### 本项目组件
 
-- [yiyungent/plugincore-admin-frontend](https://github.com/yiyungent/plugincore-admin-frontend) - PluginCore Admin 前端实现
-- [yiyungent/plugincore-js-sdk](https://github.com/yiyungent/plugincore-js-sdk) - 前端挂件 依赖
+- [yiyungent/PluginCore/plugincore-admin-frontend](https://github.com/yiyungent/PluginCore/tree/main/plugincore-admin-frontend) - PluginCore Admin 前端实现
+- [yiyungent/PluginCore/plugincore-js-sdk](https://github.com/yiyungent/PluginCore/tree/main/plugincore-js-sdk) - 前端挂件 依赖
 
 ### 本项目前生/相关
 

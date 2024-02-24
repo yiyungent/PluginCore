@@ -3,11 +3,11 @@
 </p>
 <h1 align="center">plugincore-js-sdk</h1>
 
-> 🔌 PluginCore JavaScript SDK | 页面注入/修改 | Plugin Widget  
+> 🔌 PluginCore JavaScript SDK | 页面注入/修改 | Plugin Widget
 > :cake: PluginCore JavaScript SDK
 
-[![repo size](https://img.shields.io/github/repo-size/yiyungent/plugincore-js-sdk.svg?style=flat)]()
-[![LICENSE](https://img.shields.io/github/license/yiyungent/plugincore-js-sdk.svg?style=flat)](https://github.com/yiyungent/plugincore-js-sdk/blob/master/LICENSE)
+[![repo size](https://img.shields.io/github/repo-size/yiyungent/PluginCore.svg?style=flat)]()
+[![LICENSE](https://img.shields.io/github/license/yiyungent/PluginCore.svg?style=flat)](https://github.com/yiyungent/plugincore-js-sdk/blob/master/LICENSE)
 [![NPM version](https://img.shields.io/npm/v/@yiyungent/plugincore.svg)](https://www.npmjs.com/package/@yiyungent/plugincore)
 [![NPM downloads](https://img.shields.io/npm/dt/@yiyungent/plugincore)](https://www.npmjs.com/package/@yiyungent/plugincore)
 [![jsDelivr](https://img.shields.io/jsdelivr/npm/hy/@yiyungent/plugincore)](https://www.jsdelivr.com/package/npm/@yiyungent/plugincore)
@@ -40,9 +40,9 @@ npm install @yiyungent/plugincore --save
 
 ### 首先 需扩展的前端页面 埋点 (扩展点 / Plugin Widget)
 
-> 例如下方: 第一个扩展点    
-> 在 `body` 最后 插入扩展点, 并且 `widgetKey`: `PluginCore.Admin.Footer`, 传递额外参数: `a,b,c`      
-> 启用 `HelloWorldPlugin` 插件后, 即会插入相应挂件  
+> 例如下方: 第一个扩展点
+> 在 `body` 最后 插入扩展点, 并且 `widgetKey`: `PluginCore.Admin.Footer`, 传递额外参数: `a,b,c`
+> 启用 `HelloWorldPlugin` 插件后, 即会插入相应挂件
 
 ```html
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ const p = new PluginCore();
 			var p = new PluginCore({
                 baseUrl: "your PluginCore url"
             });
-			
+
             p.start();
         </script>
     </body>
@@ -90,7 +90,7 @@ const p = new PluginCore();
 
 - [yiyungent/PluginCore: ASP.NET Core lightweight plugin framework. ASP.NET Core 轻量级 插件框架 - 一分钟集成](https://github.com/yiyungent/PluginCore)
 - [yiyungent/plugincore-admin-frontend: PluginCore 的 Admin 前端 ( Vue.js )](https://github.com/yiyungent/plugincore-admin-frontend)
- 
+
 ## 鸣谢
 
 
