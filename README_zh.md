@@ -48,6 +48,11 @@
   - 可前往 [KnifeHub - Releases](https://github.com/yiyungent/KnifeHub/releases?q=Plugin&expanded=true) 下载插件
   - 非最新版本
 
+## 技术栈
+
+- 后端: .NET/C#: .NET Standard & .NET Core & .NET & ASP.NET Core
+- 前端: Vue.js & vue-i18n & Vue Router & Vuex
+- 前端: babel & mockjs & sass & autoprefixer & eslint & axios & npm
 
 ## 截图
 

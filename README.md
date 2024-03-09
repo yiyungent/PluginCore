@@ -46,6 +46,11 @@ English | [中文](README_zh.md)
   - Online demo, use [KnifeHub](https://github.com/yiyungent/KnifeHub), empty data from time to time
   - Not the latest version
 
+## Tech Stack
+
+- Backend: .NET/C#: .NET Standard & .NET Core & .NET & ASP.NET Core
+- Frontend: Vue.js & vue-i18n & Vue Router & Vuex
+- Frontend: babel & mockjs & sass & autoprefixer & eslint & axios & npm
 
 ## Screenshot
 
