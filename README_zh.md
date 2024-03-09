@@ -51,7 +51,7 @@
 ## 技术栈
 
 - 后端: .NET/C#: .NET Standard & .NET Core & .NET & ASP.NET Core
-- 前端: Vue.js & vue-i18n & Vue Router & Vuex
+- 前端: Vue.js & vue-i18n & Vue Router & Vuex & Element UI
 - 前端: babel & mockjs & sass & autoprefixer & eslint & axios & npm
 
 ## 截图

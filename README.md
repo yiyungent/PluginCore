@@ -49,7 +49,7 @@ English | [中文](README_zh.md)
 ## Tech Stack
 
 - Backend: .NET/C#: .NET Standard & .NET Core & .NET & ASP.NET Core
-- Frontend: Vue.js & vue-i18n & Vue Router & Vuex
+- Frontend: Vue.js & vue-i18n & Vue Router & Vuex & Element UI
 - Frontend: babel & mockjs & sass & autoprefixer & eslint & axios & npm
 
 ## Screenshot
