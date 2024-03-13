@@ -19,6 +19,8 @@ namespace PluginCore.Utils
 {
     public class LogUtil
     {
+        public const string LogCategoryName = nameof(PluginCore);
+
         private static IServiceScopeFactory _serviceScopeFactory;
 
         public static void Initialize(IServiceScopeFactory serviceScopeFactory)
@@ -37,7 +39,7 @@ namespace PluginCore.Utils
                 ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
                 if (service != null)
                 {
-                    service.LogInformation(message);
+                    service.LogInformation($"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -55,7 +57,7 @@ namespace PluginCore.Utils
                 ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
                 if (service != null)
                 {
-                    service.LogInformation(message);
+                    service.LogInformation($"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -71,7 +73,7 @@ namespace PluginCore.Utils
                 ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
                 if (service != null)
                 {
-                    service.LogWarning(message);
+                    service.LogWarning($"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -89,7 +91,7 @@ namespace PluginCore.Utils
                 ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
                 if (service != null)
                 {
-                    service.LogWarning(message);
+                    service.LogWarning($"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -105,7 +107,7 @@ namespace PluginCore.Utils
                 ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
                 if (service != null)
                 {
-                    service.LogWarning(ex, message);
+                    service.LogWarning(ex, $"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -123,7 +125,7 @@ namespace PluginCore.Utils
                 ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
                 if (service != null)
                 {
-                    service.LogWarning(ex, message);
+                    service.LogWarning(ex, $"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -139,7 +141,7 @@ namespace PluginCore.Utils
                 ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
                 if (service != null)
                 {
-                    service.LogError(message);
+                    service.LogError($"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -157,7 +159,7 @@ namespace PluginCore.Utils
                 ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
                 if (service != null)
                 {
-                    service.LogError(message);
+                    service.LogError($"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -173,7 +175,7 @@ namespace PluginCore.Utils
                 ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
                 if (service != null)
                 {
-                    service.LogError(ex, message);
+                    service.LogError(ex, $"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -191,7 +193,7 @@ namespace PluginCore.Utils
                 ILogger? service = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger(categoryName: categoryName) ?? null;
                 if (service != null)
                 {
-                    service.LogError(ex, message);
+                    service.LogError(ex, $"{LogCategoryName}: {message}");
                 }
             }
         }
@@ -225,7 +227,7 @@ namespace PluginCore.Utils
                 ILogger<T>? service = scope.ServiceProvider.GetService<ILogger<T>>();
                 if (service != null)
                 {
-                    service.LogInformation(message);
+                    service.LogInformation($"{LogCategoryName}: {message}");
                 }
             }
         }
