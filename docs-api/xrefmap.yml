@@ -4131,6 +4131,12 @@ references:
   commentId: Overload:PluginCore.Utils.LogUtil.Initialize
   fullName: PluginCore.Utils.LogUtil.Initialize
   nameWithType: LogUtil.Initialize
+- uid: PluginCore.Utils.LogUtil.LogCategoryName
+  name: LogCategoryName
+  href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_LogCategoryName
+  commentId: F:PluginCore.Utils.LogUtil.LogCategoryName
+  fullName: PluginCore.Utils.LogUtil.LogCategoryName
+  nameWithType: LogUtil.LogCategoryName
 - uid: PluginCore.Utils.LogUtil.PluginBehavior*
   name: PluginBehavior
   href: api/PluginCore.Utils.LogUtil.html#PluginCore_Utils_LogUtil_PluginBehavior_
