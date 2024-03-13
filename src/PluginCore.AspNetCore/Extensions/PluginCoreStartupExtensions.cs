@@ -56,6 +56,8 @@ namespace PluginCore.AspNetCore.Extensions
         {
             services.AddPluginCoreServices();
 
+            services.AddPluginCoreLog();
+
             services.AddPluginCorePlugins();
 
             #region PluginCore Admin 权限
@@ -70,13 +72,12 @@ namespace PluginCore.AspNetCore.Extensions
 
             services.AddPluginCoreStartupPlugin();
 
-            services.AddPluginCoreLog();
-
             // AddBackgroundServices
             services.AddBackgroundServices();
 
             // 一定要在最后
             _services = services;
+            _serviceProvider = services.BuildServiceProvider();
         }
 
         public static IApplicationBuilder UsePluginCore(this IApplicationBuilder app)
@@ -275,7 +276,11 @@ namespace PluginCore.AspNetCore.Extensions
             foreach (var item in plugins)
             {
                 // 调用
-                Utils.LogUtil.Info(categoryName: nameof(PluginCoreStartupExtensions), $"{item.GetType().ToString()} {nameof(IStartupPlugin)}.{nameof(IStartupPlugin.ConfigureServices)}");
+                Utils.LogUtil.Info(
+                    categoryName: $"{nameof(PluginCoreStartupExtensions)}.{nameof(AddPluginCoreStartupPlugin)}",
+                    message: $"{item.GetType().ToString()}: {nameof(IStartupPlugin)}.{nameof(IStartupPlugin.ConfigureServices)}"
+                );
+
                 item?.ConfigureServices(services);
             }
 
@@ -326,7 +331,11 @@ namespace PluginCore.AspNetCore.Extensions
             foreach (var item in sortedPlugins)
             {
                 // 调用
-                Utils.LogUtil.PluginBehavior(item, typeof(IPlugin), nameof(IPlugin.AppStart));
+                //Utils.LogUtil.PluginBehavior(item, typeof(IPlugin), nameof(IPlugin.AppStart));
+                Utils.LogUtil.Info(
+                    categoryName: $"{nameof(PluginCoreStartupExtensions)}.{nameof(UsePluginCoreAppStart)}",
+                    message: $"{item.GetType().ToString()}: {nameof(IPlugin)}.{nameof(IPlugin.AppStart)}"
+                );
 
                 item?.AppStart();
             }
@@ -348,7 +357,11 @@ namespace PluginCore.AspNetCore.Extensions
             foreach (var item in startupPlugins)
             {
                 // 调用
-                Utils.LogUtil.PluginBehavior(item, typeof(IStartupPlugin), nameof(IStartupPlugin.Configure));
+                //Utils.LogUtil.PluginBehavior(item, typeof(IStartupPlugin), nameof(IStartupPlugin.Configure));
+                Utils.LogUtil.Info(
+                    categoryName: $"{nameof(PluginCoreStartupExtensions)}.{nameof(UsePluginCoreStartupPlugin)}",
+                    message: $"{item.GetType().ToString()}: {nameof(IStartupPlugin)}.{nameof(IStartupPlugin.Configure)}"
+                );
 
                 item?.Configure(app);
             }
