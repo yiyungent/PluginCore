@@ -105,9 +105,9 @@ namespace PluginCore.AspNetCore.Extensions
             app.UseMiddleware<PluginHttpEndFilterMiddleware>();
             #endregion
 
-            app.UsePluginCoreAppStart();
-
             app.UsePluginCoreStartupPlugin();
+
+            app.UsePluginCoreAppStart();
 
             // Log
             app.UsePluginCoreLog();
@@ -379,10 +379,10 @@ namespace PluginCore.AspNetCore.Extensions
             #region 启动 Log
             Config.PluginCoreConfig pluginCoreConfig = Config.PluginCoreConfigFactory.Create();
 
-            Utils.LogUtil.Info(categoryName: nameof(PluginCoreStartupExtensions), $"{nameof(PluginCore.AspNetCore)}");
-            Utils.LogUtil.Info(categoryName: nameof(PluginCoreStartupExtensions), "Started successfully:");
-            Utils.LogUtil.Info(categoryName: nameof(PluginCoreStartupExtensions), $"Front-end mode: {pluginCoreConfig.FrontendMode}");
-            Utils.LogUtil.Info(categoryName: nameof(PluginCoreStartupExtensions), $"Notice: Updating the front-end mode requires restarting the site");
+            Utils.LogUtil.Info(categoryName: $"{nameof(PluginCoreStartupExtensions)}.{nameof(UsePluginCoreLog)}", $"{nameof(PluginCore.AspNetCore)}");
+            Utils.LogUtil.Info(categoryName: $"{nameof(PluginCoreStartupExtensions)}.{nameof(UsePluginCoreLog)}", "Started successfully:");
+            Utils.LogUtil.Info(categoryName: $"{nameof(PluginCoreStartupExtensions)}.{nameof(UsePluginCoreLog)}", $"Front-end mode: {pluginCoreConfig.FrontendMode}");
+            Utils.LogUtil.Info(categoryName: $"{nameof(PluginCoreStartupExtensions)}.{nameof(UsePluginCoreLog)}", $"Notice: Updating the front-end mode requires restarting the site");
             #endregion
 
             return app;
