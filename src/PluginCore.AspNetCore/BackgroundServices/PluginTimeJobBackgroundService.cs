@@ -57,7 +57,7 @@ namespace PluginCore.AspNetCore.BackgroundServices
                         if (nowTime - lastExecuteTime >= item.SecondsPeriod)
                         {
                             // 调用
-                            Utils.LogUtil.Info<PluginTimeJobBackgroundService>($"{pluginKey} {nameof(ITimeJobPlugin)}.{nameof(ITimeJobPlugin.ExecuteAsync)}");
+                            Utils.LogUtil.Info<PluginTimeJobBackgroundService>($"{pluginKey}: {nameof(ITimeJobPlugin)}.{nameof(ITimeJobPlugin.ExecuteAsync)}");
                             Task task = item?.ExecuteAsync();
                             this._pluginAndLastExecuteTimeDic[pluginKey] = DateTime.Now.ToTimeStamp10();
                         }
