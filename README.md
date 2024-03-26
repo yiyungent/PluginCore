@@ -52,6 +52,9 @@ English | [中文](README_zh.md)
 - Frontend: Vue.js & vue-i18n & Vue Router & Vuex & Element UI
 - Frontend: babel & mockjs & sass & autoprefixer & eslint & axios & npm
 
+> 关联线上产品:
+> [https://120365.xyz](https://120365.xyz)
+
 ## Screenshot
 
 ![](screenshots/1.png)
