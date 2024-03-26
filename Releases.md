@@ -1,4 +1,22 @@
 
+
+# PluginCore.AspNetCore-v1.4.1
+
+## Updated
+
+- fixed(`PluginCoreStartupExtensions`)
+  - Log Plugin 输出不全
+  - `_serviceProvider` 在 `AddPluginCore` 后重新赋值
+- `PackageReference`: `PluginCore`: `2.2.3` -> `2.2.4`
+
+
+# PluginCore-v2.2.4
+
+## Updated
+
+- `LogUtil`: add `LogCategoryName`
+
+
 # PluginCore.AspNetCore-v1.4.0
 
 ## Updated
