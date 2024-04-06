@@ -1,5 +1,26 @@
 
 
+
+
+# PluginCore.AspNetCore-v1.4.2
+
+## Updated
+
+- Log: {pluginKey}: 更新
+- plugin:startup->appstart
+- PackageReference: PluginCore: 2.2.4 -> 2.2.5
+
+
+
+# PluginCore-v2.2.5
+
+## Fixed
+
+- 支持插件间共享 dll 不同版本
+  - dll 忽略版本搜索
+
+
+
 # PluginCore.AspNetCore-v1.4.1
 
 ## Updated
