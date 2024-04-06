@@ -54,6 +54,9 @@
 - 前端: Vue.js & vue-i18n & Vue Router & Vuex & Element UI
 - 前端: babel & mockjs & sass & autoprefixer & eslint & axios & npm
 
+> 关联线上产品:
+> [https://120365.xyz](https://120365.xyz)
+
 ## 截图
 
 ![](screenshots/1.png)
