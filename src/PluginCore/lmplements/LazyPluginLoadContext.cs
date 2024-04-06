@@ -60,6 +60,24 @@ namespace PluginCore.lmplements
             {
                 return temp;
             }
+            // 尝试忽略版本搜索
+            var temp2 = assList.FirstOrDefault(m => m.GetName().Name == assemblyName.Name);
+            if (temp2 != null)
+            {
+                return temp2;
+            }
+
+            // 由于是懒加载, 若 A 插件依赖 B 插件, 而此时在 A 插件调用 B.Test(),
+            // 而 B.Test() 与 C.dll 有关, 而之前 B 插件未触发 C.dll 中类型, 于是这时还没有加载 C.dll, 于是 assList 这时其中无 C.dll
+            // 由于 B.Test() 需在 A 中调用, 于是为公用, 因此 C.dll 需在 A 中排除, 不然会由于重复加载-类型不一致而 Method Missing
+            // 在 A 中 C.dll 与 在 B 中 C.dll 会认为其中类型不一致
+            // TODO: 主动扫描一次
+            //foreach (var pluginContextKeyValue in PluginContextStore.PluginContexts)
+            //{
+            //    //pluginContextKeyValue.Value.Load(assemblyName);
+            //    string pluginId = pluginContextKeyValue.Key;
+                
+            //}
 
             // 3. 最后搜索不到, 返回 null, 即代表使用主程序提供, 如果最后几次都为 null, 则会报错
             // 当启用本插件/触碰到本插件中的一些类型时, 而当主程序中没有提供相关的此 assemblyName 时, 也会触发此方法 来尝试加载
