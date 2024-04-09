@@ -299,15 +299,36 @@ namespace PluginCore.AspNetCore.Extensions
 
         public static IApplicationBuilder UsePluginCoreStaticFiles(this IApplicationBuilder app)
         {
+            // TODO: 其实由于目前已实现运行时动态新增/删除 HTTP Middleware, 其实可以不用再像下方这么复制插件 wwwroot 目录到 Plugins_wwwroot/{PluginId}
+            // 而是在运行时配置, 直接指向 `Plugins/{PluginId}/wwwroot`, 而无需复制/删除
+
+            // 注意：`UseDefaultFiles`必须在`UseStaticFiles`之前进行调用。因为`DefaultFilesMiddleware`仅仅负责重写Url，实际上默认页文件，仍然是通过`StaticFilesMiddleware`来提供的。
+
+            string pluginwwwrootDir = PluginPathProvider.PluginsWwwRootDir();
+
+            #region 插件 wwwroot 默认页
+            // 设置目录的默认页
+            var defaultFilesOptions = new DefaultFilesOptions();
+            defaultFilesOptions.DefaultFileNames.Clear();
+            // 指定默认页名称
+            defaultFilesOptions.DefaultFileNames.Add("index.html");
+            // 指定请求路径
+            defaultFilesOptions.RequestPath = "/Plugins";
+            // 指定默认页所在的目录
+            defaultFilesOptions.FileProvider = new PhysicalFileProvider(pluginwwwrootDir);
+            app.UseDefaultFiles(defaultFilesOptions);
+            #endregion
+
+            #region 插件 wwwroot
             // 由于没办法在运行时, 动态 UseStaticFiles(), 因此不再为每一个插件都 UseStaticFiles(),
             // 而是统一在一个文件夹下, 插件启用时, 将插件的wwwroot复制到 Plugins_wwwroot/{PluginId}, 禁用时, 再删除
-            string pluginwwwrootDir = PluginPathProvider.PluginsWwwRootDir();
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
                     pluginwwwrootDir),
                 RequestPath = "/Plugins"
             });
+            #endregion
 
             return app;
         }
