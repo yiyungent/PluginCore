@@ -362,6 +362,9 @@ graph BT
 
 <!-- AFDIAN-ACTION:START -->
 
+<a href="https://afdian.net/u/e98feb9e12d511efa7b352540025c377">
+    <img src="https://pic1.afdiancdn.com/default/avatar/avatar-purple.png?imageView2/1/?imageView2/1/w/120/h/120" width="40" height="40" alt="爱发电用户_e98fe" title="爱发电用户_e98fe"/>
+</a>
 <a href="https://afdian.net/u/1ec1819cde6c11ec95b252540025c377">
     <img src="https://pic1.afdiancdn.com/user/1ec1819cde6c11ec95b252540025c377/avatar/0bd8c71ba926c7649a8a2646d4946fb2_w639_h640_s85.jpeg?imageView2/1/w/120/h/120" width="40" height="40" alt="RemMai" title="RemMai"/>
 </a>
@@ -381,6 +384,10 @@ graph BT
 <details>
   <summary>点我 打开/关闭 赞助者列表</summary>
 
+<a href="https://afdian.net/u/e98feb9e12d511efa7b352540025c377">
+爱发电用户_e98fe
+</a>
+<span>( 1 次赞助, 共 ￥30 ) 留言: </span><br>
 <a href="https://afdian.net/u/1ec1819cde6c11ec95b252540025c377">
 RemMai
 </a>
