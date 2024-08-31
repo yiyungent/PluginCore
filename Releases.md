@@ -1,5 +1,11 @@
 
 
+# PluginCore.AspNetCore-v1.4.3
+
+## Fixed
+
+- 兼容 `Swashbuckle.AspNetCore` 生成
+  - `Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Controllers.PluginsController.Upload (PluginCore.AspNetCore) as [FromForm] attribute used with IFormFile.`
 
 
 # PluginCore.AspNetCore-v1.4.2
