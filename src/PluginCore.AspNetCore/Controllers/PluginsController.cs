@@ -7,7 +7,7 @@
 
 
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -339,7 +339,7 @@ namespace PluginCore.AspNetCore.Controllers
         /// <param name="file">注意: 参数名一定为 file， 对应前端传过来时以 file 为名</param>
         /// <returns></returns>
         [HttpGet, HttpPost]
-        public async Task<ActionResult<BaseResponseModel>> Upload([FromForm] IFormFile file)
+        public async Task<ActionResult<BaseResponseModel>> Upload(IFormFile file)
         {
             BaseResponseModel responseData = new BaseResponseModel();
 
