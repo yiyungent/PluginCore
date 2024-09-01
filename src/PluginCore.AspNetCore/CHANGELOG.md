@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
+## [unreleased]
+
+### Miscellaneous Chores
+
+- **(src/plugincore.aspnetcore)** cliff.toml, CHANGELOG.md - ([bf95c28](https://github.com/yiyungent/PluginCore/commit/bf95c287ae9902608c4711e4dec05575c2d0e794)) - yiyun
+
+---
 ## [PluginCore.AspNetCore-v1.4.3](https://github.com/yiyungent/PluginCore/compare/PluginCore.AspNetCore-v1.4.2..PluginCore.AspNetCore-v1.4.3) - 2024-08-31
 
 ### Bug Fixes
