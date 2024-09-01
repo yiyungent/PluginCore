@@ -65,8 +65,13 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "docs(CHANGELOG.md): update" -a
+          set +e
+          git add .
+          git commit -m "docs(CHANGELOG.md): update"
+          # 注意: -a 对于 Untracked files (新建的)无法直接 commit
+          # git commit -m "docs(CHANGELOG.md): update" -a
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git main
+        shell: bash
 
     #   - name: Push changes
     #     uses: ad-m/github-push-action@master # https://github.com/ad-m/github-push-action
