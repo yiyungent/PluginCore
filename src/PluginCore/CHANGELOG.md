@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. See [conven
 
 - **(cliff.toml)** add - ([5614ef0](https://github.com/yiyungent/PluginCore/commit/5614ef024d644349095e19a0016bb23d989b0c90)) - yiyun
 
+### Ci
+
+- **(changelog.yml)** changelog.yml, PluginCore/CHANGELOG.md - ([34ab464](https://github.com/yiyungent/PluginCore/commit/34ab46467101933f3b4b966fbe9c7a21f510494e)) - yiyun
+
 ---
 ## [PluginCore-v2.2.5](https://github.com/yiyungent/PluginCore/compare/PluginCore-v2.2.4..PluginCore-v2.2.5) - 2024-04-06
 
