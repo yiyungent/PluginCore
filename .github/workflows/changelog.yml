@@ -1,0 +1,75 @@
+name: Generate a changelog
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Set up git-cliff
+        uses: kenji-miyake/setup-git-cliff@v1
+
+      - name: Generate a changelog PluginCore
+        run: |
+          cd src/PluginCore
+          git cliff --include-path "src/PluginCore/**/*" --repository "../../" -o CHANGELOG.md
+        shell: bash
+
+      - name: Generate a changelog PluginCore.AspNetCore
+        run: |
+          cd src/PluginCore.AspNetCore
+          git cliff --include-path "src/PluginCore.AspNetCore/**/*" --repository "../../" -o CHANGELOG.md
+        shell: bash
+
+      - name: Generate a changelog PluginCore.IPlugins
+        run: |
+          cd src/PluginCore.IPlugins
+          git cliff --include-path "src/PluginCore.IPlugins/**/*" --repository "../../" -o CHANGELOG.md
+        shell: bash
+
+      - name: Generate a changelog PluginCore.IPlugins.AspNetCore
+        run: |
+          cd src/PluginCore.IPlugins.AspNetCore
+          git cliff --include-path "src/PluginCore.IPlugins.AspNetCore/**/*" --repository "../../" -o CHANGELOG.md
+        shell: bash
+
+      - name: Generate a changelog PluginCore.Registry
+        run: |
+          cd src/PluginCore.Registry
+          git cliff --include-path "src/PluginCore.Registry/**/*" --repository "../../" -o CHANGELOG.md
+        shell: bash
+
+      - name: Generate a changelog plugincore-admin-frontend
+        run: |
+          cd plugincore-admin-frontend
+          git cliff --include-path "plugincore-admin-frontend/**/*" --repository "../" -o CHANGELOG.md
+        shell: bash
+
+      - name: Generate a changelog plugincore-js-sdk
+        run: |
+          cd plugincore-js-sdk
+          git cliff --include-path "plugincore-js-sdk/**/*" --repository "../" -o CHANGELOG.md
+        shell: bash
+
+      # 下方为 直接 push 到目标分支, 当然你也可以选择 Pull Request 方式
+      - name: Commit files
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "docs(CHANGELOG.md): update" -a
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git main
+
+    #   - name: Push changes
+    #     uses: ad-m/github-push-action@master # https://github.com/ad-m/github-push-action
+    #     with:
+    #       github_token: ${{ secrets.GITHUB_TOKEN }}
+    #       branch: main # 注意修改为你的分支, 例如: master
