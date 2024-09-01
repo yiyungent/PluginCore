@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file. See [conven
 ---
 ## [unreleased]
 
+### Documentation
+
+- **(CHANGELOG.md)** update - ([85bf0d9](https://github.com/yiyungent/PluginCore/commit/85bf0d9bd8e2f9efa7e8c0db3127ec8aaa054bc8)) - github-actions[bot]
+
 ### Miscellaneous Chores
 
 - **(src/plugincore.aspnetcore)** cliff.toml, CHANGELOG.md - ([bf95c28](https://github.com/yiyungent/PluginCore/commit/bf95c287ae9902608c4711e4dec05575c2d0e794)) - yiyun
