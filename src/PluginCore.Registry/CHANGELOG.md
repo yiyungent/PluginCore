@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. See [conven
 ### Documentation
 
 - **(CHANGELOG.md)** update - ([0bbfc89](https://github.com/yiyungent/PluginCore/commit/0bbfc8955b7f6338db2125c78ec250e9eeeadcce)) - github-actions[bot]
+- **(CHANGELOG.md)** update - ([4f6b47b](https://github.com/yiyungent/PluginCore/commit/4f6b47b3f86bfce4a8f660166837a7322c568d78)) - github-actions[bot]
 
 ### Features
 
