@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file. See [conven
 ---
 ## [unreleased]
 
+### Documentation
+
+- **(CHANGELOG.md)** update - ([0bbfc89](https://github.com/yiyungent/PluginCore/commit/0bbfc8955b7f6338db2125c78ec250e9eeeadcce)) - github-actions[bot]
+
 ### Features
 
 - **(src/**/*.cs)** //  License: Apache-2.0 -> //  License: GNU LGPLv3 - ([57366d3](https://github.com/yiyungent/PluginCore/commit/57366d3e2afdb8e20e94851aa8a09f1ee61b6d7e)) - yiyun

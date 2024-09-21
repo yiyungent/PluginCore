@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file. See [conven
 ---
 ## [unreleased]
 
+### Documentation
+
+- **(CHANGELOG.md)** update - ([0bbfc89](https://github.com/yiyungent/PluginCore/commit/0bbfc8955b7f6338db2125c78ec250e9eeeadcce)) - github-actions[bot]
+
 ### Miscellaneous Chores
 
 - **(cliff.toml)** add - ([5614ef0](https://github.com/yiyungent/PluginCore/commit/5614ef024d644349095e19a0016bb23d989b0c90)) - yiyun
