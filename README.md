@@ -16,6 +16,7 @@ English | [中文](README_zh.md)
 <!-- ![hits](https://api-onetree.moeci.com/hits.svg?id=PluginCore) -->
 [![CLA assistant](https://cla-assistant.io/readme/badge/yiyungent/PluginCore)](https://cla-assistant.io/yiyungent/PluginCore)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyiyungent%2FPluginCore?ref=badge_shield)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yiyungent/PluginCore)
 
 ## Introduce
 
