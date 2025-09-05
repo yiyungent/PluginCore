@@ -349,10 +349,22 @@ graph BT
 
 ### 特别鸣谢
 
-> [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 是一个强大的 Visual Studio 扩展，适用于 .NET 平台语言。
+<!-- 本项目已加入 ZMTO & JetBrains & Netlify 开源项目计划 -->
+This project has joined the zmto & JetBrains & Netlify Open Source Program.
 
-特别感谢 [JetBrains](https://www.jetbrains.com/?from=PluginCore) 为开源项目提供免费的 [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 等的授权  
-[<img src="docs/docs/.vuepress/public/images/jetbrains-variant-3.png" width="200"/>](https://www.jetbrains.com/?from=PluginCore)
+<!-- https://zmto.com/opensource -->
+<!-- https://www.jetbrains.com/shop/eform/opensource -->
+<!-- https://www.netlify.com/legal/open-source-policy/ -->
+
+<!-- > [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 是一个强大的 Visual Studio 扩展，适用于 .NET 平台语言。 -->
+
+Special thanks to [ZMTO](https://zmto.com/) for sponsoring servers for this project for testing purposes.
+
+Special thanks to [JetBrains](https://www.jetbrains.com/?from=KnifeHub) for providing free licenses of [ReSharper](https://www.jetbrains.com/resharper/?from=KnifeHub) and more for open-source projects.  
+[<img src="README/image-jetbrains-variant-3.png" width="200"/>](https://www.jetbrains.com/?from=KnifeHub)
+
+Special thanks to [Netlify](https://www.netlify.com) for supporting open-source projects.  
+[<img src="README/netlify-light.png" width="200"/>](https://www.netlify.com)
 
 
 ## 赞助者

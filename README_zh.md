@@ -340,14 +340,37 @@ graph BT
 - [yiyungent/KnifeHub](https://github.com/yiyungent/KnifeHub) - 【PluginCore.AspNetCore 最佳实践】工具平台 | 日常生活/学习/工作/开发 工具集
 - [yiyungent/Dragonfly](https://github.com/yiyungent/Dragonfly) - ASP.NET Core + Selenium 实现 Web 自动化
 
-## 赞助者
-
-TODO: 
 
 ## 鸣谢
 
 - 插件系统设计参考自 <a href="https://github.com/lamondlu/CoolCat" target="_blank">CoolCat</a>，感谢作者 lamondlu 的贡献
 - 设计参考自 <a href="https://github.com/nopSolutions/nopCommerce" target="_blank">nopCommerce</a>，感谢作者 nopSolutions 的贡献
+
+
+### 特别鸣谢
+
+<!-- 本项目已加入 ZMTO & JetBrains & Netlify 开源项目计划 -->
+This project has joined the zmto & JetBrains & Netlify Open Source Program.
+
+<!-- https://zmto.com/opensource -->
+<!-- https://www.jetbrains.com/shop/eform/opensource -->
+<!-- https://www.netlify.com/legal/open-source-policy/ -->
+
+<!-- > [ReSharper](https://www.jetbrains.com/resharper/?from=PluginCore) 是一个强大的 Visual Studio 扩展，适用于 .NET 平台语言。 -->
+
+特别感谢 [ZMTO](https://zmto.com/) 为本项目赞助服务器以用于测试  
+
+特别感谢 [JetBrains](https://www.jetbrains.com/?from=KnifeHub) 为开源项目提供免费的 [ReSharper](https://www.jetbrains.com/resharper/?from=KnifeHub) 等的授权  
+[<img src="README/image-jetbrains-variant-3.png" width="200"/>](https://www.jetbrains.com/?from=KnifeHub)
+
+特别感谢 [Netlify](https://www.netlify.com) 为开源项目提供支持  
+[<img src="README/netlify-light.png" width="200"/>](https://www.netlify.com)
+
+
+## 赞助者
+
+TODO: 
+
 
 ## Donate
 
