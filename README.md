@@ -347,7 +347,7 @@ graph BT
 - Design referenced from <a href="https://github.com/nopSolutions/nopCommerce" target="_blank">nopCommerce</a>, thanks to author nopSolutions for the contribution
 
 
-### 特别鸣谢
+### Special Thanks
 
 <!-- 本项目已加入 ZMTO & JetBrains & Netlify 开源项目计划 -->
 This project has joined the zmto & JetBrains & Netlify Open Source Program.
