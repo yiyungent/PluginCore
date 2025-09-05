@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(CHANGELOG.md)** update - ([4f6b47b](https://github.com/yiyungent/PluginCore/commit/4f6b47b3f86bfce4a8f660166837a7322c568d78)) - github-actions[bot]
 - **(CHANGELOG.md)** update - ([82fd182](https://github.com/yiyungent/PluginCore/commit/82fd182007362e8877c03ae2e1a496ed762825ae)) - github-actions[bot]
 - **(CHANGELOG.md)** update - ([c3b1db5](https://github.com/yiyungent/PluginCore/commit/c3b1db5b918b6342d5a730ce2eac7552d39e3715)) - github-actions[bot]
+- **(CHANGELOG.md)** update - ([7fd216c](https://github.com/yiyungent/PluginCore/commit/7fd216cde264fb9f0481db81117ece8fe374d5ab)) - github-actions[bot]
 
 ### Miscellaneous Chores
 
