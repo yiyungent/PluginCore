@@ -395,7 +395,7 @@ Thanks to these sponsors from Afdian:
 </a>
 
 <details>
-  <summary>Click to open/close sponsor list</summary>
+  <summary>点我 打开/关闭 赞助者列表</summary>
 
 <a href="https://afdian.net/u/e98feb9e12d511efa7b352540025c377">
 爱发电用户_e98fe
