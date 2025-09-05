@@ -53,12 +53,12 @@ English | [中文](README_zh.md)
 - Frontend: Vue.js & vue-i18n & Vue Router & Vuex & Element UI
 - Frontend: babel & mockjs & sass & autoprefixer & eslint & axios & npm
 
-> 关联线上产品:         
+> Related Online Products:         
 > - [https://120365.xyz](https://120365.xyz)          
->   - 在线工具集   
->   - 数据分析可视化    
->   - 时间管理    
->   - 效率工具箱    
+>   - Online Tools Collection   
+>   - Data Analysis Visualization    
+>   - Time Management    
+>   - Efficiency Toolbox    
 
 ## Screenshot
 
@@ -241,41 +241,41 @@ PluginCore supports 3 front-end file loading methods
 3. RemoteCDN
   - To use remote CDN resources, you can specify the url through the `RemoteFrontend` in the configuration file
 
-> **注意:**    
-> 更新 `FrontendMode`, 需重启站点后, 才能生效
+> **Note:**    
+> After updating `FrontendMode`, the site needs to be restarted for the changes to take effect
 
 
 
-### 补充
+### Additional Information
 
-> **补充**
+> **Additional Information**
 >
-> 开发插件只需要, 添加对 `PluginCore.IPlugins` 包 (插件sdk) 的引用即可，        
+> To develop plugins, you only need to add a reference to the `PluginCore.IPlugins` package (plugin SDK),        
 >
-> 当然如果你需要 `PluginCore` ,  也可以添加引用
+> Of course, if you need `PluginCore`, you can also add a reference
 
 
 
-> **规范**
+> **Specifications**
 >
-> 1. 插件sdk
+> 1. Plugin SDK
 >
-> 插件接口应当位于 `PluginCore.IPlugins` 命名空间，这是规范，不强求，但建议这么做，      
+> Plugin interfaces should be located in the `PluginCore.IPlugins` namespace. This is a convention, not mandatory, but it is recommended to do so,      
 >
-> 程序集名不一定要与命名空间名相同，你完全在你的插件sdk程序集中，使用 `PluginCore.IPlugins` 命名空间。
+> The assembly name does not have to be the same as the namespace name. You can completely use the `PluginCore.IPlugins` namespace in your plugin SDK assembly.
 >
-> 2. 插件
+> 2. Plugin
 >
-> 插件程序集名(一般=项目(Project)名) 与 插件 `info.json` 中 `PluginId` 一致, 例如: Project: `HelloWorldPlugin`, PluginId: `HelloWorldPlugin`,  此项必须，否则插件无法加载
-> `PluginId` 为插件唯一标识
+> The plugin assembly name (usually = project name) must match the `PluginId` in the plugin `info.json`, for example: Project: `HelloWorldPlugin`, PluginId: `HelloWorldPlugin`. This is required, otherwise the plugin cannot be loaded
+> `PluginId` is the unique identifier of the plugin
 
 
 
 
 
-## 版本依赖
+## Version dependency
 
-> 自 `PluginCore.IPlugins-v0.8.0` 起, `PluginCore` 项目重构, `PluginCore` 只包含核心插件逻辑, `ASP.NET Core` 需要使用 `PluginCore.AspNetCore`
+> Since `PluginCore.IPlugins-v0.8.0`, the `PluginCore` project has been refactored. `PluginCore` only contains core plugin logic, and `ASP.NET Core` needs to use `PluginCore.AspNetCore`
 
 |      PluginCore.IPlugins       |     0.8.0     |     0.8.0     |     0.8.0     |     0.8.0     |     0.8.0     |     0.8.0     |     0.8.0     |     0.8.0     |     0.8.0     |     0.8.0     |     0.8.0     |     0.8.0     |     0.9.0     |     0.9.0     |     0.9.0     |     0.9.0     |     0.9.1     |     0.9.1     |     0.9.1     |
 | :----------------------------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
@@ -285,7 +285,7 @@ PluginCore supports 3 front-end file loading methods
 |   plugincore-admin-frontend    | 0.1.0 - 0.3.1 | 0.1.0 - 0.3.1 | 0.1.0 - 0.3.1 | 0.1.0 - 0.3.1 | 0.1.0 - 0.3.1 | 0.1.0 - 0.3.1 | 0.1.0 - 0.3.1 |     0.3.2     |     0.3.2     |     0.3.2     |     0.3.2     |     0.3.2     |     0.3.2     |     0.3.2     |     0.3.2     |     0.3.2     |     0.3.2     |     0.3.2     |     0.3.2     |
 |       plugincore-js-sdk        | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 | 0.1.0 - 0.5.0 |
 
-> 下方为旧版依赖, 仅作存档
+> Below are the old version dependencies, for archival purposes only
 
 |    PluginCore.IPlugins    | 0.1.0 | 0.1.0 | 0.2.0 | 0.2.0 | 0.2.0 | 0.3.0 | 0.3.0 | 0.4.0 | 0.5.0 | 0.6.0 | 0.6.0 | 0.6.0 | 0.6.0 | 0.6.1 | 0.6.1 | 0.6.1 | 0.7.0 | 0.7.0 | 0.7.0 | 0.7.0 |
 | :-----------------------: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -317,34 +317,34 @@ graph BT
     jssdk(plugincore-js-sdk) --> aspnetcore
 ```
 
-## 环境
+## Environment
 
-- 运行环境: .NET Core 3.1 (+)
-- 开发环境: Visual Studio Community 2019
+- Runtime: .NET Core 3.1 (+)
+- Development: Visual Studio Community 2019
 
-## 相关项目
+## Related Projects
 
-### 本项目组件
+### Components of This Project
 
-- [yiyungent/PluginCore/plugincore-admin-frontend](https://github.com/yiyungent/PluginCore/tree/main/plugincore-admin-frontend) - PluginCore Admin 前端实现
-- [yiyungent/PluginCore/plugincore-js-sdk](https://github.com/yiyungent/PluginCore/tree/main/plugincore-js-sdk) - 前端挂件 依赖
+- [yiyungent/PluginCore/plugincore-admin-frontend](https://github.com/yiyungent/PluginCore/tree/main/plugincore-admin-frontend) - PluginCore Admin Frontend Implementation
+- [yiyungent/PluginCore/plugincore-js-sdk](https://github.com/yiyungent/PluginCore/tree/main/plugincore-js-sdk) - Frontend Widget Dependencies
 
-### 本项目前生/相关
+### Predecessors/Related Projects
 
-- [yiyungent/Remember.Core](https://github.com/yiyungent/Remember.Core) - 🐬 .NET Web 应用框架。remember for ASP.NET Core
-- [yiyungent/PluginHub](http://github.com/yiyungent/PluginHub) - 🍰 ASP.NET MVC 插件化解决方案
-- [yiyungent/Templates](https://github.com/yiyungent/Templates) - 🎨 ASP.NET MVC5 多主题模板解决方案
+- [yiyungent/Remember.Core](https://github.com/yiyungent/Remember.Core) - 🐬 .NET Web Application Framework. remember for ASP.NET Core
+- [yiyungent/PluginHub](http://github.com/yiyungent/PluginHub) - 🍰 ASP.NET MVC Plugin Solution
+- [yiyungent/Templates](https://github.com/yiyungent/Templates) - 🎨 ASP.NET MVC5 Multi-Theme Template Solution
 
-### 使用本项目的项目
+### Projects Using This Project
 
-- [yiyungent/KnifeHub](https://github.com/yiyungent/KnifeHub) - 【PluginCore.AspNetCore 最佳实践】工具平台 | 日常生活/学习/工作/开发 工具集
-- [yiyungent/Dragonfly](https://github.com/yiyungent/Dragonfly) - ASP.NET Core + Selenium 实现 Web 自动化
+- [yiyungent/KnifeHub](https://github.com/yiyungent/KnifeHub) - 【PluginCore.AspNetCore Best Practice】Tool Platform | Daily Life/Learning/Work/Development Tool Collection
+- [yiyungent/Dragonfly](https://github.com/yiyungent/Dragonfly) - ASP.NET Core + Selenium Web Automation Implementation
 
 
-## 鸣谢
+## Acknowledgments
 
-- 插件系统设计参考自 <a href="https://github.com/lamondlu/CoolCat" target="_blank">CoolCat</a>，感谢作者 lamondlu 的贡献
-- 设计参考自 <a href="https://github.com/nopSolutions/nopCommerce" target="_blank">nopCommerce</a>，感谢作者 nopSolutions 的贡献
+- Plugin system design referenced from <a href="https://github.com/lamondlu/CoolCat" target="_blank">CoolCat</a>, thanks to author lamondlu for the contribution
+- Design referenced from <a href="https://github.com/nopSolutions/nopCommerce" target="_blank">nopCommerce</a>, thanks to author nopSolutions for the contribution
 
 
 ### 特别鸣谢
@@ -367,11 +367,11 @@ Special thanks to [Netlify](https://www.netlify.com) for supporting open-source 
 [<img src="README/netlify-light.png" width="200"/>](https://www.netlify.com)
 
 
-## 赞助者
+## Sponsors
 
-本列表由 [afdian-action](https://github.com/yiyungent/afdian-action) 自动更新
+This list is automatically updated by [afdian-action](https://github.com/yiyungent/afdian-action)
 
-感谢这些来自爱发电的赞助者：
+Thanks to these sponsors from Afdian:
 
 <!-- AFDIAN-ACTION:START -->
 
@@ -395,7 +395,7 @@ Special thanks to [Netlify](https://www.netlify.com) for supporting open-source 
 </a>
 
 <details>
-  <summary>点我 打开/关闭 赞助者列表</summary>
+  <summary>Click to open/close sponsor list</summary>
 
 <a href="https://afdian.net/u/e98feb9e12d511efa7b352540025c377">
 爱发电用户_e98fe
