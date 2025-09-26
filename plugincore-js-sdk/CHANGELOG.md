@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(CHANGELOG.md)** update - ([7fd216c](https://github.com/yiyungent/PluginCore/commit/7fd216cde264fb9f0481db81117ece8fe374d5ab)) - github-actions[bot]
 - **(CHANGELOG.md)** update - ([62e2bc7](https://github.com/yiyungent/PluginCore/commit/62e2bc766ce85f51459ae18c29c3bfef5c7ee64f)) - github-actions[bot]
 - **(CHANGELOG.md)** update - ([cc9f0c0](https://github.com/yiyungent/PluginCore/commit/cc9f0c01cf176eae07c24ee1cfc9fa96778be614)) - github-actions[bot]
+- **(CHANGELOG.md)** update - ([0d72cda](https://github.com/yiyungent/PluginCore/commit/0d72cdae09f22c50b2a64a4e14ae3bf16e2fdfc8)) - github-actions[bot]
 - **(plugincore-admin-frontend,plugincore-js-sdk)** rEADME.md: update - ([c1c37cc](https://github.com/yiyungent/PluginCore/commit/c1c37cc3799c3ae354e2d9f5092fa269c467cc38)) - yiyun
 - **(readme)** rEADME,plugincore-js-sdk/README.md: badge,link - ([c448e44](https://github.com/yiyungent/PluginCore/commit/c448e44c26f3131349b4ef82a289c72cb83e7f3a)) - yiyun
 
