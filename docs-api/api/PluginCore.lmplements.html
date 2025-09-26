@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
@@ -99,9 +99,9 @@ Classes
           <p><a class="xref" href="PluginCore.lmplements.PluginContextManager.html">PluginContextManager</a></p>
           <p><p>启用插件时加载进来, 禁用插件时移除释放</p>
 <p>只有已启用的插件才有上下文</p>
-        https://www.cnblogs.com/lwqlun/p/11395828.html
-        1.当加载插件的时候，我们需要将当前插件的程序集加载上下文放到_pluginContexts字典中。字典的key是插件的名称，字典的value是插件的程序集加载上下文。
-        2.当移除一个插件的时候，我们需要使用Unload方法，来释放当前的程序集加载上下文。
+https://www.cnblogs.com/lwqlun/p/11395828.html
+1.当加载插件的时候，我们需要将当前插件的程序集加载上下文放到_pluginContexts字典中。字典的key是插件的名称，字典的value是插件的程序集加载上下文。
+2.当移除一个插件的时候，我们需要使用Unload方法，来释放当前的程序集加载上下文。
 
         </td>
       </tr>
@@ -162,7 +162,8 @@ TODO: 其实是没必要再效验plugin.config.json的，因为只有启用的�
         <td>
           <p><a class="xref" href="PluginCore.lmplements.PluginManager.html">PluginManager</a></p>
           <p><p>一个插件的所有dll由 一个 <a class="xref" href="PluginCore.Interfaces.IPluginContext.html">IPluginContext</a> 管理
-<a class="xref" href="PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager">PluginContextManager</a> 记录管理了所有 插件的<a class="xref" href="PluginCore.Interfaces.IPluginContext.html">IPluginContext</a><a class="xref" href="PluginCore.lmplements.PluginManager.html">PluginManager</a> 是对 <a class="xref" href="PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager">PluginContextManager</a>的封装, 使其更好管理插件加载释放的行为</p>
+<a class="xref" href="PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager">PluginContextManager</a> 记录管理了所有 插件的<a class="xref" href="PluginCore.Interfaces.IPluginContext.html">IPluginContext</a>
+<a class="xref" href="PluginCore.lmplements.PluginManager.html">PluginManager</a> 是对 <a class="xref" href="PluginCore.lmplements.PluginManager.html#PluginCore_lmplements_PluginManager_PluginContextManager">PluginContextManager</a>的封装, 使其更好管理插件加载释放的行为</p>
 
         </td>
       </tr>

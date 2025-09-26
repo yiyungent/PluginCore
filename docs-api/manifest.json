@@ -10,7 +10,11 @@
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIBuilderExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -20,7 +24,11 @@
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIMiddleware.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIMiddleware",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -30,7 +38,11 @@
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIOptions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -40,7 +52,11 @@
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider.PluginCoreAdminUIFileInfo.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider.PluginCoreAdminUIFileInfo",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -50,7 +66,11 @@
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.AdminUI.PluginCoreAdminUIRemoteFileProvider",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -60,7 +80,11 @@
           "relative_path": "api/PluginCore.AspNetCore.AdminUI.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.AdminUI",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -70,7 +94,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationHandler.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationHandler",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationHandler.yml\" sourcestartlinenumber=\"1\"><a href=\"https://stackoverflow.com/questions/52287542/invalidoperationexception-no-authenticationscheme-was-specified-and-there-was\" sourcefile=\"api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationHandler.yml\" sourcestartlinenumber=\"1\">https://stackoverflow.com/questions/52287542/invalidoperationexception-no-authenticationscheme-was-specified-and-there-was</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -80,7 +108,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationSchemeOptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Authentication.PluginCoreAuthenticationSchemeOptions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -90,7 +122,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Authentication.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Authentication",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -100,7 +136,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Authorization.AccountManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Authorization.AccountManager",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -110,7 +150,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizationHandler.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizationHandler",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -120,7 +164,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizeAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizeAttribute",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.Authorization.PluginCoreAdminAuthorizeAttribute.yml\" sourcestartlinenumber=\"1\">注意: PluginCoreAdmin -&gt; PluginCore.Admin</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -130,7 +178,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Authorization.PluginCoreAdminRequirement.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Authorization.PluginCoreAdminRequirement",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -140,7 +192,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Authorization.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Authorization",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -150,7 +206,11 @@
           "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.BackgroundServicesHelper.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.BackgroundServices.BackgroundServicesHelper",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -160,7 +220,11 @@
           "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.PluginTimeJobBackgroundService.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.BackgroundServices.PluginTimeJobBackgroundService",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -170,7 +234,11 @@
           "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.BackgroundServices.TimeBackgroundService",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -180,7 +248,11 @@
           "relative_path": "api/PluginCore.AspNetCore.BackgroundServices.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.BackgroundServices",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -190,7 +262,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.AppCenterController.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.AppCenterController",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.Controllers.AppCenterController.yml\" sourcestartlinenumber=\"1\">应用中心</p>\n<p>插件</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -200,7 +276,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssembliesResponseDataModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.DebugController.AssembliesResponseDataModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -210,7 +290,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel.AssemblyLoadContextModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel.AssemblyLoadContextModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -220,7 +304,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.DebugController.AssemblyLoadContextsResponseDataModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -230,7 +318,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.AssemblyModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.DebugController.AssemblyModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -240,7 +332,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.ServiceModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.DebugController.ServiceModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -250,7 +346,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.DebugController.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.DebugController",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -260,7 +360,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.HomeController.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.HomeController",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -270,7 +374,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.PluginWidgetController.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.PluginWidgetController",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -280,7 +388,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.PluginsController.UploadFileType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.PluginsController.UploadFileType",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -290,7 +402,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.PluginsController.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.PluginsController",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -300,7 +416,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.UserController.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers.UserController",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -310,7 +430,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Controllers.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Controllers",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -320,7 +444,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Extensions.IServiceProviderExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Extensions.IServiceProviderExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -330,7 +458,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Extensions.PluginCoreStartupExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Extensions.PluginCoreStartupExtensions",
+      "Summary": ""
     },
     {
       "type": "ManagedReference",
@@ -340,7 +472,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Extensions.ReflectionHelper.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Extensions.ReflectionHelper",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -350,7 +486,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Extensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Extensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -360,7 +500,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.yml\" sourcestartlinenumber=\"1\">Default implementation for <xref href=\"Microsoft.AspNetCore.Builder.IApplicationBuilder\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p sourcefile=\"api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.yml\" sourcestartlinenumber=\"3\"><a href=\"https://github.com/dotnet/aspnetcore/blob/main/src/Http/Http/src/Builder/ApplicationBuilder.cs\" sourcefile=\"api/PluginCore.AspNetCore.Infrastructure.PluginApplicationBuilder.yml\" sourcestartlinenumber=\"3\">https://github.com/dotnet/aspnetcore/blob/main/src/Http/Http/src/Builder/ApplicationBuilder.cs</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -370,7 +514,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Infrastructure.PluginCoreHostingStartup.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Infrastructure.PluginCoreHostingStartup",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.Infrastructure.PluginCoreHostingStartup.yml\" sourcestartlinenumber=\"1\"><a href=\"https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/host/platform-specific-configuration?view=aspnetcore-5.0\" sourcefile=\"api/PluginCore.AspNetCore.Infrastructure.PluginCoreHostingStartup.yml\" sourcestartlinenumber=\"1\">https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/host/platform-specific-configuration?view=aspnetcore-5.0</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -380,7 +528,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Infrastructure.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Infrastructure",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -390,7 +542,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Interfaces.IPluginApplicationBuilderManager",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -400,7 +556,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Interfaces.IPluginControllerManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Interfaces.IPluginControllerManager",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -410,7 +570,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -420,7 +584,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.LanguageMiddleware.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Middlewares.LanguageMiddleware",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -430,7 +598,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Middlewares.LanguageMiddlewareExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -440,7 +612,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.Middlewares.PluginContentFilterMiddleware.yml\" sourcestartlinenumber=\"1\">TODO: 未测试</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -450,7 +626,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.Middlewares.PluginHttpEndFilterMiddleware.yml\" sourcestartlinenumber=\"1\">一定在 PluginCore 添加的中间件中 最后一个</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -460,7 +640,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.Middlewares.PluginHttpStartFilterMiddleware.yml\" sourcestartlinenumber=\"1\">一定在 PluginCore 添加的中间件中 第一个</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -470,7 +654,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Middlewares.PluginStartupXMiddleware",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -480,7 +668,11 @@
           "relative_path": "api/PluginCore.AspNetCore.Middlewares.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.Middlewares",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -490,7 +682,11 @@
           "relative_path": "api/PluginCore.AspNetCore.RequestModel.User.LoginRequestModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.RequestModel.User.LoginRequestModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -500,7 +696,11 @@
           "relative_path": "api/PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.RequestModel.User.UpdateRequestModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -510,7 +710,11 @@
           "relative_path": "api/PluginCore.AspNetCore.RequestModel.User.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.RequestModel.User",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -520,7 +724,11 @@
           "relative_path": "api/PluginCore.AspNetCore.ResponseModel.BaseResponseModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.ResponseModel.BaseResponseModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -530,7 +738,11 @@
           "relative_path": "api/PluginCore.AspNetCore.ResponseModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.ResponseModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -540,7 +752,11 @@
           "relative_path": "api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.lmplements.AspNetCorePluginManager",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManager.yml\" sourcestartlinenumber=\"1\">一个插件的所有dll由 一个 <xref href=\"PluginCore.Interfaces.IPluginContext\" data-throw-if-not-resolved=\"false\"></xref> 管理\n<xref href=\"PluginCore.AspNetCore.lmplements.AspNetCorePluginManager.PluginContextManager\" data-throw-if-not-resolved=\"false\"></xref> 记录管理了所有 插件的<xref href=\"PluginCore.Interfaces.IPluginContext\" data-throw-if-not-resolved=\"false\"></xref>\n<xref href=\"PluginCore.AspNetCore.lmplements.AspNetCorePluginManager\" data-throw-if-not-resolved=\"false\"></xref> 是对 <xref href=\"PluginCore.AspNetCore.lmplements.AspNetCorePluginManager.PluginContextManager\" data-throw-if-not-resolved=\"false\"></xref>的封装, 使其更好管理插件加载释放的行为</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -550,7 +766,11 @@
           "relative_path": "api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManagerV1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.lmplements.AspNetCorePluginManagerV1",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.lmplements.AspNetCorePluginManagerV1.yml\" sourcestartlinenumber=\"1\">一个插件的所有dll由 一个 <xref href=\"PluginCore.Interfaces.IPluginContext\" data-throw-if-not-resolved=\"false\"></xref> 管理\n<xref href=\"PluginCore.AspNetCore.lmplements.AspNetCorePluginManagerV1.PluginContextManager\" data-throw-if-not-resolved=\"false\"></xref> 记录管理了所有 插件的<xref href=\"PluginCore.lmplements.CollectibleAssemblyLoadContext\" data-throw-if-not-resolved=\"false\"></xref>\n<xref href=\"PluginCore.AspNetCore.lmplements.AspNetCorePluginManagerV1\" data-throw-if-not-resolved=\"false\"></xref> 是对 <xref href=\"PluginCore.AspNetCore.lmplements.AspNetCorePluginManagerV1.PluginContextManager\" data-throw-if-not-resolved=\"false\"></xref>的封装, 使其更好管理插件加载释放的行为</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -560,7 +780,11 @@
           "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginActionDescriptorChangeProvider.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.lmplements.PluginActionDescriptorChangeProvider",
+      "Summary": "<p sourcefile=\"api/PluginCore.AspNetCore.lmplements.PluginActionDescriptorChangeProvider.yml\" sourcestartlinenumber=\"1\">目前采用的第一种方案\n方案一: <a href=\"https://www.codetd.com/article/461093\" sourcefile=\"api/PluginCore.AspNetCore.lmplements.PluginActionDescriptorChangeProvider.yml\" sourcestartlinenumber=\"2\">https://www.codetd.com/article/461093</a>\n方案二: <a href=\"https://www.cnblogs.com/artech/p/dynamic-controllers.html\" sourcefile=\"api/PluginCore.AspNetCore.lmplements.PluginActionDescriptorChangeProvider.yml\" sourcestartlinenumber=\"3\">https://www.cnblogs.com/artech/p/dynamic-controllers.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -570,7 +794,11 @@
           "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager<TPluginApplicationBuilder>",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -580,7 +808,11 @@
           "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.lmplements.PluginApplicationBuilderManager",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -590,7 +822,11 @@
           "relative_path": "api/PluginCore.AspNetCore.lmplements.PluginControllerManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.lmplements.PluginControllerManager",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -600,7 +836,11 @@
           "relative_path": "api/PluginCore.AspNetCore.lmplements.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.AspNetCore.lmplements",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -610,7 +850,11 @@
           "relative_path": "api/PluginCore.Config.PluginCoreConfig.AdminModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Config.PluginCoreConfig.AdminModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -620,7 +864,11 @@
           "relative_path": "api/PluginCore.Config.PluginCoreConfig.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Config.PluginCoreConfig",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -630,7 +878,11 @@
           "relative_path": "api/PluginCore.Config.PluginCoreConfigFactory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Config.PluginCoreConfigFactory",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -640,7 +892,11 @@
           "relative_path": "api/PluginCore.Config.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Config",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -650,7 +906,11 @@
           "relative_path": "api/PluginCore.Infrastructure.NupkgService.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Infrastructure.NupkgService",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -660,7 +920,11 @@
           "relative_path": "api/PluginCore.Infrastructure.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Infrastructure",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -670,7 +934,11 @@
           "relative_path": "api/PluginCore.Interfaces.ICollectibleAssemblyLoadContext.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Interfaces.ICollectibleAssemblyLoadContext",
+      "Summary": "<p sourcefile=\"api/PluginCore.Interfaces.ICollectibleAssemblyLoadContext.yml\" sourcestartlinenumber=\"1\">暂时无用, 仅作为约束标记</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -680,7 +948,11 @@
           "relative_path": "api/PluginCore.Interfaces.IPluginContext.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Interfaces.IPluginContext",
+      "Summary": "<p sourcefile=\"api/PluginCore.Interfaces.IPluginContext.yml\" sourcestartlinenumber=\"1\">每个插件的所有 Assembly 打包到此中</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -690,7 +962,11 @@
           "relative_path": "api/PluginCore.Interfaces.IPluginContextManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Interfaces.IPluginContextManager",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -700,7 +976,11 @@
           "relative_path": "api/PluginCore.Interfaces.IPluginContextPack.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Interfaces.IPluginContextPack",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -710,7 +990,11 @@
           "relative_path": "api/PluginCore.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -720,7 +1004,11 @@
           "relative_path": "api/PluginCore.Models.PluginConfigModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginConfigModel",
+      "Summary": "<p sourcefile=\"api/PluginCore.Models.PluginConfigModel.yml\" sourcestartlinenumber=\"1\">所有插件的配置信息模型</p>\n<p>对应 WebApi/App_Data/plugin.config.json</p>\n<p>-------------</p>\n<p> Plugins = 已启用 + 已禁用 </p>\n<p> 上传放入 Plugins 后, 默认为 已禁用 </p>\n"
     },
     {
       "type": "ManagedReference",
@@ -730,7 +1018,11 @@
           "relative_path": "api/PluginCore.Models.PluginInfoModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginInfoModel",
+      "Summary": "<p sourcefile=\"api/PluginCore.Models.PluginInfoModel.yml\" sourcestartlinenumber=\"1\">插件信息模型</p>\n<p>对应插件目录下 info.json</p>\n<p>约定: 插件文件夹名=PluginID</p>\n<p>约定: 插件文件夹名=插件主程序集(Assembly)名 .dll</p>\n<p>eg: plugins/payment  payment.dll</p>\n<p>约定: 插件文件夹下 logo.png 为插件图标</p>\n<p>约定: 插件文件夹下 README.md 为插件说明文件</p>\n<p>约定: 插件文件夹下 settings.json 为插件设置文件</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -740,7 +1032,11 @@
           "relative_path": "api/PluginCore.Models.PluginInfoResponseModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginInfoResponseModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -750,7 +1046,11 @@
           "relative_path": "api/PluginCore.Models.PluginReadmeModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginReadmeModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -760,7 +1060,11 @@
           "relative_path": "api/PluginCore.Models.PluginReadmeResponseModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginReadmeResponseModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -770,7 +1074,11 @@
           "relative_path": "api/PluginCore.Models.PluginRegistryDTO.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginRegistryDTO",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -780,7 +1088,11 @@
           "relative_path": "api/PluginCore.Models.PluginRegistryResponseModel.PluginStatus.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginRegistryResponseModel.PluginStatus",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -790,7 +1102,11 @@
           "relative_path": "api/PluginCore.Models.PluginRegistryResponseModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginRegistryResponseModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -800,7 +1116,11 @@
           "relative_path": "api/PluginCore.Models.PluginSettingsInputModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginSettingsInputModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -810,7 +1130,11 @@
           "relative_path": "api/PluginCore.Models.PluginStatus.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models.PluginStatus",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -820,7 +1144,11 @@
           "relative_path": "api/PluginCore.Models.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Models",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -830,7 +1158,11 @@
           "relative_path": "api/PluginCore.PluginConfigModelFactory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.PluginConfigModelFactory",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -840,7 +1172,11 @@
           "relative_path": "api/PluginCore.PluginInfoModelFactory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.PluginInfoModelFactory",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -850,7 +1186,11 @@
           "relative_path": "api/PluginCore.PluginReadmeModelFactory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.PluginReadmeModelFactory",
+      "Summary": "<p sourcefile=\"api/PluginCore.PluginReadmeModelFactory.yml\" sourcestartlinenumber=\"1\">TODO: 目前这样读取出来的包含了 windows 换行符 \\r\\n</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -860,7 +1200,11 @@
           "relative_path": "api/PluginCore.Utils.CircularReferenceException.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Utils.CircularReferenceException",
+      "Summary": "<p sourcefile=\"api/PluginCore.Utils.CircularReferenceException.yml\" sourcestartlinenumber=\"1\">Represents a circular reference exception when sorting dependency objects.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -870,7 +1214,11 @@
           "relative_path": "api/PluginCore.Utils.DateTimeUtil.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Utils.DateTimeUtil",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -880,7 +1228,11 @@
           "relative_path": "api/PluginCore.Utils.DependencySorter-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Utils.DependencySorter<T>",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -890,7 +1242,11 @@
           "relative_path": "api/PluginCore.Utils.FileUtil.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Utils.FileUtil",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -900,7 +1256,11 @@
           "relative_path": "api/PluginCore.Utils.LogUtil.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Utils.LogUtil",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -910,7 +1270,11 @@
           "relative_path": "api/PluginCore.Utils.Md5Helper.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Utils.Md5Helper",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -920,7 +1284,11 @@
           "relative_path": "api/PluginCore.Utils.RuntimeUtil.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Utils.RuntimeUtil",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -930,7 +1298,11 @@
           "relative_path": "api/PluginCore.Utils.ZipHelper.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Utils.ZipHelper",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -940,7 +1312,11 @@
           "relative_path": "api/PluginCore.Utils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.Utils",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -950,7 +1326,11 @@
           "relative_path": "api/PluginCore.lmplements.CollectibleAssemblyLoadContext.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.CollectibleAssemblyLoadContext",
+      "Summary": "<p sourcefile=\"api/PluginCore.lmplements.CollectibleAssemblyLoadContext.yml\" sourcestartlinenumber=\"1\">一个可回收的程序集加载上下文\n在整个插件加载上下文的设计上，每个插件都使用一个单独的CollectibleAssemblyLoadContext来加载，所有插件的CollectibleAssemblyLoadContext都放在一个PluginsLoadContext对象中</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -960,7 +1340,11 @@
           "relative_path": "api/PluginCore.lmplements.LazyPluginLoadContext.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.LazyPluginLoadContext",
+      "Summary": "<p sourcefile=\"api/PluginCore.lmplements.LazyPluginLoadContext.yml\" sourcestartlinenumber=\"1\">修改自下方\n<a href=\"https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support\" sourcefile=\"api/PluginCore.lmplements.LazyPluginLoadContext.yml\" sourcestartlinenumber=\"2\">https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support</a>\n此方法依赖于 插件项目生成的 HelloWorldPlugin.deps.json 与 runtimes 文件夹,\n虽然官方文档没写, 但最好还带上 HelloWorldPlugin.runtimeconfig.json\n插件项目 .csproj 其它注意, 看文档</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -970,7 +1354,11 @@
           "relative_path": "api/PluginCore.lmplements.PluginContextManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PluginContextManager",
+      "Summary": "<p>启用插件时加载进来, 禁用插件时移除释放</p>\n<p>只有已启用的插件才有上下文</p>\nhttps://www.cnblogs.com/lwqlun/p/11395828.html\n1.当加载插件的时候，我们需要将当前插件的程序集加载上下文放到_pluginContexts字典中。字典的key是插件的名称，字典的value是插件的程序集加载上下文。\n2.当移除一个插件的时候，我们需要使用Unload方法，来释放当前的程序集加载上下文。\n"
     },
     {
       "type": "ManagedReference",
@@ -980,7 +1368,11 @@
           "relative_path": "api/PluginCore.lmplements.PluginContextPack.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PluginContextPack",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -990,7 +1382,11 @@
           "relative_path": "api/PluginCore.lmplements.PluginContextPackV1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PluginContextPackV1",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1000,7 +1396,11 @@
           "relative_path": "api/PluginCore.lmplements.PluginContextStore.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PluginContextStore",
+      "Summary": "<p sourcefile=\"api/PluginCore.lmplements.PluginContextStore.yml\" sourcestartlinenumber=\"1\">fixed: 由于 <xref href=\"PluginCore.Interfaces.IPluginContextManager\" data-throw-if-not-resolved=\"false\"></xref> 单例失败, 因此临时解决方案</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1010,7 +1410,11 @@
           "relative_path": "api/PluginCore.lmplements.PluginFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PluginFinder",
+      "Summary": "<p sourcefile=\"api/PluginCore.lmplements.PluginFinder.yml\" sourcestartlinenumber=\"1\">插件发现者: 找启用的插件(1.plugin.config.json中启用 2. 有插件上下文)\nTODO: 其实是没必要再效验plugin.config.json的，因为只有启用的插件才有上下文, 为了保险，暂时这么做\n注意: 这意味着一个启用的插件需同时满足这两个条件</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1020,7 +1424,11 @@
           "relative_path": "api/PluginCore.lmplements.PluginFinderV1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PluginFinderV1",
+      "Summary": "<p sourcefile=\"api/PluginCore.lmplements.PluginFinderV1.yml\" sourcestartlinenumber=\"1\">插件发现者: 找启用的插件(1.plugin.config.json中启用 2. 有插件上下文)\nTODO: 其实是没必要再效验plugin.config.json的，因为只有启用的插件才有上下文, 为了保险，暂时这么做\n注意: 这意味着一个启用的插件需同时满足这两个条件</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1030,7 +1438,11 @@
           "relative_path": "api/PluginCore.lmplements.PluginFinderV2.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PluginFinderV2",
+      "Summary": "<p sourcefile=\"api/PluginCore.lmplements.PluginFinderV2.yml\" sourcestartlinenumber=\"1\">插件发现者: 找启用的插件(1.plugin.config.json中启用 2. 有插件上下文)\nTODO: 其实是没必要再效验plugin.config.json的，因为只有启用的插件才有上下文, 为了保险，暂时这么做\n注意: 这意味着一个启用的插件需同时满足这两个条件</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1040,7 +1452,11 @@
           "relative_path": "api/PluginCore.lmplements.PluginLoadContext.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PluginLoadContext",
+      "Summary": "<p sourcefile=\"api/PluginCore.lmplements.PluginLoadContext.yml\" sourcestartlinenumber=\"1\">LazyPluginLoadContext</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1050,7 +1466,11 @@
           "relative_path": "api/PluginCore.lmplements.PluginManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PluginManager",
+      "Summary": "<p sourcefile=\"api/PluginCore.lmplements.PluginManager.yml\" sourcestartlinenumber=\"1\">一个插件的所有dll由 一个 <xref href=\"PluginCore.Interfaces.IPluginContext\" data-throw-if-not-resolved=\"false\"></xref> 管理\n<xref href=\"PluginCore.lmplements.PluginManager.PluginContextManager\" data-throw-if-not-resolved=\"false\"></xref> 记录管理了所有 插件的<xref href=\"PluginCore.Interfaces.IPluginContext\" data-throw-if-not-resolved=\"false\"></xref>\n<xref href=\"PluginCore.lmplements.PluginManager\" data-throw-if-not-resolved=\"false\"></xref> 是对 <xref href=\"PluginCore.lmplements.PluginManager.PluginContextManager\" data-throw-if-not-resolved=\"false\"></xref>的封装, 使其更好管理插件加载释放的行为</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1060,7 +1480,11 @@
           "relative_path": "api/PluginCore.lmplements.PositivePluginLoadContext.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements.PositivePluginLoadContext",
+      "Summary": "<p sourcefile=\"api/PluginCore.lmplements.PositivePluginLoadContext.yml\" sourcestartlinenumber=\"1\">修改自下方\n<a href=\"https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support\" sourcefile=\"api/PluginCore.lmplements.PositivePluginLoadContext.yml\" sourcestartlinenumber=\"2\">https://docs.microsoft.com/en-us/dotnet/core/tutorials/creating-app-with-plugin-support</a>\n此方法依赖于 插件项目生成的 HelloWorldPlugin.deps.json 与 runtimes 文件夹,\n虽然官方文档没写, 但最好还带上 HelloWorldPlugin.runtimeconfig.json\n插件项目 .csproj 其它注意, 看文档</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1070,7 +1494,11 @@
           "relative_path": "api/PluginCore.lmplements.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore.lmplements",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1080,7 +1508,11 @@
           "relative_path": "api/PluginCore.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PluginCore",
+      "Summary": null
     },
     {
       "type": "Conceptual",
@@ -1096,11 +1528,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -1119,11 +1551,11 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "articles/toc.json"
-        },
         ".html": {
           "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
         }
       },
       "version": ""
@@ -1142,11 +1574,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""
