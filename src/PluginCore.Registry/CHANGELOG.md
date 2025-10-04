@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(CHANGELOG.md)** update - ([868a40b](https://github.com/yiyungent/PluginCore/commit/868a40b1b79ab35967fdf46d34a6c6c8f2a33ba1)) - github-actions[bot]
 - **(CHANGELOG.md)** update - ([8fcfc13](https://github.com/yiyungent/PluginCore/commit/8fcfc13f80d00b12989cc4981a26d36f3baaccef)) - github-actions[bot]
 - **(CHANGELOG.md)** update - ([8cdc35d](https://github.com/yiyungent/PluginCore/commit/8cdc35dcfa3029cbbde84dcc481a301c38e1a152)) - github-actions[bot]
+- **(CHANGELOG.md)** update - ([c3b4aad](https://github.com/yiyungent/PluginCore/commit/c3b4aad1e1ea934687efb7ae48d522bec627ff08)) - github-actions[bot]
 
 ### Features
 
