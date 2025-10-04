@@ -1,0 +1,4 @@
+# VuePress
+docs/.vuepress/dist/
+
+# package-lock.json

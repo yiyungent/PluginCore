@@ -1,0 +1,39 @@
+{
+  "name": "PluginCore",
+  "version": "0.1.0",
+  "description": "<p align=\"center\">\r <img src=\".vuepress/public/images/logo.png\" alt=\"PluginCore\">\r </p>\r <h1 align=\"center\">PluginCore</h1>",
+  "main": "",
+  "scripts": {
+    "docs:test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiyungent/PluginCore.git"
+  },
+  "keywords": [
+    "PluginCore"
+  ],
+  "author": "yiyun",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/yiyungent/PluginCore/issues"
+  },
+  "homepage": "https://github.com/yiyungent/PluginCore#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^2.0.10",
+    "axios": "^1.6.7",
+    "vuepress": "^1.5.2",
+    "vuepress-plugin-matomo": "^1.0.2"
+  },
+  "devDependencies": {
+    "vuepress-plugin-mermaidjs": "^1.9.1"
+  }
+}
