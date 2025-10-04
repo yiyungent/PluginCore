@@ -31,7 +31,7 @@ features:
   details: Controllable plug-in life cycle, perfect event distribution
 - title: Globalization
   details: Thanks to the internationalization implementation of i18n, it provides multi-language switching support
-footer: GNU LGPLv3 Licensed | Copyright © 2021-present yiyun | Special thanks to [Netlify](https://www.netlify.com) for supporting open-source projects.
+footer: GNU LGPLv3 Licensed | Copyright © 2021-present yiyun | This site is powered by <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
 ---
 
 
