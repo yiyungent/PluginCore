@@ -1060,6 +1060,18 @@ references:
   commentId: Overload:PluginCore.AspNetCore.Controllers.DebugController.AssemblyModel.FullName
   fullName: PluginCore.AspNetCore.Controllers.DebugController.AssemblyModel.FullName
   nameWithType: DebugController.AssemblyModel.FullName
+- uid: PluginCore.AspNetCore.Controllers.DebugController.LoadedPluginAssemblies
+  name: LoadedPluginAssemblies()
+  href: api/PluginCore.AspNetCore.Controllers.DebugController.html#PluginCore_AspNetCore_Controllers_DebugController_LoadedPluginAssemblies
+  commentId: M:PluginCore.AspNetCore.Controllers.DebugController.LoadedPluginAssemblies
+  fullName: PluginCore.AspNetCore.Controllers.DebugController.LoadedPluginAssemblies()
+  nameWithType: DebugController.LoadedPluginAssemblies()
+- uid: PluginCore.AspNetCore.Controllers.DebugController.LoadedPluginAssemblies*
+  name: LoadedPluginAssemblies
+  href: api/PluginCore.AspNetCore.Controllers.DebugController.html#PluginCore_AspNetCore_Controllers_DebugController_LoadedPluginAssemblies_
+  commentId: Overload:PluginCore.AspNetCore.Controllers.DebugController.LoadedPluginAssemblies
+  fullName: PluginCore.AspNetCore.Controllers.DebugController.LoadedPluginAssemblies
+  nameWithType: DebugController.LoadedPluginAssemblies
 - uid: PluginCore.AspNetCore.Controllers.DebugController.PluginContexts
   name: PluginContexts()
   href: api/PluginCore.AspNetCore.Controllers.DebugController.html#PluginCore_AspNetCore_Controllers_DebugController_PluginContexts
