@@ -197,6 +197,57 @@ namespace PluginCore.AspNetCore.Controllers
             return await Task.FromResult(responseModel);
         }
 
+        [HttpGet, HttpPost]
+        public async Task<ActionResult<BaseResponseModel>> LoadedPluginAssemblies()
+        {
+            BaseResponseModel responseModel = new BaseResponseModel();
+            try
+            {
+                var pluginContextList = _pluginContextManager.All();
+                var data = new Dictionary<string, List<AssemblyModel>>();
+
+                foreach (var pluginContext in pluginContextList)
+                {
+                    var assemblyModels = new List<AssemblyModel>();
+                    foreach (var assembly in pluginContext.Assemblies)
+                    {
+                        List<string> definedTypes = new List<string>();
+                        try
+                        {
+                            definedTypes = assembly.GetTypes().Select(t => t.FullName).ToList();
+                        }
+                        catch (System.Reflection.ReflectionTypeLoadException ex)
+                        {
+                             definedTypes = ex.LoaderExceptions.Select(e => $"LoaderException: {e.Message}").ToList();
+                        }
+                        catch (Exception ex)
+                        {
+                            definedTypes.Add($"Exception: {ex.Message}");
+                        }
+
+                        assemblyModels.Add(new AssemblyModel
+                        {
+                            FullName = assembly.FullName,
+                            DefinedTypes = definedTypes
+                        });
+                    }
+                    data.Add($"{pluginContext.PluginId}", assemblyModels);
+                }
+
+                responseModel.Code = 1;
+                responseModel.Message = "success";
+                responseModel.Data = data;
+            }
+            catch (Exception ex)
+            {
+                responseModel.Code = -1;
+                responseModel.Message = "error";
+                responseModel.Data = ex.ToString();
+            }
+
+            return await Task.FromResult(responseModel);
+        }
+
         #endregion
 
         public sealed class AssemblyLoadContextsResponseDataModel
@@ -276,5 +327,3 @@ namespace PluginCore.AspNetCore.Controllers
 
     }
 }
-
-
