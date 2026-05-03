@@ -385,7 +385,7 @@ Thanks to these sponsors from Afdian:
     <img src="https://pic1.afdiancdn.com/user/98e9914c457911ee95eb52540025c377/avatar/0c7e8ddbbf27c6614fabbb00d4e907a0_w684_h683_s27.jpeg?imageView2/1/w/120/h/120" width="40" height="40" alt="浮沉" title="浮沉"/>
 </a>
 <a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
-    <img src="https://pic1.afdiancdn.com/user/c4a50eea706211ebb48352540025c377/avatar/bd2c86c3f773240acf4b74ca8ec3eef8_w640_h640_s22.jpeg?imageView2/1/w/120/h/120" width="40" height="40" alt="WiMi" title="WiMi"/>
+    <img src="https://pic1.afdiancdn.com/user/c4a50eea706211ebb48352540025c377/avatar/c8a4074b925812bacee8a47f25707c38_w640_h640_s39.jpeg?imageView2/1/w/120/h/120" width="40" height="40" alt="炸至两面金黄" title="炸至两面金黄"/>
 </a>
 <a href="https://afdian.net/u/459023b8e07b11eb92af52540025c377">
     <img src="https://pic1.afdiancdn.com/user/459023b8e07b11eb92af52540025c377/avatar/9238a84b58fdc0aa6093340709d63fd4_w1500_h925_s935.jpg?imageView2/1/w/120/h/120" width="40" height="40" alt="Dr" title="Dr"/>
@@ -411,7 +411,7 @@ RemMai
 </a>
 <span>( 1 次赞助, 共 ￥100 ) 留言: </span><br>
 <a href="https://afdian.net/u/c4a50eea706211ebb48352540025c377">
-WiMi
+炸至两面金黄
 </a>
 <span>( 1 次赞助, 共 ￥30 ) 留言: 感谢分享</span><br>
 <a href="https://afdian.net/u/459023b8e07b11eb92af52540025c377">
